@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; " />
-<title>AndroidJNI.PopLocalFrame �����ֲ�֡</title>
-<meta name="Keywords" content="unity,Android,PopLocalFrame,�����ֲ�֡" />
-<meta name="Description" content="�����رյ�ǰ�ֲ�����֡���ͷ����еı������ã�������һ���ֲ����ã���ǰһ���ֲ�����֡�����ڸ����Ľ������" />
+<title>AndroidJNI.PopLocalFrame 弹出局部帧</title>
+<meta name="Keywords" content="unity,Android,PopLocalFrame,弹出局部帧" />
+<meta name="Description" content="弹出关闭当前局部引用帧，释放所有的本地引用，并返回一个局部引用，在前一个局部引用帧，用于给定的结果对象。" />
 <link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
 <script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
@@ -18,29 +18,29 @@ $(function() {
 
 <body>
 <div class="head">
-<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unityʥ��" width="350" height="80"  title="Unityʥ��"/></a></div>
-<div class="menu"><a href="/">��ҳ</a><a href="/Script">Unity�ű�</a></div>
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
 </div>
 
 <div class="mainbody">
 <div class="leftmain">
     	        <ul class="scriptmenu">
-          <li><a href="../index.html">Overview</a> <span class="trans">����</span></li>
-            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">ʵʱ������</span></li>
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
             <ul>
-                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">����</span></li>
-                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">ö��</span></li>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
             </ul>
-            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">�༭����</span></li>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
             <ul>
-                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">ö��</span></li>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
             </ul>
-            <li>History <span class="trans">��ʷ</span></li>
-            <li><a href="../index.Classes.html">Index</a> <span class="trans">������</span></li>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
         </ul>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity�� */
+/* Unity方 */
 google_ad_slot = "5047319569";
 google_ad_width = 200;
 google_ad_height = 200;
@@ -49,7 +49,7 @@ google_ad_height = 200;
 <script type="text/javascript"
 src="">
 </script>
-        <div class="subclass"><a href="AndroidJNI.html">AndroidJNI</a><span class="transer">���룺U_ӥ </span>
+        <div class="subclass"><a href="AndroidJNI.html">AndroidJNI</a><span class="transer">翻译：U_鹰 </span>
               <ul>
                     <li><a href="AndroidJNI.AllocObject.html">AllocObject</a></li>
                     <li><a href="AndroidJNI.AttachCurrentThread.html">AttachCurrentThread</a></li>
@@ -199,7 +199,7 @@ src="">
     </div>
     <div class="rightmain"><!--right start--><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity�� */
+/* Unity横 */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -208,24 +208,24 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="">
 </script>
-<h1><a href="AndroidJNI.html">AndroidJNI</a>.PopLocalFrame �����ֲ�֡</h1>
+<h1><a href="AndroidJNI.html">AndroidJNI</a>.PopLocalFrame 弹出局部帧</h1>
 <p class="h1inherit"></p>
 <p>static function <em>PopLocalFrame</em> (<em>result</em> : IntPtr) : IntPtr </p>
-<p><em>Description</em><span class="trans">����</span></p>
+<p><em>Description</em><span class="trans">描述</span></p>
 <p> Pops off the current local reference frame, frees   all the local references, and returns a local reference in the previous   local reference frame for the given result object.</p>
-<p>�����رյ�ǰ�ֲ�����֡���ͷ����еı������ã�������һ���ֲ����ã���ǰһ���ֲ�����֡�����ڸ����Ľ������</p>
+<p>弹出关闭当前局部引用帧，释放所有的本地引用，并返回一个局部引用，在前一个局部引用帧，用于给定的结果对象。</p>
 <blockquote>
-<p>PushLocalFrameΪһ�������ľֲ����ô�����һ��ʹ�ö�ջ����PopLocalFrame�������ٶ�ջ���˵����á�</p>
-<p >Push/PopLocalFrame�������ṩ�˶Ծֲ����õ��������ڸ�����Ĺ�����</p>
-<p >�ڹ����ֲ����õ����������У�Push/PopLocalFrame�Ƿǳ�����ġ�������ڱ��غ�������ڴ�����PushLocalFrame��Ȼ���ڳ��ڴ�����PopLocalFrame�������Ļ����ں������м��κ�λ�ô����ľֲ����ö��ᱻ�ͷš����ң������������Ƿǳ���Ч�ġ�</p>
-<p >������ں�������ڴ�������PushLocalFrame����ס�����еĳ��ڣ���return���ֵĵط�������PopLocalFrame��</p>
-<p >�����ľֲ����ô������˷Ѳ���Ҫ���ڴ档һ���ֲ����ûᵼ��������������ָ��Ķ��󶼵ò������ա�����Ҫע����Щ��ʱ�����еķ����������ֲ����õ�ѭ���͹��ߺ�������ֵ�����Pus/PopLocalFrame����Ч�ع����ֲ����á�</p>
+<p>PushLocalFrame为一定数量的局部引用创建了一个使用堆栈，而PopLocalFrame负责销毁堆栈顶端的引用。</p>
+<p >Push/PopLocalFrame函数对提供了对局部引用的生命周期更方便的管理。</p>
+<p >在管理局部引用的生命周期中，Push/PopLocalFrame是非常方便的。你可以在本地函数的入口处调用PushLocalFrame，然后在出口处调用PopLocalFrame，这样的话，在函数对中间任何位置创建的局部引用都会被释放。而且，这两个函数是非常高效的。</p>
+<p >如果你在函数的入口处调用了PushLocalFrame，记住在所有的出口（有return出现的地方）调用PopLocalFrame。</p>
+<p >大量的局部引用创建会浪费不必要的内存。一个局部引用会导致它本身和它所指向的对象都得不到回收。尤其要注意那些长时间运行的方法、创建局部引用的循环和工具函数，充分得利用Pus/PopLocalFrame来高效地管理局部引用。</p>
 </blockquote>
-<p> �μ��� <a href="http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html">Java Native Interface Specification (Oracle)</a></p>
+<p> 参见： <a href="http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html">Java Native Interface Specification (Oracle)</a></p>
 
-<div class="date"><span>����޸ģ�<!-- #BeginDate format:wfcCh2m -->2011��4��12�� Tuesday  15:12<!-- #EndDate --></span></div><script type="text/javascript"><!--
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月12日 Tuesday  15:12<!-- #EndDate --></span></div><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity�� */
+/* Unity横 */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -238,8 +238,8 @@ src="">
     <div class="clear"></div>
 </div>
 
-<div style="padding: 30px; text-align: center; clear:both"><p>���ű��ο�����Unity 3.30f4</p>Ӣ�Ĳ��ְ�Ȩ��&copy;<a href="http://unity3d.com/">Unity</a>��˾���У����Ĳ���&copy;
-<a href="http://3d.ceeger.com/">Unityʥ��</a> ��Ȩ���У�δ�����ɣ��Ͻ�ת�� ��</div>
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));

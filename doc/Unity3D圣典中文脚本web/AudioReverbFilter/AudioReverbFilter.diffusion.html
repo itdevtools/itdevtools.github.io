@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; " />
-<title>AudioReverbFilter.reverbDelay �����ӳ�</title>
-<meta name="Keywords" content="unity,AudioReverbFilter,reverbDelay,�����ӳ�" />
-<meta name="Description" content="���ڻ����ӳ�ʱ�䣬������״η��䣬����Ϊ��λ����Χ��0.0 �� 0.0��Ĭ��Ϊ0.04��" />
+<title>AudioReverbFilter.reverbDelay 混响延迟</title>
+<meta name="Keywords" content="unity,AudioReverbFilter,reverbDelay,混响延迟" />
+<meta name="Description" content="后期混响延迟时间，相对于首次反射，以秒为单位。范围从0.0 到 0.0，默认为0.04。" />
 <link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
 <script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
@@ -18,29 +18,29 @@ $(function() {
 
 <body>
 <div class="head">
-<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unityʥ��" width="350" height="80"  title="Unityʥ��"/></a></div>
-<div class="menu"><a href="/">��ҳ</a><a href="/Script">Unity�ű�</a></div>
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
 </div>
 
 <div class="mainbody">
     <div class="leftmain">
     	        <ul class="scriptmenu">
-          <li><a href="../index.html">Overview</a> <span class="trans">����</span></li>
-            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">ʵʱ������</span></li>
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
             <ul>
-                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">����</span></li>
-                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">ö��</span></li>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
             </ul>
-            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">�༭����</span></li>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
             <ul>
-                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">ö��</span></li>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
             </ul>
-            <li>History <span class="trans">��ʷ</span></li>
-            <li><a href="../index.Classes.html">Index</a> <span class="trans">������</span></li>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
         </ul>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity�� */
+/* Unity方 */
 google_ad_slot = "5047319569";
 google_ad_width = 200;
 google_ad_height = 200;
@@ -49,7 +49,7 @@ google_ad_height = 200;
 <script type="text/javascript"
 src="">
 </script>
-        <div class="subclass"><a href="AudioReverbFilter.html">AudioReverbFilter</a><span class="transer">���룺U_ӥ </span>
+        <div class="subclass"><a href="AudioReverbFilter.html">AudioReverbFilter</a><span class="transer">翻译：U_鹰 </span>
                 <ul>
                     <li><a href="AudioReverbFilter.decayHFRatio.html">decayHFRatio</a></li>
                     <li><a href="AudioReverbFilter.decayTime.html">decayTime</a></li>
@@ -72,7 +72,7 @@ src="">
     </div>
     <div class="rightmain"><!--right start--><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity�� */
+/* Unity横 */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -81,23 +81,23 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="">
 </script>
-<h1><a href="AudioReverbFilter.html">AudioReverbFilter</a>.diffusion ɢ���</h1>
+<h1><a href="AudioReverbFilter.html">AudioReverbFilter</a>.diffusion 散射度</h1>
 <p class="h1inherit"></p>
 <p>var <em>diffusion</em> : float </p>
-<p><em>Description</em><span class="trans">����</span></p>
+<p><em>Description</em><span class="trans">描述</span></p>
 <p> Reverberation diffusion (echo density) in percent. Ranges from 0.0 to 100.0. Default is 100.0.</p>
 
-<p>����ɢ��ȣ������ܶȣ��İٷֱȡ���Χ��0.0 �� 100.0��Ĭ��Ϊ100��</p>
+<p>混响散射度（回声密度）的百分比。范围从0.0 到 100.0，默认为100。</p>
 <blockquote>
-<p><em>ɢ��ȣ�diffusion��</em></p>
-<p>��ͳ���ǽ��� Early reflections diffusion���練���ɢ��ȣ�������֪���練�����һ��Ƚ����Եķ���������Щ���������໥�ӽ��̶ȣ����� diffusion ��ǽ��Խ���⻬�����������˵�̺�ģ���������ɢ��Ⱦ�Խ�󣬷�����Խ�࣬�໥֮��Խ�ӽ�������������һƬ�ģ��������ºͣ�ǽ��Խ�⻬�����粣������������ɢ��Ⱦ�ԽС��������Խ�٣��໥֮�����Խ�����������������ͱȽϽӽ������ˣ�������������</p>
-<p>��ˣ�����һЩ����������������� organ ���ϳ����֣�����ʹ�ý�С�� diffusion�������ͱȽ�Ư�������<br />
-������������������������֡�ľ�ٵȣ�����ʹ�ýϴ�� diffusion ������ͱȽ� smooth��<br />
-��ЩЧ������Ҳ��   diffusion ������������Ǿ���Ķ��岻̫һ������ĳЩЧ�����diffusion   ��ָ���������޹��ɳ̶ȣ��ռ����״Խ����������ɽ�����������ǽ��Խ���⻬�����������ĳ���Խû�й��ɣ�diffusion   Խ�󣻿ռ����״Խ���������޼Ҿߵ�סլ���յĽ��ң���ǽ��Խ�⻬���������ĳ���Խ�й��ɣ�diffusion ԽС�� </p>
+<p><em>散射度（diffusion）</em></p>
+<p>传统上是叫做 Early reflections diffusion（早反射的散射度）。我们知道早反射就是一组比较明显的反射声。这些反射声的相互接近程度，就是 diffusion 。墙壁越不光滑（例如铺上了地毯的），声音的散射度就越大，反射声越多，相互之间越接近，混响是连声一片的，声音很温和；墙壁越光滑（例如玻璃），声音的散射度就越小，反射声越少，相互之间隔得越开，混响声听起来就比较接近回声了，声音很清晰。</p>
+<p>因此，对于一些延音类的声音，比如 organ ，合成弦乐，可以使用较小的 diffusion，声音就比较漂亮清楚；<br />
+对于脉冲类的声音，比如打击乐、木琴等，可以使用较大的 diffusion ，混响就比较 smooth。<br />
+有些效果器里也有   diffusion 这个参数，但是具体的定义不太一样。在某些效果器里，diffusion   是指反射声的无规律程度，空间的形状越不规则（例如山洞、教堂里），墙壁越不光滑，反射声音的出现越没有规律，diffusion   越大；空间的形状越规则（例如无家具的住宅、空的教室），墙壁越光滑，反射声的出现越有规律，diffusion 越小。 </p>
 </blockquote>
-<div class="date"><span>����޸ģ�<!-- #BeginDate format:wfcCh2m -->2011��3��22�� Tuesday  21:22<!-- #EndDate --></span></div><script type="text/javascript"><!--
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月22日 Tuesday  21:22<!-- #EndDate --></span></div><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity�� */
+/* Unity横 */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -110,8 +110,8 @@ src="">
     <div class="clear"></div>
 </div>
 
-<div style="padding: 30px; text-align: center; clear:both"><p>���ű��ο�����Unity 3.30f4</p>Ӣ�Ĳ��ְ�Ȩ��&copy;<a href="http://unity3d.com/">Unity</a>��˾���У����Ĳ���&copy;
-<a href="http://3d.ceeger.com/">Unityʥ��</a> ��Ȩ���У�δ�����ɣ��Ͻ�ת�� ��</div>
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));

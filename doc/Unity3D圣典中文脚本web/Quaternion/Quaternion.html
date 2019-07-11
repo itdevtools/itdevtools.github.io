@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; " />
-<title>Quaternion ËÄÔªÊı</title>
-<meta name="Keywords" content="unity,Quaternion,ËÄÔªÊı" />
-<meta name="Description" content="ËÄÔªÊıÓÃÓÚ±íÊ¾Ğı×ª¡£" />
+<title>Quaternion å››å…ƒæ•°</title>
+<meta name="Keywords" content="unity,Quaternion,å››å…ƒæ•°" />
+<meta name="Description" content="å››å…ƒæ•°ç”¨äºè¡¨ç¤ºæ—‹è½¬ã€‚" />
 <link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
 <script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
@@ -18,28 +18,28 @@ $(function() {
 
 <body>
 <div class="head">
-<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="UnityÊ¥µä" width="350" height="80"  title="UnityÊ¥µä"/></a></div>
-<div class="menu"><a href="/">Ê×Ò³</a><a href="/Script">Unity½Å±¾</a></div>
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unityåœ£å…¸" width="350" height="80"  title="Unityåœ£å…¸"/></a></div>
+<div class="menu"><a href="/">é¦–é¡µ</a><a href="/Script">Unityè„šæœ¬</a></div>
 </div>
 
 <div class="mainbody">    <div class="leftmain">
     	        <ul class="scriptmenu">
-          <li><a href="../index.html">Overview</a> <span class="trans">¸ÅÊö</span></li>
-            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">ÊµÊ±ÔËĞĞÀà</span></li>
+          <li><a href="../index.html">Overview</a> <span class="trans">æ¦‚è¿°</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">å®æ—¶è¿è¡Œç±»</span></li>
             <ul>
-                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">ÊôĞÔ</span></li>
-                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">å±æ€§</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">±à¼­Æ÷Àà</span></li>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">ç¼–è¾‘å™¨ç±»</span></li>
             <ul>
-                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li>History <span class="trans">ÀúÊ·</span></li>
-            <li><a href="../index.Classes.html">Index</a> <span class="trans">×ÜË÷Òı</span></li>
+            <li>History <span class="trans">å†å²</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">æ€»ç´¢å¼•</span></li>
         </ul>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity·½ */
+/* Unityæ–¹ */
 google_ad_slot = "5047319569";
 google_ad_width = 200;
 google_ad_height = 200;
@@ -48,7 +48,7 @@ google_ad_height = 200;
 <script type="text/javascript"
 src="">
 </script>
-        <div class="subclass"><a href="Quaternion.html">Quaternion</a><span class="transer">·­Òë£ºU_Ó¥ </span>
+        <div class="subclass"><a href="Quaternion.html">Quaternion</a><span class="transer">ç¿»è¯‘ï¼šU_é¹° </span>
                 <ul>
                     <li><a href="Quaternion.AngleAxis.html">AngleAxis</a></li>
                     <li><a href="Quaternion.Angle.html">Angle</a></li>
@@ -80,7 +80,7 @@ src="">
     </div>
     <div class="rightmain"><!--right start--><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -89,154 +89,154 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="">
 </script>
-<h1>Quaternion ËÄÔªÊı</h1>
+<h1>Quaternion å››å…ƒæ•°</h1>
 <p class="h1inherit">Struct</p>
 <p> Quaternions are used to represent rotations.</p>
-<p>ËÄÔªÊıÓÃÓÚ±íÊ¾Ğı×ª¡£</p>
+<p>å››å…ƒæ•°ç”¨äºè¡¨ç¤ºæ—‹è½¬ã€‚</p>
 <p> They are compact, don't suffer from gimbal lock and can easily be interpolated.  Unity internally uses Quaternions to represent all rotations. </p>
-<p>ËüÃÇÊÇ½ô´ÕµÄ£¬²»»á³öÏÖÍòÏò½ÚËø²¢ÇÒÄÜ¹»ºÜÈİÒ×±»²åÖµ¡£UnityÄÚÊ¹ÓÃQuaternion±íÊ¾ËùÓĞĞı×ª¡£</p>
+<p>å®ƒä»¬æ˜¯ç´§å‡‘çš„ï¼Œä¸ä¼šå‡ºç°ä¸‡å‘èŠ‚é”å¹¶ä¸”èƒ½å¤Ÿå¾ˆå®¹æ˜“è¢«æ’å€¼ã€‚Unityå†…ä½¿ç”¨Quaternionè¡¨ç¤ºæ‰€æœ‰æ—‹è½¬ã€‚</p>
 <p> However, they are based on complex numbers and are not easy to understand intuitively.  Thus you almost never access or modify individual Quaternion components (x,y,z,w);  most often you would just take existing rotations (e.g. from the <a href="../Transform/Transform.html">Transform</a>) and use them  to construct new rotations (e.g. to smoothly interpolate between two rotations).  The Quaternion functions that you use 99% of the time (The other functions are only for exoctic uses) <a href="Quaternion.LookRotation.html">Quaternion.LookRotation</a>, <a href="Quaternion.Angle.html">Quaternion.Angle</a>, <a href="Quaternion.Euler.html">Quaternion.Euler</a>, <a href="Quaternion.Slerp.html">Quaternion.Slerp</a>, <a href="Quaternion.FromToRotation.html">Quaternion.FromToRotation</a>, <a href="Quaternion.identity.html">Quaternion.identity</a></p>
-<p>È»¶ø£¬ËüÃÇ»ùÓÚ¸´ÊıµÄ²¢²»ÈİÒ×±»Ö±¹ÛµØÀí½â£¬Òò´ËÄãÃ»ÓĞ±ØÒª·ÃÎÊ»òĞŞ¸Äµ¥¸öQuaternion×é¼ş(x,y,z,w)£»Í¨³£ÄãÖ»Ğè°ÑÏÖÓĞµÄĞı×ª£¨ÀıÈç£¬À´×ÔTransform£©²¢Ê¹ÓÃËüÃÇÀ´¹¹ÔìĞÂµÄĞı×ª£¨ÀıÈç£¬ÔÚÁ½¸öĞı×ª¼äÆ½»¬µØ²åÖµ£©¡£ËÄÔªÊıº¯ÊıÄã99%µÄÊ±¼äÄã»áÊ¹ÓÃËü£¨ÆäËûº¯Êı½ö¶îÍâÊ¹ÓÃ£©<a href="Quaternion.LookRotation.html">Quaternion.LookRotation</a>, <a href="Quaternion.Angle.html">Quaternion.Angle</a>, <a href="Quaternion.Euler.html">Quaternion.Euler</a>, <a href="Quaternion.Slerp.html">Quaternion.Slerp</a>, <a href="Quaternion.FromToRotation.html">Quaternion.FromToRotation</a>, <a href="Quaternion.identity.html">Quaternion.identity</a>¡£</p>
+<p>ç„¶è€Œï¼Œå®ƒä»¬åŸºäºå¤æ•°çš„å¹¶ä¸å®¹æ˜“è¢«ç›´è§‚åœ°ç†è§£ï¼Œå› æ­¤ä½ æ²¡æœ‰å¿…è¦è®¿é—®æˆ–ä¿®æ”¹å•ä¸ªQuaternionç»„ä»¶(x,y,z,w)ï¼›é€šå¸¸ä½ åªéœ€æŠŠç°æœ‰çš„æ—‹è½¬ï¼ˆä¾‹å¦‚ï¼Œæ¥è‡ªTransformï¼‰å¹¶ä½¿ç”¨å®ƒä»¬æ¥æ„é€ æ–°çš„æ—‹è½¬ï¼ˆä¾‹å¦‚ï¼Œåœ¨ä¸¤ä¸ªæ—‹è½¬é—´å¹³æ»‘åœ°æ’å€¼ï¼‰ã€‚å››å…ƒæ•°å‡½æ•°ä½ 99%çš„æ—¶é—´ä½ ä¼šä½¿ç”¨å®ƒï¼ˆå…¶ä»–å‡½æ•°ä»…é¢å¤–ä½¿ç”¨ï¼‰<a href="Quaternion.LookRotation.html">Quaternion.LookRotation</a>, <a href="Quaternion.Angle.html">Quaternion.Angle</a>, <a href="Quaternion.Euler.html">Quaternion.Euler</a>, <a href="Quaternion.Slerp.html">Quaternion.Slerp</a>, <a href="Quaternion.FromToRotation.html">Quaternion.FromToRotation</a>, <a href="Quaternion.identity.html">Quaternion.identity</a>ã€‚</p>
 <p> You can use <a href="Quaternion.operator_multiply.html">Quaternion.operator *</a> to rotate one rotation by another, or to rotate a vector by a rotation.</p>
-<p>Äã¿ÉÒÔÊ¹ÓÃ<a href="Quaternion.operator_multiply.html">Quaternion.operator *</a>ÓÉÁíÒ»¸öËÄÔªÊıÀ´Ğı×ªÒ»¸öĞı×ª½Ç¶È£¬»òÓÉÒ»¸öĞı×ª½Ç¶ÈÀ´Ğı×ªÒ»¸öÏòÁ¿¡£</p>
-<h3>Variables<span class="trans">±äÁ¿</span></h3>
+<p>ä½ å¯ä»¥ä½¿ç”¨<a href="Quaternion.operator_multiply.html">Quaternion.operator *</a>ç”±å¦ä¸€ä¸ªå››å…ƒæ•°æ¥æ—‹è½¬ä¸€ä¸ªæ—‹è½¬è§’åº¦ï¼Œæˆ–ç”±ä¸€ä¸ªæ—‹è½¬è§’åº¦æ¥æ—‹è½¬ä¸€ä¸ªå‘é‡ã€‚</p>
+<h3>Variables<span class="trans">å˜é‡</span></h3>
 <ul class="tableli">
     <li><div class="lititle"><a href="Quaternion.x.html">x</a></div>
     	<div class="licontent">X component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
-   	    ËÄÔªÊıµÄX×é¼ş¡£²»ÒªÖ±½ÓĞŞ¸ÄÕâ¸ö£¬³ı·ÇÄãºÜÁË½âËÄÔªÊı¡£ </div>
+   	    å››å…ƒæ•°çš„Xç»„ä»¶ã€‚ä¸è¦ç›´æ¥ä¿®æ”¹è¿™ä¸ªï¼Œé™¤éä½ å¾ˆäº†è§£å››å…ƒæ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="Quaternion.y.html">y</a></div>
     	<div class="licontent">Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
-   	    ËÄÔªÊıµÄY×é¼ş¡£²»ÒªÖ±½ÓĞŞ¸ÄÕâ¸ö£¬³ı·ÇÄãºÜÁË½âËÄÔªÊı¡£ </div>
+   	    å››å…ƒæ•°çš„Yç»„ä»¶ã€‚ä¸è¦ç›´æ¥ä¿®æ”¹è¿™ä¸ªï¼Œé™¤éä½ å¾ˆäº†è§£å››å…ƒæ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="Quaternion.z.html">z</a></div>
     	<div class="licontent">Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
-   	    ËÄÔªÊıµÄZ×é¼ş¡£²»ÒªÖ±½ÓĞŞ¸ÄÕâ¸ö£¬³ı·ÇÄãºÜÁË½âËÄÔªÊı¡£ </div>
+   	    å››å…ƒæ•°çš„Zç»„ä»¶ã€‚ä¸è¦ç›´æ¥ä¿®æ”¹è¿™ä¸ªï¼Œé™¤éä½ å¾ˆäº†è§£å››å…ƒæ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="Quaternion.w.html">w</a></div>
     	<div class="licontent">W component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
-   	    ËÄÔªÊıµÄW×é¼ş¡£²»ÒªÖ±½ÓĞŞ¸ÄÕâ¸ö£¬³ı·ÇÄãºÜÁË½âËÄÔªÊı¡£ </div>
+   	    å››å…ƒæ•°çš„Wç»„ä»¶ã€‚ä¸è¦ç›´æ¥ä¿®æ”¹è¿™ä¸ªï¼Œé™¤éä½ å¾ˆäº†è§£å››å…ƒæ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="Quaternion.Index_operator.html">this [int index]</a></div>
     	<div class="licontent">Access the x, y, z, w components using [0], [1], [2], [3] respectively.<br />
-   	    ·Ö±ğÊ¹ÓÃ [0]¡¢[1]¡¢ [2]¡¢ [3]£¬·ÃÎÊx¡¢y¡¢z¡¢w×é¼ş¡£ </div>
+   	    åˆ†åˆ«ä½¿ç”¨ [0]ã€[1]ã€ [2]ã€ [3]ï¼Œè®¿é—®xã€yã€zã€wç»„ä»¶ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.eulerAngles.html">eulerAngles</a></div>
     	<div class="licontent">Returns the euler angle representation of the rotation.<br />
-   	    ·µ»Ø±íÊ¾Ğı×ªµÄÅ·À­½Ç¶È¡£ </div>
+   	    è¿”å›è¡¨ç¤ºæ—‹è½¬çš„æ¬§æ‹‰è§’åº¦ã€‚ </div>
     </li>
 </ul>
-<h3>Constructors<span class="trans">¹¹ÔìÆ÷</span></h3>
+<h3>Constructors<span class="trans">æ„é€ å™¨</span></h3>
 <ul class="tableli">
     <li>
       <div class="lititle"><a href="Quaternion.Quaternion.html">Quaternion</a></div>
     	<div class="licontent">Constructs new Quaternion with given x,y,z,w components.<br />
-   	    ÓÃ¸ø¶¨µÄx¡¢y¡¢z¡¢w×é¼ş£¬¹¹ÔìĞÂµÄËÄÔªÊı¡£ </div>
+   	    ç”¨ç»™å®šçš„xã€yã€zã€wç»„ä»¶ï¼Œæ„é€ æ–°çš„å››å…ƒæ•°ã€‚ </div>
     </li>
 </ul>
-<h3>Functions<span class="trans">º¯Êı</span></h3>
+<h3>Functions<span class="trans">å‡½æ•°</span></h3>
 <ul class="tableli">
     <li>
       <div class="lititle"><a href="Quaternion.ToAngleAxis.html">ToAngleAxis</a></div>
     	<div class="licontent">Converts a rotation to angle-axis representation.<br />
-   	    ×ª»»Ò»¸öĞı×ªÓÃ¡°½Ç-Öá¡±±íÊ¾¡£ </div>
+   	    è½¬æ¢ä¸€ä¸ªæ—‹è½¬ç”¨â€œè§’-è½´â€è¡¨ç¤ºã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.SetFromToRotation.html">SetFromToRotation</a></div>
     	<div class="licontent">Creates a rotation which rotates from fromDirection to toDirection.<br />
-   	    ´´½¨Ò»¸ö´ÓfromDirectionµ½toDirectionµÄĞı×ª¡£ </div>
+   	    åˆ›å»ºä¸€ä¸ªä»fromDirectionåˆ°toDirectionçš„æ—‹è½¬ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.SetLookRotation.html">SetLookRotation</a></div>
     	<div class="licontent">Creates a rotation that looks along forward with the the head upwards along upwards<br />
-   	    ´´½¨Ò»¸öĞı×ª£¬ÑØ×Åforward£¨zÖá£©²¢ÇÒÍ·²¿ÑØ×Åup£¨yÖá£©µÄÔ¼Êø×¢ÊÓ¡£ </div>
+   	    åˆ›å»ºä¸€ä¸ªæ—‹è½¬ï¼Œæ²¿ç€forwardï¼ˆzè½´ï¼‰å¹¶ä¸”å¤´éƒ¨æ²¿ç€upï¼ˆyè½´ï¼‰çš„çº¦æŸæ³¨è§†ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.ToString.html">ToString</a></div>
     	<div class="licontent">Returns a nicely formatted string of the Quaternion<br />
-   	    ·µ»ØÒ»¸ö¸ñÊ½»¯ºÃµÄËÄÔªÊı×Ö·û´®¡£ </div>
+   	    è¿”å›ä¸€ä¸ªæ ¼å¼åŒ–å¥½çš„å››å…ƒæ•°å­—ç¬¦ä¸²ã€‚ </div>
     </li>
 </ul>
-<h3>Class Variables<span class="trans">Àà±äÁ¿</span></h3>
+<h3>Class Variables<span class="trans">ç±»å˜é‡</span></h3>
 <ul class="tableli">
     <li>
       <div class="lititle"><a href="Quaternion.identity.html">identity</a></div>
     	<div class="licontent">The identity rotation (Read Only). This quaternion corresponds to "no rotation": the object<br />
-   	    ·µ»ØºãµÈÊ½Ğı×ª£¨Ö»¶Á£©¡£Õâ¸öËÄÔªÊı¶ÔÓÚ¡°ÎŞĞı×ª¡±£ºÕâ¸öÎïÌåÍêÈ«¶ÔÆëÓÚÊÀ½ç»ò¸¸Öá¡£ </div>
+   	    è¿”å›æ’ç­‰å¼æ—‹è½¬ï¼ˆåªè¯»ï¼‰ã€‚è¿™ä¸ªå››å…ƒæ•°å¯¹äºâ€œæ— æ—‹è½¬â€ï¼šè¿™ä¸ªç‰©ä½“å®Œå…¨å¯¹é½äºä¸–ç•Œæˆ–çˆ¶è½´ã€‚ </div>
     </li>
 </ul>
-<h3>Class Functions<span class="trans">Ààº¯Êı</span></h3>
+<h3>Class Functions<span class="trans">ç±»å‡½æ•°</span></h3>
 <ul class="tableli">
     <li>
       <div class="lititle"><a href="Quaternion.operator_multiply.html">operator *</a></div>
     	<div class="licontent">Combines rotations lhs and rhs.<br />
-   	    ×éºÏĞı×ªlhsºÍrhs¡£ </div>
+   	    ç»„åˆæ—‹è½¬lhså’Œrhsã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.operator_eq.html">operator ==</a></div>
     	<div class="licontent">Are two quaternions equal to each other?<br />
-   	    Á½¸öËÄÔªÊıÏàµÈ£¿ </div>
+   	    ä¸¤ä¸ªå››å…ƒæ•°ç›¸ç­‰ï¼Ÿ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.operator_ne.html">operator !=</a></div>
     	<div class="licontent">Are two quaternions different from each other?<br />
-   	    Á½¸öËÄÔªÊıÊÇ²»ÏàµÈµÄ£¿ </div>
+   	    ä¸¤ä¸ªå››å…ƒæ•°æ˜¯ä¸ç›¸ç­‰çš„ï¼Ÿ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.Dot.html">Dot</a></div>
     	<div class="licontent">The dot product between two rotations.<br />
-   	    Á½¸öĞı×ªÖ®¼äµÄµã³Ë¡£ </div>
+   	    ä¸¤ä¸ªæ—‹è½¬ä¹‹é—´çš„ç‚¹ä¹˜ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.AngleAxis.html">AngleAxis</a></div>
     	<div class="licontent">Creates a rotation which rotates angle degrees around axis.<br />
-   	    ÈÆaxisÖáĞı×ªangle£¬´´½¨Ò»¸öĞı×ª¡£ </div>
+   	    ç»•axisè½´æ—‹è½¬angleï¼Œåˆ›å»ºä¸€ä¸ªæ—‹è½¬ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.FromToRotation.html">FromToRotation</a></div>
     	<div class="licontent">Creates a rotation which rotates from fromDirection to toDirection.<br />
-   	    ´ÓfromDirectionµ½toDirection´´½¨Ò»¸öĞı×ª¡£ </div>
+   	    ä»fromDirectionåˆ°toDirectionåˆ›å»ºä¸€ä¸ªæ—‹è½¬ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.LookRotation.html">LookRotation</a></div>
     	<div class="licontent">Creates a rotation that looks along forward with the the head upwards along upwards<br />
-   	    ´´½¨Ò»¸öĞı×ª£¬ÑØ×Åforward£¨zÖá£©²¢ÇÒÍ·²¿ÑØ×Åupwards£¨yÖá£©µÄÔ¼Êø×¢ÊÓ¡£ </div>
+   	    åˆ›å»ºä¸€ä¸ªæ—‹è½¬ï¼Œæ²¿ç€forwardï¼ˆzè½´ï¼‰å¹¶ä¸”å¤´éƒ¨æ²¿ç€upwardsï¼ˆyè½´ï¼‰çš„çº¦æŸæ³¨è§†ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.Slerp.html">Slerp</a></div>
     	<div class="licontent">Spherically interpolates from towards to by t.<br />
-   	    ÇòĞÎ²åÖµ£¬Í¨¹ıtÖµfromÏòtoÖ®¼ä²åÖµ¡£ </div>
+   	    çƒå½¢æ’å€¼ï¼Œé€šè¿‡tå€¼fromå‘toä¹‹é—´æ’å€¼ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.Lerp.html">Lerp</a></div>
     	<div class="licontent">Interpolates from towards to by t and normalizes the result afterwards.<br />
-   	    Í¨¹ıtÖµfromÏòtoÖ®¼ä²åÖµ£¬²¢ÇÒ¹æ·¶»¯½á¹û¡£ </div>
+   	    é€šè¿‡tå€¼fromå‘toä¹‹é—´æ’å€¼ï¼Œå¹¶ä¸”è§„èŒƒåŒ–ç»“æœã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.RotateTowards.html">RotateTowards</a></div>
     	<div class="licontent">Rotates a rotation from towards to.<br />
-   	    Ğı×ªÒ»¸ö½Ç¶È´ÓfromÏòto¡£ </div>
+   	    æ—‹è½¬ä¸€ä¸ªè§’åº¦ä»fromå‘toã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.Inverse.html">Inverse</a></div>
     	<div class="licontent">Returns the Inverse of rotation.<br />
-   	    ·µ»Ø·´ÏòµÄĞı×ª¡£ </div>
+   	    è¿”å›åå‘çš„æ—‹è½¬ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.Angle.html">Angle</a></div>
     	<div class="licontent">Returns the angle in degrees between two rotations a and b.<br />
-   	    ·µ»ØaºÍbÁ½ÕßÖ®¼äµÄ½Ç¶È¡£ </div>
+   	    è¿”å›aå’Œbä¸¤è€…ä¹‹é—´çš„è§’åº¦ã€‚ </div>
     </li>
     <li>
       <div class="lititle"><a href="Quaternion.Euler.html">Euler</a></div>
     	<div class="licontent">Returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis (in that order).<br />
-   	    ·µ»ØÒ»¸öĞı×ª½Ç¶È£¬ÈÆzÖáĞı×ªz¶È£¬ÈÆxÖáĞı×ªx¶È£¬ÈÆyÖáĞı×ªy¶È£¨ÏñÕâÑùµÄË³Ğò£©¡£ </div>
+   	    è¿”å›ä¸€ä¸ªæ—‹è½¬è§’åº¦ï¼Œç»•zè½´æ—‹è½¬zåº¦ï¼Œç»•xè½´æ—‹è½¬xåº¦ï¼Œç»•yè½´æ—‹è½¬yåº¦ï¼ˆåƒè¿™æ ·çš„é¡ºåºï¼‰ã€‚ </div>
     </li>
 </ul>
-<div class="date"><span>×îºóĞŞ¸Ä£º<!-- #BeginDate format:wfcCh2m -->2011Äê1ÔÂ16ÈÕ Sunday  18:10<!-- #EndDate --></span></div><script type="text/javascript"><!--
+<div class="date"><span>æœ€åä¿®æ”¹ï¼š<!-- #BeginDate format:wfcCh2m -->2011å¹´1æœˆ16æ—¥ Sunday  18:10<!-- #EndDate --></span></div><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -249,8 +249,8 @@ src="">
     <div class="clear"></div>
 </div>
 
-<div style="padding: 30px; text-align: center; clear:both"><p>±¾½Å±¾²Î¿¼»ùÓÚUnity 3.30f4</p>Ó¢ÎÄ²¿·Ö°æÈ¨Êô&copy;<a href="http://unity3d.com/">Unity</a>¹«Ë¾ËùÓĞ£¬ÖĞÎÄ²¿·Ö&copy;
-<a href="http://3d.ceeger.com/">UnityÊ¥µä</a> °æÈ¨ËùÓĞ£¬Î´¾­Ğí¿É£¬ÑÏ½û×ªÔØ ¡£</div>
+<div style="padding: 30px; text-align: center; clear:both"><p>æœ¬è„šæœ¬å‚è€ƒåŸºäºUnity 3.30f4</p>è‹±æ–‡éƒ¨åˆ†ç‰ˆæƒå±&copy;<a href="http://unity3d.com/">Unity</a>å…¬å¸æ‰€æœ‰ï¼Œä¸­æ–‡éƒ¨åˆ†&copy;
+<a href="http://3d.ceeger.com/">Unityåœ£å…¸</a> ç‰ˆæƒæ‰€æœ‰ï¼Œæœªç»è®¸å¯ï¼Œä¸¥ç¦è½¬è½½ ã€‚</div>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));

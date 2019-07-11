@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; " />
-<title>Texture2D.Compress Ñ¹Ëõ</title>
-<meta name="Keywords" content="unity,Texture2D,¶şÎ¬ÎÆÀí,Compress,Ñ¹Ëõ" />
-<meta name="Description" content="Ñ¹ËõÎÆÀí³ÉÎªDXT¸ñÊ½" />
+<title>Texture2D.Compress å‹ç¼©</title>
+<meta name="Keywords" content="unity,Texture2D,äºŒç»´çº¹ç†,Compress,å‹ç¼©" />
+<meta name="Description" content="å‹ç¼©çº¹ç†æˆä¸ºDXTæ ¼å¼" />
 <link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
 <script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
@@ -18,29 +18,29 @@ $(function() {
 
 <body>
 <div class="head">
-<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="UnityÊ¥µä" width="350" height="80"  title="UnityÊ¥µä"/></a></div>
-<div class="menu"><a href="/">Ê×Ò³</a><a href="/Script">Unity½Å±¾</a></div>
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unityåœ£å…¸" width="350" height="80"  title="Unityåœ£å…¸"/></a></div>
+<div class="menu"><a href="/">é¦–é¡µ</a><a href="/Script">Unityè„šæœ¬</a></div>
 </div>
 
 <div class="mainbody">
     <div class="leftmain">
     	        <ul class="scriptmenu">
-          <li><a href="../index.html">Overview</a> <span class="trans">¸ÅÊö</span></li>
-            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">ÊµÊ±ÔËĞĞÀà</span></li>
+          <li><a href="../index.html">Overview</a> <span class="trans">æ¦‚è¿°</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">å®æ—¶è¿è¡Œç±»</span></li>
             <ul>
-                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">ÊôĞÔ</span></li>
-                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">å±æ€§</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">±à¼­Æ÷Àà</span></li>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">ç¼–è¾‘å™¨ç±»</span></li>
             <ul>
-                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li>History <span class="trans">ÀúÊ·</span></li>
-            <li><a href="../index.Classes.html">Index</a> <span class="trans">×ÜË÷Òı</span></li>
+            <li>History <span class="trans">å†å²</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">æ€»ç´¢å¼•</span></li>
         </ul>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity·½ */
+/* Unityæ–¹ */
 google_ad_slot = "5047319569";
 google_ad_width = 200;
 google_ad_height = 200;
@@ -49,7 +49,7 @@ google_ad_height = 200;
 <script type="text/javascript"
 src="">
 </script>
-        <div class="subclass"><a href="Texture2D.html">Texture2D</a><span class="transer"> ·­Òë£ºtitan-Ö¾¹ã</span>
+        <div class="subclass"><a href="Texture2D.html">Texture2D</a><span class="transer"> ç¿»è¯‘ï¼štitan-å¿—å¹¿</span>
                 <ul>
                     <li><a href="Texture2D.Apply.html">Apply</a></li>
                     <li><a href="Texture2D.Compress.html">Compress</a></li>
@@ -71,7 +71,7 @@ src="">
     </div>
     <div class="rightmain"><!--right start--><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -80,26 +80,26 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="">
 </script>
-<h1><a href="Texture2D.html">Texture2D</a>.Compress Ñ¹Ëõ</h1>
+<h1><a href="Texture2D.html">Texture2D</a>.Compress å‹ç¼©</h1>
 <p class="h1inherit"></p>
 <p>function <em>Compress</em> (<em>highQuality</em> : bool) : void </p>
-<p><em>Description</em><span class="trans">ÃèÊö</span></p>
+<p><em>Description</em><span class="trans">æè¿°</span></p>
 <p>Compress texture into DXT format.</p>
-<p>Ñ¹ËõÎÆÀí³ÉÎªDXT¸ñÊ½</p>
+<p>å‹ç¼©çº¹ç†æˆä¸ºDXTæ ¼å¼</p>
 <p>Use this to compress textures generated at   runtime. Compressed textures use less graphics memory and are faster to   render.</p>
-<p>Ê¹ÓÃËüÑ¹ËõÊµÊ±²úÉúµÄÎÆÀí£¬Ñ¹Ëõ¹ıµÄÎÆÀíÊ¹ÓÃ¸üÉÙµÄÏÔ´æ²¢¿ÉÒÔ¸ü¿ìµÄ±»äÖÈ¾</p>
+<p>ä½¿ç”¨å®ƒå‹ç¼©å®æ—¶äº§ç”Ÿçš„çº¹ç†ï¼Œå‹ç¼©è¿‡çš„çº¹ç†ä½¿ç”¨æ›´å°‘çš„æ˜¾å­˜å¹¶å¯ä»¥æ›´å¿«çš„è¢«æ¸²æŸ“</p>
 <p>After compression, texture will be in <a href="../TextureFormat/TextureFormat.DXT1.html">DXT1 </a>format if the   original texture had no alpha channel, and in <a href="../TextureFormat/TextureFormat.DXT1.html">DXT5 </a>format if it had   alpha channel.</p>
-<p>Ñ¹Ëõºó£¬Èç¹ûÕâ¸öÎÆÀíÃ»ÓĞalphaÍ¨µÀÄÇÃ´¾Í»áÊÇDXT1¸ñÊ½£¬Èç¹ûÓĞalphaÍ¨µÀÔò»áÊÇDXT5¸ñÊ½</p>
+<p>å‹ç¼©åï¼Œå¦‚æœè¿™ä¸ªçº¹ç†æ²¡æœ‰alphaé€šé“é‚£ä¹ˆå°±ä¼šæ˜¯DXT1æ ¼å¼ï¼Œå¦‚æœæœ‰alphaé€šé“åˆ™ä¼šæ˜¯DXT5æ ¼å¼</p>
 <p>Passing true for highQuality   parameter will dither the source texture during   compression, which helps to reduce compression artifacts but is slightly   slower.</p>
-<p>´«µİ true µ½ highQuality   Ôò»áÔÚÑ¹Ëõ¹ı³ÌÖĞ¶¶¶¯Ô´ÎÆÀí£¬ÕâÑù»áÌá¸ßÑ¹ËõÖÊÁ¿µ«ÊÇÒ²»áÈÃÑ¹ËõËÙ¶È±äÂı</p>
+<p>ä¼ é€’ true åˆ° highQuality   åˆ™ä¼šåœ¨å‹ç¼©è¿‡ç¨‹ä¸­æŠ–åŠ¨æºçº¹ç†ï¼Œè¿™æ ·ä¼šæé«˜å‹ç¼©è´¨é‡ä½†æ˜¯ä¹Ÿä¼šè®©å‹ç¼©é€Ÿåº¦å˜æ…¢</p>
 <p>If the graphics card does not support compression   or the texture is already in compressed format, then Compress will do   nothing.</p>
-<p>Èç¹ûÏÔ¿¨²»Ö§³ÖÑ¹Ëõ»òÕßÎÆÀíÒÑ¾­ÊÇÑ¹Ëõ¸ñÊ½ÁË£¬ÄÇÃ´Õâ¸öCompress½«²»»á×öÈÎºÎÊÂ</p>
+<p>å¦‚æœæ˜¾å¡ä¸æ”¯æŒå‹ç¼©æˆ–è€…çº¹ç†å·²ç»æ˜¯å‹ç¼©æ ¼å¼äº†ï¼Œé‚£ä¹ˆè¿™ä¸ªCompresså°†ä¸ä¼šåšä»»ä½•äº‹</p>
 <p>In the Editor scripts, you probably want to   use <a href="../EditorUtility/EditorUtility.CompressTexture.html">EditorUtility.CompressTexture </a>, which will compress using slower, but   higher quality DXT compression.</p>
-<p>ÔÚ±à¼­Æ÷ÖĞµÄ½Å±¾ÖĞÄú¿ÉÄÜÒªÊ¹ÓÃEditorUtility.CompressTexture£¬Ñ¹ËõµÄ½ÏÂı£¬µ«È´ÊÇ¸ü¸ßÖÊÁ¿µÄDXTÑ¹Ëõ¡£</p>
-<p>²Î¼û: <a href="Texture2D.SetPixels.html">SetPixels </a>º¯Êı, <a href="../EditorUtility/EditorUtility.CompressTexture.html">EditorUtility.CompressTexture </a></p>
-<div class="date"><span>×îºóĞŞ¸Ä£º<!-- #BeginDate format:wfcCh2m -->2010Äê12ÔÂ18ÈÕ Saturday  0:57<!-- #EndDate --></span></div><script type="text/javascript"><!--
+<p>åœ¨ç¼–è¾‘å™¨ä¸­çš„è„šæœ¬ä¸­æ‚¨å¯èƒ½è¦ä½¿ç”¨EditorUtility.CompressTextureï¼Œå‹ç¼©çš„è¾ƒæ…¢ï¼Œä½†å´æ˜¯æ›´é«˜è´¨é‡çš„DXTå‹ç¼©ã€‚</p>
+<p>å‚è§: <a href="Texture2D.SetPixels.html">SetPixels </a>å‡½æ•°, <a href="../EditorUtility/EditorUtility.CompressTexture.html">EditorUtility.CompressTexture </a></p>
+<div class="date"><span>æœ€åä¿®æ”¹ï¼š<!-- #BeginDate format:wfcCh2m -->2010å¹´12æœˆ18æ—¥ Saturday  0:57<!-- #EndDate --></span></div><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -112,8 +112,8 @@ src="">
     <div class="clear"></div>
 </div>
 
-<div style="padding: 30px; text-align: center; clear:both"><p>±¾½Å±¾²Î¿¼»ùÓÚUnity 3.30f4</p>Ó¢ÎÄ²¿·Ö°æÈ¨Êô&copy;<a href="http://unity3d.com/">Unity</a>¹«Ë¾ËùÓĞ£¬ÖĞÎÄ²¿·Ö&copy;
-<a href="http://3d.ceeger.com/">UnityÊ¥µä</a> °æÈ¨ËùÓĞ£¬Î´¾­Ğí¿É£¬ÑÏ½û×ªÔØ ¡£</div>
+<div style="padding: 30px; text-align: center; clear:both"><p>æœ¬è„šæœ¬å‚è€ƒåŸºäºUnity 3.30f4</p>è‹±æ–‡éƒ¨åˆ†ç‰ˆæƒå±&copy;<a href="http://unity3d.com/">Unity</a>å…¬å¸æ‰€æœ‰ï¼Œä¸­æ–‡éƒ¨åˆ†&copy;
+<a href="http://3d.ceeger.com/">Unityåœ£å…¸</a> ç‰ˆæƒæ‰€æœ‰ï¼Œæœªç»è®¸å¯ï¼Œä¸¥ç¦è½¬è½½ ã€‚</div>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));

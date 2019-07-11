@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; " />
-<title>GeometryUtility.TestPlanesAABB ²âÊÔÆ½Ãæ</title>
-<meta name="Keywords" content="unity,TestPlanesAABB,²âÊÔÆ½Ãæ" />
-<meta name="Description" content="¼ÆËãÊÓ¾°Æ½Ãæ¡£" />
+<title>GeometryUtility.TestPlanesAABB æµ‹è¯•å¹³é¢</title>
+<meta name="Keywords" content="unity,TestPlanesAABB,æµ‹è¯•å¹³é¢" />
+<meta name="Description" content="è®¡ç®—è§†æ™¯å¹³é¢ã€‚" />
 <link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
 <script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
@@ -18,29 +18,29 @@ $(function() {
 
 <body>
 <div class="head">
-<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="UnityÊ¥µä" width="350" height="80"  title="UnityÊ¥µä"/></a></div>
-<div class="menu"><a href="/">Ê×Ò³</a><a href="/Script">Unity½Å±¾</a></div>
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unityåœ£å…¸" width="350" height="80"  title="Unityåœ£å…¸"/></a></div>
+<div class="menu"><a href="/">é¦–é¡µ</a><a href="/Script">Unityè„šæœ¬</a></div>
 </div>
 
 <div class="mainbody">
     <div class="leftmain">
     	        <ul class="scriptmenu">
-          <li><a href="../index.html">Overview</a> <span class="trans">¸ÅÊö</span></li>
-            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">ÊµÊ±ÔËĞĞÀà</span></li>
+          <li><a href="../index.html">Overview</a> <span class="trans">æ¦‚è¿°</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">å®æ—¶è¿è¡Œç±»</span></li>
             <ul>
-                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">ÊôĞÔ</span></li>
-                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">å±æ€§</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">±à¼­Æ÷Àà</span></li>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">ç¼–è¾‘å™¨ç±»</span></li>
             <ul>
-                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li>History <span class="trans">ÀúÊ·</span></li>
-            <li><a href="../index.Classes.html">Index</a> <span class="trans">×ÜË÷Òı</span></li>
+            <li>History <span class="trans">å†å²</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">æ€»ç´¢å¼•</span></li>
         </ul>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity·½ */
+/* Unityæ–¹ */
 google_ad_slot = "5047319569";
 google_ad_width = 200;
 google_ad_height = 200;
@@ -49,7 +49,7 @@ google_ad_height = 200;
 <script type="text/javascript"
 src="">
 </script>
-        <div class="subclass"><a href="GeometryUtility.html">GeometryUtility</a><span class="transer">·­Òë£ºU_Ó¥ </span>
+        <div class="subclass"><a href="GeometryUtility.html">GeometryUtility</a><span class="transer">ç¿»è¯‘ï¼šU_é¹° </span>
                 <ul>
                     <li><a href="GeometryUtility.CalculateFrustumPlanes.html">CalculateFrustumPlanes</a></li>
                     <li><a href="GeometryUtility.TestPlanesAABB.html">TestPlanesAABB</a></li>
@@ -58,7 +58,7 @@ src="">
     </div>
     <div class="rightmain"><!--right start--><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -67,17 +67,17 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="">
 </script>
-<h1><a href="GeometryUtility.html">GeometryUtility</a>.TestPlanesAABB ²âÊÔÆ½Ãæ</h1>
+<h1><a href="GeometryUtility.html">GeometryUtility</a>.TestPlanesAABB æµ‹è¯•å¹³é¢</h1>
 <p class="h1inherit"></p>
 <p>static function <em>TestPlanesAABB</em> (<em>planes</em> : <a href="../Plane/Plane.html">Plane</a>[], <em>bounds</em> : <a href="../Bounds/Bounds.html">Bounds</a>) : bool </p>
-<p><em>Description</em><span class="trans">ÃèÊö</span></p>
+<p><em>Description</em><span class="trans">æè¿°</span></p>
 <p> Returns true if bounds are inside the plane array.</p>
-<p>Èç¹û°üÎ§ºĞÔÚÆ½ÃæÊı×éÄÚ²¿·µ»Øtrue¡£</p>
+<p>å¦‚æœåŒ…å›´ç›’åœ¨å¹³é¢æ•°ç»„å†…éƒ¨è¿”å›trueã€‚</p>
 <p> Will return true if the bounding box is inside the planes or intersects any of the planes. </p>
-<p>Èç¹û°üÎ§ºĞÔÚÆ½ÃæÊı×éÄÚ²¿»òºÍÈÎÒâÆ½ÃæÏà½»£¬·µ»Øtrue¡£</p>
+<p>å¦‚æœåŒ…å›´ç›’åœ¨å¹³é¢æ•°ç»„å†…éƒ¨æˆ–å’Œä»»æ„å¹³é¢ç›¸äº¤ï¼Œè¿”å›trueã€‚</p>
 <p> The TestPlanesAABB function uses the Plane array to test whether a bounding box is in the frustum or not.   You can use this function with CalculateFrustrumPlanes to test whether a camera's view contains an object   regardless of whether it is rendered or not. </p>
-<p>TestPlanesAABBº¯ÊıÊ¹ÓÃPlaneÊı×éÀ´²âÊÔ°üÎ§ºĞÊÇ·ñÔÚÊÓ¾°Ìå¡£Äã¿ÉÒÔÊ¹ÓÃÕâ¸öº¯ÊıÓÃCalculateFrustrumPlanesÈ¥²âÊÔÏà»úÊÓÍ¼ÊÇ·ñ°üº¬Ò»¸öÎïÌå£¬ÎŞÂÛËüÊÇ·ñ±»äÖÈ¾¡£</p>
-<p> ²Î¿¼£º<a href="GeometryUtility.CalculateFrustumPlanes.html">GeometryUtility.CalculateFrustumPlanes</a>. </p>
+<p>TestPlanesAABBå‡½æ•°ä½¿ç”¨Planeæ•°ç»„æ¥æµ‹è¯•åŒ…å›´ç›’æ˜¯å¦åœ¨è§†æ™¯ä½“ã€‚ä½ å¯ä»¥ä½¿ç”¨è¿™ä¸ªå‡½æ•°ç”¨CalculateFrustrumPlaneså»æµ‹è¯•ç›¸æœºè§†å›¾æ˜¯å¦åŒ…å«ä¸€ä¸ªç‰©ä½“ï¼Œæ— è®ºå®ƒæ˜¯å¦è¢«æ¸²æŸ“ã€‚</p>
+<p> å‚è€ƒï¼š<a href="GeometryUtility.CalculateFrustumPlanes.html">GeometryUtility.CalculateFrustumPlanes</a>. </p>
 <div class="wrap">
 	<ul class="tabs">
 		<li><a href="#">C#</a></li>
@@ -104,7 +104,7 @@ public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehavio
 }</code></pre></div>
     <div class="panes">
       <pre><code><span class="notes">// Detects manually if anObject is being seen by the main camera
-//ÊÖ¹¤¼ì²â£¬Èç¹ûÒ»¸öÎïÌåÓÉÖ÷ÉãÏñ»ú¿´µ½</span>
+//æ‰‹å·¥æ£€æµ‹ï¼Œå¦‚æœä¸€ä¸ªç‰©ä½“ç”±ä¸»æ‘„åƒæœºçœ‹åˆ°</span>
 var anObject : <a href="../GameObject/GameObject.html">GameObject</a>;
 private var cam : <a href="../Camera/Camera.html">Camera</a>;
 private var planes : <a href="../Plane/Plane.html">Plane</a>[];
@@ -121,9 +121,9 @@ function Update() {
 		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Nothing has been detected&quot;);
 }</code></pre></div>
 </div>
-<div class="date"><span>×îºóĞŞ¸Ä£º<!-- #BeginDate format:wfcCh2m -->2011Äê1ÔÂ5ÈÕ Wednesday  16:45<!-- #EndDate --></span></div><script type="text/javascript"><!--
+<div class="date"><span>æœ€åä¿®æ”¹ï¼š<!-- #BeginDate format:wfcCh2m -->2011å¹´1æœˆ5æ—¥ Wednesday  16:45<!-- #EndDate --></span></div><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -136,8 +136,8 @@ src="">
     <div class="clear"></div>
 </div>
 
-<div style="padding: 30px; text-align: center; clear:both"><p>±¾½Å±¾²Î¿¼»ùÓÚUnity 3.30f4</p>Ó¢ÎÄ²¿·Ö°æÈ¨Êô&copy;<a href="http://unity3d.com/">Unity</a>¹«Ë¾ËùÓĞ£¬ÖĞÎÄ²¿·Ö&copy;
-<a href="http://3d.ceeger.com/">UnityÊ¥µä</a> °æÈ¨ËùÓĞ£¬Î´¾­Ğí¿É£¬ÑÏ½û×ªÔØ ¡£</div>
+<div style="padding: 30px; text-align: center; clear:both"><p>æœ¬è„šæœ¬å‚è€ƒåŸºäºUnity 3.30f4</p>è‹±æ–‡éƒ¨åˆ†ç‰ˆæƒå±&copy;<a href="http://unity3d.com/">Unity</a>å…¬å¸æ‰€æœ‰ï¼Œä¸­æ–‡éƒ¨åˆ†&copy;
+<a href="http://3d.ceeger.com/">Unityåœ£å…¸</a> ç‰ˆæƒæ‰€æœ‰ï¼Œæœªç»è®¸å¯ï¼Œä¸¥ç¦è½¬è½½ ã€‚</div>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));

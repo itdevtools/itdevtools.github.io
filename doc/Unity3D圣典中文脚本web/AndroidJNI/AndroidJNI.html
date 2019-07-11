@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; " />
-<title>AndroidJNI °²×¿JNI</title>
-<meta name="Keywords" content="unity,Android,°²×¿,AndroidJNI,°²×¿JNI" />
-<meta name="Description" content="´ÓMono (CS/JS)£¬Ô­Ê¼JNI½Ó¿Úµ½°²×¿Dalvik (Java)ĞéÄâ»ú¡£" />
+<title>AndroidJNI å®‰å“JNI</title>
+<meta name="Keywords" content="unity,Android,å®‰å“,AndroidJNI,å®‰å“JNI" />
+<meta name="Description" content="ä»Mono (CS/JS)ï¼ŒåŸå§‹JNIæ¥å£åˆ°å®‰å“Dalvik (Java)è™šæ‹Ÿæœºã€‚" />
 <link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
 <script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
@@ -18,29 +18,29 @@ $(function() {
 
 <body>
 <div class="head">
-<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="UnityÊ¥µä" width="350" height="80"  title="UnityÊ¥µä"/></a></div>
-<div class="menu"><a href="/">Ê×Ò³</a><a href="/Script">Unity½Å±¾</a></div>
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unityåœ£å…¸" width="350" height="80"  title="Unityåœ£å…¸"/></a></div>
+<div class="menu"><a href="/">é¦–é¡µ</a><a href="/Script">Unityè„šæœ¬</a></div>
 </div>
 
 <div class="mainbody">
 <div class="leftmain">
     	        <ul class="scriptmenu">
-          <li><a href="../index.html">Overview</a> <span class="trans">¸ÅÊö</span></li>
-            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">ÊµÊ±ÔËĞĞÀà</span></li>
+          <li><a href="../index.html">Overview</a> <span class="trans">æ¦‚è¿°</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">å®æ—¶è¿è¡Œç±»</span></li>
             <ul>
-                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">ÊôĞÔ</span></li>
-                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">å±æ€§</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">±à¼­Æ÷Àà</span></li>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">ç¼–è¾‘å™¨ç±»</span></li>
             <ul>
-                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">Ã¶¾Ù</span></li>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">æšä¸¾</span></li>
             </ul>
-            <li>History <span class="trans">ÀúÊ·</span></li>
-            <li><a href="../index.Classes.html">Index</a> <span class="trans">×ÜË÷Òı</span></li>
+            <li>History <span class="trans">å†å²</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">æ€»ç´¢å¼•</span></li>
         </ul>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unity·½ */
+/* Unityæ–¹ */
 google_ad_slot = "5047319569";
 google_ad_width = 200;
 google_ad_height = 200;
@@ -49,7 +49,7 @@ google_ad_height = 200;
 <script type="text/javascript"
 src="">
 </script>
-        <div class="subclass"><a href="AndroidJNI.html">AndroidJNI</a><span class="transer">·­Òë£ºU_Ó¥ </span>
+        <div class="subclass"><a href="AndroidJNI.html">AndroidJNI</a><span class="transer">ç¿»è¯‘ï¼šU_é¹° </span>
               <ul>
                     <li><a href="AndroidJNI.AllocObject.html">AllocObject</a></li>
                     <li><a href="AndroidJNI.AttachCurrentThread.html">AttachCurrentThread</a></li>
@@ -199,7 +199,7 @@ src="">
     </div>
     <div class="rightmain"><!--right start--><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -208,592 +208,592 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="">
 </script>
-<h1>AndroidJNI °²×¿JNI</h1>
+<h1>AndroidJNI å®‰å“JNI</h1>
 <p class="h1inherit"></p>
 <p> 'Raw' JNI interface to Android Dalvik (Java) VM from Mono (CS/JS)</p>
-<p>´ÓMono (CS/JS)£¬Ô­Ê¼JNI½Ó¿Úµ½°²×¿Dalvik (Java)ĞéÄâ»ú¡£</p>
-<blockquote>JNIÊÇJava Native InterfaceµÄËõĞ´£¬ÖĞÎÄÎªJAVA±¾µØµ÷ÓÃ¡£´ÓJava1.1¿ªÊ¼£¬Java Native Interface(JNI)±ê×¼³ÉÎªjavaÆ½Ì¨µÄÒ»²¿·Ö£¬ËüÔÊĞíJava´úÂëºÍÆäËûÓïÑÔĞ´µÄ´úÂë½øĞĞ½»»¥¡£JNIÒ»¿ªÊ¼ÊÇÎªÁË±¾µØÒÑ±àÒëÓïÑÔ£¬ÓÈÆäÊÇCºÍC++¶øÉè¼ÆµÄ£¬µ«ÊÇËü²¢²»·Á°­ÄãÊ¹ÓÃÆäËûÓïÑÔ£¬Ö»Òªµ÷ÓÃÔ¼¶¨ÊÜÖ§³Ö¾Í¿ÉÒÔÁË¡£
+<p>ä»Mono (CS/JS)ï¼ŒåŸå§‹JNIæ¥å£åˆ°å®‰å“Dalvik (Java)è™šæ‹Ÿæœºã€‚</p>
+<blockquote>JNIæ˜¯Java Native Interfaceçš„ç¼©å†™ï¼Œä¸­æ–‡ä¸ºJAVAæœ¬åœ°è°ƒç”¨ã€‚ä»Java1.1å¼€å§‹ï¼ŒJava Native Interface(JNI)æ ‡å‡†æˆä¸ºjavaå¹³å°çš„ä¸€éƒ¨åˆ†ï¼Œå®ƒå…è®¸Javaä»£ç å’Œå…¶ä»–è¯­è¨€å†™çš„ä»£ç è¿›è¡Œäº¤äº’ã€‚JNIä¸€å¼€å§‹æ˜¯ä¸ºäº†æœ¬åœ°å·²ç¼–è¯‘è¯­è¨€ï¼Œå°¤å…¶æ˜¯Cå’ŒC++è€Œè®¾è®¡çš„ï¼Œä½†æ˜¯å®ƒå¹¶ä¸å¦¨ç¢ä½ ä½¿ç”¨å…¶ä»–è¯­è¨€ï¼Œåªè¦è°ƒç”¨çº¦å®šå—æ”¯æŒå°±å¯ä»¥äº†ã€‚
 </blockquote>
-<h3>Class Functions<span class="trans">Ààº¯Êı</span></h3>
+<h3>Class Functions<span class="trans">ç±»å‡½æ•°</span></h3>
 <ul class="tableli">
     <li>
     	<div class="lititle"><a href="AndroidJNI.AttachCurrentThread.html">AttachCurrentThread</a></div>
     	<div class="licontent">Attaches the current thread to a Java (Dalvik) VM.<br />
-    		¸½¼Óµ±Ç°Ïß³Ìµ½Ò»¸öJava(Dalvik)ĞéÄâ»ú¡£ </div>
+    		é™„åŠ å½“å‰çº¿ç¨‹åˆ°ä¸€ä¸ªJava(Dalvik)è™šæ‹Ÿæœºã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.DetachCurrentThread.html">DetachCurrentThread</a></div>
     	<div class="licontent">Detaches the current thread from a Java (Dalvik) VM.<br />
-    		´ÓÒ»¸öJava£¨Dalvik£©ĞéÄâ»ú£¬·ÖÀàµ±Ç°Ïß³Ì¡£ </div>
+    		ä»ä¸€ä¸ªJavaï¼ˆDalvikï¼‰è™šæ‹Ÿæœºï¼Œåˆ†ç±»å½“å‰çº¿ç¨‹ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetVersion.html">GetVersion</a></div>
     	<div class="licontent">Returns the version of the native method interface.<br />
-    		·µ»Ø±¾µØ·½·¨½Ó¿ÚµÄ°æ±¾¡£ </div>
+    		è¿”å›æœ¬åœ°æ–¹æ³•æ¥å£çš„ç‰ˆæœ¬ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FindClass.html">FindClass</a></div>
     	<div class="licontent">This function loads a locally-defined class.<br />
-    		Õâ¸öº¯Êı¼ÓÔØÒ»¸ö±¾µØ¶¨ÒåµÄÀà¡£ </div>
+    		è¿™ä¸ªå‡½æ•°åŠ è½½ä¸€ä¸ªæœ¬åœ°å®šä¹‰çš„ç±»ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromReflectedMethod.html">FromReflectedMethod</a></div>
     	<div class="licontent">Converts a java.lang.reflect.Method or java.lang.reflect.Constructor object to a method ID.<br />
-    		×ª»»Ò»¸öjava.lang.reflect.Method»òjava.lang.reflect.Constructor¶ÔÏóµ½Ò»¸ö·½·¨ID¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªjava.lang.reflect.Methodæˆ–java.lang.reflect.Constructorå¯¹è±¡åˆ°ä¸€ä¸ªæ–¹æ³•IDã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromReflectedField.html">FromReflectedField</a></div>
     	<div class="licontent">Converts a java.lang.reflect.Field to a field ID.<br />
-    		×ª»»Ò»¸öjava.lang.reflect.Fieldµ½Ò»¸öÓòID¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªjava.lang.reflect.Fieldåˆ°ä¸€ä¸ªåŸŸIDã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToReflectedMethod.html">ToReflectedMethod</a></div>
     	<div class="licontent">Converts a method ID derived from clazz to a java.lang.reflect.Method or java.lang.reflect.Constructor object.<br />
-    		×ª»»Ò»¸öÈ¡×ÔclazzµÄ·½·¨IDµ½Ò»¸öjava.lang.reflect.Method »ò java.lang.reflect.Constructor¶ÔÏó¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªå–è‡ªclazzçš„æ–¹æ³•IDåˆ°ä¸€ä¸ªjava.lang.reflect.Method æˆ– java.lang.reflect.Constructorå¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToReflectedField.html">ToReflectedField</a></div>
     	<div class="licontent">Converts a field ID derived from cls to a java.lang.reflect.Field object.<br />
-    		×ª»»Ò»¸öÈ¡×ÔclazzµÄÓòIDµ½Ò»¸öjava.lang.reflect.Field¶ÔÏó¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªå–è‡ªclazzçš„åŸŸIDåˆ°ä¸€ä¸ªjava.lang.reflect.Fieldå¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetSuperclass.html">GetSuperclass</a></div>
     	<div class="licontent">If clazz represents any class other than the class Object, then this function returns the object that represents the superclass of the class specified by clazz.<br />
-    		Èç¹û&nbsp;clazz&nbsp;´ú±íÀà¶ø·ÇÀà&nbsp;object£¬Ôò¸Ãº¯Êı·µ»ØÓÉ&nbsp;clazz&nbsp;ËùÖ¸¶¨µÄÀàµÄ³¬Àà¡£&nbsp;</div>
+    		å¦‚æœ&nbsp;clazz&nbsp;ä»£è¡¨ç±»è€Œéç±»&nbsp;objectï¼Œåˆ™è¯¥å‡½æ•°è¿”å›ç”±&nbsp;clazz&nbsp;æ‰€æŒ‡å®šçš„ç±»çš„è¶…ç±»ã€‚&nbsp;</div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.IsAssignableFrom.html">IsAssignableFrom</a></div>
     	<div class="licontent">Determines whether an object of clazz1 can be safely cast to clazz2.<br />
-    		È·¶¨&nbsp;clazz1&nbsp;µÄ¶ÔÏóÊÇ·ñ¿É°²È«µØÇ¿ÖÆ×ª»»Îª&nbsp;clazz2¡£&nbsp; </div>
+    		ç¡®å®š&nbsp;clazz1&nbsp;çš„å¯¹è±¡æ˜¯å¦å¯å®‰å…¨åœ°å¼ºåˆ¶è½¬æ¢ä¸º&nbsp;clazz2ã€‚&nbsp; </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.Throw.html">Throw</a></div>
     	<div class="licontent">Causes a java.lang.Throwable object to be thrown.<br />
-    		ÀûÓÃÖ¸¶¨ÀàµÄÏûÏ¢£¨ÓÉ&nbsp;message&nbsp;Ö¸¶¨£©¹¹ÔìÒì³£¶ÔÏó²¢Å×³ö¸ÃÒì³£¡£ </div>
+    		åˆ©ç”¨æŒ‡å®šç±»çš„æ¶ˆæ¯ï¼ˆç”±&nbsp;message&nbsp;æŒ‡å®šï¼‰æ„é€ å¼‚å¸¸å¯¹è±¡å¹¶æŠ›å‡ºè¯¥å¼‚å¸¸ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ThrowNew.html">ThrowNew</a></div>
     	<div class="licontent">Constructs an exception object from the specified class with the message specified by message and causes that exception to be thrown.<br />
-    		ÀûÓÃÖ¸¶¨ÀàµÄÏûÏ¢£¨ÓÉ&nbsp;message&nbsp;Ö¸¶¨£©¹¹ÔìÒì³£¶ÔÏó²¢Å×³ö¸ÃÒì³£¡£ </div>
+    		åˆ©ç”¨æŒ‡å®šç±»çš„æ¶ˆæ¯ï¼ˆç”±&nbsp;message&nbsp;æŒ‡å®šï¼‰æ„é€ å¼‚å¸¸å¯¹è±¡å¹¶æŠ›å‡ºè¯¥å¼‚å¸¸ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ExceptionOccurred.html">ExceptionOccurred</a></div>
     	<div class="licontent">Determines if an exception is being thrown<br />
-    		È·¶¨ÊÇ·ñÄ³¸öÒì³£Õı±»Å×³ö¡£ </div>
+    		ç¡®å®šæ˜¯å¦æŸä¸ªå¼‚å¸¸æ­£è¢«æŠ›å‡ºã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ExceptionDescribe.html">ExceptionDescribe</a></div>
     	<div class="licontent">Prints an exception and a backtrace of the stack to the logcat<br />
-    		½«Òì³£¼°¶ÑÕ»µÄ»ØËİÊä³öµ½ÏµÍ³´íÎó±¨¸æĞÅµÀ¡£¸ÃÀı³Ì¿É±ãÀûµ÷ÊÔ²Ù×÷¡£&nbsp;</div>
+    		å°†å¼‚å¸¸åŠå †æ ˆçš„å›æº¯è¾“å‡ºåˆ°ç³»ç»Ÿé”™è¯¯æŠ¥å‘Šä¿¡é“ã€‚è¯¥ä¾‹ç¨‹å¯ä¾¿åˆ©è°ƒè¯•æ“ä½œã€‚&nbsp;</div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ExceptionClear.html">ExceptionClear</a></div>
     	<div class="licontent">Clears any exception that is currently being thrown.<br />
-    		Çå³ıµ±Ç°Å×³öµÄÈÎºÎÒì³£¡£Èç¹ûµ±Ç°ÎŞÒì³££¬Ôò´ËÀı³Ì²»²úÉúÈÎºÎĞ§¹û¡£ </div>
+    		æ¸…é™¤å½“å‰æŠ›å‡ºçš„ä»»ä½•å¼‚å¸¸ã€‚å¦‚æœå½“å‰æ— å¼‚å¸¸ï¼Œåˆ™æ­¤ä¾‹ç¨‹ä¸äº§ç”Ÿä»»ä½•æ•ˆæœã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FatalError.html">FatalError</a></div>
     	<div class="licontent">Raises a fatal error and does not expect the VM to recover. This function does not return.<br />
-    		Å×³öÖÂÃü´íÎó²¢ÇÒ²»Ï£ÍûĞéÄâ»ú½øĞĞĞŞ¸´¡£¸Ãº¯ÊıÎŞ·µ»ØÖµ¡£&nbsp; </div>
+    		æŠ›å‡ºè‡´å‘½é”™è¯¯å¹¶ä¸”ä¸å¸Œæœ›è™šæ‹Ÿæœºè¿›è¡Œä¿®å¤ã€‚è¯¥å‡½æ•°æ— è¿”å›å€¼ã€‚&nbsp; </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.PushLocalFrame.html">PushLocalFrame</a></div>
     	<div class="licontent">Creates a new local reference frame, in which at least a given number of local references can be created.<br />
-    		´´½¨Ò»¸öĞÂµÄ¾Ö²¿ÒıÈëÖ¡£¬ÖÁÉÙÒ»¸ö¸ø¶¨µÄ¾Ö²¿ÒıÓÃ¿ÉÒÔ±»´´½¨µÄÊı¡£ </div>
+    		åˆ›å»ºä¸€ä¸ªæ–°çš„å±€éƒ¨å¼•å…¥å¸§ï¼Œè‡³å°‘ä¸€ä¸ªç»™å®šçš„å±€éƒ¨å¼•ç”¨å¯ä»¥è¢«åˆ›å»ºçš„æ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.PopLocalFrame.html">PopLocalFrame</a></div>
     	<div class="licontent">Pops off the current local reference frame, frees all the local references, and returns a local reference in the previous local reference frame for the given result object.<br />
-    		µ¯³ö¹Ø±Õµ±Ç°¾Ö²¿ÒıÓÃÖ¡£¬ÊÍ·ÅËùÓĞµÄ±¾µØÒıÓÃ£¬²¢·µ»ØÒ»¸ö¾Ö²¿ÒıÓÃ£¬ÔÚÇ°Ò»¸ö¾Ö²¿ÒıÓÃÖ¡£¬ÓÃÓÚ¸ø¶¨µÄ½á¹û¶ÔÏó¡£ </div>
+    		å¼¹å‡ºå…³é—­å½“å‰å±€éƒ¨å¼•ç”¨å¸§ï¼Œé‡Šæ”¾æ‰€æœ‰çš„æœ¬åœ°å¼•ç”¨ï¼Œå¹¶è¿”å›ä¸€ä¸ªå±€éƒ¨å¼•ç”¨ï¼Œåœ¨å‰ä¸€ä¸ªå±€éƒ¨å¼•ç”¨å¸§ï¼Œç”¨äºç»™å®šçš„ç»“æœå¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewGlobalRef.html">NewGlobalRef</a></div>
     	<div class="licontent">Creates a new global reference to the object referred to by the obj argument.<br />
-    		´´½¨ obj ²ÎÊıËùÒıÓÃ¶ÔÏóµÄĞÂÈ«¾ÖÒıÓÃ¡£ </div>
+    		åˆ›å»º obj å‚æ•°æ‰€å¼•ç”¨å¯¹è±¡çš„æ–°å…¨å±€å¼•ç”¨ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.DeleteGlobalRef.html">DeleteGlobalRef</a></div>
     	<div class="licontent">Deletes the global reference pointed to by obj.<br />
-    		É¾³ı obj ËùÖ¸ÏòµÄÈ«¾ÖÒıÓÃ¡£&nbsp; </div>
+    		åˆ é™¤ obj æ‰€æŒ‡å‘çš„å…¨å±€å¼•ç”¨ã€‚&nbsp; </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewLocalRef.html">NewLocalRef</a></div>
     	<div class="licontent">Creates a new local reference that refers to the same object as obj.<br />
-    		´´½¨ obj ²ÎÊı¶ÔÏóµÄĞÂ¾Ö²¿ÒıÓÃ¡£ </div>
+    		åˆ›å»º obj å‚æ•°å¯¹è±¡çš„æ–°å±€éƒ¨å¼•ç”¨ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.DeleteLocalRef.html">DeleteLocalRef</a></div>
     	<div class="licontent">Deletes the local reference pointed to by obj.<br />
-    		É¾³ı obj ËùÖ¸ÏòµÄ¾Ö²¿ÒıÓÃ¡£&nbsp; </div>
+    		åˆ é™¤ obj æ‰€æŒ‡å‘çš„å±€éƒ¨å¼•ç”¨ã€‚&nbsp; </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.IsSameObject.html">IsSameObject</a></div>
     	<div class="licontent">Tests whether two references refer to the same Java object.<br />
-    		²âÊÔÁ½¸öÒıÓÃÊÇ·ñÒıÓÃÍ¬Ò»&nbsp;Java&nbsp;¶ÔÏó¡£&nbsp; </div>
+    		æµ‹è¯•ä¸¤ä¸ªå¼•ç”¨æ˜¯å¦å¼•ç”¨åŒä¸€&nbsp;Java&nbsp;å¯¹è±¡ã€‚&nbsp; </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.EnsureLocalCapacity.html">EnsureLocalCapacity</a></div>
     	<div class="licontent">Ensures that at least a given number of local references can be created in the current thread.<br />
-    		ÔÚµ±Ç°Ïß³ÌÈ·±£ÖÁÉÙÒ»¸ö¿ÉÒÔ±»´´½¨µÄ¸ø¶¨¾Ö²¿ÒıÓÃÊı¡£ </div>
+    		åœ¨å½“å‰çº¿ç¨‹ç¡®ä¿è‡³å°‘ä¸€ä¸ªå¯ä»¥è¢«åˆ›å»ºçš„ç»™å®šå±€éƒ¨å¼•ç”¨æ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.AllocObject.html">AllocObject</a></div>
     	<div class="licontent">Allocates a new Java object without invoking any of the constructors for the object.<br />
-    		·ÖÅäĞÂ&nbsp;Java&nbsp;¶ÔÏó¶ø²»µ÷ÓÃ¸Ã¶ÔÏóµÄÈÎºÎ¹¹Ôìº¯Êı¡£·µ»Ø¸Ã¶ÔÏóµÄÒıÓÃ¡£&nbsp; </div>
+    		åˆ†é…æ–°&nbsp;Java&nbsp;å¯¹è±¡è€Œä¸è°ƒç”¨è¯¥å¯¹è±¡çš„ä»»ä½•æ„é€ å‡½æ•°ã€‚è¿”å›è¯¥å¯¹è±¡çš„å¼•ç”¨ã€‚&nbsp; </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewObject.html">NewObject</a></div>
     	<div class="licontent">Constructs a new Java object. The method ID indicates which constructor method to invoke. This ID must be obtained by calling GetMethodID() with as the method name and void (V) as the return type.<br />
-    		¹¹ÔìĞÂµÄ&nbsp;Java&nbsp;¶ÔÏó¡£·½·¨&nbsp;IDÖ¸Ê¾Ó¦µ÷ÓÃµÄ¹¹Ôìº¯Êı·½·¨¡£¸Ã&nbsp;ID&nbsp;±ØĞëÍ¨¹ıµ÷ÓÃ&nbsp;GetMethodID()&nbsp;»ñµÃ£¬ÇÒµ÷ÓÃÊ±µÄ·½·¨Ãû±ØĞëÎª&nbsp;&lt;init&gt;£¬¶ø·µ»ØÀàĞÍ±ØĞëÎª&nbsp;void&nbsp;(V)¡£ </div>
+    		æ„é€ æ–°çš„&nbsp;Java&nbsp;å¯¹è±¡ã€‚æ–¹æ³•&nbsp;IDæŒ‡ç¤ºåº”è°ƒç”¨çš„æ„é€ å‡½æ•°æ–¹æ³•ã€‚è¯¥&nbsp;ID&nbsp;å¿…é¡»é€šè¿‡è°ƒç”¨&nbsp;GetMethodID()&nbsp;è·å¾—ï¼Œä¸”è°ƒç”¨æ—¶çš„æ–¹æ³•åå¿…é¡»ä¸º&nbsp;&lt;init&gt;ï¼Œè€Œè¿”å›ç±»å‹å¿…é¡»ä¸º&nbsp;void&nbsp;(V)ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetObjectClass.html">GetObjectClass</a></div>
     	<div class="licontent">Returns the class of an object.<br />
-    		·µ»ØÒ»¸ö¶ÔÏóµÄÀà¡£ </div>
+    		è¿”å›ä¸€ä¸ªå¯¹è±¡çš„ç±»ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.IsInstanceOf.html">IsInstanceOf</a></div>
     	<div class="licontent">Tests whether an object is an instance of a class.<br />
-    		²âÊÔ¶ÔÏóÊÇ·ñÎªÄ³¸öÀàµÄÊµÀı¡£ </div>
+    		æµ‹è¯•å¯¹è±¡æ˜¯å¦ä¸ºæŸä¸ªç±»çš„å®ä¾‹ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetMethodID.html">GetMethodID</a></div>
     	<div class="licontent">Returns the method ID for an instance (nonstatic) method of a class or interface.<br />
-    		·µ»ØÀà»ò½Ó¿ÚÊµÀı£¨·Ç¾²Ì¬£©·½·¨µÄ·½·¨&nbsp;ID¡£ </div>
+    		è¿”å›ç±»æˆ–æ¥å£å®ä¾‹ï¼ˆéé™æ€ï¼‰æ–¹æ³•çš„æ–¹æ³•&nbsp;IDã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetFieldID.html">GetFieldID</a></div>
     	<div class="licontent">Returns the field ID for an instance (nonstatic) field of a class.<br />
-    		·µ»ØÀàµÄÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÓò&nbsp;ID¡£¸ÃÓòÓÉÆäÃû³Æ¼°Ç©ÃûÖ¸¶¨¡£ </div>
+    		è¿”å›ç±»çš„å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„åŸŸ&nbsp;IDã€‚è¯¥åŸŸç”±å…¶åç§°åŠç­¾åæŒ‡å®šã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticMethodID.html">GetStaticMethodID</a></div>
     	<div class="licontent">Returns the method ID for a static method of a class.<br />
-    		·µ»ØÀàµÄ¾²Ì¬·½·¨µÄ·½·¨&nbsp;ID¡£·½·¨ÓÉÆäÃû³ÆºÍÇ©ÃûÖ¸¶¨¡£ </div>
+    		è¿”å›ç±»çš„é™æ€æ–¹æ³•çš„æ–¹æ³•&nbsp;IDã€‚æ–¹æ³•ç”±å…¶åç§°å’Œç­¾åæŒ‡å®šã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticFieldID.html">GetStaticFieldID</a></div>
     	<div class="licontent">Returns the field ID for a static field of a class.<br />
-    		·µ»ØÀàµÄ¾²Ì¬ÓòµÄÓò&nbsp;ID¡£ÓòÓÉÆäÃû³ÆºÍÇ©ÃûÖ¸¶¨¡£ </div>
+    		è¿”å›ç±»çš„é™æ€åŸŸçš„åŸŸ&nbsp;IDã€‚åŸŸç”±å…¶åç§°å’Œç­¾åæŒ‡å®šã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewStringUTF.html">NewStringUTF</a></div>
     	<div class="licontent">Constructs a new java.lang.String object from an array of characters in modified UTF-8 encoding.<br />
-    		ÀûÓÃ&nbsp;UTF-8&nbsp;×Ö·ûÊı×é¹¹ÔìĞÂµÄ java.lang.String ¶ÔÏó¡£ </div>
+    		åˆ©ç”¨&nbsp;UTF-8&nbsp;å­—ç¬¦æ•°ç»„æ„é€ æ–°çš„ java.lang.String å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStringUTFLength.html">GetStringUTFLength</a></div>
     	<div class="licontent">Returns the length in bytes of the modified UTF-8 representation of a string.<br />
-    		ÒÔ×Ö½ÚÎªµ¥Î»·µ»Ø×Ö·û´®µÄ&nbsp;UTF-8&nbsp;³¤¶È¡£ </div>
+    		ä»¥å­—èŠ‚ä¸ºå•ä½è¿”å›å­—ç¬¦ä¸²çš„&nbsp;UTF-8&nbsp;é•¿åº¦ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStringUTFChars.html">GetStringUTFChars</a></div>
     	<div class="licontent">Returns a managed string object representing the string in modified UTF-8 encoding.<br />
-    		·µ»ØÓÉUTF-8ĞŞ¸ÄµÄÍĞ¹ÜµÄ×Ö·û´®¶ÔÏó¡£ </div>
+    		è¿”å›ç”±UTF-8ä¿®æ”¹çš„æ‰˜ç®¡çš„å­—ç¬¦ä¸²å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStringMethod.html">CallStringMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallObjectMethod.html">CallObjectMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallIntMethod.html">CallIntMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallBooleanMethod.html">CallBooleanMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallShortMethod.html">CallShortMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallByteMethod.html">CallByteMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallCharMethod.html">CallCharMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallFloatMethod.html">CallFloatMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallDoubleMethod.html">CallDoubleMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallLongMethod.html">CallLongMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallVoidMethod.html">CallVoidMethod</a></div>
     	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
-    		µ÷ÓÃÒ»¸öÓÉmethodID¶¨ÒåµÄÊµÀıµÄJava·½·¨£¬¿ÉÑ¡Ôñ´«µİ²ÎÊı£¨args£©µÄÊı×éµ½Õâ¸ö·½·¨¡£ </div>
+    		è°ƒç”¨ä¸€ä¸ªç”±methodIDå®šä¹‰çš„å®ä¾‹çš„Javaæ–¹æ³•ï¼Œå¯é€‰æ‹©ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¿™ä¸ªæ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStringField.html">GetStringField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£</div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚</div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetObjectField.html">GetObjectField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetBooleanField.html">GetBooleanField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetByteField.html">GetByteField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetCharField.html">GetCharField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetShortField.html">GetShortField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetIntField.html">GetIntField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetLongField.html">GetLongField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetFloatField.html">GetFloatField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetDoubleField.html">GetDoubleField</a></div>
     	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStringField.html">SetStringField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetObjectField.html">SetObjectField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetBooleanField.html">SetBooleanField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetByteField.html">SetByteField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetCharField.html">SetCharField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetShortField.html">SetShortField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetIntField.html">SetIntField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetLongField.html">SetLongField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetFloatField.html">SetFloatField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetDoubleField.html">SetDoubleField</a></div>
     	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóÊµÀı£¨·Ç¾²Ì¬£©ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡å®ä¾‹ï¼ˆéé™æ€ï¼‰åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticStringMethod.html">CallStaticStringMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticObjectMethod.html">CallStaticObjectMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticIntMethod.html">CallStaticIntMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticBooleanMethod.html">CallStaticBooleanMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticShortMethod.html">CallStaticShortMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticByteMethod.html">CallStaticByteMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticCharMethod.html">CallStaticCharMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticFloatMethod.html">CallStaticFloatMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticDoubleMethod.html">CallStaticDoubleMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticLongMethod.html">CallStaticLongMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.CallStaticVoidMethod.html">CallStaticVoidMethod</a></div>
     	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
-    		ÔÚÒ»¸öJava¶ÔÏóµ÷ÓÃÒ»¸ö¾²Ì¬·½·¨£¬¸ù¾İÖ¸¶¨µÄmethodID£¬¿ÉÑ¡´«µİ²ÎÊı£¨args£©µÄÊı×éµ½¸Ã·½·¨¡£ </div>
+    		åœ¨ä¸€ä¸ªJavaå¯¹è±¡è°ƒç”¨ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œæ ¹æ®æŒ‡å®šçš„methodIDï¼Œå¯é€‰ä¼ é€’å‚æ•°ï¼ˆargsï¼‰çš„æ•°ç»„åˆ°è¯¥æ–¹æ³•ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticStringField.html">GetStaticStringField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticObjectField.html">GetStaticObjectField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticBooleanField.html">GetStaticBooleanField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticByteField.html">GetStaticByteField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticCharField.html">GetStaticCharField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticShortField.html">GetStaticShortField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticIntField.html">GetStaticIntField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticLongField.html">GetStaticLongField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticFloatField.html">GetStaticFloatField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetStaticDoubleField.html">GetStaticDoubleField</a></div>
     	<div class="licontent">This function returns the value of a static field of an object.<br />
-    		Õâ¸öº¯Êı·µ»ØÒ»¸ö¶ÔÏó¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è¿”å›ä¸€ä¸ªå¯¹è±¡é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticStringField.html">SetStaticStringField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticObjectField.html">SetStaticObjectField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticBooleanField.html">SetStaticBooleanField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticByteField.html">SetStaticByteField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticCharField.html">SetStaticCharField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticShortField.html">SetStaticShortField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticIntField.html">SetStaticIntField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticLongField.html">SetStaticLongField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticFloatField.html">SetStaticFloatField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetStaticDoubleField.html">SetStaticDoubleField</a></div>
     	<div class="licontent">This function ets the value of a static field of an object.<br />
-    		Õâ¸öº¯ÊıÉèÖÃÒ»¸ö¶ÔÏóµÄ¾²Ì¬ÓòµÄÖµ¡£ </div>
+    		è¿™ä¸ªå‡½æ•°è®¾ç½®ä¸€ä¸ªå¯¹è±¡çš„é™æ€åŸŸçš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToBooleanArray.html">ToBooleanArray</a></div>
     	<div class="licontent">Convert a managed array of System.Boolean to a Java array of boolean.<br />
-    		×ª»»Ò»¸öSystem.BooleanµÄÍĞ¹ÜÊı×éµ½Ò»¸öJava²¼¶ûÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Booleançš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaå¸ƒå°”æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToByteArray.html">ToByteArray</a></div>
     	<div class="licontent">Convert a managed array of System.Byte to a Java array of byte.<br />
-    		×ª»»Ò»¸öSystem.ByteµÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄ×Ö½ÚÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Byteçš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„å­—èŠ‚æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToCharArray.html">ToCharArray</a></div>
     	<div class="licontent">Convert a managed array of System.Char to a Java array of char.<br />
-    		×ª»»Ò»¸öSystem.CharµÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄ×Ö·ûÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Charçš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„å­—ç¬¦æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToShortArray.html">ToShortArray</a></div>
     	<div class="licontent">Convert a managed array of System.Int16 to a Java array of short.<br />
-    		×ª»»Ò»¸öSystem.Int16µÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄ¶ÌÕûÊıÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Int16çš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„çŸ­æ•´æ•°æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToIntArray.html">ToIntArray</a></div>
     	<div class="licontent">Convert a managed array of System.Int32 to a Java array of int.<br />
-    		×ª»»Ò»¸öSystem.Int32µÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄÕûÊıÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Int32çš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„æ•´æ•°æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToLongArray.html">ToLongArray</a></div>
     	<div class="licontent">Convert a managed array of System.Int64 to a Java array of long.<br />
-    		×ª»»Ò»¸öSystem.Int64µÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄ³¤ÕûÊıÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Int64çš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„é•¿æ•´æ•°æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToFloatArray.html">ToFloatArray</a></div>
     	<div class="licontent">Convert a managed array of System.Single to a Java array of float.<br />
-    		×ª»»Ò»¸öSystem.SingleµÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄ¸¡µãÊıÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Singleçš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„æµ®ç‚¹æ•°æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToDoubleArray.html">ToDoubleArray</a></div>
     	<div class="licontent">Convert a managed array of System.Double to a Java array of double.<br />
-    		×ª»»Ò»¸öSystem.DoubleµÄÍĞ¹ÜÊı×éµ½Ò»¸öJavaµÄË«¾«¶È¸¡µãÊıÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.Doubleçš„æ‰˜ç®¡æ•°ç»„åˆ°ä¸€ä¸ªJavaçš„åŒç²¾åº¦æµ®ç‚¹æ•°æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.ToObjectArray.html">ToObjectArray</a></div>
     	<div class="licontent">Convert a managed array of System.IntPtr, representing Java objects, to a Java array of java.lang.Object.<br />
-    		×ª»»Ò»¸öSystem.IntPtrµÄÍĞ¹ÜÊı×é£¬±íÊ¾Java¶ÔÏó£¬µ½Ò»¸öJavaµÄjava.lang.ObjectÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªSystem.IntPtrçš„æ‰˜ç®¡æ•°ç»„ï¼Œè¡¨ç¤ºJavaå¯¹è±¡ï¼Œåˆ°ä¸€ä¸ªJavaçš„java.lang.Objectæ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromBooleanArray.html">FromBooleanArray</a></div>
     	<div class="licontent">Convert a Java array of boolean to a managed array of System.Boolean.<br />
-    		×ª»»Ò»¸öJava²¼¶ûÊı×éµ½Ò»¸öÍĞ¹ÜSystem.BooleanÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaå¸ƒå°”æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡System.Booleanæ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromByteArray.html">FromByteArray</a></div>
     	<div class="licontent">Convert a Java array of byte to a managed array of System.Byte.<br />
-    		×ª»»Ò»¸öJava×Ö½ÚÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.ByteÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaå­—èŠ‚æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Byteæ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromCharArray.html">FromCharArray</a></div>
     	<div class="licontent">Convert a Java array of char to a managed array of System.Char.<br />
-    		×ª»»Ò»¸öJava×Ö·ûÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.CharÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaå­—ç¬¦æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Charæ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromShortArray.html">FromShortArray</a></div>
     	<div class="licontent">Convert a Java array of short to a managed array of System.Int16.<br />
-    		×ª»»Ò»¸öJava¶ÌÕûÊıÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.Int16Êı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaçŸ­æ•´æ•°æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Int16æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromIntArray.html">FromIntArray</a></div>
     	<div class="licontent">Convert a Java array of int to a managed array of System.Int32.<br />
-    		×ª»»Ò»¸öJavaÕûÊıÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.Int32Êı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaæ•´æ•°æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Int32æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromLongArray.html">FromLongArray</a></div>
     	<div class="licontent">Convert a Java array of long to a managed array of System.Int64.<br />
-    		×ª»»Ò»¸öJava³¤ÕûÊıÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.Int64Êı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaé•¿æ•´æ•°æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Int64æ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromFloatArray.html">FromFloatArray</a></div>
     	<div class="licontent">Convert a Java array of float to a managed array of System.Single.<br />
-    		×ª»»Ò»¸öJava¸¡µãÊıÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.SingleÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaæµ®ç‚¹æ•°æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Singleæ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromDoubleArray.html">FromDoubleArray</a></div>
     	<div class="licontent">Convert a Java array of double to a managed array of System.Double.<br />
-    		×ª»»Ò»¸öJavaË«¾«¶È¸¡µãÊıÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.DoubleÊı×é¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaåŒç²¾åº¦æµ®ç‚¹æ•°æ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.Doubleæ•°ç»„ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.FromObjectArray.html">FromObjectArray</a></div>
     	<div class="licontent">Convert a Java array of java.lang.Object to a managed array of System.IntPtr, representing Java objects.<br />
-    		×ª»»Ò»¸öJavaµÄjava.lang.ObjectÊı×éµ½Ò»¸öÍĞ¹ÜµÄSystem.IntPtrÊı×é£¬±íÊ¾Java¶ÔÏó¡£ </div>
+    		è½¬æ¢ä¸€ä¸ªJavaçš„java.lang.Objectæ•°ç»„åˆ°ä¸€ä¸ªæ‰˜ç®¡çš„System.IntPtræ•°ç»„ï¼Œè¡¨ç¤ºJavaå¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetArrayLength.html">GetArrayLength</a></div>
     	<div class="licontent">Returns the number of elements in the array.<br />
-    		·µ»ØÊı×éµÄÔªËØÊı¡£ </div>
+    		è¿”å›æ•°ç»„çš„å…ƒç´ æ•°ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewBooleanArray.html">NewBooleanArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewByteArray.html">NewByteArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewCharArray.html">NewCharArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewShortArray.html">NewShortArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewIntArray.html">NewIntArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewLongArray.html">NewLongArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewFloatArray.html">NewFloatArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewDoubleArray.html">NewDoubleArray</a></div>
     	<div class="licontent">Construct a new primitive array object.<br />
-    		¹¹ÔìÒ»¸öĞÂµÄ»ù±¾Êı×é¶ÔÏó¡£ </div>
+    		æ„é€ ä¸€ä¸ªæ–°çš„åŸºæœ¬æ•°ç»„å¯¹è±¡ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.NewObjectArray.html">NewObjectArray</a></div>
     	<div class="licontent">Constructs a new array holding objects in class clazz. All elements are initially set to obj.<br />
-    		¹¹ÔìĞÂµÄÊı×é£¬Ëü½«±£´æÔÚÀà clazz&nbsp;ÖĞµÄ¶ÔÏó¡£ËùÓĞÔªËØ³õÊ¼Öµ¾ùÉèÎª&nbsp;obj¡£ </div>
+    		æ„é€ æ–°çš„æ•°ç»„ï¼Œå®ƒå°†ä¿å­˜åœ¨ç±» clazz&nbsp;ä¸­çš„å¯¹è±¡ã€‚æ‰€æœ‰å…ƒç´ åˆå§‹å€¼å‡è®¾ä¸º&nbsp;objã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetBooleanArrayElement.html">GetBooleanArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetByteArrayElement.html">GetByteArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetCharArrayElement.html">GetCharArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetShortArrayElement.html">GetShortArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetIntArrayElement.html">GetIntArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetLongArrayElement.html">GetLongArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetFloatArrayElement.html">GetFloatArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetDoubleArrayElement.html">GetDoubleArrayElement</a></div>
     	<div class="licontent">Returns the value of one element of a primitive array.<br />
-    		·µ»ØÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è¿”å›ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.GetObjectArrayElement.html">GetObjectArrayElement</a></div>
     	<div class="licontent">Returns an element of an Object array.<br />
-    		·µ»ØÒ»¸ö¶ÔÏóÊı×éµÄÒ»¸öÔªËØ¡£ </div>
+    		è¿”å›ä¸€ä¸ªå¯¹è±¡æ•°ç»„çš„ä¸€ä¸ªå…ƒç´ ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetBooleanArrayElement.html">SetBooleanArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetByteArrayElement.html">SetByteArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetCharArrayElement.html">SetCharArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetShortArrayElement.html">SetShortArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetIntArrayElement.html">SetIntArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetLongArrayElement.html">SetLongArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetFloatArrayElement.html">SetFloatArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetDoubleArrayElement.html">SetDoubleArrayElement</a></div>
     	<div class="licontent">Sets the value of one element in a primitive array.<br />
-    		ÉèÖÃÒ»¸ö»ù±¾Êı×éÒ»¸öÔªËØµÄÖµ¡£ </div>
+    		è®¾ç½®ä¸€ä¸ªåŸºæœ¬æ•°ç»„ä¸€ä¸ªå…ƒç´ çš„å€¼ã€‚ </div>
     </li>
     <li><div class="lititle"><a href="AndroidJNI.SetObjectArrayElement.html">SetObjectArrayElement</a></div>
     	<div class="licontent">Sets an element of an Object array.<br />
-    		ÉèÖÃÒ»¸ö¶ÔÏóÊı×éµÄÒ»¸öÔªËØ¡£</div>
+    		è®¾ç½®ä¸€ä¸ªå¯¹è±¡æ•°ç»„çš„ä¸€ä¸ªå…ƒç´ ã€‚</div>
     </li>
 </ul>
 
-<div class="date"><span>×îºóĞŞ¸Ä£º<!-- #BeginDate format:wfcCh2m -->2011Äê4ÔÂ15ÈÕ Friday  19:49<!-- #EndDate --></span></div><script type="text/javascript"><!--
+<div class="date"><span>æœ€åä¿®æ”¹ï¼š<!-- #BeginDate format:wfcCh2m -->2011å¹´4æœˆ15æ—¥ Friday  19:49<!-- #EndDate --></span></div><script type="text/javascript"><!--
 google_ad_client = "ca-pub-8054246454688368";
-/* Unityºá */
+/* Unityæ¨ª */
 google_ad_slot = "2374072180";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -806,8 +806,8 @@ src="">
     <div class="clear"></div>
 </div>
 
-<div style="padding: 30px; text-align: center; clear:both"><p>±¾½Å±¾²Î¿¼»ùÓÚUnity 3.30f4</p>Ó¢ÎÄ²¿·Ö°æÈ¨Êô&copy;<a href="http://unity3d.com/">Unity</a>¹«Ë¾ËùÓĞ£¬ÖĞÎÄ²¿·Ö&copy;
-<a href="http://3d.ceeger.com/">UnityÊ¥µä</a> °æÈ¨ËùÓĞ£¬Î´¾­Ğí¿É£¬ÑÏ½û×ªÔØ ¡£</div>
+<div style="padding: 30px; text-align: center; clear:both"><p>æœ¬è„šæœ¬å‚è€ƒåŸºäºUnity 3.30f4</p>è‹±æ–‡éƒ¨åˆ†ç‰ˆæƒå±&copy;<a href="http://unity3d.com/">Unity</a>å…¬å¸æ‰€æœ‰ï¼Œä¸­æ–‡éƒ¨åˆ†&copy;
+<a href="http://3d.ceeger.com/">Unityåœ£å…¸</a> ç‰ˆæƒæ‰€æœ‰ï¼Œæœªç»è®¸å¯ï¼Œä¸¥ç¦è½¬è½½ ã€‚</div>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));

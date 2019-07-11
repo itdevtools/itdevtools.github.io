@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url("tabs.css");
 body, p, ul, ol, td, li {
-	font-family: Verdana, Geneva, sans-serif, "宋体";
+	font-family: Verdana, Geneva, sans-serif, "瀹浣";
 	font-size: 12px;
 	margin: 0px;
 	padding: 0px;
@@ -10,7 +10,7 @@ body, p, ul, ol, td, li {
 }
 
 pre {
-	font-family: Verdana, Geneva, sans-serif, "宋体";
+	font-family: Verdana, Geneva, sans-serif, "瀹浣";
 	margin: 0px;
 	padding: 0px;
 	white-space: pre-wrap; /* css-3 */
@@ -26,7 +26,7 @@ pre span {
 code{
 	margin: 0px;
 	padding: 0px;
-	font-family: Verdana, Geneva, sans-serif, "宋体";
+	font-family: Verdana, Geneva, sans-serif, "瀹浣";
 }
 body {
 	margin: 10px;
@@ -81,7 +81,7 @@ a {
 
 a:hover {
 	text-decoration:underline;
-	font-family: Verdana, Geneva, sans-serif, "宋体";
+	font-family: Verdana, Geneva, sans-serif, "瀹浣";
 }
 
 
