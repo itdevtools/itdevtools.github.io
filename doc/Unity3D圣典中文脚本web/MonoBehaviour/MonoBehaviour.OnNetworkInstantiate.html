@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>MonoBehaviour.OnNetworkInstantiate 当网络实例</title>
+<meta name="Keywords" content="unity,MonoBehaviour,Behaviour,行为,OnNetworkInstantiate" />
+<meta name="Description" content="当一个物体使用Network.Instantiate进行网络初始化时调用。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="MonoBehaviour.html">MonoBehaviour</a><span class="transer">翻译： 脚本_树 </span>
+                <ul>
+                    <li><a href="MonoBehaviour.Awake.html">Awake</a></li>
+                    <li><a href="MonoBehaviour.CancelInvoke.html">CancelInvoke</a></li>
+                    <li><a href="MonoBehaviour.FixedUpdate.html">FixedUpdate</a></li>
+                    <li><a href="MonoBehaviour.InvokeRepeating.html">InvokeRepeating</a></li>
+                    <li><a href="MonoBehaviour.Invoke.html">Invoke</a></li>
+                    <li><a href="MonoBehaviour.IsInvoking.html">IsInvoking</a></li>
+                    <li><a href="MonoBehaviour.LateUpdate.html">LateUpdate</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationFocus.html">OnApplicationFocus</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationPause.html">OnApplicationPause</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationQuit.html">OnApplicationQuit</a></li>
+                    <li><a href="MonoBehaviour.OnBecameInvisible.html">OnBecameInvisible</a></li>
+                    <li><a href="MonoBehaviour.OnBecameVisible.html">OnBecameVisible</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionEnter.html">OnCollisionEnter</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionExit.html">OnCollisionExit</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionStay.html">OnCollisionStay</a></li>
+                    <li><a href="MonoBehaviour.OnConnectedToServer.html">OnConnectedToServer</a></li>
+                    <li><a href="MonoBehaviour.OnControllerColliderHit.html">OnControllerColliderHit</a></li>
+                    <li><a href="MonoBehaviour.OnDestroy.html">OnDestroy</a></li>
+                    <li><a href="MonoBehaviour.OnDisable.html">OnDisable</a></li>
+                    <li><a href="MonoBehaviour.OnDisconnectedFromServer.html">OnDisconnectedFromServer</a></li>
+                    <li><a href="MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a></li>
+                    <li><a href="MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a></li>
+                    <li><a href="MonoBehaviour.OnEnable.html">OnEnable</a></li>
+                    <li><a href="MonoBehaviour.OnFailedToConnectToMasterServer.html" title="OnFailedToConnectToMasterServer">OnFailedToConnectToM...</a></li>
+                    <li><a href="MonoBehaviour.OnFailedToConnect.html">OnFailedToConnect</a></li>
+                    <li><a href="MonoBehaviour.OnGUI.html">OnGUI</a></li>
+                    <li><a href="MonoBehaviour.OnJointBreak.html">OnJointBreak</a></li>
+                    <li><a href="MonoBehaviour.OnLevelWasLoaded.html">OnLevelWasLoaded</a></li>
+                    <li><a href="MonoBehaviour.OnMasterServerEvent.html">OnMasterServerEvent</a></li>
+                    <li><a href="MonoBehaviour.OnMouseDown.html">OnMouseDown</a></li>
+                    <li><a href="MonoBehaviour.OnMouseDrag.html">OnMouseDrag</a></li>
+                    <li><a href="MonoBehaviour.OnMouseEnter.html">OnMouseEnter</a></li>
+                    <li><a href="MonoBehaviour.OnMouseExit.html">OnMouseExit</a></li>
+                    <li><a href="MonoBehaviour.OnMouseOver.html">OnMouseOver</a></li>
+                    <li><a href="MonoBehaviour.OnMouseUp.html">OnMouseUp</a></li>
+                    <li><a href="MonoBehaviour.OnNetworkInstantiate.html">OnNetworkInstantiate</a></li>
+                    <li><a href="MonoBehaviour.OnParticleCollision.html">OnParticleCollision</a></li>
+                    <li><a href="MonoBehaviour.OnPlayerConnected.html">OnPlayerConnected</a></li>
+                    <li><a href="MonoBehaviour.OnPlayerDisconnected.html">OnPlayerDisconnected</a></li>
+                    <li><a href="MonoBehaviour.OnPostRender.html">OnPostRender</a></li>
+                    <li><a href="MonoBehaviour.OnPreCull.html">OnPreCull</a></li>
+                    <li><a href="MonoBehaviour.OnPreRender.html">OnPreRender</a></li>
+                    <li><a href="MonoBehaviour.OnRenderImage.html">OnRenderImage</a></li>
+                    <li><a href="MonoBehaviour.OnRenderObject.html">OnRenderObject</a></li>
+                    <li><a href="MonoBehaviour.OnSerializeNetworkView.html">OnSerializeNetworkView</a></li>
+                    <li><a href="MonoBehaviour.OnServerInitialized.html">OnServerInitialized</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerEnter.html">OnTriggerEnter</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerExit.html">OnTriggerExit</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerStay.html">OnTriggerStay</a></li>
+                    <li><a href="MonoBehaviour.OnWillRenderObject.html">OnWillRenderObject</a></li>
+                    <li><a href="MonoBehaviour.print.html">print</a></li>
+                    <li><a href="MonoBehaviour.Reset.html">Reset</a></li>
+                    <li><a href="MonoBehaviour.StartCoroutine.html">StartCoroutine</a></li>
+                    <li><a href="MonoBehaviour.Start.html">Start</a></li>
+                    <li><a href="MonoBehaviour.StopAllCoroutines.html">StopAllCoroutines</a></li>
+                    <li><a href="MonoBehaviour.StopCoroutine.html">StopCoroutine</a></li>
+                    <li><a href="MonoBehaviour.Update.html">Update</a></li>
+                    <li><a href="MonoBehaviour.useGUILayout.html">useGUILayout</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="MonoBehaviour.html">MonoBehaviour</a>.OnNetworkInstantiate 当网络实例</h1>
+<p class="h1inherit"></p>
+<p>function <em>OnNetworkInstantiate</em> (<em>info</em> : <a href="../NetworkMessageInfo/NetworkMessageInfo.html">NetworkMessageInfo</a>) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Called on objects which have been network   instantiated with <a href="../Network/Network.Instantiate.html">Network.Instantiate </a></p>
+<p>当一个物体使用Network.Instantiate进行网络初始化时调用。</p>
+<p>This is useful for disabling or enabling   components for objects which have been instantiated and their behavior depends   on if they are locally or remotely owned.</p>
+<p>这对于禁用或启用一个已经初始化的物体组件来说是非常有用的，它们的行为取决于它们是在本地还是在远端。</p>
+<p>Note: The networkView attribute inside the <a href="../NetworkMessageInfo/NetworkMessageInfo.html">NetworkMessageInfo </a>is not used inside OnNetworkInstantiate</p>
+<p>注意: 在NetworkMessageInfo里的networkView属性不能在OnNetworkInstantiate里使用。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="MonoBehaviour.html">MonoBehaviour</a> {
+	void OnNetworkInstantiate(<a href="../NetworkMessageInfo/NetworkMessageInfo.html">NetworkMessageInfo</a> info) {
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>("New object instantiated by " + info.sender);
+	}
+}
+</code></pre></div>
+    <div class="panes"><pre><code>function OnNetworkInstantiate (info : <a href="../NetworkMessageInfo/NetworkMessageInfo.html">NetworkMessageInfo</a> ) {
+	<a href="../Debug/Debug.Log.html">Debug.Log</a> ("New object instantiated by " + info.sender);
+}
+</code></pre></div>
+</div>
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月2日 Sunday  18:55<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

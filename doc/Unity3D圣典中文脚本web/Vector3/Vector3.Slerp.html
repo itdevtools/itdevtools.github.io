@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Vector3.Slerp 球形插值</title>
+<meta name="Keywords" content="unity,Vector3,三维向量,Slerp,球形插值。" />
+<meta name="Description" content="球形插值在两个向量之间。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Vector3.html">Vector3</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Vector3.Angle.html">Angle</a></li>
+                    <li><a href="Vector3.ClampMagnitude.html">ClampMagnitude</a></li>
+                    <li><a href="Vector3.Cross.html">Cross</a></li>
+                    <li><a href="Vector3.Distance.html">Distance</a></li>
+                    <li><a href="Vector3.Dot.html">Dot</a></li>
+                    <li><a href="Vector3.forward.html">forward</a></li>
+                    <li><a href="Vector3.Lerp.html">Lerp</a></li>
+                    <li><a href="Vector3.magnitude.html">magnitude</a></li>
+                    <li><a href="Vector3.Max.html">Max</a></li>
+                    <li><a href="Vector3.Min.html">Min</a></li>
+                    <li><a href="Vector3.MoveTowards.html">MoveTowards</a></li>
+                    <li><a href="Vector3.normalized.html">normalized</a></li>
+                    <li><a href="Vector3.Normalize.html">Normalize</a></li>
+                    <li><a href="Vector3.one.html">one</a></li>
+                    <li><a href="Vector3.operator_ne.html">operator !=</a></li>
+                    <li><a href="Vector3.operator_multiply.html">operator *</a></li>
+                    <li><a href="Vector3.operator_add.html">operator +</a></li>
+                    <li><a href="Vector3.operator_subtract.html">operator -</a></li>
+                    <li><a href="Vector3.operator_divide.html">operator /</a></li>
+                    <li><a href="Vector3.operator_eq.html">operator ==</a></li>
+                    <li><a href="Vector3.OrthoNormalize.html">OrthoNormalize</a></li>
+                    <li><a href="Vector3.Project.html">Project</a></li>
+                    <li><a href="Vector3.Reflect.html">Reflect</a></li>
+                    <li><a href="Vector3.right.html">right</a></li>
+                    <li><a href="Vector3.RotateTowards.html">RotateTowards</a></li>
+                    <li><a href="Vector3.Scale.html">Scale</a></li>
+                    <li><a href="Vector3.Slerp.html">Slerp</a></li>
+                    <li><a href="Vector3.SmoothDamp.html">SmoothDamp</a></li>
+                    <li><a href="Vector3.sqrMagnitude.html">sqrMagnitude</a></li>
+                    <li><a href="Vector3.Index_operator.html">this [int index</a>]</li>
+                    <li><a href="Vector3.ToString.html">ToString</a></li>
+                    <li><a href="Vector3.up.html">up</a></li>
+                    <li><a href="Vector3.Vector3.html">Vector3</a></li>
+                    <li><a href="Vector3.x.html">x</a></li>
+                    <li><a href="Vector3.y.html">y</a></li>
+                    <li><a href="Vector3.zero.html">zero</a></li>
+                    <li><a href="Vector3.z.html">z</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Vector3.html">Vector3</a>.Slerp 球形插值</h1>
+<p class="h1inherit"></p>
+<p>static function <em>Slerp</em> (<em>from</em> : <a href="Vector3.html">Vector3</a>, <em>to</em> : <a href="Vector3.html">Vector3</a>, <em>t</em> : float) : <a href="Vector3.html">Vector3</a> </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Spherically interpolates between two vectors.</p>
+<p>球形插值在两个向量之间。</p>
+<p>我感觉叫“弧线插值”更直观一些。</p>
+<p> Interpolates from towards to by amount t.  The returned vector's <a href="Vector3.magnitude.html">magnitude</a> will be interpolated between magnitudes of from and to. </p>
+<p>通过t数值在from和to之间插值。返回的向量的长度将被插值到from到to的长度之间。</p>
+<p> t is clamped between [0...1].  See Also: <a href="Vector3.Lerp.html">Lerp</a> function. </p>
+<p>t的值在[0...1]。</p>
+<p>参见：<a href="Vector3.Lerp.html">Lerp</a>函数</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Transform/Transform.html">Transform</a> sunrise;
+	public <a href="../Transform/Transform.html">Transform</a> sunset;
+	void Update() {
+		Vector3 center = sunrise.position + sunset.position * 0.5F;
+		center -= new <a href="Vector3.html">Vector3</a>(0, 1, 0);
+		Vector3 riseRelCenter = sunrise.position - center;
+		Vector3 setRelCenter = sunset.position - center;
+		transform.position = Vector3.Slerp(riseRelCenter, setRelCenter, Time.time);
+		transform.position += center;
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Animates the position in an arc between sunrise and sunset.
+//在日出和日落之间动画弧线</span>
+var sunrise : <a href="../Transform/Transform.html">Transform</a>;
+var sunset : <a href="../Transform/Transform.html">Transform</a>;
+
+function Update () {
+	<span class="notes">// The center of the arc
+	//弧线的中心</span>
+	var center = (sunrise.position + sunset.position) * 0.5;
+	<span class="notes">// move the center a bit downwards to make the arc vertical
+	//向下移动中心，垂直于弧线</span>
+	center -= <a href="Vector3.html">Vector3</a>(0,1,0);
+
+	<span class="notes">// Interpolate over the arc relative to center
+	//相对于中心在弧线上插值</span>
+	var riseRelCenter = sunrise.position - center;
+	var setRelCenter = sunset.position - center;
+	transform.position = Vector3.Slerp(riseRelCenter, setRelCenter, Time.time);
+	transform.position += center;
+}</code></pre></div>
+</div>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月19日 Sunday  23:34<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

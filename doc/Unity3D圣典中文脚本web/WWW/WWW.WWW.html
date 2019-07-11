@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>WWW.WWW 构造WWW</title>
+<meta name="Keywords" content="unity,WWW,url" />
+<meta name="Description" content="该WWW请求的URL(只读)。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="WWW.html">WWW</a> <span class="transer">坏坏/咖啡</span>
+                <ul>
+                    <li><a href="WWW.assetBundle.html">assetBundle</a></li>
+                    <li><a href="WWW.audioClip.html">audioClip</a></li>
+                    <li><a href="WWW.bytes.html">bytes</a></li>
+                    <li><a href="WWW.error.html">error</a></li>
+                    <li><a href="WWW.EscapeURL.html">EscapeURL</a></li>
+                    <li><a href="WWW.isDone.html">isDone</a></li>
+                    <li><a href="WWW.LoadImageIntoTexture.html">LoadImageIntoTexture</a></li>
+                    <li><a href="WWW.LoadUnityWeb.html">LoadUnityWeb</a></li>
+                    <li><a href="WWW.movie.html">movie</a></li>
+                    <li><a href="WWW.oggVorbis.html">oggVorbis</a></li>
+                    <li><a href="WWW.progress.html">progress</a></li>
+                    <li><a href="WWW.texture.html">texture</a></li>
+                    <li><a href="WWW.text.html">text</a></li>
+                    <li><a href="WWW.threadPriority.html">threadPriority</a></li>
+                    <li><a href="WWW.UnEscapeURL.html">UnEscapeURL</a></li>
+                    <li><a href="WWW.uploadProgress.html">uploadProgress</a></li>
+                    <li><a href="WWW.url.html">url</a></li>
+                    <li><a href="WWW.WWW.html">WWW</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="WWW.html">WWW</a>.WWW 构造WWW</h1>
+<p class="h1inherit"></p>
+<p>static function <em>WWW</em> (<em>url</em> : string) : WWW </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><em>url</em></div>
+    	<div class="licontent">The url to download. <br />
+    	下载的网址</div>
+    </li>
+</ul>
+	
+<em>Returns</em>
+<p>WWW - A new WWW object. When it has been downloaded, the results can be fetched from the returned object.</p>
+<p>返回WWW类型，一个新的WWW对象。当它被下载，其结果可以从返回的对象中获取。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Creates a WWW request with the given URL.</p>
+<p>用给定的URL创建一个WWW请求。</p>
+<p> This function creates and sends a GET request.  The stream will automatically start downloading the response. </p>
+<p>这个函数创建和发送一个GET请求，流将自动开始下载响应。</p>
+<p> After the stream is created you have to wait for it to complete, then you can access the downloaded data.  As a convenience the stream can be yielded, so you can very easily tell Unity to wait for the download to complete. </p>
+<p>流创建之后，你必须等待它完成，然而可以访问已下载的数据。作为一个方面的流可以被中断，因此你可以容易的告诉Unity等待下载完成。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public string url = "http://images.earthcam.com/ec_metros/ourcams/fridays.jpg";
+	IEnumerator Start() {
+		WWW www = new WWW(url);
+		yield return www;
+		renderer.material.mainTexture = www.texture;
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Get the latest webcam shot from outside "Friday's" in Times Square
+// 获取时代广场最新的外部"Friday" web摄像头数据 </span>
+var url = "http://images.earthcam.com/ec_metros/ourcams/fridays.jpg";
+function Start () {
+	<span class="notes">// Start a download of the given URL
+	// 开始下载给定的URL</span>
+	var www : WWW = new WWW (url);
+
+	<span class="notes">// Wait for download to complete
+	// 等待直到下载完成</span>
+	yield www;
+
+	<span class="notes">// assign texture
+	//指定纹理</span>
+	renderer.material.mainTexture = www.texture;
+}</code></pre></div>
+</div>
+<p>&#8226; static function <em>WWW</em> (<em>url</em> : string, <em>form</em> : <a href="../WWWForm/WWWForm.html">WWWForm</a>) : WWW </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><em>url</em></div>
+    	<div class="licontent">The url to download.<br />
+    	下载的网址</div>
+    </li>
+    <li>
+      <div class="lititle"><em>form</em></div>
+    	<div class="licontent">A WWWForm instance containing the form data to post. <br />
+    	一个WWWForm实例包含post表单数据</div>
+    </li>
+</ul>
+<em>Returns</em>
+<p>WWW - A new WWW object. When it has been downloaded, the results can be fetched from the returned object.</p>
+<p>返回WWW类型，一个新的WWW对象。当它被下载，其结果可以从返回的对象中获取。 </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Creates a WWW request with the given URL.</p>
+<p>用给定的URL创建一个WWW请求。</p>
+<p> This function creates and sends a POST request with form data contained in a <a href="../WWWForm/WWWForm.html">WWWForm</a> parameter. This is the same as calling new WWW(url,form.data, form.headers).  The stream will automatically start downloading the response. </p>
+<p>这个函数创建和发送一个POST关于表单数据包含一个<a href="../WWWForm/WWWForm.html">WWWForm</a>参数的请求。这是与调用new WWW(url,form.data, form.headers)相同的。流将自动开始下载响应。</p>
+<p> After the stream is created you have to wait for it to complete, then you can access the downloaded data.  As a convenience the stream can be yielded, so you can very easily tell Unity to wait for the download to complete. </p>
+<p>流创建之后，你必须等待它完成，然而可以访问已下载的数据。作为一个方面的流可以被中断，因此你可以容易的告诉Unity等待下载完成。</p>
+<p>&#8226; static function <em>WWW</em> (<em>url</em> : string, <em>postData</em> : byte[]) : WWW </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><em>url</em></div>
+    	<div class="licontent">The url to download.<br />
+    	下载的网址</div>
+    </li>
+    <li>
+      <div class="lititle"><em>postData</em></div>
+    	<div class="licontent">A byte array of data to be posted to the url. <br />
+    	数据post到url的一个字节数组</div>
+    </li>
+</ul>	
+<em>Returns</em>
+<p>WWW - A new WWW object. When it has been downloaded, the results can be fetched from the returned object.</p>
+<p>返回WWW类型，一个新的WWW对象。当它被下载，其结果可以从返回的对象中获取。 </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Creates a WWW request with the given URL.</p>
+<p>用给定的URL创建一个WWW请求。</p>
+<p> This function creates and sends a POST request with raw post data contained in postData.  The stream will automatically start downloading the response.  Use this version if you need to post raw post data in a custom format to the server. </p>
+<p>这个函数创建和发送一个POST关于元素post数据包含在postData的请求。流将自动开始下载响应。如果你需要post在一个自定义格式的原始postData到服务器，使用这个版本。</p>
+<p> After the stream is created you have to wait for it to complete, then you can access the downloaded data.  As a convenience the stream can be yielded, so you can very easily tell Unity to wait for the download to complete. </p>
+<p>流创建之后，你必须等待它完成，然而可以访问已下载的数据。作为一个方面的流可以被中断，因此你可以容易的告诉Unity等待下载完成。</p>
+<p>&#8226; static function <em>WWW</em> (<em>url</em> : string, <em>postData</em> : byte[], <em>headers</em> : <a href="../Hashtable/Hashtable.html">Hashtable</a>) : WWW </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><em>url</em></div>
+    	<div class="licontent">The url to download.</div>
+    </li>
+    <li>
+      <div class="lititle"><em>postData</em></div>
+    	<div class="licontent">A byte array of data to be posted to the url.</div>
+    </li>
+    <li>
+      <div class="lititle"><em>headers</em></div>
+    	<div class="licontent">A hash table of custom headers to send with the request. </div>
+    </li>
+</ul>
+<em>Returns</em>
+<p>WWW - A new WWW object. When it has been downloaded, the results can be fetched from the returned object.</p>
+<p>返回WWW类型，一个新的WWW对象。当它被下载，其结果可以从返回的对象中获取。 </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Creates a WWW request with the given URL.</p>
+<p>用给定的URL创建一个WWW请求。</p>
+<p> This function creates and sends a POST request with raw post data contained in  postData and custom request headers supplied in the headers   hashtable.  The stream will automatically start downloading the response.  Use this version if you need to post raw post data in a custom format to   the server or if you need to supply custom request headers. </p>
+<p>这个函数创建和发送一个POST关于元素post数据包含在postData并且在哈希表头自定义请求headers的请求。流将自动开始下载响应。如果你需要post在一个自定义格式的原始postData到服务器或如果您需要提供自定义请求表头，使用这个版本。</p>
+<p> After the stream is created you have to wait for it to complete, then you can access the downloaded data.  As a convenience the stream can be yielded, so you can very easily tell Unity to wait for the download to complete.</p>
+<p>流创建之后，你必须等待它完成，然而可以访问已下载的数据。作为一个方面的流可以被中断，因此你可以容易的告诉Unity等待下载完成。</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月25日 Monday  9:24<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

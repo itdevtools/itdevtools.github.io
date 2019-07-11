@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>iPhoneKeyboard 键盘</title>
+<meta name="Keywords" content="unity,iPhoneKeyboard,键盘" />
+<meta name="Description" content="iPhone本身屏幕上的键盘的接口。这个接口允许你显示不同的键盘：ASCII码，数字，URL，电子邮件，和其他。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="iPhoneKeyboard.html">iPhoneKeyboard</a><span class="transer">翻译：剑客 </span>
+                <ul>
+                    <li><a href="iPhoneKeyboard.active.html">active</a></li>
+                    <li><a href="iPhoneKeyboard.area.html">area</a></li>
+                    <li><a href="iPhoneKeyboard.autorotateToLandscapeLeft.html">autorotateToLandscapeLeft</a></li>
+                    <li><a href="iPhoneKeyboard.autorotateToLandscapeRight.html">autorotateToLandscapeRight</a></li>
+                    <li><a href="iPhoneKeyboard.autorotateToPortraitUpsideDown.html">autorotateToPortraitUpsideDown</a></li>
+                    <li><a href="iPhoneKeyboard.autorotateToPortrait.html">autorotateToPortrait</a></li>
+                    <li><a href="iPhoneKeyboard.done.html">done</a></li>
+                    <li><a href="iPhoneKeyboard.hideInput.html">hideInput</a></li>
+                    <li><a href="iPhoneKeyboard.Open.html">Open</a></li>
+                    <li><a href="iPhoneKeyboard.text.html">text</a></li>
+                    <li><a href="iPhoneKeyboard.visible.html">visible</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>iPhoneKeyboard 键盘</h1>
+<p class="h1inherit"></p>
+<p> Interface into iPhone native on screen keyboard. This   interface allows to display different types of the keyboard: ASCII,   Numbers, URL, Email, and others.</p>
+<p>iPhone本身屏幕上的键盘的接口。这个接口允许你显示不同的键盘：ASCII码，数字，URL，电子邮件，和其他。</p>
+<p> Because the appearance of the keyboard has the potential to obscure portions of your user interface,  it is up to you to make sure that parts of your user interface are not obscured when the keyboard is being displayed. </p>
+<p>由于键盘的外形有可能的部分遮住你的用户界面,当键盘被显示的时候，你应该确保那部分用户界面没有被遮挡。</p>
+<p> <a href="iPhoneKeyboard.visible.html">iPhoneKeyboard.visible</a> and <a href="iPhoneKeyboard.area.html">iPhoneKeyboard.area</a> should be used to determine if the keyboard is being shown (activated) and what portion of the screen is using. </p>
+<p>iPhoneKeyboard.visible和iPhoneKeyboard.area被用来确定键盘正显示(激活)和哪一部分屏幕使用。</p>
+<p> Apple's API does not allow to explicitly control the orientation of the keyboard.  Instead you can define <a href="iPhoneKeyboard.autorotateToPortrait.html">iPhoneKeyboard.autorotateToPortrait</a>, <a href="iPhoneKeyboard.autorotateToPortraitUpsideDown.html">iPhoneKeyboard.autorotateToPortraitUpsideDown</a>, <a href="iPhoneKeyboard.autorotateToLandscapeLeft.html">iPhoneKeyboard.autorotateToLandscapeLeft</a>, <a href="iPhoneKeyboard.autorotateToLandscapeRight.html">iPhoneKeyboard.autorotateToLandscapeRight</a> if the keyboard needs to be automatically rotated to match a specific orientation of the device. </p>
+<p>苹果的API不允许明确地控制键盘的方向。但是,你可以定义iPhoneKeyboard.autorotateToPortrait ，iPhoneKeyboard.autorotateToLandscapeLeft，iPhoneKeyboard.autorotateToPortraitUpsideDown，iPhoneKeyboard.autorotateToLandscapeRight，如果键盘需要自动旋转匹配一个具体的定位装置。</p>
+<p> Instance of this class can be used as a yield instruction. It waits   until keyboard becomes inactive that is disappears from the screen.</p>
+<p>这个类的实例可以用来作为一个yield指令。它等待直到变为无效,键盘从屏幕上消失了。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="iPhoneKeyboard.text.html">text</a></div>
+    	<div class="licontent">Returns the text displayed by the input field of the keyboard. This value can be accessed at any moment, even if user has not yet finished input process.<br />
+   	    返回显示在键盘输入区域的text（文字）。这个值可以在任何时刻被存取,即使用户尚未完成输入的过程中。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.active.html">active</a></div>
+    	<div class="licontent">Specifies if the keyboard is visible or is sliding into the position on the screen.<br />
+   	    指定键盘是否显示或者正在向屏幕指定位置滑动。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.done.html">done</a></div>
+    	<div class="licontent">Specifies if input process was finished (Read Only)<br />
+   	    输入过程是否结束（只读） </div>
+    </li>
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.hideInput.html">hideInput</a></div>
+    	<div class="licontent">Specifies if text input field above the keyboard will be hidden when the keyboard is on screen.<br />
+   	    当键盘显示在屏幕上的时候指定在键盘上面的输入框是否被隐藏。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.autorotateToPortrait.html">autorotateToPortrait</a></div>
+    	<div class="licontent">Specifies whether the keyboard should be automatically rotated to Portrait orientation to match orientation of the device.<br />
+   	    指定键盘是否应该被自动旋转到纵向方向来匹配定位装置。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.autorotateToPortraitUpsideDown.html">autorotateToPortraitUpsideDown</a></div>
+    	<div class="licontent">Specifies whether the keyboard should be automatically rotated to PortraitUpsideDown orientation to match orientation of the device.<br />
+   	    指定键盘是否应该自动旋转到PortraitUpsideDown定位来匹配的定位装置 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.autorotateToLandscapeLeft.html">autorotateToLandscapeLeft</a></div>
+    	<div class="licontent">Specifies whether the keyboard should be automatically rotated to LandscapeLeft orientation to match orientation of the device.<br />
+   	    指定键盘是否应该自动旋转到LandscapeLeft定位来匹配的定位装置 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.autorotateToLandscapeRight.html">autorotateToLandscapeRight</a></div>
+    	<div class="licontent">Specifies whether the keyboard should be automatically rotated to LandscapeRight orientation to match orientation of the device.<br />
+   	    指定键盘是否应该自动旋转到LandscapeRight定位来匹配的定位装置 。注：Portrait、PortraitUpsideDown、LandscapeLeft、LandscapeRight 是在PlayerSetting中Resolution下Default Orientation的四个属性。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.area.html">area</a></div>
+    	<div class="licontent">Returns portion of the screen which is covered by the keyboard.<br />
+   	    返回被键盘覆盖的屏幕部分。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.visible.html">visible</a></div>
+    	<div class="licontent">Returns true whenever any keyboard is completely visible on the screen.<br />
+   	    当任何键盘在屏幕上完全可见，返回true。</div>
+    </li>
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="iPhoneKeyboard.Open.html">Open</a></div>
+    	<div class="licontent">Opens the native iPhone keyboard on the screen.
+          <br />
+        打开iPhone原生键盘在屏幕上 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月8日 Friday  15:46<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Light.color 颜色</title>
+<meta name="Keywords" content="unity,Light,color,颜色" />
+<meta name="Description" content="灯光的颜色。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Light.html">Light</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Light.color.html">color</a></li>
+                    <li><a href="Light.cookie.html">cookie</a></li>
+                    <li><a href="Light.cullingMask.html">cullingMask</a></li>
+                    <li><a href="Light.flare.html">flare</a></li>
+                    <li><a href="Light.intensity.html">intensity</a></li>
+                    <li><a href="Light.range.html">range</a></li>
+                    <li><a href="Light.renderMode.html">renderMode</a></li>
+                    <li><a href="Light.shadowBias.html">shadowBias</a></li>
+                    <li><a href="Light.shadowSoftnessFade.html">shadowSoftnessFade</a></li>
+                    <li><a href="Light.shadowSoftness.html">shadowSoftness</a></li>
+                    <li><a href="Light.shadowStrength.html">shadowStrength</a></li>
+                    <li><a href="Light.shadows.html">shadows</a></li>
+                    <li><a href="Light.spotAngle.html">spotAngle</a></li>
+                    <li><a href="Light.type.html">type</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1> <a href="Light.html">Light</a>.color 颜色</h1>
+<p class="h1inherit"></p>
+
+<p>var <em>color</em> : <a href="../Color/Color.html">Color</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> The color of the light.</p>
+<p>灯光的颜色。</p>
+<p> To modify the light intensity you change light's color luminance.  Lights always add illumination, so a light with a black color is the same  as no light at all. </p>
+<p>修改的灯光强度（intensity），可以改变灯光颜色的亮度。灯光总是增加照明，因此一个黑色光源和没有光一样。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Update() {
+		light.color -= <a href="../Color/Color.white.html">Color.white</a> / 2.0F * <a href="../Time/Time.deltaTime.html">Time.deltaTime</a>;
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// Darken the light completely over a period of 2 seconds.
+//在2秒内使颜色变黑。</span>
+
+function Update () {
+	light.color -= <a href="../Color/Color.white.html">Color.white</a> / 2.0 * <a href="../Time/Time.deltaTime.html">Time.deltaTime</a>;
+}</code></pre></div>
+</div>
+<p>另一个例子：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public float duration = 1.0F;
+	public <a href="../Color/Color.html">Color</a> color0 = <a href="../Color/Color.red.html">Color.red</a>;
+	public <a href="../Color/Color.html">Color</a> color1 = <a href="../Color/Color.blue.html">Color.blue</a>;
+	void Update() {
+		float t = <a href="../Mathf/Mathf.PingPong.html">Mathf.PingPong</a>(<a href="../Time/Time.time.html">Time.time</a>, duration) / duration;
+		light.color = <a href="../Color/Color.Lerp.html">Color.Lerp</a>(color0, color1, t);
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// Interpolate light color between two colors back and forth
+//在2个颜色之间来回插值光源颜色。</span>
+var duration : float = 1.0;
+var color0 : <a href="../Color/Color.html">Color</a> = <a href="../Color/Color.red.html">Color.red</a>;
+var color1 : <a href="../Color/Color.html">Color</a> = <a href="../Color/Color.blue.html">Color.blue</a>;
+
+function Update () {
+	<span class="notes">// set light color
+	//设置灯光颜色</span>
+	var t : float = <a href="../Mathf/Mathf.PingPong.html">Mathf.PingPong</a> (<a href="../Time/Time.time.html">Time.time</a>, duration) / duration;
+	light.color = <a href="../Color/Color.Lerp.html">Color.Lerp</a> (color0, color1, t);
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月30日 Wednesday  10:53<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

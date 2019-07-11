@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>RaycastHit.barycentricCoordinate 重心坐标</title>
+<meta name="Keywords" content="unity,RaycastHit,barycentricCoordinate,重心坐标" />
+<meta name="Description" content="所碰到的三角形的重心坐标。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="RaycastHit.html">RaycastHit</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="RaycastHit.barycentricCoordinate.html">barycentricCoordinate</a></li>
+                    <li><a href="RaycastHit.collider.html">collider</a></li>
+                    <li><a href="RaycastHit.distance.html">distance</a></li>
+                    <li><a href="RaycastHit.lightmapCoord.html">lightmapCoord</a></li>
+                    <li><a href="RaycastHit.normal.html">normal</a></li>
+                    <li><a href="RaycastHit.point.html">point</a></li>
+                    <li><a href="RaycastHit.rigidbody.html">rigidbody</a></li>
+                    <li><a href="RaycastHit.textureCoord2.html">textureCoord2</a></li>
+                    <li><a href="RaycastHit.textureCoord.html">textureCoord</a></li>
+                    <li><a href="RaycastHit.transform.html">transform</a></li>
+                    <li><a href="RaycastHit.triangleIndex.html">triangleIndex</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="RaycastHit.html">RaycastHit</a>.barycentricCoordinate 重心坐标</h1>
+<p class="h1inherit"></p>
+<p>var <em>barycentricCoordinate</em> : <a href="../Vector3/Vector3.html">Vector3</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> The barycentric coordinate of the triangle we hit.</p>
+<p>所碰到的三角形的重心坐标。</p>
+<p> This lets you interpolate any of the vertex data along the 3 axes.</p>
+<p>这允许你沿着3个轴插值任何顶点数据。</p>
+<div class="note"><pre><code><span class="notes">// Attach this script to a camera and it will
+// draw a debug line pointing outward from the normal
+//附加这个脚本到相机，它将绘制一条从法线指出的调试直线</span>
+function Update () {
+	<span class="notes">// Only if we hit something, do we continue
+	//只有当碰到了什么东西，继续</span>
+	var hit : RaycastHit;
+	if (!Physics.Raycast (<a href="../Camera/Camera.main.html">Camera.main</a>.ScreenPointToRay(<a href="../Input/Input.mousePosition.html">Input.mousePosition</a>), hit))
+		return;
+
+	<span class="notes">// Just in case, also make sure the collider also has a renderer
+	// material and texture
+	//以防万一，确保碰撞器也有一个渲染器、材质和纹理</span>
+	var meshCollider = hit.collider as <a href="../MeshCollider/MeshCollider.html">MeshCollider</a>;
+	if (meshCollider == null || meshCollider.sharedMesh == null)
+		return;
+
+	var mesh : <a href="../Mesh/Mesh.html">Mesh</a> = meshCollider.sharedMesh;
+	var normals = mesh.normals;
+	var triangles = mesh.triangles;
+
+	<span class="notes">// Extract local space normals of the triangle we hit
+	//取得所碰到三角形的本地法线</span>
+	var n0 = normals[triangles[hit.triangleIndex * 3 + 0]];
+	var n1 = normals[triangles[hit.triangleIndex * 3 + 1]];
+	var n2 = normals[triangles[hit.triangleIndex * 3 + 2]];
+
+	<span class="notes">// interpolate using the barycentric coordinate of the hitpoint
+	//使用碰撞点的重心坐标来插值</span>
+	var baryCenter = hit.barycentricCoordinate;
+
+	<span class="notes">// Use barycentric coordinate to interpolate normal
+	//使用重心坐标插值法线</span>
+	var interpolatedNormal = n0 * baryCenter.x + n1 * baryCenter.y + n2 * baryCenter.z;
+	<span class="notes">// normalize the interpolated normal
+	//规范化插值法线</span>
+	interpolatedNormal = interpolatedNormal.normalized;
+
+	<span class="notes">// Transform local space normals to world space
+	//变换本地法线到世界空间</span>
+	var hitTransform : <a href="../Transform/Transform.html">Transform</a> = hit.collider.transform;
+	interpolatedNormal = hitTransform.TransformDirection(interpolatedNormal);
+
+	<span class="notes">// Display with Debug.DrawLine
+	//显示调试线</span>
+	<a href="../Debug/Debug.DrawRay.html">Debug.DrawRay</a>(hit.point, interpolatedNormal);
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月13日 Sunday  13:39<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

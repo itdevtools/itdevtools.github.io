@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Application.ExternalCall,外部调用</title>
+<meta name="Keywords" content="unity,Application,应用程序,ExternalCall,外部调用" />
+<meta name="Description" content="调用一个包含在网页中的函数（只用于Web Player）。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Application.html">Application</a><span class="transer">翻译：^牛^魔王 </span>
+                <ul>
+                    <li><a href="Application.absoluteURL.html">absoluteURL</a></li>
+                    <li><a href="Application.backgroundLoadingPriority.html">backgroundLoadingPriority</a></li>
+                    <li><a href="Application.CancelQuit.html">CancelQuit</a></li>
+                    <li><a href="Application.CanStreamedLevelBeLoaded.html">CanStreamedLevelBeLoaded</a></li>
+                    <li><a href="Application.CaptureScreenshot.html">CaptureScreenshot</a></li>
+                    <li><a href="Application.dataPath.html">dataPath</a></li>
+                    <li><a href="Application.ExternalCall.html">ExternalCall</a></li>
+                    <li><a href="Application.ExternalEval.html">ExternalEval</a></li>
+                    <li><a href="Application.GetStreamProgressForLevel.html">GetStreamProgressForLevel</a></li>
+                    <li><a href="Application.isEditor.html">isEditor</a></li>
+                    <li><a href="Application.isLoadingLevel.html">isLoadingLevel</a></li>
+                    <li><a href="Application.isPlaying.html">isPlaying</a></li>
+                    <li><a href="Application.isWebPlayer.html">isWebPlayer</a></li>
+                    <li><a href="Application.levelCount.html">levelCount</a></li>
+                    <li><a href="Application.loadedLevelName.html">loadedLevelName</a></li>
+                    <li><a href="Application.loadedLevel.html">loadedLevel</a></li>
+                    <li><a href="Application.LoadLevelAdditiveAsync.html">LoadLevelAdditiveAsync</a></li>
+                    <li><a href="Application.LoadLevelAdditive.html">LoadLevelAdditive</a></li>
+                    <li><a href="Application.LoadLevelAsync.html">LoadLevelAsync</a></li>
+                    <li><a href="Application.LoadLevel.html">LoadLevel</a></li>
+                    <li><a href="Application.LogCallback.html">LogCallback</a></li>
+                    <li><a href="Application.OpenURL.html">OpenURL</a></li>
+                    <li><a href="Application.persistentDataPath.html">persistentDataPath</a></li>
+                    <li><a href="Application.platform.html">platform</a></li>
+                    <li><a href="Application.Quit.html">Quit</a></li>
+                    <li><a href="Application.RegisterLogCallbackThreaded.html">RegisterLogCallbackThreaded</a></li>
+                    <li><a href="Application.RegisterLogCallback.html">RegisterLogCallback</a></li>
+                    <li><a href="Application.runInBackground.html">runInBackground</a></li>
+                    <li><a href="Application.srcValue.html">srcValue</a></li>
+                    <li><a href="Application.streamedBytes.html">streamedBytes</a></li>
+                    <li><a href="Application.systemLanguage.html">systemLanguage</a></li>
+                    <li><a href="Application.targetFrameRate.html">targetFrameRate</a></li>
+                    <li><a href="Application.temporaryCachePath.html">temporaryCachePath</a></li>
+                    <li><a href="Application.unityVersion.html">unityVersion</a></li>
+                    <li><a href="Application.webSecurityEnabled.html">webSecurityEnabled</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Application.html">Application</a>.ExternalCall 外部调用</h1>
+<p class="h1inherit"></p>
+<p>static function <em>ExternalCall</em> (<em>functionName</em> : string, <em>params args</em> : object[]) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Calls a function in the containing web   page (Web Player   only).</p>
+<p>调用一个包含在网页中的函数（只用于Web Player）。</p>
+<p>This will call JavaScript function functionName   in the web page that contains the web player, passing   given arguments to it. Supported argument types are the primitive types (string,   int, float, char) and arrays of them. Any other objects are converted to string   (using ToString method) and passed as strings.</p>
+<p>调用包含在网页中名为functionNameJavaScript函数，并传递给定的参数。支持原始的数据类型(string, int, float,   char)和这些类型的数字。如何其他的对象被转化为字符串（使用ToString方法）并作为字符串传递。</p>
+<p>The   function is called non-blocking, i.e. ExternalCall immediately returns   without waiting for the function that was called to complete.</p>
+<p>这个函数调用时不会被阻塞，即ExternalCall立即返回的功能而不必等待被完成。</p>
+<p>The number of passed arguments can be   varying:</p>
+<p>传递的参数数量是可变的。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public void Awake() {
+		Application.ExternalCall("MyFunction1");
+		Application.ExternalCall("MyFunction2", "Hello from Unity!");
+		Application.ExternalCall("MyFunction3", "one", 2, 3.0F);
+	}
+}
+</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Calls MyFunction1 in web page with no arguments
+// 调用网页上的MyFunction1并不使用参数。</span>
+Application.ExternalCall ("MyFunction1");
+
+<span class="notes">// Calls MyFunction2 in web page with a string
+//调用网页上的MyFunction2并使用字符串参数。</span>
+Application.ExternalCall ("MyFunction2", "Hello from Unity!");
+
+<span class="notes">// Calls MyFunction3 in web page with several arguments of different types
+//调用网页上的MyFunction3并使用几个不同类型的参数。</span>
+Application.ExternalCall ("MyFunction3", "one", 2, 3.0);
+</code></pre></div>
+</div>
+<p>The functions to be called are just declared in the HTML page using standard syntax, for example:<br />
+  被调用的在HTML中的函数只需要使用标准的语法即可，例如：</p>
+<div class="note"><pre>&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot;&gt;
+&lt;!--  
+<span class="notes">// Using the above call from Unity, this will   receive
+// 使用来自Unity的调用，这将接受
+// &quot;Hello from Unity!&quot; as the argument.
+// &quot;Hello from Unity!&quot; 做为参数</span>
+function MyFunction2( arg )
+	{
+		alert( arg );
+	}
+--&gt;
+&lt;/script&gt;</pre>
+</div>
+<p>参见： <a href="Application.ExternalEval.html">Application.ExternalEval</a>.</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月15日 Wednesday  15:11<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

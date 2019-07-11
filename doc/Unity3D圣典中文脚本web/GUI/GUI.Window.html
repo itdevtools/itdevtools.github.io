@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>GUI.Window 窗口</title>
+<meta name="Keywords" content="unity,GUI,界面,Window,窗口" />
+<meta name="Description" content="创建一个弹出窗口。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="GUI.html">GUI</a> <span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="GUI.backgroundColor.html">backgroundColor</a></li>
+                    <li><a href="GUI.BeginGroup.html">BeginGroup</a></li>
+                    <li><a href="GUI.BeginScrollView.html">BeginScrollView</a></li>
+                    <li><a href="GUI.Box.html">Box</a></li>
+                    <li><a href="GUI.BringWindowToBack.html">BringWindowToBack</a></li>
+                    <li><a href="GUI.BringWindowToFront.html">BringWindowToFront</a></li>
+                    <li><a href="GUI.Button.html">Button</a></li>
+                    <li><a href="GUI.changed.html">changed</a></li>
+                    <li><a href="GUI.color.html">color</a></li>
+                    <li><a href="GUI.contentColor.html">contentColor</a></li>
+                    <li><a href="GUI.depth.html">depth</a></li>
+                    <li><a href="GUI.DragWindow.html">DragWindow</a></li>
+                    <li><a href="GUI.DrawTexture.html">DrawTexture</a></li>
+                    <li><a href="GUI.enabled.html">enabled</a></li>
+                    <li><a href="GUI.EndGroup.html">EndGroup</a></li>
+                    <li><a href="GUI.EndScrollView.html">EndScrollView</a></li>
+                    <li><a href="GUI.FocusControl.html">FocusControl</a></li>
+                    <li><a href="GUI.FocusWindow.html">FocusWindow</a></li>
+                    <li><a href="GUI.GetNameOfFocusedControl.html">GetNameOfFocusedControl</a></li>
+                    <li><a href="GUI.GUI.html">GUI</a></li>
+                    <li><a href="GUI.HorizontalScrollbar.html">HorizontalScrollbar</a></li>
+                    <li><a href="GUI.HorizontalSlider.html">HorizontalSlider</a></li>
+                    <li><a href="GUI.Label.html">Label</a></li>
+                    <li><a href="GUI.matrix.html">matrix</a></li>
+                    <li><a href="GUI.PasswordField.html">PasswordField</a></li>
+                    <li><a href="GUI.RepeatButton.html">RepeatButton</a></li>
+                    <li><a href="GUI.ScrollTo.html">ScrollTo</a></li>
+                    <li><a href="GUI.SelectionGrid.html">SelectionGrid</a></li>
+                    <li><a href="GUI.SetNextControlName.html">SetNextControlName</a></li>
+                    <li><a href="GUI.skin.html">skin</a></li>
+                    <li><a href="GUI.TextArea.html">TextArea</a></li>
+                    <li><a href="GUI.TextField.html">TextField</a></li>
+                    <li><a href="GUI.Toggle.html">Toggle</a></li>
+                    <li><a href="GUI.Toolbar.html">Toolbar</a></li>
+                    <li><a href="GUI.tooltip.html">tooltip</a></li>
+                    <li><a href="GUI.UnfocusWindow.html">UnfocusWindow</a></li>
+                    <li><a href="GUI.VerticalScrollbar.html">VerticalScrollbar</a></li>
+                    <li><a href="GUI.VerticalSlider.html">VerticalSlider</a></li>
+                    <li><a href="GUI.Window.html">Window</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="GUI.html">GUI</a>.Window  窗口</h1>
+<p></p>
+<p>static function <em>Window</em> (<em>id</em> : int, <em>clientRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>func</em> : WindowFunction, <em>text</em> : <a href="../String/String.html">String</a>) : <a href="../Rect/Rect.html">Rect</a><br />
+static function <em>Window</em> (<em>id</em> : int, <em>clientRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>func</em> : WindowFunction, <em>image</em> : <a href="../Texture/Texture.html">Texture</a>) : <a href="../Rect/Rect.html">Rect</a><br />
+static function <em>Window</em> (<em>id</em> : int, <em>clientRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>func</em> : WindowFunction, <em>content</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>) : <a href="../Rect/Rect.html">Rect</a><br />
+static function <em>Window</em> (<em>id</em> : int, <em>clientRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>func</em> : WindowFunction, <em>text</em> : <a href="../String/String.html">String</a>, <em>style</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>) : <a href="../Rect/Rect.html">Rect</a><br />
+static function <em>Window</em> (<em>id</em> : int, <em>clientRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>func</em> : WindowFunction, <em>image</em> : <a href="../Texture/Texture.html">Texture</a>, <em>style</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>) : <a href="../Rect/Rect.html">Rect</a><br />
+static function <em>Window</em> (<em>id</em> : int, <em>clientRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>func</em> : WindowFunction, <em>title</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>, <em>style</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>) : <a href="../Rect/Rect.html">Rect</a> </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><em>id</em></div>
+    	<div class="licontent">A unique ID to use for each window. This is the ID you'll use to interface to.<br />
+    	用于每个窗口的唯一ID。这是你用于接口的ID</div>
+    </li>
+    <li><div class="lititle"><em>clientRect</em></div>
+    	<div class="licontent">Rectangle on the screen to use for the group.<br />
+    	用于窗口组在屏幕上的矩形位置</div>
+    </li>
+    <li><div class="lititle"><em>func</em></div>
+    	<div class="licontent">The function that creates the GUI inside the window. This function must take one parameter - the id of the window it's currently making GUI for.<br />
+    	在窗口中创建GUI的函数，这个函数必须获得一个参数-用于当前创建GUI的窗口ID</div>
+    </li>
+    <li><div class="lititle"><em>text</em></div>
+    	<div class="licontent">Text to display as a title for the window.<br />
+    	用于窗口的标题文本显示。</div>
+    </li>
+    <li><div class="lititle"><em>image</em></div>
+    	<div class="licontent">Texture to display an image in the titlebar.<br />
+    	在标题栏显示图片纹理</div>
+    </li>
+    <li><div class="lititle"><em>content</em></div>
+    	<div class="licontent">Text, image and tooltip for this window.<br />
+    	用于窗口的文本，图片和提示</div>
+    </li>
+    <li><div class="lititle"><em>style</em></div>
+    	<div class="licontent">An optional style to use for the window. If left out, the window style from the current GUISkin is used. <br />
+    	用户窗口的可选样式，如果不设置，窗口样式应用当前的GUISkin皮肤。</div>
+    </li>
+</ul>
+<em>Returns</em>
+<p>Rect - the rectangle the window is at.</p>
+<p>返回 Rect类型，窗口所在的矩形。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+
+<p> Make a popup window.</p>
+<p>创建一个弹出窗口。</p>
+<p> Windows float above normal GUI controls, feature click-to-focus and can optionally be dragged around by the end user.  	Unlike other controls, you need to pass them a separate function for the GUI controls to put inside the window. <strong>Note:</strong> If you are using <a href="../GUILayout/GUILayout.html">GUILayout</a> to place your components inside the window, you should use <a href="../GUILayout/GUILayout.Window.html">GUILayout.Window</a>.  	Here is a small example to get you started: </p>
+<p>窗口浮动在普通GUI控件之上，点选焦点和能被终端用户随意拖动的特点，不像其他的控件，你需要为GUI控件传递她们一个单独的函数放进窗口。注意，如果你使用<a href="../GUILayout/GUILayout.html">GUILayout</a>在窗口中放你的组件，你需要使用<a href="../GUILayout/GUILayout.Window.html">GUILayout.Window</a>。这儿是一个小例子助你理解：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Rect/Rect.html">Rect</a> windowRect = new <a href="../Rect/Rect.html">Rect</a>(20, 20, 120, 50);
+	void OnGUI() {
+		windowRect = <a href="GUI.Window.html">GUI.Window</a>(0, windowRect, DoMyWindow, &quot;My Window&quot;);
+	}
+	void DoMyWindow(int windowID) {
+	if (<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(10, 20, 100, 20), &quot;Hello World&quot;))
+		print(&quot;Got a click&quot;);
+
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>var windowRect : <a href="../Rect/Rect.html">Rect</a> = <a href="../Rect/Rect.html">Rect</a>(20, 20, 120, 50);
+
+function OnGUI () {
+	<span class="notes">// Register the window. Notice the 3rd parameter
+	//注册窗口，注意第三个参数</span>
+	windowRect = <a href="GUI.Window.html">GUI.Window</a>(0, windowRect, DoMyWindow, &quot;My Window&quot;);
+}
+
+<span class="notes">// Make the contents of the window
+//制作窗口的内容</span>
+function DoMyWindow (windowID : int) {
+	if (<a href="GUI.Button.html">GUI.Button</a>(<a href="../Rect/Rect.html">Rect</a> (10,20,100,20), &quot;Hello World&quot;))
+		print (&quot;Got a click&quot;);
+}</code></pre></div>
+</div>
+<p>You can use the same function to create multiple windows. Just make sure that each window has its own ID. Example: </p>
+<p>你可以使用一样的函数来创建多个窗口，要确定每一个窗口有自己的ID。</p>
+<p>例如：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Rect/Rect.html">Rect</a> windowRect0 = new <a href="../Rect/Rect.html">Rect</a>(20, 20, 120, 50);
+	public <a href="../Rect/Rect.html">Rect</a> windowRect1 = new <a href="../Rect/Rect.html">Rect</a>(20, 100, 120, 50);
+	void OnGUI() {
+		windowRect0 = <a href="GUI.Window.html">GUI.Window</a>(0, windowRect0, DoMyWindow, &quot;My Window&quot;);
+		windowRect1 = <a href="GUI.Window.html">GUI.Window</a>(1, windowRect1, DoMyWindow, &quot;My Window&quot;);
+	}
+	void DoMyWindow(int windowID) {
+	if (<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(10, 20, 100, 20), &quot;Hello World&quot;))
+		print(&quot;Got a click in window &quot; + windowID);
+
+		<a href="GUI.DragWindow.html">GUI.DragWindow</a>(new <a href="../Rect/Rect.html">Rect</a>(0, 0, 10000, 10000));
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>var windowRect0 : <a href="../Rect/Rect.html">Rect</a> = <a href="../Rect/Rect.html">Rect</a>(20, 20, 120, 50);
+var windowRect1 : <a href="../Rect/Rect.html">Rect</a> = <a href="../Rect/Rect.html">Rect</a>(20, 100, 120, 50);
+
+function OnGUI () {
+	<span class="notes">// Register the window. We create two windows that use the same function
+	// Notice that their IDs differ
+	//注册窗口，我们用一样的函数创建两个窗口，注意它们的ID不同</span>
+	windowRect0 = <a href="GUI.Window.html">GUI.Window</a>(0, windowRect0, DoMyWindow, &quot;My Window&quot;);
+	windowRect1 = <a href="GUI.Window.html">GUI.Window</a>(1, windowRect1, DoMyWindow, &quot;My Window&quot;);
+}
+
+<span class="notes">// Make the contents of the window
+//制作窗口的内容</span>
+function DoMyWindow (windowID : int) {
+if (<a href="GUI.Button.html">GUI.Button</a>(<a href="../Rect/Rect.html">Rect</a> (10,20,100,20), &quot;Hello World&quot;))
+	print (&quot;Got a click in window &quot; + windowID);
+	<span class="notes">// Make the windows be draggable.
+	//制作窗口可以拖动</span>
+	<a href="GUI.DragWindow.html">GUI.DragWindow</a>(<a href="../Rect/Rect.html">Rect</a> (0,0,10000,10000));
+}</code></pre></div>
+</div>
+<p>To stop showing a window, simply stop calling <a href="GUI.Window.html">GUI.Window</a> from inside your main DoGUI function:</p>
+<p>停止显示一个窗口，从你的主DoGUI函数中简单停止调用<a href="GUI.Window.html">GUI.Window</a>。 </p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public bool doWindow0 = true;
+	void DoWindow0(int windowID) {
+		<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(10, 30, 80, 20), &quot;Click Me!&quot;);
+	}
+	void OnGUI() {
+	doWindow0 = <a href="GUI.Toggle.html">GUI.Toggle</a>(new <a href="../Rect/Rect.html">Rect</a>(10, 10, 100, 20), doWindow0, &quot;Window 0&quot;);
+	if (doWindow0)
+		<a href="GUI.Window.html">GUI.Window</a>(0, new <a href="../Rect/Rect.html">Rect</a>(110, 10, 200, 60), DoWindow0, &quot;Basic Window&quot;);
+
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// boolean variable to decide whether to show the window or not.
+// Change this from the in-game GUI, scripting, the inspector or anywhere else to
+// decide whether the window is visible
+//布尔变量决定窗口是否显示，你可以从游戏界面，脚本，检视面板或者其他地方决定窗口是否可见</span>
+var doWindow0 : boolean = true;
+
+<span class="notes">// Make the contents of the window.
+//创建窗口的内容。</span>
+function DoWindow0 (windowID : int) {
+	<a href="GUI.Button.html">GUI.Button</a>(<a href="../Rect/Rect.html">Rect</a> (10,30, 80,20), &quot;Click Me!&quot;);
+}
+
+function OnGUI () {
+	<span class="notes">// Make a toggle button for hiding and showing the window
+	//创建开关按钮，用于隐藏显示窗口</span>
+	doWindow0 = <a href="GUI.Toggle.html">GUI.Toggle</a>(<a href="../Rect/Rect.html">Rect</a> (10,10,100,20), doWindow0, &quot;Window 0&quot;);
+
+	<span class="notes">// Make sure we only call GUI.Window if doWindow0 is true.
+	//确定我们如果doWindow0为True，仅调用窗口GUI.Window</span>
+	if (doWindow0)
+		<a href="GUI.Window.html">GUI.Window</a>(0, <a href="../Rect/Rect.html">Rect</a>(110,10,200,60), DoWindow0, &quot;Basic Window&quot;);
+}</code></pre></div>
+</div>
+<p>To make a window that gets its size from automatic GUI layouting, use GUILayout.Window. </p>
+<p>要创建一个自动GUI布局的窗口，使用GUILayout.Window。</p>
+<em>Call Ordering 调用排序</em>
+<p> Windows need to be drawn back-to-front; windows on top of other windows   need to be drawn later than the ones below them. This means that you   can not count on your DoWindow functions to   	be called in any particular order. In order for this to work   seamlessly, the following values are stored when you create your window   (using the <strong>Window</strong> function), and retrieved when your DoWindow gets called: <a href="GUI.skin.html">GUI.skin</a>, <a href="file:///E:/Program%20Files/Unity/Editor/Data/Documentation/Documentation/ScriptReference/GUI-enabled.html">GUI.enabled</a>, <a href="GUI.color.html">GUI.color</a>, <a href="GUI.backgroundColor.html">GUI.backgroundColor</a>, <a href="GUI.contentColor.html">GUI.contentColor</a>, <a href="GUI.matrix.html">GUI.matrix</a></p>
+<p>窗口需要从后向前绘制。在其他窗口上面的窗口需要比他们下面的窗口晚绘制。你不能指望在你的Dowindow函数中调用任意特定排序。为了使整个工作无缝，当你创建窗口时下面的值被储存（使用窗口函数），并且当你的DoWindow被<a href="GUI.skin.html">GUI.skin</a>, <a href="GUI.enabled.html">GUI.enabled</a>, <a href="GUI.color.html">GUI.color</a>, <a href="GUI.backgroundColor.html">GUI.backgroundColor</a>, <a href="GUI.contentColor.html">GUI.contentColor</a>, <a href="GUI.matrix.html">GUI.matrix</a>调用时，重新取回。</p>
+<p> This means it's easy to do colored windows like this: </p>
+<p>这意味着它很容易做这样的彩色窗口：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Rect/Rect.html">Rect</a> windowRect0 = new <a href="../Rect/Rect.html">Rect</a>(20, 20, 120, 50);
+	public <a href="../Rect/Rect.html">Rect</a> windowRect1 = new <a href="../Rect/Rect.html">Rect</a>(20, 100, 120, 50);
+	void OnGUI() {
+		GUI.color = Color.red;
+		windowRect0 = <a href="GUI.Window.html">GUI.Window</a>(0, windowRect0, DoMyWindow, &quot;Red Window&quot;);
+		GUI.color = Color.green;
+		windowRect1 = <a href="GUI.Window.html">GUI.Window</a>(1, windowRect1, DoMyWindow, &quot;Green Window&quot;);
+	}
+	void DoMyWindow(int windowID) {
+		if (<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(10, 20, 100, 20), &quot;Hello World&quot;))
+			print(&quot;Got a click in window with color &quot; + GUI.color);
+
+		<a href="GUI.DragWindow.html">GUI.DragWindow</a>(new <a href="../Rect/Rect.html">Rect</a>(0, 0, 10000, 10000));
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>var windowRect0 : <a href="../Rect/Rect.html">Rect</a> = <a href="../Rect/Rect.html">Rect</a>(20, 20, 120, 50);
+var windowRect1 : <a href="../Rect/Rect.html">Rect</a> = <a href="../Rect/Rect.html">Rect</a>(20, 100, 120, 50);
+
+function OnGUI () {
+	<span class="notes">//创建2个窗口，我们设置每个窗口GUI.color颜色不同</span>
+	GUI.color = Color.red;
+	windowRect0 = <a href="GUI.Window.html">GUI.Window</a>(0, windowRect0, DoMyWindow, &quot;Red Window&quot;);
+
+	GUI.color = Color.green;
+	windowRect1 = <a href="GUI.Window.html">GUI.Window</a>(1, windowRect1, DoMyWindow, &quot;Green Window&quot;);
+}
+
+<span class="notes">//创建窗口的内容，GUI.color的值应用到在上面的代码中创建的窗口</span>。
+function DoMyWindow (windowID : int) {
+	if (<a href="GUI.Button.html">GUI.Button</a>(<a href="../Rect/Rect.html">Rect</a> (10,20,100,20), &quot;Hello World&quot;))
+		print (&quot;Got a click in window with color &quot; + GUI.color);
+	<span class="notes">//窗口一个可以拖动的窗口</span>
+	<a href="GUI.DragWindow.html">GUI.DragWindow</a>(<a href="../Rect/Rect.html">Rect</a> (0,0,10000,10000));
+}</code></pre></div>
+</div>
+<p>Hint: you can use the alpha component of <a href="GUI.color.html">GUI.color</a> to fade windows in and out.</p>
+<p>提示：你可以使用GUI.color的组件通道，来淡入淡出窗口。</p>
+<p> 另见: <a href="GUI.DragWindow.html">DragWindow</a>, <a href="GUI.BringWindowToFront.html">BringWindowToFront</a>, <a href="GUI.BringWindowToBack.html">BringWindowToBack</a></p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月14日 Friday  22:26<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

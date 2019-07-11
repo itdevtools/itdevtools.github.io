@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Mathf 数学运算</title>
+<meta name="keywords" content="unity,Mathf,数学运算" />
+<meta name="description" content="Mathf提供数学计算的函数与常量，面有所有数学计算时需要用到的函数。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Mathf.html">Mathf</a> <span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Mathf.Abs.html">Abs</a></li>
+                    <li><a href="Mathf.Acos.html">Acos</a></li>
+                    <li><a href="Mathf.Approximately.html">Approximately</a></li>
+                    <li><a href="Mathf.Asin.html">Asin</a></li>
+                    <li><a href="Mathf.Atan2.html">Atan2</a></li>
+                    <li><a href="Mathf.Atan.html">Atan</a></li>
+                    <li><a href="Mathf.CeilToInt.html">CeilToInt</a></li>
+                    <li><a href="Mathf.Ceil.html">Ceil</a></li>
+                    <li><a href="Mathf.Clamp01.html">Clamp01</a></li>
+                    <li><a href="Mathf.Clamp.html">Clamp</a></li>
+                    <li><a href="Mathf.ClosestPowerOfTwo.html">ClosestPowerOfTwo</a></li>
+                    <li><a href="Mathf.Cos.html">Cos</a></li>
+                    <li><a href="Mathf.Deg2Rad.html">Deg2Rad</a></li>
+                    <li><a href="Mathf.DeltaAngle.html">DeltaAngle</a></li>
+                    <li><a href="Mathf.Epsilon.html">Epsilon</a></li>
+                    <li><a href="Mathf.Exp.html">Exp</a></li>
+                    <li><a href="Mathf.FloorToInt.html">FloorToInt</a></li>
+                    <li><a href="Mathf.Floor.html">Floor</a></li>
+                    <li><a href="Mathf.Infinity.html">Infinity</a></li>
+                    <li><a href="Mathf.InverseLerp.html">InverseLerp</a></li>
+                    <li><a href="Mathf.IsPowerOfTwo.html">IsPowerOfTwo</a></li>
+                    <li><a href="Mathf.LerpAngle.html">LerpAngle</a></li>
+                    <li><a href="Mathf.Lerp.html">Lerp</a></li>
+                    <li><a href="Mathf.Log10.html">Log10</a></li>
+                    <li><a href="Mathf.Log.html">Log</a></li>
+                    <li><a href="Mathf.Max.html">Max</a></li>
+                    <li><a href="Mathf.Min.html">Min</a></li>
+                    <li><a href="Mathf.MoveTowardsAngle.html">MoveTowardsAngle</a></li>
+                    <li><a href="Mathf.MoveTowards.html">MoveTowards</a></li>
+                    <li><a href="Mathf.NegativeInfinity.html">NegativeInfinity</a></li>
+                    <li><a href="Mathf.NextPowerOfTwo.html">NextPowerOfTwo</a></li>
+                    <li><a href="Mathf.PingPong.html">PingPong</a></li>
+                    <li><a href="Mathf.PI.html">PI</a></li>
+                    <li><a href="Mathf.Pow.html">Pow</a></li>
+                    <li><a href="Mathf.Rad2Deg.html">Rad2Deg</a></li>
+                    <li><a href="Mathf.Repeat.html">Repeat</a></li>
+                    <li><a href="Mathf.RoundToInt.html">RoundToInt</a></li>
+                    <li><a href="Mathf.Round.html">Round</a></li>
+                    <li><a href="Mathf.Sign.html">Sign</a></li>
+                    <li><a href="Mathf.Sin.html">Sin</a></li>
+                    <li><a href="Mathf.SmoothDampAngle.html">SmoothDampAngle</a></li>
+                    <li><a href="Mathf.SmoothDamp.html">SmoothDamp</a></li>
+                    <li><a href="Mathf.SmoothStep.html">SmoothStep</a></li>
+                    <li><a href="Mathf.Sqrt.html">Sqrt</a></li>
+                    <li><a href="Mathf.Tan.html">Tan</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Mathf<span class="trans">数学运算</span></h1>
+<p class="h1inherit">Struct 结构</p>
+<p>A collection of common math functions.</p>
+<p>Mathf提供数学计算的函数与常量，面有所有数学计算时需要用到的函数。Mathf对象没有构造函数，是一个固有的对象，并不像String那样是对象的类，因此没有构造函数 Math()。</p>
+
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+  	<li><div class="lititle"><a href="Mathf.PI.html">PI</a></div><div class="licontent">The infamous 3.14159265358979... value (Read Only).<br />
+PI（读pai）的值，也就是圆周率（π）的值3.14159265358979323846...（只读）</div></li>
+    <li><div class="lititle"><a href="Mathf.Infinity.html">Infinity</a></div><div class="licontent">A representation of positive infinity (Read Only).<br />
+表示正无穷，也就是无穷大，∞ （只读）[in'finiti]</div></li>
+    <li><div class="lititle"><a href="Mathf.NegativeInfinity.html">NegativeInfinity</a></div><div class="licontent">A representation of negative infinity (Read Only).<br />
+表示负无穷，也就是无穷小，-∞ （只读）['neg?tiv][in'finiti]</div></li>
+    <li><div class="lititle"><a href="Mathf.Deg2Rad.html">Deg2Rad</a></div><div class="licontent">Degrees-to-radians conversion constant (Read Only).<br />度到弧度的转化常量。（只读）[di'gri:s] ['reidi?ns]</div></li>
+    <li><div class="lititle"><a href="Mathf.Rad2Deg.html">Rad2Deg</a></div><div class="licontent">Radians-to-degrees conversion constant (Read Only).<br />
+弧度到度的转化常量。（只读）</div></li>
+    <li><div class="lititle"><a href="Mathf.Epsilon.html">Epsilon</a></div><div class="licontent">A tiny floating point value (Read Only).<br />
+一个很小的浮点数值。（只读）['epsil?n]</div></li> 
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+  	<li><div class="lititle"><a href="Mathf.Sin.html">Sin</a></div><div class="licontent">Returns the sine of angle f in radians.<br />
+  	  计算并返回以弧度为单位指定的角 f 的正弦值。</div></li>
+    <li><div class="lititle"><a href="Mathf.Cos.html">Cos</a></div><div class="licontent">Returns the cosine of angle f in radians.<br />
+      返回由参数 f 指定的角的余弦值（介于 -1.0 与 1.0 之间的值）。</div></li>
+    <li><div class="lititle"><a href="Mathf.Tan.html">Tan</a></div><div class="licontent">Returns the tangent of angle f in radians.<br />
+      计算并返回以弧度为单位 f 指定角度的正切值。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Asin.html">Asin</a></div><div class="licontent">Returns the arc-sine of f - the angle in radians whose sine is f.<br />
+      以弧度为单位计算并返回参数 f 中指定的数字的反正弦值。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Acos.html">Acos</a></div><div class="licontent">Returns the arc-cosine of f - the angle in radians whose cosine is f.<br />
+      以弧度为单位计算并返回参数 f 中指定的数字的反余弦值。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Atan.html">Atan</a></div><div class="licontent">Returns the arc-tangent of f - the angle in radians whose tangent is f.<br />
+      计算并返回参数 f 中指定的数字的反正切值。返回值介于负二分之 pi 与正二分之 pi 之间。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Atan2.html">Atan2</a></div><div class="licontent">Returns the angle in radians whose Tan is y/x.<br />
+      以弧度为单位计算并返回 y/x 的反正切值。返回值表示相对直角三角形对角的角，其中 x 是临边边长，而 y 是对边边长。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Sqrt.html">Sqrt</a></div><div class="licontent">Returns square root of f.<br />
+    计算并返回 f 的平方根。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Abs.html">Abs</a></div><div class="licontent">Returns the absolute value of f.<br />
+      计算并返回指定参数 f 绝对值。</div></li>
+    <li><div class="lititle"><a href="Mathf.Min.html">Min</a></div><div class="licontent">Returns the smallest of two or more values.<br />
+  返回两个或更多值中最小的值。</div></li>
+    <li><div class="lititle"><a href="Mathf.Max.html">Max</a></div><div class="licontent">Returns largest of two or more values.<br />
+  返回两个或更多值中最大的值。</div></li>
+    <li><div class="lititle"><a href="Mathf.Pow.html">Pow</a></div><div class="licontent">Returns f raised to power p.<br />
+      计算并返回 f 的 p 次方。 </div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Exp.html">Exp</a></div><div class="licontent">Returns e raised to the specified power.<br />
+      返回 e 的 power 次方的值。</div></li>
+    <li><div class="lititle"><a href="Mathf.Log.html">Log</a></div><div class="licontent">Returns the logarithm of a specified number in a specified base.<br />
+      返回参数 f 的对数。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Log10.html">Log10</a></div><div class="licontent">Returns the base 10 logarithm of a specified number.<br />
+    返回f的对数，基数为10。
+  </div></li>
+    <li><div class="lititle"><a href="Mathf.Ceil.html">Ceil</a></div><div class="licontent">Returns the smallest integer greater to or equal to f.<br />
+      返回 f 指定数字或表达式的上限值。数字的上限值是大于等于该数字的最接近的整数。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Floor.html">Floor</a></div><div class="licontent">Returns the largest integer smaller to or equal to f.<br />
+      返回参数 f 中指定的数字或表达式的下限值。下限值是小于等于指定数字或表达式的最接近的整数。 </div></li>
+    <li><div class="lititle"><a href="Mathf.Round.html">Round</a></div><div class="licontent">Returns f rounded to the nearest integer.<br />
+    返回浮点数 f 进行四舍五入最接近的整数。
+    </div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.CeilToInt.html">CeilToInt</a></div><div class="licontent">Returns the smallest integer greater to or equal to f.<br />
+    返回最小的整数大于或等于f。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.FloorToInt.html">FloorToInt</a></div><div class="licontent">Returns the largest integer smaller to or equal to f.<br />
+    返回最大的整数，小于或等于f。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.RoundToInt.html">RoundToInt</a></div><div class="licontent">Returns f rounded to the nearest integer.<br />
+    返回 f 指定的值四舍五入到最近的整数。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Sign.html">Sign</a></div><div class="licontent">Returns the sign of f.<br />
+    返回 f 的符号。当 f 为正或为0返回1，为负返回-1。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Clamp.html">Clamp</a></div><div class="licontent">Clamps a value between a minimum float and maximum float value.<br />
+      限制value的值在min和max之间， 如果value小于min，返回min。 如果value大于max，返回max，否则返回value
+    </div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Clamp01.html">Clamp01</a></div>
+    <div class="licontent">Clamps value between 0 and 1 and returns value.<br />
+    限制value在0,1之间，如果value小于0，返回0。如果value大于1,返回1，否则返回value
+    。</div>
+    </li>
+    <li><div class="lititle"><a href="Mathf.Lerp.html">Lerp</a></div><div class="licontent">Interpolates a towards b by t. t is clamped between 0 and 1.<br />
+    基于浮点数t返回a到b之间的插值，t限制在0～1之间。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.LerpAngle.html">LerpAngle</a></div><div class="licontent">Same as Lerp but makes sure the values interpolate correctly when they wrap around 360 degrees.<br />
+    和Lerp的原理一样，当他们环绕360度确保插值正确。a和b是代表度数。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.MoveTowards.html">MoveTowards</a></div><div class="licontent">Moves a value current towards target.<br />
+    改变一个当前值向目标值靠近。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.MoveTowardsAngle.html">MoveTowardsAngle</a></div><div class="licontent">Same as MoveTowards but makes sure the values interpolate correctly when they wrap around 360 degrees.<br />
+    像MoveTowards,但是当它们环绕360度确保插值正确。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Approximately.html">SmoothStep</a></div><div class="licontent">Interpolates between min and max and eases in and out at the limits.<br />
+    和lerp类似，在最小和最大值之间的插值，并在限制处渐入渐出。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Approximately.html">Approximately</a></div><div class="licontent">Compares two floating point values if they are similar.<br />
+      比较两个浮点数值，看它们是否非常接近。
+    </div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.SmoothDamp.html">SmoothDamp</a></div><div class="licontent">Gradually changes a value towards a desired goal over time.<br />随着时间的推移逐渐改变一个值到期望值。
+    </div></li>
+    <li><div class="lititle"><a href="Mathf.SmoothDampAngle.html">SmoothDampAngle</a></div><div class="licontent">Gradually changes an angle given in degrees towards a desired goal angle over time.<br />
+    随着时间的推移逐渐改变一个给定的角度到期望的角度。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.Repeat.html">Repeat</a></div><div class="licontent">Loops the value t, so that it is never larger than length and never smaller than 0.<br />
+    循环数值t，0到length之间。t值永远不会大于length的值，也永远不会小于0。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.PingPong.html">PingPong</a></div><div class="licontent">PingPongs the value t, so that it is never larger than length and never smaller than 0.<br />
+      让数值t在 0到length之间往返。t值永远不会大于length的值，也永远不会小于0。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.InverseLerp.html">InverseLerp</a></div><div class="licontent">Calculates the Lerp parameter between of two values.<br />
+      计算两个值之间的Lerp参数。也就是value在from和to之间的比例值。</div>
+      </li>
+	  <li>
+	  	<div class="lititle"><a href="Mathf.IsPowerOfTwo.html">IsPowerOfTwo</a></div>
+    	<div class="licontent">Returns true if the value is power of two.<br />
+    		如果该值是2的幂，返回true。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="Mathf.NextPowerOfTwo.html">NextPowerOfTwo</a></div>
+    	<div class="licontent">Returns the next power of two value<br />
+    		返回下一个2的幂值。 </div>
+    </li>
+    <li><div class="lititle"><a href="Mathf.ClosestPowerOfTwo.html">ClosestPowerOfTwo</a></div><div class="licontent">Returns the closest power of two value.<br />
+    返回距离value最近的2的次方数。</div>
+      </li>
+    <li><div class="lititle"><a href="Mathf.DeltaAngle.html">DeltaAngle</a></div><div class="licontent">Calculates the shortest difference between two given angles.<br />计算给定的两个角之间最短的差异。
+    </div></li>
+</ul>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月16日 Monday  21:15<!-- #EndDate --></span></div>
+    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

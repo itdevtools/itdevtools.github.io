@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>RenderTexture 渲染纹理</title>
+<meta name="Keywords" content="unity,RenderTexture,渲染纹理" />
+<meta name="Description" content="RenderTexture是可以被渲染的纹理。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="RenderTexture.html">RenderTexture</a></span><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="RenderTexture.active.html">active</a></li>
+                    <li><a href="RenderTexture.Create.html">Create</a></li>
+                    <li><a href="RenderTexture.depth.html">depth</a></li>
+                    <li><a href="RenderTexture.format.html">format</a></li>
+                    <li><a href="RenderTexture.GetTemporary.html">GetTemporary</a></li>
+                    <li><a href="RenderTexture.height.html">height</a></li>
+                    <li><a href="RenderTexture.IsCreated.html">IsCreated</a></li>
+                    <li><a href="RenderTexture.isCubemap.html">isCubemap</a></li>
+                    <li><a href="RenderTexture.isPowerOfTwo.html">isPowerOfTwo</a></li>
+                    <li><a href="RenderTexture.ReleaseTemporary.html">ReleaseTemporary</a></li>
+                    <li><a href="RenderTexture.Release.html">Release</a></li>
+                    <li><a href="RenderTexture.RenderTexture.html">RenderTexture</a></li>
+                    <li><a href="RenderTexture.SetGlobalShaderProperty.html">SetGlobalShaderProperty</a></li>
+                    <li><a href="RenderTexture.useMipMap.html">useMipMap</a></li>
+                    <li><a href="RenderTexture.width.html">width</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>RenderTexture 渲染纹理</h1>
+<p class="h1inherit">Inherits from <a href="../Texture/Texture.html">Texture</a></p>
+<p> Render textures are textures that can be rendered to.</p>
+<p>RenderTexture是可以被渲染的纹理。</p>
+<p> They can be used to implement image based rendering effects, dynamic shadows,  projectors, reflections or surveillance cameras. </p>
+<p>它们可以用来实现基于渲染效果的图像、动态阴影、投影、反射或监视摄像机。</p>
+<p> All rendering goes into the active RenderTexture (<a href="RenderTexture.active.html">active</a> class property).  If the active RenderTexture is null everything is rendered to the main window. </p>
+<p>所有渲染将进入激活的RenderTexture（<a href="RenderTexture.active.html">active</a>类属性）。</p>
+<p> Note that while RenderTexture assets can be only power-of-two  size, it is possible to create a non-power-of-two (rect) render textures from scripts.  These are most often used for image post processing effects. </p>
+<p>注意，RenderTexture资源只能是2的幂次方大小，它可以从脚本创建一个不是2的乘方的渲染纹理。这最常用于图像后期处理效果。</p>
+<p> RenderTexture class is only available in Unity Pro.</p>
+<p>RenderTexture类只能激活于Unity专业版。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="RenderTexture.width.html">width</a></div>
+    	<div class="licontent">The width of the render texture in pixels.<br />
+   	    渲染纹理的宽度，以像素为单位。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.height.html">height</a></div>
+    	<div class="licontent">The height of the render texture in pixels.<br />
+   	    渲染纹理的高度，以像素为单位。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.depth.html">depth</a></div>
+    	<div class="licontent">The precision of the render texture's depth buffer in bits (0, 16, 24 are supported)<br />
+   	    渲染纹理的深度位数(支持0, 16, 24)的精确度。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.isPowerOfTwo.html">isPowerOfTwo</a></div>
+    	<div class="licontent">Is the size of the render texture constrained to power of two sizes?<br />
+   	    渲染纹理是否包含2的乘方大小？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.format.html">format</a></div>
+    	<div class="licontent">The format of the render texture.<br />
+   	    渲染纹理的格式。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.useMipMap.html">useMipMap</a></div>
+    	<div class="licontent">Generate mipmap levels?<br />
+   	    生成多级纹理级别？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.isCubemap.html">isCubemap</a></div>
+    	<div class="licontent">If enabled, this Render Texture will be used as a Cubemap<br />
+   	    如果启用，这个渲染纹理将使用<a href="../Cubemap/Cubemap.html">Cubemap</a>。 </div>
+    </li>
+</ul>
+<h3>Constructors<span class="trans">构造器</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="RenderTexture.RenderTexture.html">RenderTexture</a></div>
+    	<div class="licontent">Creates a new RenderTexture object.<br />
+   	    创建一个新的渲染纹理对象。 </div>
+    </li>
+</ul>
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="RenderTexture.Create.html">Create</a></div>
+    	<div class="licontent">Actually creates the RenderTexture.<br />
+   	    实际创建RenderTexture。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.Release.html">Release</a></div>
+    	<div class="licontent">Releases the RenderTexture.<br />
+   	    释放RenderTexture。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.IsCreated.html">IsCreated</a></div>
+    	<div class="licontent">Is the render texture actually created?<br />
+   	    渲染纹理是否被实际创建？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.SetGlobalShaderProperty.html">SetGlobalShaderProperty</a></div>
+    	<div class="licontent">Assigns this RenderTexture as a global shader property named propertyName.<br />
+   	    指定这个RenderTexture作为一个名为propertyName的全局shader属性。 </div>
+    </li>
+</ul>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="RenderTexture.active.html">active</a></div>
+    	<div class="licontent">The active render texture.<br />
+   	    激活的渲染纹理。 </div>
+    </li>
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="RenderTexture.GetTemporary.html">GetTemporary</a></div>
+    	<div class="licontent">Allocate a temporary render texture.<br />
+   	    分配一个临时的渲染纹理。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="RenderTexture.ReleaseTemporary.html">ReleaseTemporary</a></div>
+    	<div class="licontent">Release a temporary texture allocated with GetTemporary.<br />
+   	    释放一个由GetTemporary分配的临时纹理。 </div>
+    </li>
+</ul>
+<h2>Inherited members<span class="trans">继承成员</span></h2>
+<h3>Inherited Variables<span class="trans">继承变量</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">width</a></div>
+    	<div class="licontent">Width of the texture in pixels (Read Only)<br />以像素为单位的贴图宽度 （只读）
+    	</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">height</a></div>
+    	<div class="licontent">Height of the texture in pixels (Read Only)<br />以像素为单位的贴图的高度（只读）
+    	</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">filterMode</a></div>
+    	<div class="licontent">Filtering mode of the texture.<br />贴图的过滤模式
+    	</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">anisoLevel</a></div>
+    	<div class="licontent">Anisotropic filtering level of the texture.<br />贴图的各向异性等级。（增加等级意味着更好的贴图效果，但是会需要更大的开销，减小则减少开销，代价是较远处或侧面的贴图会变得模糊。）
+    	</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">wrapMode</a></div>
+    	<div class="licontent">Wrap mode (Repeat or Clamp) of the texture.<br />循环模式 （重复或强制拉伸？）</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">mipMapBias</a></div>
+    	<div class="licontent">Mip map bias of the texture.<br />Mip贴图偏移
+    	</div>
+    </li>
+</ul>
+
+<ul class="tableli">
+    <li>
+		<div class="lititle"><a href="../Object/Object.name.html">name</a></div>
+		<div class="licontent">The name of the object. //物体的名字</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.hideFlags.html">hideFlags</a></div>
+    	<div class="licontent">Should the object be hidden, saved with the scene or modifiable by the user?<br />
+    	物体是否被隐藏、保存在场景中或被用户修改？</div>
+    </li>
+</ul>
+<h3>Inherited Functions<span class="trans">继承函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Texture/Texture.GetNativeTextureID.html">GetNativeTextureID</a></div>
+    	<div class="licontent">Retrieve native ('hardware') handle to a texture<br />检索本地纹理（'硬件'）
+    	</div>
+    </li>
+</ul>
+
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.GetInstanceID.html">GetInstanceID</a></div>
+    	<div class="licontent">Returns the instance id of the object.<br />
+    	返回物体的实例ID</div>
+    </li>
+	<li><div class="lititle"><a href="../Object/Object.ToString.html">ToString</a></div>
+    	<div class="licontent">Returns the name of the game object.<br />返回游戏物体的名称。</div>
+    </li>
+</ul>
+<h3>Inherited Class Functions<span class="trans">继承类函数</span></h3>
+
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_bool.html">operator bool</a></div>
+    	<div class="licontent">Does the object exist?<br />
+    	物体是否存在？</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.html">Instantiate</a></div>
+    	<div class="licontent">Clones the object original and returns the clone.<br />
+    	克隆原始物体，并返回克隆的物体</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.ltTgt.html">Instantiate.&lt;T&gt;</a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Destroy.html">Destroy</a></div>
+    	<div class="licontent">Removes a gameobject, component or asset.<br />
+    	删除一个游戏物体、组件或资源</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DestroyImmediate.html">DestroyImmediate</a></div>
+    	<div class="licontent">Destroys the object obj immediately. It is strongly recommended to use Destroy instead.<br />
+    	立即销毁物体obj，强烈建议使用Destroy代替。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectsOfType.html">FindObjectsOfType</a></div>
+    	<div class="licontent">Returns a list of all active loaded objects of Type type.<br />
+    	返回Type类型的所有激活的加载的物体列表</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectOfType.html">FindObjectOfType</a></div>
+    	<div class="licontent">Returns the first active loaded object of Type type.<br />
+    	返回Type类型第一个激活的加载的物体。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_eq.html">operator ==</a></div>
+    	<div class="licontent">Compares if two objects refer to the same<br />
+    	比较如果两个物体相同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_ne.html">operator !=</a></div>
+    	<div class="licontent">Compares if two objects refer to a different object<br />
+    	比较如果两个物体不同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></div>
+    	<div class="licontent">Makes the object target not be destroyed automatically when loading a new scene.<br />
+    	加载新场景的时候使目标物体不被自动销毁。</div>
+    </li>
+</ul>
+
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月16日 Monday  21:15<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

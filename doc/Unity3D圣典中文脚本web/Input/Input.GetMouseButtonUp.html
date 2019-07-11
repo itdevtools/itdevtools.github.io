@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Input.GetMouseButtonUp 获取鼠标按钮弹起</title>
+<meta name="Keywords" content="unity,Input,GetMouseButtonUp,获取鼠标按钮弹起" />
+<meta name="Description" content="在用户释放指定鼠标按键的那一帧返回true。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Input.html">Input</a><span class="transer">U兔</span>
+                <ul>
+                    <li><a href="Input.accelerationEventCount.html">accelerationEventCount</a></li>
+                    <li><a href="Input.accelerationEvents.html">accelerationEvents</a></li>
+                    <li><a href="Input.acceleration.html">acceleration</a></li>
+                    <li><a href="Input.anyKeyDown.html">anyKeyDown</a></li>
+                    <li><a href="Input.anyKey.html">anyKey</a></li>
+                    <li><a href="Input.deviceOrientation.html">deviceOrientation</a></li>
+                    <li><a href="Input.GetAccelerationEvent.html">GetAccelerationEvent</a></li>
+                    <li><a href="Input.GetAxisRaw.html">GetAxisRaw</a></li>
+                    <li><a href="Input.GetAxis.html">GetAxis</a></li>
+                    <li><a href="Input.GetButtonDown.html">GetButtonDown</a></li>
+                    <li><a href="Input.GetButtonUp.html">GetButtonUp</a></li>
+                    <li><a href="Input.GetButton.html">GetButton</a></li>
+                    <li><a href="Input.GetJoystickNames.html">GetJoystickNames</a></li>
+                    <li><a href="Input.GetKeyDown.html">GetKeyDown</a></li>
+                    <li><a href="Input.GetKeyUp.html">GetKeyUp</a></li>
+                    <li><a href="Input.GetKey.html">GetKey</a></li>
+                    <li><a href="Input.GetMouseButtonDown.html">GetMouseButtonDown</a></li>
+                    <li><a href="Input.GetMouseButtonUp.html">GetMouseButtonUp</a></li>
+                    <li><a href="Input.GetMouseButton.html">GetMouseButton</a></li>
+                    <li><a href="Input.GetPosition.html">GetPosition</a></li>
+                    <li><a href="Input.GetRotation.html">GetRotation</a></li>
+                    <li><a href="Input.GetTouch.html">GetTouch</a></li>
+                    <li><a href="Input.inputString.html">inputString</a></li>
+                    <li><a href="Input.mousePosition.html">mousePosition</a></li>
+                    <li><a href="Input.multiTouchEnabled.html">multiTouchEnabled</a></li>
+                    <li><a href="Input.ResetInputAxes.html">ResetInputAxes</a></li>
+                    <li><a href="Input.touchCount.html">touchCount</a></li>
+                    <li><a href="Input.touches.html">touches</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Input.html">Input</a>.GetMouseButtonUp 获取鼠标按钮弹起</h1>
+<p class="h1inherit"></p>
+<p>static function <em>GetMouseButtonUp</em> (<em>button</em> : int) : bool </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Returns true during the frame the user releases the given mouse button.</p>
+<p>在用户释放指定鼠标按键的那一帧返回true。</p>
+<p> You need to call this function from the <a href="../MonoBehaviour/MonoBehaviour.Update.html">Update</a> function, since the state gets reset each frame.	  It will not return true until the user has pressed the mouse button and released it again.  button values are 0 for left button, 1 for right button, 2 for the middle button. </p>
+<p>你需要在Update方法中调用这个方法，此后每一帧重置状态时，它将不会返回true除非用户释放这个鼠标按钮然后重新按下它。按钮值设定为 0对应左键 ， 1对应右键 ， 2对应中键。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Update() {
+		if (Input.GetMouseButtonUp(0))
+			<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Pressed left click.&quot;);
+
+		if (Input.GetMouseButtonUp(1))
+			<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Pressed right click.&quot;);
+
+		if (Input.GetMouseButtonUp(2))
+			<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Pressed middle click.&quot;);
+
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Detects clicks from the mouse and prints a message
+// depending on the click detected.
+//检测到鼠标点击就输出信息
+//取决于点击的键值</span>
+
+function Update() {
+	if(Input.GetMouseButtonUp(0))
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Pressed left click.&quot;);
+	if(Input.GetMouseButtonUp(1))
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Pressed right click.&quot;);
+	if(Input.GetMouseButtonUp(2))
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Pressed middle click.&quot;);
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月12日 Saturday  21:22<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

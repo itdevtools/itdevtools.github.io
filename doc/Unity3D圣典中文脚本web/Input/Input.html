@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Input 输入</title>
+<meta name="Keywords" content="unity,Input,输入" />
+<meta name="Description" content="输入系统的接口。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Input.html">Input</a><span class="transer">U兔</span>
+                <ul>
+                    <li><a href="Input.accelerationEventCount.html">accelerationEventCount</a></li>
+                    <li><a href="Input.accelerationEvents.html">accelerationEvents</a></li>
+                    <li><a href="Input.acceleration.html">acceleration</a></li>
+                    <li><a href="Input.anyKeyDown.html">anyKeyDown</a></li>
+                    <li><a href="Input.anyKey.html">anyKey</a></li>
+                    <li><a href="Input.deviceOrientation.html">deviceOrientation</a></li>
+                    <li><a href="Input.GetAccelerationEvent.html">GetAccelerationEvent</a></li>
+                    <li><a href="Input.GetAxisRaw.html">GetAxisRaw</a></li>
+                    <li><a href="Input.GetAxis.html">GetAxis</a></li>
+                    <li><a href="Input.GetButtonDown.html">GetButtonDown</a></li>
+                    <li><a href="Input.GetButtonUp.html">GetButtonUp</a></li>
+                    <li><a href="Input.GetButton.html">GetButton</a></li>
+                    <li><a href="Input.GetJoystickNames.html">GetJoystickNames</a></li>
+                    <li><a href="Input.GetKeyDown.html">GetKeyDown</a></li>
+                    <li><a href="Input.GetKeyUp.html">GetKeyUp</a></li>
+                    <li><a href="Input.GetKey.html">GetKey</a></li>
+                    <li><a href="Input.GetMouseButtonDown.html">GetMouseButtonDown</a></li>
+                    <li><a href="Input.GetMouseButtonUp.html">GetMouseButtonUp</a></li>
+                    <li><a href="Input.GetMouseButton.html">GetMouseButton</a></li>
+                    <li><a href="Input.GetPosition.html">GetPosition</a></li>
+                    <li><a href="Input.GetRotation.html">GetRotation</a></li>
+                    <li><a href="Input.GetTouch.html">GetTouch</a></li>
+                    <li><a href="Input.inputString.html">inputString</a></li>
+                    <li><a href="Input.mousePosition.html">mousePosition</a></li>
+                    <li><a href="Input.multiTouchEnabled.html">multiTouchEnabled</a></li>
+                    <li><a href="Input.ResetInputAxes.html">ResetInputAxes</a></li>
+                    <li><a href="Input.touchCount.html">touchCount</a></li>
+                    <li><a href="Input.touches.html">touches</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Input 输入</h1>
+<p class="h1inherit"></p>
+<p> Interface into the Input system.</p>
+<p>输入系统的接口。</p>
+<p> Use this class to read the axes set up in the Input Manager, and to access  multi-touch/accelerometer data on mobile devices. </p>
+<p>使用这个类能够读取输入管理器设置的按键，以及访问移动设备的多点触控或加速感应数据。 </p>
+<p> To read an axis use <a href="Input.GetAxis.html">Input.GetAxis</a> with one of the following default axes:  &quot;Horizontal&quot; and &quot;Vertical&quot; are mapped to joystick, A, W, S, D and the arrow keys.  &quot;Mouse X&quot; and &quot;Mouse Y&quot; are mapped to the mouse delta.  &quot;Fire1&quot;, &quot;Fire2&quot; &quot;Fire3&quot; are mapped to Ctrl, Alt, Cmd keys and three mouse or joystick buttons.  New input axes can be added in the Input Manager. </p>
+<p>想要读取轴向使用Input.GetAxis方法获取下列默认轴： &quot;Horizontal&quot; 和&quot;Vertical&quot; 映射于控制杆、A、W、S、D和箭头键（方向键）。 &quot;Mouse X&quot; 和&quot;Mouse Y&quot; 映射于鼠标,&quot;Fire1&quot;, &quot;Fire2&quot; &quot;Fire3&quot;映射于键盘的Ctrl、Alt、Cmd键和鼠标中键或控制器的按钮。新的输入设置可以使用输入管理器来添加。</p>
+<p> If you are using input for any kind of movement behaviour use <a href="Input.GetAxis.html">Input.GetAxis</a>.  It gives you smoothed and configurable input that can be mapped to keyboard, joystick or mouse.  Use <a href="Input.GetButton.html">Input.GetButton</a> for action like events only. Don't use it for movement, <a href="Input.GetAxis.html">Input.GetAxis</a> will make the script code smaller and simpler. </p>
+<p>如果你使用Input制作某种运动行为可以使用Input.GetAxis方法，它能够返回来自键盘、控制器或鼠标平缓并且可以设置的输入结果。使用Input.GetButton方法只用于像事件之类的动作。不要将它用于移动动作。Input.GetAxis方法可以使脚本代码更简洁。</p>
+<p> Note also that the Input flags are not reset until &quot;Update()&quot;, so its suggested you make all the Input Calls in the Update Loop. </p>
+<p>注意：每次输入在&quot;Update()&quot;之前不会再更新，所以建议你将所有的输入调用都写在Update方法中。（Update循环中）</p>
+<p> Mobile Devices: </p>
+<p>移动设备：</p>
+<p> iOS and Android devices are capable of tracking multiple fingers touching the screen simultaneously.  You can access data on the status of each finger touching screen during the last frame by accessing the <a href="Input.touches.html">Input.touches</a> property array. </p>
+<p>iOS和Android设备能够支持多点触控。你可以通过Input.touches属性集合访问在最近一帧中触摸在屏幕上的每一根手指的状态数据。 </p>
+<p> As a device moves, its accelerometer hardware reports linear   acceleration changes along the three primary axes in three-dimensional   space.  You can use this data to detect both the current orientation of the   device (relative to the ground) and any immediate changes to that   orientation. </p>
+<p>当设备移动时，它们的加速感应器硬件将报告它们在三维空间中沿着三个主轴的线性加速变化数据。你可以使用这些数据检测设备当前的移动方向（相对于地面）和突然间的方向改 变。</p>
+<p> Acceleration along each axis is reported directly by the hardware as G-force values.  A value of 1.0 represents a load of about +1g along a given axis while a value of -1.0 represents -1g.  If you hold the device upright (with the home button at the bottom) in front of you, the X axis is positive along the right,  the Y axis is positive directly up, and the Z axis is positive pointing toward you. </p>
+<p>硬件沿着某感应一轴加速就会立即返回重力值。如果值为1.0代表沿着给定轴的方向+1g的重力加速度，如果值为-1.0代表-1g的重力加速度。如果你保持设备垂直（主页键在下方）在你正前方，那么X轴就是指向你右侧的方向，Y轴指向正上方，Z轴就是你所面向的方向。</p>
+<p> You can read the <a href="Input.acceleration.html">Input.acceleration</a> property to get the accelerometer reading.  You can also use the <a href="Input.deviceOrientation.html">Input.deviceOrientation</a> property to get a discrete evaluation of the device's orientation in   three-dimensional space.  Detecting a change in orientation can be useful if you want to create   game behaviors when the user rotates the device to hold it differently. </p>
+<p>你可以读取Input.acceleration属性获得设备的加速度信息。你也可以使用Input.deviceOrientation属性获取设备在三维空间中的方位偏移。检测方位变化在你想要制作游戏行为中会非常有用，当用户转动设备或拿着设备时它是不同的。</p>
+<p> Note that the accelerometer hardware can be polled more than once per frame.  To access all accelerometer samples since the last frame, you can read the <a href="Input.accelerationEvents.html">Input.accelerationEvents</a> property array.  This can be useful when reconstructing player motions, feeding   acceleration data into a predictor, or implementing other precise motion   analysis. </p>
+<p>注意：速度感应装置在每一帧中能够轮询多次，想访问上一帧的所有速度样本你可以读取Input.accelerationEvents属性集合。这在重组玩家动作中会非常有用。例如将加速数据放入一个预测器中或者实现其他一些精确的动作捕捉。</p>
+<p> The Unity mobile devices input API is based on Apple's iOS API. It may   help to learn more about the native API to better understand Unity's   Input API.  You can find Apple's input API documentation here: </p>
+<p>Unity移动设备输入API是以苹果的iOS API为基础。学习一些原生API更有助于理解Unity的Input API。你可以查找苹果的Input API文档：</p>
+
+<p>&#8226;<a href="file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/EventHandling/chapter_8_section_1.html">Programming Guide: Event Handling (Apple iPhone SDK documentation)</a></p>
+<p>&#8226;<a href="file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITouch_Class/Reference/Reference.html">UITouch Class Reference (Apple iPhone SDK documentation)</a></p>
+
+<p> NOTE: above links reference your locally installed iOS SDK Reference   Documentation and will contain native ObjectiveC code. It is not   necessary to understand these documents for using Unity iOS, but may be   helpful to some!</p>
+<p>注意：以上链接参考你本地安装的iOS SDK参考文档将包含ObjectiveC代码。你没有必要去弄明白这些文档怎么用于UnityiOS，但是能理解点更好。</p>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Input.mousePosition.html">mousePosition</a></div>
+    	<div class="licontent">The current mouse position in pixel coordinates. (Read Only)<br />
+   	    当前所在像素坐标的鼠标位置（只读）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.anyKey.html">anyKey</a></div>
+    	<div class="licontent">Is any key or mouse button currently held down? (Read Only)<br />
+   	    是否有某一按键或鼠标按钮此时被按住？（只读） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.anyKeyDown.html">anyKeyDown</a></div>
+    	<div class="licontent">Returns true the first frame the user hits any key or mouse button (Read Only).<br />
+    	  在第一帧用户按下某一按键或鼠标按钮，返回true（只读） <br />
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Input.inputString.html">inputString</a></div>
+    	<div class="licontent">Returns the keyboard input entered this frame (Read Only).<br />
+   	    返回在这一帧的键盘输入（只读） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.acceleration.html">acceleration</a></div>
+    	<div class="licontent">Last measured linear acceleration of a device in three-dimensional space (Read Only).<br />
+   	    最近一次测量的设备在三维空间中的线性加速度（只读） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.accelerationEvents.html">accelerationEvents</a></div>
+    	<div class="licontent">Returns list of acceleration measurements which occurred during the last frame (Read Only) (Allocates temporary variables).<br />
+   	    返回上一帧测量的加速值数据列表（只读）（分配临时变量） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.accelerationEventCount.html">accelerationEventCount</a></div>
+    	<div class="licontent">Number of acceleration measurements which occurred during last frame.<br />
+   	    上一帧所进行的加速度测量次数。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.touches.html">touches</a></div>
+    	<div class="licontent">Returns list of objects representing status of all touches during last frame (Read Only) (Allocates temporary variables).<br />
+   	    返回代表上一帧所有的触摸状态的对象列表（只读）（分配临时变量） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.touchCount.html">touchCount</a></div>
+    	<div class="licontent">Number of touches (Read Only).<br />
+   	    触摸的数量（只读）。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.multiTouchEnabled.html">multiTouchEnabled</a></div>
+    	<div class="licontent">Property indicating whether the system handles multiple touches.<br />
+   	    此属性表明此系统是否支持多点触控。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.deviceOrientation.html">deviceOrientation</a></div>
+    	<div class="licontent">Device physical orientation as reported by OS (Read Only).<br />
+   	    操作系统所报告的物理设备的方位信息（只读）</div>
+    </li>
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Input.GetAxis.html">GetAxis</a></div>
+    	<div class="licontent">Returns the value of the virtual axis identified by axisName.<br />
+   	    根据坐标轴名称返回虚拟坐标系中的值。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetAxisRaw.html">GetAxisRaw</a></div>
+    	<div class="licontent">Returns the value of the virtual axis identified by axisName with no smoothing filtering applied.<br />
+   	    通过坐标轴名称返回一个不使用平滑滤波器的虚拟坐标值。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetButton.html">GetButton</a></div>
+    	<div class="licontent">Returns true while the virtual button identified by buttonName is held down.<br />
+   	    根据按钮名称返回true当对应的虚拟按钮被按住时。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetButtonDown.html">GetButtonDown</a></div>
+    	<div class="licontent">Returns true during the frame the user pressed down the virtual button identified by buttonName.<br />
+   	    在给定名称的虚拟按钮被按下的那一帧返回true。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetButtonUp.html">GetButtonUp</a></div>
+    	<div class="licontent">Returns true the first frame the user releases the virtual button identified by buttonName.<br />
+   	    在用户释放指定名称的虚拟按钮时返回true。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetKey.html">GetKey</a></div>
+    	<div class="licontent">Returns true while the user holds down the key identified by name. Think auto fire.<br />
+   	    当通过名称指定的按键被用户按住时返回true。想想自动开火。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetKeyDown.html">GetKeyDown</a></div>
+    	<div class="licontent">Returns true during the frame the user starts pressing down the key identified by name.<br />
+   	    当用户按下指定名称的按键时的那一帧返回true。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetKeyUp.html">GetKeyUp</a></div>
+    	<div class="licontent">Returns true during the frame the user releases the key identified by name.<br />
+   	    在用户释放给定名字的按键的那一帧返回true。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetJoystickNames.html">GetJoystickNames</a></div>
+    	<div class="licontent">Returns an array of stings describing the connected joysticks.<br />
+   	    返回一个用来描述已连接的控制杆的字符串集合。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetMouseButton.html">GetMouseButton</a></div>
+    	<div class="licontent">Returns whether the given mouse button is held down.<br />
+   	    当指定的鼠标按钮被按下时返回true </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetMouseButtonDown.html">GetMouseButtonDown</a></div>
+    	<div class="licontent">Returns true during the frame the user pressed the given mouse button.<br />
+   	    在用户按下指定鼠标按键的那一帧返回true。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetMouseButtonUp.html">GetMouseButtonUp</a></div>
+    	<div class="licontent">Returns true during the frame the user releases the given mouse button.<br />
+   	    在用户释放指定鼠标按键的那一帧返回true。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.ResetInputAxes.html">ResetInputAxes</a></div>
+    	<div class="licontent">Resets all input. After ResetInputAxes all axes return to 0 and all buttons return to 0 for one frame.<br />
+   	    在一帧中重置所有的输入，重置输入指令之后所有的方向轴都被设置为0并且所有的按键都被设置为0。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetAccelerationEvent.html">GetAccelerationEvent</a></div>
+    	<div class="licontent">Returns specific acceleration measurement which occurred during last frame (Does not allocate temporary variables).<br />
+   	    返回上一帧发生的指定的加速度测量（不允许分配临时变量） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Input.GetTouch.html">GetTouch</a></div>
+    	<div class="licontent">Returns object representing status of a specific touch (Does not allocate temporary variables).<br />
+   	    返回一个存放触摸信息的对象（不允许分配临时变量）。 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月30日 Wednesday  13:51<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

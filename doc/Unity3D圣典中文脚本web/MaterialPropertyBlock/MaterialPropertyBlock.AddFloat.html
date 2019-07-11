@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>MaterialPropertyBlock.AddFloat 添加浮点</title>
+<meta name="Keywords" content="unity,MaterialPropertyBlock,AddFloat,添加浮点" />
+<meta name="Description" content="添加一个浮点材质属性。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="MaterialPropertyBlock.html">MaterialPropertyBlock</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="MaterialPropertyBlock.AddColor.html">AddColor</a></li>
+                    <li><a href="MaterialPropertyBlock.AddFloat.html">AddFloat</a></li>
+                    <li><a href="MaterialPropertyBlock.AddMatrix.html">AddMatrix</a></li>
+                    <li><a href="MaterialPropertyBlock.AddVector.html">AddVector</a></li>
+                    <li><a href="MaterialPropertyBlock.Clear.html">Clear</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="MaterialPropertyBlock.html">MaterialPropertyBlock</a>.AddFloat 添加浮点</h1>
+<p class="h1inherit"></p>
+<p>function <em>AddFloat</em> (<em>name</em> : string, <em>value</em> : float) : void<br />
+function <em>AddFloat</em> (<em>nameID</em> : int, <em>value</em> : float) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Add a float material property.</p>
+<p>添加一个浮点材质属性。</p>
+<p> For performance reasons, the property block can contain only a limited number of property values.  Two 4x4 matrices, six vectors/colors or 12 floats can be stored in the block. Storage space for the values  is shared, so storing one matrix leaves twice less space to store vectors and floats. When block's  storage is filled up, additional Add calls will be ignored. </p>
+<p>出于性能原因，属性块只能包含属性值的有限数量。两个4x4矩形，六个向量/颜色或存12个浮点数可以存储在这个块中，存储空间的值被共享，所以存储一个矩阵留下两倍少的空间来存储向量和浮点数。当块的存储空间填满后，额外的Add调用将被忽略。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Mesh/Mesh.html">Mesh</a> aMesh;
+	public <a href="../Material/Material.html">Material</a> aMaterial = new <a href="../Material/Material.html">Material</a>(<a href="../Shader/Shader.Find.html">Shader.Find</a>("VertexLit"));
+	void Update() {
+		MaterialPropertyBlock materialProperty = new MaterialPropertyBlock();
+		materialProperty.Clear();
+		materialProperty.AddFloat("_Shininess", 1.0F);
+		<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, new <a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0, null, 0, materialProperty);
+		materialProperty.Clear();
+		materialProperty.AddFloat("_Shininess", 0.5F);
+		<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, new <a href="../Vector3/Vector3.html">Vector3</a>(5, 0, 0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0, null, 0, materialProperty);
+		materialProperty.Clear();
+		materialProperty.AddFloat("_Shininess", 0.0F);
+		<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, new <a href="../Vector3/Vector3.html">Vector3</a>(-5, 0, 0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0, null, 0, materialProperty);
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// Draws 3 meshes with the same material but with different Shininess levels
+//绘制3个网格带有相同的材质但是具有不同的光泽级别</span>
+
+var aMesh : <a href="../Mesh/Mesh.html">Mesh</a>;
+var aMaterial : <a href="../Material/Material.html">Material</a> = new <a href="../Material/Material.html">Material</a>(<a href="../Shader/Shader.Find.html">Shader.Find</a>("VertexLit"));
+
+function Update() {
+	var materialProperty : MaterialPropertyBlock = new MaterialPropertyBlock();
+
+
+	<span class="notes">// Not shiny 没有光泽</span>
+	materialProperty.Clear();
+	materialProperty.AddFloat("_Shininess", 1.0);
+	<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, <a href="../Vector3/Vector3.html">Vector3</a>(0,0,0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>,
+	aMaterial, 0, null, 0, materialProperty);
+
+	<span class="notes">// More or less shiny 或多或少有光泽</span>
+	materialProperty.Clear();
+	materialProperty.AddFloat("_Shininess", 0.5);
+	<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, <a href="../Vector3/Vector3.html">Vector3</a>(5,0,0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>,
+	aMaterial, 0, null, 0, materialProperty);
+
+	<span class="notes">// Shiny 有光泽</span>
+	materialProperty.Clear();
+	materialProperty.AddFloat("_Shininess", 0.0);
+	<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, <a href="../Vector3/Vector3.html">Vector3</a>(-5,0,0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>,
+	aMaterial, 0, null, 0, materialProperty);
+}</code></pre></div>
+</div>
+<p>Function variant that takes nameID is faster. If you are adding properties with the same name repeatedly,  use <a href="../Shader/Shader.PropertyToID.html">Shader.PropertyToID</a> to get unique identifier for the name, and pass the identifier to AddFloat. </p>
+<p>使用nameID的函数变量更快，如果你重复添加相同名称的属性，使用Shader.PropertyToID得到唯一的名称标识，并传递这个标示到AddFloat。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Mesh/Mesh.html">Mesh</a> aMesh;
+	public <a href="../Material/Material.html">Material</a> aMaterial = new <a href="../Material/Material.html">Material</a>(<a href="../Shader/Shader.Find.html">Shader.Find</a>("VertexLit"));
+	void Update() {
+		MaterialPropertyBlock materialProperty = new MaterialPropertyBlock();
+		int tagID = <a href="../Shader/Shader.PropertyToID.html">Shader.PropertyToID</a>("_Shininess");
+		materialProperty.Clear();
+		materialProperty.AddFloat(tagID, 1.0F);
+		<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, new <a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0, null, 0, materialProperty);
+		materialProperty.Clear();
+		materialProperty.AddFloat(tagID, 0.5F);
+		<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, new <a href="../Vector3/Vector3.html">Vector3</a>(5, 0, 0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0, null, 0, materialProperty);
+		materialProperty.Clear();
+		materialProperty.AddFloat(tagID, 0.0F);
+		<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, new <a href="../Vector3/Vector3.html">Vector3</a>(-5, 0, 0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0, null, 0, materialProperty);
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// Draws 3 meshes with the same material but with different Shininess levels
+// Using the material tag ID.
+//绘制3个网格带有相同的材质但是具有不同的光泽级别
+//使用材质标签ID</span>
+
+var aMesh : <a href="../Mesh/Mesh.html">Mesh</a>;
+var aMaterial : <a href="../Material/Material.html">Material</a> = new <a href="../Material/Material.html">Material</a>(Shader.Find("VertexLit"));
+
+function Update() {
+	var materialProperty : MaterialPropertyBlock = new MaterialPropertyBlock();
+	var tagID : int = <a href="../Shader/Shader.PropertyToID.html">Shader.PropertyToID</a>("_Shininess");
+
+	<span class="notes">// Not shiny 没有光泽</span>
+	materialProperty.Clear();
+	materialProperty.AddFloat(tagID, 1.0);
+	<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, <a href="../Vector3/Vector3.html">Vector3</a>(0,0,0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>,
+	aMaterial, 0, null, 0, materialProperty);
+
+	<span class="notes">// More or less shiny 或多或少有光泽</span>
+	materialProperty.Clear();
+	materialProperty.AddFloat(tagID, 0.5);
+	<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, <a href="../Vector3/Vector3.html">Vector3</a>(5,0,0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>,
+	aMaterial, 0, null, 0, materialProperty);
+
+	<span class="notes">// Shiny 有光泽</span>
+	materialProperty.Clear();
+	materialProperty.AddFloat(tagID, 0.0);
+	<a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a>(aMesh, <a href="../Vector3/Vector3.html">Vector3</a>(-5,0,0), <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>,
+	aMaterial, 0, null, 0, materialProperty);
+}</code></pre></div>
+</div>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月1日 Tuesday  21:08<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

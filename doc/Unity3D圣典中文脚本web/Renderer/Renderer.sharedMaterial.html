@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Renderer.sharedMaterial,共享材质</title>
+<meta name="Keywords" content="unity,Renderer,渲染器,sharedMaterial,共享材质" />
+<meta name="Description" content="物体的共享材质" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Renderer.html">Renderer</a><span class="transer">翻译：U_鹰</span>
+                <ul>
+                    <li><a href="Renderer.bounds.html">bounds</a></li>
+                    <li><a href="Renderer.castShadows.html">castShadows</a></li>
+                    <li><a href="Renderer.enabled.html">enabled</a></li>
+                    <li><a href="Renderer.isPartOfStaticBatch.html">isPartOfStaticBatch</a></li>
+                    <li><a href="Renderer.isVisible.html">isVisible</a></li>
+                    <li><a href="Renderer.lightmapIndex.html">lightmapIndex</a></li>
+                    <li><a href="Renderer.lightmapTilingOffset.html">lightmapTilingOffset</a></li>
+                    <li><a href="Renderer.localToWorldMatrix.html">localToWorldMatrix</a></li>
+                    <li><a href="Renderer.materials.html">materials</a></li>
+                    <li><a href="Renderer.material.html">material</a></li>
+                    <li><a href="Renderer.OnBecameInvisible.html">OnBecameInvisible</a></li>
+                    <li><a href="Renderer.OnBecameVisible.html">OnBecameVisible</a></li>
+                    <li><a href="Renderer.receiveShadows.html">receiveShadows</a></li>
+                    <li><a href="Renderer.sharedMaterials.html">sharedMaterials</a></li>
+                    <li><a href="Renderer.sharedMaterial.html">sharedMaterial</a></li>
+                    <li><a href="Renderer.worldToLocalMatrix.html">worldToLocalMatrix</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Renderer.html">Renderer</a>.sharedMaterial 共享材质<br />
+</h1>
+<p class="h1inherit"></p>
+<p>var <em>sharedMaterial</em> : <a href="../Material/Material.html">Material</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<h3></h3>
+<p> The shared material of this object.</p>
+<p>物体的共享材质。</p>
+<p> Modifying sharedMaterial will change the appearance of all objects using this material,  and change material settings that are stored in the project too. </p>
+<p>修改sharedMaterial将改变所有物体使用这个材质的外观，并且也改变储存在工程里的材质设置。</p>
+<p> It is not recommended to modify materials returned by sharedMaterial.  If you want to modify the material of a renderer use <a href="Renderer.material.html">material</a> instead. </p>
+<p>不推荐修改由sharedMaterial返回的材质。如果你想修改渲染器的材质，使用<a href="Renderer.material.html">material</a>替代。</p>
+<p>参见: <a href="Renderer.material.html">material</a> property.</p>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月17日 Friday  17:48<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

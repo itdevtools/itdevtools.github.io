@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Texture2D.GetPixels 获取一块像素颜色</title>
+<meta name="Keywords" content="unity,Texture2D,二维纹理,GetPixels,获取一块像素颜色" />
+<meta name="Description" content="获取一块像素的颜色" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Texture2D.html">Texture2D</a><span class="transer"> 翻译：titan-志广</span>
+                <ul>
+                    <li><a href="Texture2D.Apply.html">Apply</a></li>
+                    <li><a href="Texture2D.Compress.html">Compress</a></li>
+                    <li><a href="Texture2D.EncodeToPNG.html">EncodeToPNG</a></li>
+                    <li><a href="Texture2D.format.html">format</a></li>
+                    <li><a href="Texture2D.GetPixelBilinear.html">GetPixelBilinear</a></li>
+                    <li><a href="Texture2D.GetPixels.html">GetPixels</a></li>
+                    <li><a href="Texture2D.GetPixel.html">GetPixel</a></li>
+                    <li><a href="Texture2D.LoadImage.html">LoadImage</a></li>
+                    <li><a href="Texture2D.mipmapCount.html">mipmapCount</a></li>
+                    <li><a href="Texture2D.PackTextures.html">PackTextures</a></li>
+                    <li><a href="Texture2D.ReadPixels.html">ReadPixels</a></li>
+                    <li><a href="Texture2D.Resize.html">Resize</a></li>
+                    <li><a href="Texture2D.SetPixels.html">SetPixels</a></li>
+                    <li><a href="Texture2D.SetPixel.html">SetPixel</a></li>
+                    <li><a href="Texture2D.Texture2D.html">Texture2D</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Texture2D.html">Texture2D</a>.GetPixels 获取一块像素颜色</h1>
+<p class="h1inherit"></p>
+<p>function <em>GetPixels</em> (<em>miplevel</em> : int = 0) : <a href="../Color/Color.html">Color</a>[] </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Get a block of pixel colors.</p>
+<p>获取一块像素的颜色</p>
+<p>This function returns an array of pixel colors of   the whole mip level of the texture.</p>
+<p>函数返回这个纹理整个mip级别的一个像素颜色组</p>
+<p>The returned array is a flattened 2D array, where   pixels are laid out left to right, top to bottom (i.e. row after row). Array   size is width by height of the mip level used. The default mip level is zero   (the base texture) in which case the size is just the size of the texture. In   general case, mip level size is mipWidth=max(1,width&gt;&gt;miplevel)   and similarly for height.</p>
+<p>返回的数组放在2D的数组中，像素被从左到右，从上到下的方式排列（行序）。数组的大小是这个mip等级的宽乘以高，默认的mip级别是0（基本纹理）这种情况下大小仅为纹理大小，mip等级大小是</p>
+<p>mipWidth=max(1,width&gt;&gt;miplevel)   高度也类似</p>
+<p>The texture must have the   Is Readable flag set in the import settings, otherwise this function will   fail.</p>
+<p>这个纹理需要在导入设置里设置为Is   Readable（可读），否则此函数将会无效。</p>
+<p>Using GetPixels can be   faster than calling <a href="Texture2D.GetPixel.html">GetPixel </a>repeatedly,   especially for large textures. In addition, GetPixels can access   individual mipmap levels.</p>
+<p>使用GetPixels可以比重复调用 <a href="Texture2D.GetPixel.html">GetPixel </a>，特别是在纹理较大的情况下调用 <a href="Texture2D.GetPixel.html">GetPixel </a>快得多，另外GetPixels可以访问单个mip级别</p>
+<p>参见: <a href="Texture2D.SetPixels.html">SetPixels </a>, <a href="Texture2D.mipmapCount.html">mipmapCount </a>.</p>
+<p>&#8226; function <em>GetPixels</em> (<em>x</em> : int, <em>y</em> : int, <em>blockWidth</em> : int, <em>blockHeight</em> : int, <em>miplevel</em> : int = 0) : <a href="../Color/Color.html">Color</a>[] </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Get a block of pixel colors.</p>
+<p>获得像素块的颜色</p>
+<p>This function is an extended version   of GetPixels above; it does not return the whole mip   level but only blockWidth byblockHeight   region starting at x,y. The block must fit into the used mip   level. The returned array is blockWidth*blockHeightsize.</p>
+<p>这个函数是上面GetPixels函数的扩展；它不会返回整个mip等级，而只是从x,y点开始的blockWidth(块的宽)乘以blockHeight（块的高）的区域。该块必须适合使用的mip级别。返回的数组是blockWidth*blockHeight的大小</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月18日 Saturday  0:46<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

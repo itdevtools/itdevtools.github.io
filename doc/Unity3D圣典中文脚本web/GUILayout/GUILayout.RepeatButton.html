@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>GUILayout.RepeatButton 重复按钮</title>
+<meta name="Keywords" content="unity,GUILayout,RepeatButton,重复按钮" />
+<meta name="Description" content="创建一个单次按钮。当用户点击按钮会立即发生一些事件。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="GUILayout.html">GUILayout</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="GUILayout.BeginArea.html">BeginArea</a></li>
+                    <li><a href="GUILayout.BeginHorizontal.html">BeginHorizontal</a></li>
+                    <li><a href="GUILayout.BeginScrollView.html">BeginScrollView</a></li>
+                    <li><a href="GUILayout.BeginVertical.html">BeginVertical</a></li>
+                    <li><a href="GUILayout.Box.html">Box</a></li>
+                    <li><a href="GUILayout.Button.html">Button</a></li>
+                    <li><a href="GUILayout.EndArea.html">EndArea</a></li>
+                    <li><a href="GUILayout.EndHorizontal.html">EndHorizontal</a></li>
+                    <li><a href="GUILayout.EndScrollView.html">EndScrollView</a></li>
+                    <li><a href="GUILayout.EndVertical.html">EndVertical</a></li>
+                    <li><a href="GUILayout.ExpandHeight.html">ExpandHeight</a></li>
+                    <li><a href="GUILayout.ExpandWidth.html">ExpandWidth</a></li>
+                    <li><a href="GUILayout.FlexibleSpace.html">FlexibleSpace</a></li>
+                    <li><a href="GUILayout.Height.html">Height</a></li>
+                    <li><a href="GUILayout.HorizontalScrollbar.html">HorizontalScrollbar</a></li>
+                    <li><a href="GUILayout.HorizontalSlider.html">HorizontalSlider</a></li>
+                    <li><a href="GUILayout.Label.html">Label</a></li>
+                    <li><a href="GUILayout.MaxHeight.html">MaxHeight</a></li>
+                    <li><a href="GUILayout.MaxWidth.html">MaxWidth</a></li>
+                    <li><a href="GUILayout.MinHeight.html">MinHeight</a></li>
+                    <li><a href="GUILayout.MinWidth.html">MinWidth</a></li>
+                    <li><a href="GUILayout.PasswordField.html">PasswordField</a></li>
+                    <li><a href="GUILayout.RepeatButton.html">RepeatButton</a></li>
+                    <li><a href="GUILayout.SelectionGrid.html">SelectionGrid</a></li>
+                    <li><a href="GUILayout.Space.html">Space</a></li>
+                    <li><a href="GUILayout.TextArea.html">TextArea</a></li>
+                    <li><a href="GUILayout.TextField.html">TextField</a></li>
+                    <li><a href="GUILayout.Toggle.html">Toggle</a></li>
+                    <li><a href="GUILayout.Toolbar.html">Toolbar</a></li>
+                    <li><a href="GUILayout.VerticalScrollbar.html">VerticalScrollbar</a></li>
+                    <li><a href="GUILayout.VerticalSlider.html">VerticalSlider</a></li>
+                    <li><a href="GUILayout.Width.html">Width</a></li>
+                    <li><a href="GUILayout.Window.html">Window</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="GUILayout.html">GUILayout</a>.RepeatButton 重复按钮</h1>
+<p class="h1inherit"></p>
+
+<p>static function <em>RepeatButton</em> (<em>image</em> : <a href="../Texture/Texture.html">Texture</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : bool<br />
+static function <em>RepeatButton</em> (<em>text</em> : string, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : bool<br />
+static function <em>RepeatButton</em> (<em>content</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : bool<br />
+static function <em>RepeatButton</em> (<em>image</em> : <a href="../Texture/Texture.html">Texture</a>, <em>style</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : bool<br />
+static function <em>RepeatButton</em> (<em>text</em> : string, <em>style</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : bool<br />
+static function <em>RepeatButton</em> (<em>content</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>, <em>style</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : bool </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><em>text</em></div>
+    	<div class="licontent">Text to display on the button. <br />
+    	显示在按钮上的文本</div>
+    </li>
+    <li>
+      <div class="lititle"><em>image</em></div>
+    	<div class="licontent">	Texture to display on the button.<br />
+    	显示在按钮上的纹理</div>
+    </li>
+    <li>
+      <div class="lititle"><em>content</em></div>
+    	<div class="licontent">	Text, image and tooltip for this button. <br />
+    	用于该按钮的文本、图片和工具提示</div>
+    </li>
+    <li>
+      <div class="lititle"><em>style</em></div>
+    	<div class="licontent">	The style to use. If left out, the button style from the current GUISkin is used. <br />
+    	使用的样式。如果不使用，该按钮使用当前的GUISkin皮肤</div>
+    </li>
+    <li>
+      <div class="lititle"><em>options</em></div>
+    	<div class="licontent">	An optional list of layout options that specify extra layouting properties. Any values passed in here will override settings defined by the style.<br />
+    	  布局选项指定额外布局属性的一个可选列表。这里传递任意值都将覆盖由style定义的设置。<br />
+   	   参考： <a href="GUILayout.Width.html">GUILayout.Width</a>, <a href="GUILayout.Height.html">GUILayout.Height</a>, <a href="GUILayout.MinWidth.html">GUILayout.MinWidth</a>, <a href="GUILayout.MaxWidth.html">GUILayout.MaxWidth</a>, <a href="GUILayout.MinHeight.html">GUILayout.MinHeight</a>, <a href="GUILayout.MaxHeight.html">GUILayout.MaxHeight</a>, <a href="GUILayout.ExpandWidth.html">GUILayout.ExpandWidth</a>, <a href="GUILayout.ExpandHeight.html">GUILayout.ExpandHeight</a></div>
+    </li>
+</ul>
+<em>Returns</em>
+<p>bool - /true/ when the holds down the mouse</p>
+<p>返回布尔类型，当用户按住鼠标时返回true。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+
+<p>Make a repeating button. The button returns true as long as the user holds down the mouse</p>
+<p>创建一个重复按钮。当用户点击按钮会立即发生一些事件。只要用户按住鼠标，按钮返回true。</p>
+<p>按下按钮不放，这个按钮会持续反复执行代码。</p>
+<p><img src="GUILayoutButton.png" alt="GUILayout.RepeatButton 重复按钮" width="336" height="247" /></p>
+<p> Repeat Buttons in the Game View. <br />
+在游戏视图中的重复按钮。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public Texture tex;
+	void OnGUI() {
+		if (!typeof(tex))
+			<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;No texture found, please assign a texture on the inspector&quot;);
+
+		if (GUILayout.RepeatButton(tex))
+			<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Clicked the image&quot;);
+
+		if (GUILayout.RepeatButton(&quot;I am a regular Automatic Layout Button&quot;))
+			<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Clicked Button&quot;);
+
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Draws a button with an image and a button with text
+//绘制一个带有图片的按钮和一个带有文本的按钮</span>
+var tex : Texture;
+function OnGUI() {
+	if(!tex) {
+		<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;No texture found, please assign a texture on the inspector&quot;);
+	}
+
+	if(GUILayout.RepeatButton (tex)) {
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Clicked the image&quot;);
+	}
+	if(GUILayout.RepeatButton (&quot;I am a regular Automatic Layout Button&quot;)) {
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Clicked Button&quot;);
+	}
+}</code></pre></div>
+</div>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年6月14日 Tuesday  14:57<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

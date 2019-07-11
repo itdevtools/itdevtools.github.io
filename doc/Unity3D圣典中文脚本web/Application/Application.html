@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Application 应用程序</title>
+<meta name="Keywords" content="unity,Application,应用程序" />
+<meta name="Description" content="用于处理贴图的基类。包含的功能被 Texture2D 以及 RenderTexture 所共用。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Application.html">Application</a><span class="transer">翻译：^牛^魔王 </span>
+                <ul>
+                    <li><a href="Application.absoluteURL.html">absoluteURL</a></li>
+                    <li><a href="Application.backgroundLoadingPriority.html">backgroundLoadingPriority</a></li>
+                    <li><a href="Application.CancelQuit.html">CancelQuit</a></li>
+                    <li><a href="Application.CanStreamedLevelBeLoaded.html">CanStreamedLevelBeLoaded</a></li>
+                    <li><a href="Application.CaptureScreenshot.html">CaptureScreenshot</a></li>
+                    <li><a href="Application.dataPath.html">dataPath</a></li>
+                    <li><a href="Application.ExternalCall.html">ExternalCall</a></li>
+                    <li><a href="Application.ExternalEval.html">ExternalEval</a></li>
+                    <li><a href="Application.GetStreamProgressForLevel.html">GetStreamProgressForLevel</a></li>
+                    <li><a href="Application.isEditor.html">isEditor</a></li>
+                    <li><a href="Application.isLoadingLevel.html">isLoadingLevel</a></li>
+                    <li><a href="Application.isPlaying.html">isPlaying</a></li>
+                    <li><a href="Application.isWebPlayer.html">isWebPlayer</a></li>
+                    <li><a href="Application.levelCount.html">levelCount</a></li>
+                    <li><a href="Application.loadedLevelName.html">loadedLevelName</a></li>
+                    <li><a href="Application.loadedLevel.html">loadedLevel</a></li>
+                    <li><a href="Application.LoadLevelAdditiveAsync.html">LoadLevelAdditiveAsync</a></li>
+                    <li><a href="Application.LoadLevelAdditive.html">LoadLevelAdditive</a></li>
+                    <li><a href="Application.LoadLevelAsync.html">LoadLevelAsync</a></li>
+                    <li><a href="Application.LoadLevel.html">LoadLevel</a></li>
+                    <li><a href="Application.LogCallback.html">LogCallback</a></li>
+                    <li><a href="Application.OpenURL.html">OpenURL</a></li>
+                    <li><a href="Application.persistentDataPath.html">persistentDataPath</a></li>
+                    <li><a href="Application.platform.html">platform</a></li>
+                    <li><a href="Application.Quit.html">Quit</a></li>
+                    <li><a href="Application.RegisterLogCallbackThreaded.html">RegisterLogCallbackThreaded</a></li>
+                    <li><a href="Application.RegisterLogCallback.html">RegisterLogCallback</a></li>
+                    <li><a href="Application.runInBackground.html">runInBackground</a></li>
+                    <li><a href="Application.srcValue.html">srcValue</a></li>
+                    <li><a href="Application.streamedBytes.html">streamedBytes</a></li>
+                    <li><a href="Application.systemLanguage.html">systemLanguage</a></li>
+                    <li><a href="Application.targetFrameRate.html">targetFrameRate</a></li>
+                    <li><a href="Application.temporaryCachePath.html">temporaryCachePath</a></li>
+                    <li><a href="Application.unityVersion.html">unityVersion</a></li>
+                    <li><a href="Application.webSecurityEnabled.html">webSecurityEnabled</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Application 应用程序</h1>
+<p class="h1inherit"></p>
+<p> Access to application run-time data.</p>
+<p>访问应用程序的运行时数据。</p>
+<p> This class contains static methods for looking up information about and controlling the run-time data.</p>
+<p>这个类包含静态方法，来查找相关信息并控制运行时数据。</p>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Application.loadedLevel.html">loadedLevel</a></div>
+    	<div class="licontent">The level index that was last loaded (Read Only).<br />
+   	    最后加载的关卡索引（只读） </div>
+    </li>
+    <li><div class="lititle"><a href="Application.loadedLevelName.html">loadedLevelName</a></div>
+    	<div class="licontent">The name of the level that was last loaded (Read Only).<br />
+   	    最后加载的关卡的名字。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.isLoadingLevel.html">isLoadingLevel</a></div>
+    	<div class="licontent">Is some level being loaded? (Read Only)<br />
+   	    是否有一些关卡正在读取（只读） </div>
+    </li>
+    <li><div class="lititle"><a href="Application.levelCount.html">levelCount</a></div>
+    	<div class="licontent">The total number of levels available (Read Only).<br />
+   	    可用的关卡总数。（只读） </div>
+    </li>
+    <li><div class="lititle"><a href="Application.streamedBytes.html">streamedBytes</a></div>
+    	<div class="licontent">How many bytes have we downloaded from the main unity web stream (Read Only).<br />
+   	    我们从主Unity网页流中下载了多少字节（只读）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.isPlaying.html">isPlaying</a></div>
+    	<div class="licontent">Returns true when in any kind of player (Read Only).<br />
+   	    当在任何种类的播放器时，返回真（只读）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.isEditor.html">isEditor</a></div>
+    	<div class="licontent">Are we running inside the Unity editor? (Read Only)<br />
+   	    是在Unity编辑器内运行？ </div>
+    </li>
+    <li><div class="lititle"><a href="Application.isWebPlayer.html">isWebPlayer</a></div>
+    	<div class="licontent">Are we running inside a web player? (Read Only)<br />
+   	    是否在一个网页播放器中运行？（只读） </div>
+    </li>
+    <li><div class="lititle"><a href="Application.platform.html">platform</a></div>
+    	<div class="licontent">Returns the platform the game is running (Read Only).<br />
+   	    返回游戏运行的平台（只读）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.runInBackground.html">runInBackground</a></div>
+    	<div class="licontent">Should the player be running when the application is in the background?<br />
+   	    应用程序在后台时是否应该被运行？ </div>
+    </li>
+    <li><div class="lititle"><a href="Application.dataPath.html">dataPath</a></div>
+    	<div class="licontent">Contains the path to the game data folder (Read Only).<br />
+   	    包含游戏数据文件夹的路径（只读）。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="file:///E:/Program%20Files/Unity/Editor/Data/Documentation/Documentation/ScriptReference/Application-persistentDataPath.html">persistentDataPath</a></div>
+    	<div class="licontent">Contains the path to a persistent data directory (Read Only).<br />
+    		包含一个持久数据目录的路径（只读）。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="file:///E:/Program%20Files/Unity/Editor/Data/Documentation/Documentation/ScriptReference/Application-temporaryCachePath.html">temporaryCachePath</a></div>
+    	<div class="licontent">Contains the path to a temporary data / cache directory (Read Only).<br />
+    		包含一个临时数据/缓存目录的路径（只读）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.srcValue.html">srcValue</a></div>
+    	<div class="licontent">The path to the web player data file relative to the html file (Read Only).<br />
+   	    相对于html文件的web播放器数据文件的路径（只读）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.absoluteURL.html">absoluteURL</a></div>
+    	<div class="licontent">The absolute path to the web player data file (Read Only).<br />
+   	    到web播放器数据文件夹的绝对路径（只读）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.unityVersion.html">unityVersion</a></div>
+    	<div class="licontent">The version of the Unity runtime used to play the content.<br />
+   	    用于播放内容的Unity运行时版本。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.webSecurityEnabled.html">webSecurityEnabled</a></div>
+    	<div class="licontent">Indicates whether Unity's webplayer security model is enabled.<br />
+   	    指示是否webplayer的安全模式是否被启用。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.targetFrameRate.html">targetFrameRate</a></div>
+    	<div class="licontent">Instructs game to try to render at a specified frame rate.<br />
+   	    命令游戏尝试以一个特定的帧率渲染。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.systemLanguage.html">systemLanguage</a></div>
+    	<div class="licontent">The language the user's operating system is running in.<br />
+   	    用户操作系统正在运行的语言 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.backgroundLoadingPriority.html">backgroundLoadingPriority</a></div>
+    	<div class="licontent">Priority of background loading thread.<br />
+   	    后台装载线程优先级 </div>
+    </li>
+</ul>
+
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Application.Quit.html">Quit</a></div>
+    	<div class="licontent">Quits the player application. Quit is ignored in the editor or the web player.<br />
+   	    退出应用程序。在编辑器或者web播放器中退出被忽略。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.CancelQuit.html">CancelQuit</a></div>
+    	<div class="licontent">Cancels quitting the application. This is useful for showing a splash screen at the end of a game.<br />
+   	    取消退出。这可以用来在退出游戏的时候显示一个退出画面。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.LoadLevel.html">LoadLevel</a></div>
+    	<div class="licontent">Loads the level.<br />
+   	    加载关卡，也就是加载一个新的场景。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.LoadLevelAsync.html">LoadLevelAsync</a></div>
+    	<div class="licontent">Loads the level asynchronously in the background.<br />
+   	    在后台异步加载关卡，也就是说，在后台非同步加载新的场景。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.LoadLevelAdditiveAsync.html">LoadLevelAdditiveAsync</a></div>
+    	<div class="licontent">Loads the level additively and asynchronously in the background.<br />
+   	    在后台异步累加关卡，也就是说在后台非同步加载新的场景，但当前的场景不会被销毁。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.LoadLevelAdditive.html">LoadLevelAdditive</a></div>
+    	<div class="licontent">Loads a level additively.<br />
+   	    累加一个关卡，也就是说，加载一个新的场景，当前场景不会被销毁。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.GetStreamProgressForLevel.html">GetStreamProgressForLevel</a></div>
+    	<div class="licontent">How far has the download progressed? [0...1]<br />
+   	    下载的进度是多少？ </div>
+    </li>
+    <li><div class="lititle"><a href="Application.CanStreamedLevelBeLoaded.html">CanStreamedLevelBeLoaded</a></div>
+    	<div class="licontent">Can the streamed level be loaded?<br />
+   	    能流模式加载的关卡是否被加载？ </div>
+    </li>
+    <li><div class="lititle"><a href="Application.CaptureScreenshot.html">CaptureScreenshot</a></div>
+    	<div class="licontent">Captures a screenshot at path filename as a PNG file.<br />
+   	    捕捉屏幕作为一个PNG文件保存在路径filename。简单来说就是截屏 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.ExternalCall.html">ExternalCall</a></div>
+    	<div class="licontent">Calls a function in the containing web page (Web Player only).<br />
+   	    调用一个包含在网页中的函数（只用于Web Player）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.ExternalEval.html">ExternalEval</a></div>
+    	<div class="licontent">Evaluates script snippet in the containing web page (Web Player only).<br />
+   	    调用包含在网页中的片段脚本函数（只用于Web   Player）。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.OpenURL.html">OpenURL</a></div>
+    	<div class="licontent">Opens the url in a browser.<br />
+   	    在浏览器中打开url   。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.RegisterLogCallback.html">RegisterLogCallback</a></div>
+    	<div class="licontent">Register a delegate to be called on log messages.<br />
+   	    在一个日志信息上注册一个委托来被调用。 </div>
+    </li>
+    <li><div class="lititle"><a href="Application.RegisterLogCallbackThreaded.html">RegisterLogCallbackThreaded</a></div>
+    	<div class="licontent">Register a delegate to be called on log messages.<br />
+   	    在一个日志信息上注册一个委托来被调用。 </div>
+    </li>
+</ul>
+<h3>Delegates<span class="trans">委托</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Application.LogCallback.html">LogCallback</a></div>
+    	<div class="licontent">Use this delegate type with RegisterLogCallback to monitor what gets logged.<br />
+   	    用RegisterLogCallback来使用这个委托类型，去监控什么得到记录了 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月16日 Saturday  13:36<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

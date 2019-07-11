@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorPrefs.HasKey 有否键</title>
+<meta name="Keywords" content="unity,EditorPrefs,HasKey" />
+<meta name="Description" content="设置由键确定的偏好值。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorPrefs.html">EditorPrefs</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorPrefs.DeleteAll.html">DeleteAll</a></li>
+			<li><a href="EditorPrefs.DeleteKey.html">DeleteKey</a></li>
+			<li><a href="EditorPrefs.GetBool.html">GetBool</a></li>
+			<li><a href="EditorPrefs.GetFloat.html">GetFloat</a></li>
+			<li><a href="EditorPrefs.GetInt.html">GetInt</a></li>
+			<li><a href="EditorPrefs.GetString.html">GetString</a></li>
+			<li><a href="EditorPrefs.HasKey.html">HasKey</a></li>
+			<li><a href="EditorPrefs.SetBool.html">SetBool</a></li>
+			<li><a href="EditorPrefs.SetFloat.html">SetFloat</a></li>
+			<li><a href="EditorPrefs.SetInt.html">SetInt</a></li>
+			<li><a href="EditorPrefs.SetString.html">SetString</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="EditorPrefs.html">EditorPrefs</a>.HasKey 有否键</h1>
+<p class="h1inherit"></p>
+<p>static function <em>HasKey</em> (<em>key</em> : string) : bool </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Sets the value of the preference identified by key.</p>
+<p>设置由键确定的偏好值。</p>
+<p><img src="QuickNotes.png" alt="EditorPrefs.SetString 设置字符串" width="233" height="189" /></p>
+<p>Quick notes that last between Unity Sessions.</p>
+<p>Unity Sessions 最后的快速快速笔记</p>
+<div class="note"><pre><code><span class="notes">// Simple Editor Script that lets you create / save quick notes
+// Between Unity Sessions.
+//让你创建/保持快速笔记，在 UnitySessions</span>
+class QuickNotes extends <a href="../EditorWindow/EditorWindow.html">EditorWindow</a> {
+
+	var note : <a href="../String/String.html">String</a> = &quot;Notes:\n-&gt;\n-&gt;&quot;;
+
+	@<a href="../MenuItem/MenuItem.html">MenuItem</a>(&quot;Examples/QuickNotes&quot;)
+	static function Init() {
+	var window = GetWindow(QuickNotes);
+	window.Show();
+	}
+	function OnGUI() {
+		note = <a href="../EditorGUILayout/EditorGUILayout.TextArea.html">EditorGUILayout.TextArea</a>(note,
+		<a href="../GUILayout/GUILayout.Width.html">GUILayout.Width</a>(position.width-5),
+		<a href="../GUILayout/GUILayout.Height.html">GUILayout.Height</a>(position.height - 30));
+		<a href="../EditorGUILayout/EditorGUILayout.BeginHorizontal.html">EditorGUILayout.BeginHorizontal</a>();
+		if(<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a>(&quot;Reset&quot;))
+			note = &quot;&quot;;
+		if(<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a>(&quot;Clear Story&quot;,<a href="../GUILayout/GUILayout.Width.html">GUILayout.Width</a>(72))) {
+			note = &quot;Notes:\n-&gt;\n-&gt;&quot;;
+		}
+		<a href="../EditorGUILayout/EditorGUILayout.EndHorizontal.html">EditorGUILayout.EndHorizontal</a>();
+	}
+	function OnFocus() {
+		if(<a href="EditorPrefs.HasKey.html">EditorPrefs.HasKey</a>(&quot;QuickNotes&quot;))
+			note = <a href="EditorPrefs.GetString.html">EditorPrefs.GetString</a>(&quot;QuickNotes&quot;);
+	}
+	function OnLostFocus() {
+		<a href="EditorPrefs.SetString.html">EditorPrefs.SetString</a>(&quot;QuickNotes&quot;,note);
+	}
+	function OnDestroy() {
+		<a href="EditorPrefs.SetString.html">EditorPrefs.SetString</a>(&quot;QuickNotes&quot;,note);
+	}
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年7月11日 Monday  17:47<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

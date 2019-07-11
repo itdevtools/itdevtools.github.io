@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorPrefs 编辑偏好设定</title>
+<meta name="Keywords" content="unity,EditorPrefs,编辑偏好设定" />
+<meta name="Description" content="储存和访问Unity编辑器偏好设定。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorPrefs.html">EditorPrefs</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorPrefs.DeleteAll.html">DeleteAll</a></li>
+			<li><a href="EditorPrefs.DeleteKey.html">DeleteKey</a></li>
+			<li><a href="EditorPrefs.GetBool.html">GetBool</a></li>
+			<li><a href="EditorPrefs.GetFloat.html">GetFloat</a></li>
+			<li><a href="EditorPrefs.GetInt.html">GetInt</a></li>
+			<li><a href="EditorPrefs.GetString.html">GetString</a></li>
+			<li><a href="EditorPrefs.HasKey.html">HasKey</a></li>
+			<li><a href="EditorPrefs.SetBool.html">SetBool</a></li>
+			<li><a href="EditorPrefs.SetFloat.html">SetFloat</a></li>
+			<li><a href="EditorPrefs.SetInt.html">SetInt</a></li>
+			<li><a href="EditorPrefs.SetString.html">SetString</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>EditorPrefs 编辑偏好设定</h1>
+<p class="h1inherit"></p>
+<p>Stores and accesses Unity editor preferences.</p>
+<p>储存和访问Unity编辑器偏好设定。</p>
+<p class="note">Note: This is an editor class. To use it you have to place your script in Assets/Editor inside your project folder. Editor classes are in the UnityEditor namespace so for C# scripts you need to add "using UnityEditor;" at the beginning of the script.<br />
+  注意：这是一个编辑器类，如果想使用它你需要把它放到工程目录下的Assets/Editor文件夹下。编辑器类在UnityEditor命名空间下。所以当使用C#脚本时，你需要在脚本前面加上 &quot;using UnityEditor&quot;引用。</p>
+<p> On Mac OS X, EditorPrefs are stored in ~/Library/Preferences/com.unity3d.UnityEditor.plist. </p>
+<p>在Mac OS X，EditorPrefs储存在~/Library/Preferences/com.unity3d.UnityEditor.plist。</p>
+<p> On Windows, EditorPrefs are stored in the registry under the HKCU\Software\Unity Technologies\UnityEditor key.</p>
+<p>在WindowsEditorPrefs储存在注册表HKCU\Software\Unity Technologies\UnityEditor。</p>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="EditorPrefs.SetInt.html">SetInt</a></div>
+    	<div class="licontent">Sets the value of the preference identified by key.<br />
+    		设置由键确定的偏好值。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="EditorPrefs.GetInt.html">GetInt</a></div>
+    	<div class="licontent">Returns the value corresponding to key in the preference file if it exists.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.SetFloat.html">SetFloat</a></div>
+    	<div class="licontent">Sets the value of the preference identified by key.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.GetFloat.html">GetFloat</a></div>
+    	<div class="licontent">Returns the value corresponding to key in the preference file if it exists.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.SetString.html">SetString</a></div>
+    	<div class="licontent">Sets the value of the preference identified by key.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.GetString.html">GetString</a></div>
+    	<div class="licontent">Returns the value corresponding to key in the preference file if it exists.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.SetBool.html">SetBool</a></div>
+    	<div class="licontent">Sets the value of the preference identified by key.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.GetBool.html">GetBool</a></div>
+    	<div class="licontent">Returns the value corresponding to key in the preference file if it exists.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.HasKey.html">HasKey</a></div>
+    	<div class="licontent">Returns true if key exists in the preferences.</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.DeleteKey.html">DeleteKey</a></div>
+    	<div class="licontent">Removes key and its corresponding value from the preferences.<br />
+    		从偏好设定删除键和它对应的值。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorPrefs.DeleteAll.html">DeleteAll</a></div>
+    	<div class="licontent">Removes all keys and values from the preferences. Use with caution.<br />
+    		从偏好设定删除所有键和值。请谨慎使用。 </div>
+    </li>
+</ul>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年7月11日 Monday  18:03<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

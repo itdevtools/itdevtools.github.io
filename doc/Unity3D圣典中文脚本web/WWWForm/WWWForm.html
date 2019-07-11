@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>WWWForm 网页表单</title>
+<meta name="Keywords" content="unity,WWWForm,网页表单" />
+<meta name="Description" content="辅助类。用来生成表单数据,使用WWW类传递到web服务器。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="WWWForm.html">WWWForm</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="WWWForm.AddBinaryData.html">AddBinaryData</a></li>
+                    <li><a href="WWWForm.AddField.html">AddField</a></li>
+                    <li><a href="WWWForm.data.html">data</a></li>
+                    <li><a href="WWWForm.headers.html">headers</a></li>
+                    <li><a href="WWWForm.WWWForm.html">WWWForm</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>WWWForm 网页表单</h1>
+<p class="h1inherit"></p>
+<p> Helper class to generate form data to post to web servers using the <a href="../WWW/WWW.html">WWW</a> class.</p>
+<p>辅助类。用来生成表单数据,使用<a href="../WWW/WWW.html">WWW</a>类传递到web服务器。</p>
+<div class="note"><pre><code></code><span class="notes">// Grab a screen shot and upload it to a CGI script.
+//获取一个截屏并上传到CGI脚本
+// The CGI script must be able to hande form uploads.
+//该CGI脚本必须能处理表单上传</span>
+
+var screenShotURL= &quot;http://www.my-server.com/cgi-bin/screenshot.pl&quot;;
+<span class="notes">
+// Take a screen shot immediately
+//立即截屏</span>
+function Start() {
+	UploadPNG();
+}
+
+function UploadPNG() {
+	<span class="notes">// We should only read the screen after all rendering is complete
+	//我们应该只在所有渲染完成后读取屏幕</span>
+	yield <a href="../WaitForEndOfFrame/WaitForEndOfFrame.html">WaitForEndOfFrame</a>();
+
+	<span class="notes">// Create a texture the size of the screen, RGB24 format
+	//创建屏幕大小的纹理，RGB24格式</span>
+	var width = <a href="../Screen/Screen.width.html">Screen.width</a>;
+	var height = <a href="../Screen/Screen.height.html">Screen.height</a>;
+	var tex = new <a href="../Texture2D/Texture2D.html">Texture2D</a>( width, height, TextureFormat.RGB24, false );
+	<span class="notes">// Read screen contents into the texture
+	//读取屏幕内存到纹理</span>
+	tex.ReadPixels( <a href="../Rect/Rect.html">Rect</a>(0, 0, width, height), 0, 0 );
+	tex.Apply();
+
+	<span class="notes">// Encode texture into PNG
+	//编码纹理为PNG</span>
+	var bytes = tex.EncodeToPNG();
+	Destroy( tex );
+
+	<span class="notes">// Create a Web Form
+	//创建一个Web表单</span>
+	var form = new WWWForm();
+	form.AddField(&quot;frameCount&quot;, <a href="../Time/Time.frameCount.html">Time.frameCount</a>.ToString());
+	form.AddBinaryData(&quot;fileUpload&quot;, bytes, &quot;screenShot.png&quot;, &quot;image/png&quot;);
+
+	<span class="notes">// Upload to a cgi script
+	//上传到一个CGI脚本</span>
+	var w = <a href="../WWW/WWW.html">WWW</a>(screenShotURL, form);
+	yield w;
+	if (w.error != null)
+		print(w.error);
+	else
+		print(&quot;Finished Uploading Screenshot&quot;);
+}</pre></div>
+<p>Here is a sample script that retrieves the high scores stored  in a table in an SQL database.</p>
+<p>这里是一个简单的脚本检索储存在SQL数据库中的高分表。</p>
+<div class="note"><pre><code></code><span class="notes">// This example assumes that the user has entered his name into a
+// variable called name and that score contains the user's current
+// score.
+//这个例子假设玩家已经输入了他的名称到一个name变量中并且score包含玩家的当前分数</span>
+
+var highscore_url = &quot;http://www.my-site.com/highscores.pl&quot;;
+var playName = &quot;Player 1&quot;;
+var score = -1;
+
+function Start() {
+	<span class="notes">// Create a form object for sending high score data to the server
+	// 创建一个表单来发送高分数据到服务器</span>
+	var form = new WWWForm();
+	<span class="notes">// Assuming the perl script manages high scores for different games
+	// 假设perl脚本为不同的游戏管理高分</span>
+	form.AddField( &quot;game&quot;, &quot;MyGameName&quot; );
+	<span class="notes">// The name of the player submitting the scores
+	// 玩家提交的名称</span>
+	form.AddField( &quot;playerName&quot;, playName );
+	<span class="notes">// The score
+	// 分数</span>
+	form.AddField( &quot;score&quot;, score );
+
+	<span class="notes">// Create a download object
+	//创建一个下载对象</span>
+	var download = new <a href="../WWW/WWW.html">WWW</a>( highscore_url, form );
+
+	<span class="notes">// Wait until the download is done
+	//等待直到下载完成</span>
+	yield download;
+
+	if(download.error) {
+		print( &quot;Error downloading: &quot; + download.error );
+		return;
+	} else {
+		<span class="notes">// show the highscores
+		// 显示高分</span>
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(download.text);
+	}
+}</pre></div>
+<p>Here is a sample Perl script that processes the high scores stored  in a table in an SQL database.</p>
+<p>这里是一个简单的Perl脚本用处理储存在SQL数据库中的高分表。</p>
+<div class="note"><pre><code>#!/usr/bin/perl
+# The SQL database needs to have a table called highscores
+# that looks something like this:
+#
+# CREATE TABLE highscores (
+# game varchar(255) NOT NULL,
+# player varchar(255) NOT NULL,
+# score integer NOT NULL
+# );
+#
+use strict;
+use CGI;
+use DBI;
+
+# Read form data etc.
+my $cgi = new CGI;
+
+# The results from the high score script will be in plain text
+print $cgi-&gt;header(&quot;text/plain&quot;);
+
+my $game = $cgi-&gt;param('game');
+my $playerName = $cgi-&gt;param('playerName');
+my $score = $cgi-&gt;param('score');
+
+exit 0 unless $game; # This parameter is required
+
+# Connect to a database
+my $dbh = DBI-&gt;connect( 'DBI:mysql:databasename', 'username', 'password' )
+	|| die &quot;Could not connect to database: $DBI::errstr&quot;;
+
+# Insert the player score if there are any
+if( $playerName &amp;&amp; $score) {
+	$dbh-&gt;do( &quot;insert into highscores (game, player, score) values(?,?,?)&quot;,
+		undef, $game, $playerName, $score );
+}
+
+# Fetch the high scores
+my $sth = $dbh-&gt;prepare(
+	'SELECT player, score FROM highscores WHERE game=? ORDER BY score desc LIMIT 10' );
+$sth-&gt;execute($game);
+while (my $r = $sth-&gt;fetchrow_arrayref) {
+	print join(':',@$r),&quot;\n&quot;
+}</code></pre></div>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="WWWForm.headers.html">headers</a></div>
+    	<div class="licontent">(Read Only) Returns the correct request headers for posting the form using the WWW class.<br />
+   	    （只读）为使用WWW类传递的表单返回一个正确的请求头。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="WWWForm..html">data</a></div>
+    	<div class="licontent">(Read Only) The raw data to pass as the POST request body when sending the form.<br />
+   	    （只读）在发送表单的时，原始数据作为POST请求发送。 </div>
+    </li>
+</ul>
+<h3>Constructors<span class="trans">构造器</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="WWWForm.WWWForm.html">WWWForm</a></div>
+    	<div class="licontent">Creates an empty WWWForm object.<br />
+   	    创建一个空的网页表单对象。 </div>
+    </li>
+</ul>	
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="WWWForm.AddField.html">AddField</a></div>
+    	<div class="licontent">Add a simple field to the form.<br />
+   	    添加一个简单的域到表单。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="WWWForm.AddBinaryData.html">AddBinaryData</a></div>
+    	<div class="licontent">Add binary data to the form.<br />
+   	    添加二进制数据到表单。 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月19日 Saturday  17:18<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

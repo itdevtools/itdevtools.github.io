@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>SerializeField 序列化域</title>
+<meta name="Keywords" content="unity,SerializeField,序列化域" />
+<meta name="Description" content="强制Unity去序列化一个私有域。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><strong>Attributes</strong><span class="transer">翻译：剑客</span>
+	<ul>
+        <li><a href="AddComponentMenu.html">AddComponentMenu</a></li>
+		<li><a href="ContextMenu.html">ContextMenu</a></li>
+		<li><a href="ExecuteInEditMode.html">ExecuteInEditMode</a></li>
+		<li><a href="HideInInspector.html">HideInInspector</a></li>
+		<li><a href="NonSerialized.html">NonSerialized</a></li>
+		<li><a href="RPC.html">RPC</a></li>
+		<li><a href="RequireComponent.html">RequireComponent</a></li>
+		<li><a href="Serializable.html">Serializable</a></li>
+		<li><a href="SerializeField.html">SerializeField</a></li>
+	</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>SerializeField 序列化域</h1>
+<p class="h1inherit">Inherits from Attribute</p>
+<p>Force Unity to serialize a private field. </p>
+<p>强制Unity去序列化一个私有域。</p>
+<p>You will almost never need this. When Unity serializes your scripts, it will only serialize public fields. If in addition to that you also want Unity to serialize one of your private fields you can add the SerializeField attribute to the field.</p>
+<p> 你几乎从来不需要它。当Unity序列化你的脚本的时候，它将紧紧序列化公有域。如果作为附加你也想要Unity去序列化你的一个私有域，你可以添加SerializeField（序列化域）属性给这个域。</p>
+<p>Unity will serialize all your script components, reload the new assemblies, and recreate your script components from the serialized verions. This serialization does not happen with .NET's serialization functionality, but with an internal Unity one. </p>
+<p>Unity将序列化所有你的脚本组件，重载新的集合，并且重新创建你的脚本组件从这个序列化版本。这个序列化不会发生通过.Net的序列化功能，而是用一个内部的Unity序列化功能。</p>
+<p>The serialization system used can do the following: </p>
+<p>这个序列化系统使用可以做以下事情：</p>
+<p>- CAN serialize public nonstatic fields (of serializable types) <br />
+	- 可以序列化公有的非静态域（序列化类型的） </p>
+<p>- CAN serialize nonpublic nonstatic fields marked with the [SerializeField] attribute. <br />
+	- 可以序列化非公有非静态域用[SerializeField]属性标记。 </p>
+<p>- CANNOT serialize static fields. <br />
+	- 不可以序列化静态域。 </p>
+<p>- CANNOT serialize properties. <br />
+	- 不可以序列化属性。</p>
+<p>Your field will only serialize if it is of a type that Unity can serialize: </p>
+<p>你的域将紧紧序列化如果他是Unity可以序列化的一种类型。</p>
+<p>Serializable types are: <br />
+	序列化的类型有：</p>
+<p>- All classed inheriting from UnityEngine.Object, for example Gameobject, Commponent, MonoBehaviour, Texture2D, AnimationClip.. - All basic data types like int, string, float, bool. - Some built in types like Vector2, Vector3, Vector4, Quaternion, Matrix4x4, Color, Rect, Layermask.. - Arrays of a serializable type  <br />
+	- 所有继承自UnityEngine.Object的类，例如GameObject,Component,MonoBehaviour,Texture2D,AnimationClip..- 所有基本类型像int,string,float,bool.- 一些内建类型像Vector2,Vector3,Vector4,Quaternion,Matrix4x4,Color,Rect,Layermask..- 一个序列化类型的Array（数组）  </p>
+<p>- List of a serializable type (new in Unity2.6)  <br />
+	- 一个序列化类型的列表（新的在Unity2.6）  </p>
+<p>- Enums  <br />
+	- 枚举。 </p>
+<p>Headsup note: if you put one element in a list (or array) twice, when the list gets serialized, you'll get two copies of that element, instead of one copy being in the new list twice. </p>
+<p>特别注意：如果你放一个元素在一个列表（或者数组）两次，当列表被序列化的时候，你将得到两个这个元素的拷贝，而不是一个拷贝两次在新的列表。</p>
+<p>Hint: Unity won't serialize Dictionary, however you could store a Listf&lt;&gt; or keys and a List&lt;&gt; for values, and sew them up in a non serialized dictionary on Awake(). This doesn't solve the problem of when you want to modify the dictionary and have it &quot;saved&quot; back, but it is a handy trick in a lot of other cases. </p>
+<p>暗示：Unity不会序列化Dictionary（字典），然而你可以存储一个列表给键，一个列表给值，并且缝合他们在一个非序列化dictionary（字典）在Awake()。这不会解决当你想要修改dictionary（字典）和让它的&quot;被保存&quot;返回的问题，但是它在很多其他的情况里是一个便利的窍门。</p>
+<p>For UnityScript users: Fields in c# is a script variable in UnityScript, and [SerializeField] becomes @SerializeField. [Serializable] on a class becomes @script Serializable in a UnityScript </p>
+<p>给UnityScript用户：C#中的域在UnityScript中是一个脚本变量，并且[SerializeField]变成@SerializeField。[Serializable] 在一个类上变成@script Serializable在一个UnityScript。</p>
+<div class="note"><pre><code><span class="notes">// Javascript example
+
+//This field gets serialized because it is public.
+//这个域被序列化因为他是公开的。</span>
+var name = &quot;John&quot;;
+
+<span class="notes">//This field does not get serialized because it is private.
+//这个域没有被序列化因为它是私有的。</span>
+private var age = 40;
+
+<span class="notes">//This field gets serialized even though it is private
+//这个域被序列化尽管他是私有的。
+//because it has the SerializeField attribute applied.
+//因为它应用了SerializeField属性</span>
+@SerializeField
+private var hasHealthPotion:boolean = true;
+
+function Update () {
+}</code></pre></div>
+<div class="note"><pre><code><span class="notes">//C# example</span>
+using UnityEngine;
+
+public class SomePerson : MonoBehaviour {
+	<span class="notes">//This field gets serialized because it is public.</span>
+	public string name = &quot;John&quot;;
+
+	<span class="notes">//This field does not get serialized because it is private.</span>
+	private int age = 40;
+
+	<span class="notes">//This field gets serialized even though it is private
+	//because it has the SerializeField attribute applied.</span>
+	[SerializeField]
+	private bool hasHealthPotion = true;
+
+	void Update () {
+	}
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月9日 Monday  20:13<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

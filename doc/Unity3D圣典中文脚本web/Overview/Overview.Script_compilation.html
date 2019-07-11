@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Overview: Script compilation 脚本编译(高级)</title>
+<meta name="keywords" content="unity,性能优化,JavaScript,脚本编译" />
+<meta name="description" content="Unity把脚本编译为.NET dll(动态链接库)文件. dll文件将在运行时编译执行." />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="../index.html">Unity脚本概述</a> <span class="transer">翻译：脚本_树</span>
+<ul>
+  <li><a title="Common Operations" href="Overview.Common_Operations.html">Common Operations</a></li>
+  <li><a title="Keeping Track of Time" href="Overview.Keeping_Track_of_Time.html">Time</a></li>
+  <li><a title="Accessing Other Components" href="Overview.Accessing_Other_Components.html">Accessing Components</a></li>
+  <li><a title="Accessing Other Game Objects" href="Overview.Accessing_Other_Game_Objects.html">Accessing Objects</a></li>
+  <li><a title="Vectors" href="Overview.Vectors.html">Vectors</a></li>
+  <li><a title="Member Variables &amp; Global Variables" href="Overview.Member_Variables/Global_Variables.html">Variables</a></li>
+  <li><a title="Instantiate" href="Overview.Instantiate.html">Instantiate</a></li>
+  <li><a title="Coroutines &amp; Yield" href="Overview.Coroutines/Yield.html">Coroutines &amp; Yield</a></li>
+  <li><a title="Writing Scripts in C#" href="Overview.Writing_Scripts_in_C.html">Using C#</a></li>
+  <li><a title="The most important classes" href="Overview.The_most_important_classes.html">Important Classes</a></li>
+  <li><span title="Performance Optimization"><a href="Overview.Performance_Optimization.html">Performance Optimization</a></span></li>
+  <li><a title="Script compilation (Advanced)" href="Overview.Script_compilation.html">Script Compilation</a></li>
+</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Overview: Script compilation 脚本编译(高级)</h1>
+<p></p>
+<p>Unity compiles all scripts to .NET dll files. The   .dll files will be jit compiled at runtime.</p>
+<p>Unity把脚本编译为.NET dll(动态链接库)文件. dll文件将在运行时编译执行.</p>
+<p>This allows incredibly fast script execution. It   is around 20 times faster than traditional javascript and around 50% slower than   native C++ code. Unity might take a second to compile all your scripts when you   save it. You can see if Unity is still compiling with the small spinning   progress icon in the lower right corner of Unity's main window.</p>
+<p>这使脚本以惊人的速度执行.这比传统的javascript快20倍,但比传统C++慢一半左右.在你保存的时候,Unity将花费一些时间编译你的脚本.如果Unity在编译,你能看到在主窗口角落有个活动的进度标示. </p>
+<p>Script compilation is performed in 4 steps: </p>
+<p>脚本编译包含4步:</p>
+<p><em>1. All scripts in &quot;Standard Assets&quot;, &quot;Pro   Standard Assets&quot; or &quot;Plugins&quot; are compiled first.</em><br />
+所有&quot;Standard Assets&quot;, &quot;Pro Standard Assets&quot;或&quot;Plugins&quot;文件夹里的脚本会被首先编译 </p>
+<p>Scripts in one of these folders can't directly   access scripts outside these folders. </p>
+<p>这些文件夹里的脚本不能直接访问文件夹之外的脚本.</p>
+<p>It is not possible to reference the class or its   variables directly, but it is possible to communicate with them using <a href="../GameObject/GameObject.SendMessage.html">GameObject.SendMessage </a>.</p>
+<p>不能直接引用类或它们的变量,但是可以通过使用 <a href="../GameObject/GameObject.SendMessage.html">GameObject.SendMessage </a>与他们进行通信. </p>
+<p><em>2. All scripts in &quot;Standard Assets/Editor&quot;, &quot;Pro   Standard Assets/Editor&quot; or &quot;Plugins/Editor&quot; are compiled first.</em><br />
+所有&quot;Standard Assets/Editor&quot;, &quot;Pro Standard Assets/Editor&quot;或&quot;Plugins/Editor&quot;文件夹里的脚本会被首先编译 </p>
+<p>If you want to use the UnityEditor namespace you have to place your   scripts in these folders. For example to add menu items or write custom wizards   you have to place your scripts in those folders. </p>
+<p>如果你想使用UnityEditor命名空间,你必须把你的脚本放到这些文件夹里.例如你想添加菜单项或自定义向导,那么你必须把你的脚本放到那些文件夹里.</p>
+<p>These scripts can access scripts from the   previous group. </p>
+<p>这些脚本可以访问之前第一条里说的那些脚本.</p>
+<p><em>3. All scripts in &quot;Editor&quot; are compiled   next.</em><br />
+所有在&quot;Editor&quot;里的脚本将紧接着被编译 </p>
+<p>If you want to use the UnityEditor namespace you have to place your   scripts in these folders. For example to add menu items or write custom wizards   you have to place your scripts in those folders. </p>
+<p>如果你想使用UnityEditor命名空间,你必须把你的脚本放到这些文件夹里.例如你想添加菜单项或自定义向导,那么你必须把你的脚本放到那些文件夹里.</p>
+<p>These scripts can access all scripts in all   previous groups. However they can not access scripts, in the last group. </p>
+<p>这些脚本可以访问之前提到的脚本组中的脚本.但是不能访问之后的脚本组中的脚本.</p>
+<p>This can be a problem when wirting editor code   since you often want to edit scripts that are in the last group. There are two   solutions: 1. Move the other script into the &quot;Plugins&quot; folder. 2. Take advantage   of JavaScript's dynamic typing. In Javascript you don't need to know the type of   a class to work with it. When using GetComponent you can just use a string   instead of the type. You can also use SendMessage, which takes a   string.</p>
+<p>这回导致一个问题,当你的编辑器代码要编辑其后面组内的脚本时该怎么办呢?有2种解决方法:1.把那些脚本放置到&quot;Plugins&quot;文件夹.2.利用JavaScript动态类型.在JavaScript你不需要知道类的类型,你可以使用GetComponent,因为它的参数可以只是个字符串而不需要指定类型.你也能使用SendMessage,它也可以只使用一个字符串. </p>
+<p><em>4. All other scripts are compiled   last.</em><br />
+其他所有脚本将在最后编译. </p>
+<p>All scripts that are not in the folders above are   compiled last.</p>
+<p>所有不在上面说明的脚本都将在最后编译. </p>
+<p>All scripts that are compiled in this step have   access to all scripts in the first group (&quot;Standard Assets&quot;, &quot;Pro Standard   Assets&quot; or &quot;Plugins&quot;). This allows you to let different scripting languages   interoperate. For example, if you want to create a Javascript that uses a C#   script: place the C# script in the &quot;Standard Assets&quot; folder and the Javascript   outside of the &quot;Standard Assets&quot; folder. The Javascript can now reference the C#   script directly.</p>
+<p>所有这一步里编译的脚本,可以访问第一组提到的所有脚本(&quot;Standard Assets&quot;, &quot;Pro   Standard Assets&quot; or &quot;Plugins&quot;).这允许你使用不同的脚本语言进行沟通.例如,你想用一个Javascript脚本引用一个C#脚本:放C#脚本到&quot;Standard Assets&quot;文件夹然后把Javascript脚本放在此文件夹之外.   Javascript脚本便可以直接引用C#脚本.</p>
+<p>Scripts that are placed in the first group, will   take longer to compile, since when they are compiled the third group needs to be   recompiled too. Thus if you want to reduce compile times, move scripts that   seldomly change into group 1 and scripts that change a lot into group   4.</p>
+<p>放在第一组的脚本,将需要更长的编译时间,因为你编译第三组时还需要再编译它.因此你想要减少编译时间,把不常变更的脚本放在第一组,常变的放到第四组.</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年11月30日 Tuesday  17:51<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

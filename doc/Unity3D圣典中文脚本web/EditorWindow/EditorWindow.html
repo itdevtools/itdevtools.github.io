@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorWindow 编辑器窗口</title>
+<meta name="Keywords" content="unity,EditorWindow,编辑器窗口" />
+<meta name="Description" content="从这个类来创建编辑器窗口。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorWindow.html">EditorWindow</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorWindow-autoRepaintOnSceneChange.html">autoRepaintOnSceneChange</a></li>
+			<li><a href="EditorWindow.BeginWindows.html">BeginWindows</a></li>
+			<li><a href="EditorWindow.Close.html">Close</a></li>
+			<li><a href="EditorWindow.EndWindows.html">EndWindows</a></li>
+			<li><a href="EditorWindow-focusedWindow.html">focusedWindow</a></li>
+			<li><a href="EditorWindow.FocusWindowIfItsOpen.ltTgt.html">FocusWindowIfItsOpen.&lt;T&gt; </a></li>
+			<li><a href="EditorWindow.FocusWindowIfItsOpen.html">FocusWindowIfItsOpen</a></li>
+			<li><a href="EditorWindow.Focus.html">Focus</a></li>
+			<li><a href="EditorWindow.GetWindow.ltTgt.html">GetWindow.&lt;T&gt; </a></li>
+			<li><a href="EditorWindow.GetWindowWithRect.ltTgt.html">GetWindowWithRect.&lt;T&gt; </a></li>
+			<li><a href="EditorWindow.GetWindowWithRect.html">GetWindowWithRect</a></li>
+			<li><a href="EditorWindow.GetWindow.html">GetWindow</a></li>
+			<li><a href="EditorWindow-mouseOverWindow.html">mouseOverWindow</a></li>
+			<li><a href="EditorWindow.OnDestroy.html">OnDestroy</a></li>
+			<li><a href="EditorWindow.OnFocus.html">OnFocus</a></li>
+			<li><a href="EditorWindow.OnGUI.html">OnGUI</a></li>
+			<li><a href="EditorWindow.OnHierarchyChange.html">OnHierarchyChange</a></li>
+			<li><a href="EditorWindow.OnInspectorUpdate.html">OnInspectorUpdate</a></li>
+			<li><a href="EditorWindow.OnLostFocus.html">OnLostFocus</a></li>
+			<li><a href="EditorWindow.OnProjectChange.html">OnProjectChange</a></li>
+			<li><a href="EditorWindow.OnSelectionChange.html">OnSelectionChange</a></li>
+			<li><a href="EditorWindow-position.html">position</a></li>
+			<li><a href="EditorWindow.RemoveNotification.html">RemoveNotification</a></li>
+			<li><a href="EditorWindow.Repaint.html">Repaint</a></li>
+			<li><a href="EditorWindow.SendEvent.html">SendEvent</a></li>
+			<li><a href="EditorWindow.ShowAuxWindow.html">ShowAuxWindow</a></li>
+			<li><a href="EditorWindow.ShowNotification.html">ShowNotification</a></li>
+			<li><a href="EditorWindow.ShowPopup.html">ShowPopup</a></li>
+			<li><a href="EditorWindow.ShowTab.html">ShowTab</a></li>
+			<li><a href="EditorWindow.ShowUtility.html">ShowUtility</a></li>
+			<li><a href="EditorWindow.Show.html">Show</a></li>
+			<li><a href="EditorWindow.Update.html">Update</a></li>
+			<li><a href="EditorWindow-wantsMouseMove.html">wantsMouseMove</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>EditorWindow 编辑器窗口</h1>
+<p class="h1inherit">Inherits from <a href="../ScriptableObject/ScriptableObject.html">ScriptableObject</a></p>
+<p> Derive from this class to create an editor window.</p>
+<p>从这个类来创建编辑器窗口。</p>
+<p class="note">Note: This is an editor class. To use it you have to place your script in Assets/Editor inside your project folder. Editor classes are in the UnityEditor namespace so for C# scripts you need to add "using UnityEditor;" at the beginning of the script.<br />
+  注意：这是一个编辑器类，如果想使用它你需要把它放到工程目录下的Assets/Editor文件夹下。编辑器类在UnityEditor命名空间下。所以当使用C#脚本时，你需要在脚本前面加上 &quot;using UnityEditor&quot;引用。</p>
+<p> Create your own custom editor window that can float   free or be docked as a tab, just like the native windows in the Unity   interface. </p>
+<p>创建自己的自定义编辑器窗口，可以自由浮动或作为一个标签停靠，就像在Unity接口的本地窗口。</p>
+<p> Editor windows are typically opened using a menu item.</p>
+<p>通常编辑器窗口是使用一个菜单项打开。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+    	<pre><code><span class="notes">// C# example:</span>
+using UnityEngine;
+using UnityEditor;
+public class MyWindow : EditorWindow {
+	string myString = &quot;Hello World&quot;;
+	bool groupEnabled;
+	bool myBool = true;
+	float myFloat = 1.23f;
+
+	<span class="notes">// Add menu named &quot;My Window&quot; to the Window menu</span>
+	[<a href="../MenuItem/MenuItem.html">MenuItem</a> (&quot;Window/My Window&quot;)]
+	static void Init () {
+		<span class="notes">// Get existing open window or if none, make a new one:</span>
+		MyWindow window = (MyWindow)<a href="EditorWindow.GetWindow.html">EditorWindow.GetWindow</a> (typeof (MyWindow));
+	}
+
+	void OnGUI () {
+		<a href="../GUILayout/GUILayout.Label.html">GUILayout.Label</a> (&quot;Base Settings&quot;, <a href="../EditorStyles/EditorStyles.boldLabel.html">EditorStyles.boldLabel</a>);
+		myString = <a href="../EditorGUILayout/EditorGUILayout.TextField.html">EditorGUILayout.TextField</a> (&quot;Text Field&quot;, myString);
+
+		groupEnabled = <a href="../EditorGUILayout/EditorGUILayout.BeginToggleGroup.html">EditorGUILayout.BeginToggleGroup</a> (&quot;Optional Settings&quot;, groupEnabled);
+		myBool = <a href="../EditorGUILayout/EditorGUILayout.Toggle.html">EditorGUILayout.Toggle</a> (&quot;Toggle&quot;, myBool);
+		myFloat = <a href="../EditorGUILayout/EditorGUILayout.Slider.html">EditorGUILayout.Slider</a> (&quot;Slider&quot;, myFloat, -3, 3);
+		<a href="../EditorGUILayout/EditorGUILayout.EndToggleGroup.html">EditorGUILayout.EndToggleGroup</a> ();
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// JavaScript example:</span>
+class MyWindow extends EditorWindow {
+	var myString = &quot;Hello World&quot;;
+	var groupEnabled = false;
+	var myBool = true;
+	var myFloat = 1.23;
+
+	<span class="notes">// Add menu named &quot;My Window&quot; to the Window menu
+	//添加菜单项My Window到Window菜单</span>
+	@<a href="../MenuItem/MenuItem.html">MenuItem</a> (&quot;Window/My Window&quot;)
+	static function Init () {
+		<span class="notes">// Get existing open window or if none, make a new one:
+		//获取现有的打开窗口或如果没有，创建一个新的</span>
+		var window : MyWindow = <a href="EditorWindow.GetWindow.html">EditorWindow.GetWindow</a> (MyWindow);
+	}
+
+	function OnGUI () {
+		<a href="../GUILayout/GUILayout.Label.html">GUILayout.Label</a> (&quot;Base Settings&quot;, <a href="../EditorStyles/EditorStyles.boldLabel.html">EditorStyles.boldLabel</a>);
+		myString = <a href="../EditorGUILayout/EditorGUILayout.TextField.html">EditorGUILayout.TextField</a> (&quot;Text Field&quot;, myString);
+
+		groupEnabled = <a href="../EditorGUILayout/EditorGUILayout.BeginToggleGroup.html">EditorGUILayout.BeginToggleGroup</a> (&quot;Optional Settings&quot;, groupEnabled);
+		myBool = <a href="../EditorGUILayout/EditorGUILayout.Toggle.html">EditorGUILayout.Toggle</a> (&quot;Toggle&quot;, myBool);
+		myFloat = <a href="../EditorGUILayout/EditorGUILayout.Slider.html">EditorGUILayout.Slider</a> (&quot;Slider&quot;, myFloat, -3, 3);
+		<a href="../EditorGUILayout/EditorGUILayout.EndToggleGroup.html">EditorGUILayout.EndToggleGroup</a> ();
+	}
+}</code></pre></div>
+</div>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="EditorWindow.wantsMouseMove.html">wantsMouseMove</a></div>
+    	<div class="licontent">Does the GUI in this editor window want MouseMove events?<br />
+    		GUI在这个编辑器窗口是否想要MouseMove事件？ </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="EditorWindow.autoRepaintOnSceneChange.html">autoRepaintOnSceneChange</a></div>
+    	<div class="licontent">Does the window automatically repaint whenever the scene has changed?<br />
+    		每当场景改变，窗口自动重绘? </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.position.html">position</a></div>
+    	<div class="licontent">The position of the window in screen space.<br />
+    		窗口在屏幕空间的位置。 </div>
+    </li>
+</ul>	
+
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="EditorWindow.BeginWindows.html">BeginWindows</a></div>
+    	<div class="licontent">Mark the beginning area of all popup windows.<br />
+    		标记所有弹出窗口的开始区域。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="EditorWindow.EndWindows.html">EndWindows</a></div>
+    	<div class="licontent">Close a window group started with EditorWindow.BeginWindows<br />
+    		关闭一个开始于<a href="EditorWindow.BeginWindows.html">EditorWindow.BeginWindows</a>的窗口组。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.ShowNotification.html">ShowNotification</a></div>
+    	<div class="licontent">Show a notification message.<br />
+    		显示一个通知消息。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.RemoveNotification.html">RemoveNotification</a></div>
+    	<div class="licontent">Stop showing notification message.<br />
+    		停止显示通知消息。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.ShowTab.html">ShowTab</a></div>
+    	<div class="licontent">显示Tab</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.Focus.html">Focus</a></div>
+    	<div class="licontent">Moves keyboard focus to this EditorWindow.<br />
+    		移动键盘焦点到这个编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.ShowUtility.html">ShowUtility</a></div>
+    	<div class="licontent">Show the EditorWindow as a floating utility window.<br />
+    		显示编辑器窗口，作为一个浮动工具窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.ShowPopup.html">ShowPopup</a></div>
+    	<div class="licontent">Used for popup style windows.<br />
+    		用于弹出类型窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.Show.html">Show</a></div>
+    	<div class="licontent">Show the EditorWindow.<br />
+    		显示编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.ShowAuxWindow.html">ShowAuxWindow</a></div>
+    	<div class="licontent">Show the editor window in the auxiliary window.<br />
+    		在辅助窗口中显示编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.Close.html">Close</a></div>
+    	<div class="licontent">Close the editor window.<br />
+    		关闭编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.Repaint.html">Repaint</a></div>
+    	<div class="licontent">Make the window repaint.<br />
+    		使窗口重绘。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.SendEvent.html">SendEvent</a></div>
+    	<div class="licontent">Sends an Event to a window.<br />
+    		发送一个事件到窗口。 </div>
+    </li>
+</ul>
+
+<h3>Messages Sent<span class="trans">发送消息</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="EditorWindow.OnGUI.html">OnGUI</a></div>
+    	<div class="licontent">Implement your own editor GUI here.<br />
+    		在这里实现自己的编辑器界面。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="EditorWindow.Update.html">Update</a></div>
+    	<div class="licontent">Called 100 times per second on all visible windows.<br />
+    		在所有可见的窗口每秒调用100次。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnInspectorUpdate.html">OnInspectorUpdate</a></div>
+    	<div class="licontent">OnInspectorUpdate is called at 10 frames per second to give the inspector a chance to update<br />
+    		OnInspectorUpdate被调用，在给定检视面板每秒10帧更新。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnDestroy.html">OnDestroy</a></div>
+    	<div class="licontent">OnDestroy is called when the EditorWindow is closed.<br />
+    		当编辑器窗口关闭时，OnDestroy被调用。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnSelectionChange.html">OnSelectionChange</a></div>
+    	<div class="licontent">Called whenever the selection has changed.<br />
+    		只要选择发生改变时调用。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnFocus.html">OnFocus</a></div>
+    	<div class="licontent">Called when the window gets keyboard focus.<br />
+    		当窗口获得键盘焦点时调用。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnLostFocus.html">OnLostFocus</a></div>
+    	<div class="licontent">Called when the window loses keyboard focus.<br />
+    		当窗口失去键盘焦点时调用。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnHierarchyChange.html">OnHierarchyChange</a></div>
+    	<div class="licontent">Called whenever the scene hierarchy has changed.<br />
+    		只要场景层级改变时调用。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.OnProjectChange.html">OnProjectChange</a></div>
+    	<div class="licontent">Called whenever the project has changed.<br />
+    		只要项目被改变时调用。 </div>
+    </li>
+</ul>
+
+
+<h3>Class Variables<span class="trans">类变量</span></h3>
+[an error occurred while processing the directive]	
+
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="EditorWindow.GetWindow.html">GetWindow</a></div>
+    	<div class="licontent">Returns the first EditorWindow of type t which is currently on the screen.<br />
+    		返回屏幕上类型t的当前的第一个编辑器窗口。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="EditorWindow.GetWindow.ltTgt.html">GetWindow.&lt;T&gt;</a></div>
+    	<div class="licontent">Returns the first EditorWindow of type T which is currently on the screen.<br />
+    		返回屏幕上类型T的当前的第一个编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.FocusWindowIfItsOpen.html">FocusWindowIfItsOpen</a></div>
+    	<div class="licontent">Focuses the first found EditorWindow of specified type if it is open.<br />
+    		如果是窗口打开的，焦点首先发现的指定类型的编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.FocusWindowIfItsOpen.ltTgt.html">FocusWindowIfItsOpen.&lt;T&gt;</a></div>
+    	<div class="licontent">Focuses the first found EditorWindow of type T if it is open.<br />
+    		如果是窗口打开的，焦点首先发现的类型T的编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.GetWindowWithRect.html">GetWindowWithRect</a></div>
+    	<div class="licontent">Returns the first EditorWindow of type t which is currently on the screen.<br />
+    		返回屏幕上当前类型t的第一个编辑器窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorWindow.GetWindowWithRect.ltTgt.html">GetWindowWithRect.&lt;T&gt;</a></div>
+    	<div class="licontent">Returns the first EditorWindow of type t which is currently on the screen. </div>
+    </li>
+</ul>
+	
+<h2>Inherited members<span class="trans">继承成员</span></h2>
+<h3>Inherited Variables<span class="trans">继承变量</span></h3>
+<ul class="tableli">
+    <li>
+		<div class="lititle"><a href="../Object/Object.name.html">name</a></div>
+		<div class="licontent">The name of the object. //物体的名字</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.hideFlags.html">hideFlags</a></div>
+    	<div class="licontent">Should the object be hidden, saved with the scene or modifiable by the user?<br />
+    	物体是否被隐藏、保存在场景中或被用户修改？</div>
+    </li>
+</ul>
+<h3>Inherited Functions<span class="trans">继承函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.GetInstanceID.html">GetInstanceID</a></div>
+    	<div class="licontent">Returns the instance id of the object.<br />
+    	返回物体的实例ID</div>
+    </li>
+	<li><div class="lititle"><a href="../Object/Object.ToString.html">ToString</a></div>
+    	<div class="licontent">Returns the name of the game object.<br />返回游戏物体的名称。</div>
+    </li>
+</ul>
+<h3>Inherited Class Functions<span class="trans">继承类函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../ScriptableObject/ScriptableObject.CreateInstance.html">CreateInstance</a></div>
+    	<div class="licontent">Creates an instance of a scriptable object with className.<br />
+   	    创建一个名为className的脚本化对象的一个实例。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../ScriptableObject/ScriptableObject.CreateInstance.ltTgt.html">CreateInstance.&lt;T&gt;</a></div>
+    	<div class="licontent">Creates an instance of a scriptable object with T.<br />
+   	    创建一个带有T参数脚本化对象的实例。</div>
+    </li>
+</ul>
+	
+
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_bool.html">operator bool</a></div>
+    	<div class="licontent">Does the object exist?<br />
+    	物体是否存在？</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.html">Instantiate</a></div>
+    	<div class="licontent">Clones the object original and returns the clone.<br />
+    	克隆原始物体，并返回克隆的物体</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.ltTgt.html">Instantiate.&lt;T&gt;</a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Destroy.html">Destroy</a></div>
+    	<div class="licontent">Removes a gameobject, component or asset.<br />
+    	删除一个游戏物体、组件或资源</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DestroyImmediate.html">DestroyImmediate</a></div>
+    	<div class="licontent">Destroys the object obj immediately. It is strongly recommended to use Destroy instead.<br />
+    	立即销毁物体obj，强烈建议使用Destroy代替。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectsOfType.html">FindObjectsOfType</a></div>
+    	<div class="licontent">Returns a list of all active loaded objects of Type type.<br />
+    	返回Type类型的所有激活的加载的物体列表</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectOfType.html">FindObjectOfType</a></div>
+    	<div class="licontent">Returns the first active loaded object of Type type.<br />
+    	返回Type类型第一个激活的加载的物体。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_eq.html">operator ==</a></div>
+    	<div class="licontent">Compares if two objects refer to the same<br />
+    	比较如果两个物体相同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_ne.html">operator !=</a></div>
+    	<div class="licontent">Compares if two objects refer to a different object<br />
+    	比较如果两个物体不同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></div>
+    	<div class="licontent">Makes the object target not be destroyed automatically when loading a new scene.<br />
+    	加载新场景的时候使目标物体不被自动销毁。</div>
+    </li>
+</ul>
+
+<h3>Inherited Messages Sent<span class="trans">继承发送消息</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../ScriptableObject/ScriptableObject.OnEnable.html">OnEnable</a></div>
+    	<div class="licontent">Creates an instance of a scriptable object with T.<br />
+   	    创建一脚本化对象T的一个实例。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../ScriptableObject/ScriptableObject.OnDisable.html">OnDisable</a></div>
+    	<div class="licontent">This function is called when the scriptable object goes out of scope<br />
+   	    当脚本化对象超出范围时调用这个函数。 </div>
+    </li>
+    <li><div class="lititle"><a href="../ScriptableObject/ScriptableObject.OnDestroy.html">OnDestroy</a></div>
+    	<div class="licontent">This function is called when the scriptable object will be destroyed.<br />
+        当脚本化对象将被销毁，这个函数被调用。</div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年6月25日 Saturday  10:57<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

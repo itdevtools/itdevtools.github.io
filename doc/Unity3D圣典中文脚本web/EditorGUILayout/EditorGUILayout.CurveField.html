@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorGUILayout.CurveField 曲线字段</title>
+<meta name="Keywords" content="unity,EditorGUILayout,CurveField,曲线字段" />
+<meta name="Description" content="制作一个用于编辑动画曲线的字段。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorGUILayout.html">EditorGUILayout</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorGUILayout.BeginHorizontal.html">BeginHorizontal</a></li>
+			<li><a href="EditorGUILayout.BeginScrollView.html">BeginScrollView</a></li>
+			<li><a href="EditorGUILayout.BeginToggleGroup.html">BeginToggleGroup</a></li>
+			<li><a href="EditorGUILayout.BeginVertical.html">BeginVertical</a></li>
+			<li><a href="EditorGUILayout.ColorField.html">ColorField</a></li>
+			<li><a href="EditorGUILayout.CurveField.html">CurveField</a></li>
+			<li><a href="EditorGUILayout.EndHorizontal.html">EndHorizontal</a></li>
+			<li><a href="EditorGUILayout.EndScrollView.html">EndScrollView</a></li>
+			<li><a href="EditorGUILayout.EndToggleGroup.html">EndToggleGroup</a></li>
+			<li><a href="EditorGUILayout.EndVertical.html">EndVertical</a></li>
+			<li><a href="EditorGUILayout.EnumPopup.html">EnumPopup</a></li>
+			<li><a href="EditorGUILayout.FloatField.html">FloatField</a></li>
+			<li><a href="EditorGUILayout.Foldout.html">Foldout</a></li>
+			<li><a href="EditorGUILayout.InspectorTitlebar.html">InspectorTitlebar</a></li>
+			<li><a href="EditorGUILayout.IntField.html">IntField</a></li>
+			<li><a href="EditorGUILayout.IntPopup.html">IntPopup</a></li>
+			<li><a href="EditorGUILayout.IntSlider.html">IntSlider</a></li>
+			<li><a href="EditorGUILayout.LabelField.html">LabelField</a></li>
+			<li><a href="EditorGUILayout.LayerField.html">LayerField</a></li>
+			<li><a href="EditorGUILayout.MinMaxSlider.html">MinMaxSlider</a></li>
+			<li><a href="EditorGUILayout.ObjectField.html">ObjectField</a></li>
+			<li><a href="EditorGUILayout.PasswordField.html">PasswordField</a></li>
+			<li><a href="EditorGUILayout.Popup.html">Popup</a></li>
+			<li><a href="EditorGUILayout.PrefixLabel.html">PrefixLabel</a></li>
+			<li><a href="EditorGUILayout.PropertyField.html">PropertyField</a></li>
+			<li><a href="EditorGUILayout.RectField.html">RectField</a></li>
+			<li><a href="EditorGUILayout.Slider.html">Slider</a></li>
+			<li><a href="EditorGUILayout.Space.html">Space</a></li>
+			<li><a href="EditorGUILayout.TagField.html">TagField</a></li>
+			<li><a href="EditorGUILayout.TextArea.html">TextArea</a></li>
+			<li><a href="EditorGUILayout.TextField.html">TextField</a></li>
+			<li><a href="EditorGUILayout.Toggle.html">Toggle</a></li>
+			<li><a href="EditorGUILayout.Vector2Field.html">Vector2Field</a></li>
+			<li><a href="EditorGUILayout.Vector3Field.html">Vector3Field</a></li>
+			<li><a href="EditorGUILayout.Vector4Field.html">Vector4Field</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="EditorGUILayout.html">EditorGUILayout</a>.CurveField 曲线字段</h1>
+<p class="h1inherit"></p>
+<p>static function <em>CurveField</em> (<em>value</em> : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a><br />
+static function <em>CurveField</em> (<em>label</em> : string, <em>value</em> : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>,<em> params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a><br />
+static function <em>CurveField</em> (<em>label</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>, <em>value</em> : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a><br />
+static function <em>CurveField</em> (<em>value</em> : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>, <em>color</em> : <a href="../Color/Color.html">Color</a>, <em>ranges</em> : <a href="../Rect/Rect.html">Rect</a>,<em> params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a><br />
+static function <em>CurveField</em> (<em>label</em> : string, <em>value</em> : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>, <em>color</em> : <a href="../Color/Color.html">Color</a>, <em>ranges</em> : <a href="../Rect/Rect.html">Rect</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a><br />
+static function <em>CurveField</em> (<em>label</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>, <em>value</em> : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>, <em>color</em> : <a href="../Color/Color.html">Color</a>, <em>ranges</em> : <a href="../Rect/Rect.html">Rect</a>, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a></p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+	<li>
+    	<div class="lititle"><em>label</em></div>
+    	<div class="licontent"> Optional label in front of the field.  // 字段前面的可选标签。</div>
+    </li>
+    <li>
+    	<div class="lititle"><em>value</em></div>
+    	<div class="licontent">The value to edit. // 编辑的值</div>
+    </li>
+	<li><div class="lititle"><em>color</em></div>
+    	<div class="licontent">The color to show the curve with. // 曲线显示的颜色</div>
+    </li>
+	<li><div class="lititle"><em>ranges</em></div>
+    	<div class="licontent">Optional rectangle that the curve is restrained within. <br />
+    	可选曲线被约束的矩形</div>
+    </li>
+    <li>
+    	<div class="lititle"><em>options</em></div>
+    	<div class="licontent">An optional list of layout options that specify extra layouting   properties. Any values passed in here will override settings defined by   the style.  See Also: <a href="GUILayout.Width.html">GUILayout.Width</a>, <a href="GUILayout.Height.html">GUILayout.Height</a>, <a href="GUILayout.MinWidth.html">GUILayout.MinWidth</a>, <a href="GUILayout.MaxWidth.html">GUILayout.MaxWidth</a>, <a href="GUILayout.MinHeight.html">GUILayout.MinHeight</a>, <a href="GUILayout.MaxHeight.html">GUILayout.MaxHeight</a>, <a href="GUILayout.ExpandWidth.html">GUILayout.ExpandWidth</a>, <a href="GUILayout.ExpandHeight.html">GUILayout.ExpandHeight</a><br />
+    		指定额外布局属性的可选列表。这里传递任意值，将覆盖样式定义的设置。</div>
+    	</li>
+</ul>
+<em>Returns</em>
+<p>AnimationCurve - The curve edited by the user.</p>
+<p>返回Color，由用户输入的值。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Make a field for editing an AnimationCurve.</p>
+<p>制作一个用于编辑动画曲线的字段。</p>
+<p><img src="FollowCurve.png" alt="EditorGUILayout.CurveField 曲线字段" width="340" height="315" /></p>
+<p> Create an animation on the different axis and assign it to a GameObject. <br />
+在不同轴创建动画并指定到游戏物体。</p>
+<div class="note"><pre><code><span class="notes">// Makes the selected GameObject follow the animation curve.
+//制作选择的游戏物体跟随动画曲线。
+// Usage: Generate the curves for X,Y and Z axis of your desired GameObject
+// Select an Object and click Generate Curve.
+// Press Play and see your object moving.
+//用法：为游戏物体创建曲线X,Y 和 Z轴，选择物体并点击生成曲线。按播放看物体移动</span>
+
+class FollowCurve extends <a href="../EditorWindow/EditorWindow.html">EditorWindow</a> {
+
+	var curveX : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a> = <a href="../AnimationCurve/AnimationCurve.Linear.html">AnimationCurve.Linear</a>(0,0,10,10);
+	var curveY : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a> = <a href="../AnimationCurve/AnimationCurve.Linear.html">AnimationCurve.Linear</a>(0,0,10,10);
+	var curveZ : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a> = <a href="../AnimationCurve/AnimationCurve.Linear.html">AnimationCurve.Linear</a>(0,0,10,10);
+
+
+	@<a href="../MenuItem/MenuItem.html">MenuItem</a>(&quot;Examples/Create Curve For Object&quot;)
+	static function Init() {
+		var window = GetWindow(FollowCurve);
+		window.Show();
+	}
+
+	function OnGUI() {
+			curveX = EditorGUILayout.CurveField(&quot;Animation on X&quot;, curveX);
+			curveY = EditorGUILayout.CurveField(&quot;Animation on Y&quot;, curveY);
+			curveZ = EditorGUILayout.CurveField(&quot;Animation on Z&quot;, curveZ);
+
+			if(<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a>(&quot;Generate Curve&quot;))
+			AddCurveToSelectedGameObject();
+	}
+
+	function AddCurveToSelectedGameObject() {
+		if(<a href="../Selection/Selection.activeGameObject.html">Selection.activeGameObject</a>) {
+			var comp : FollowAnimationCurve =
+			<a href="../Selection/Selection.activeGameObject.html">Selection.activeGameObject</a>.AddComponent(FollowAnimationCurve);
+			comp.SetCurves(curveX, curveY, curveZ);
+		} else {
+			<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;No Game Object selected for adding an animation curve&quot;);
+		}
+	}
+}</code></pre></div>
+<p>And the script that works with the example: </p>
+<p>脚本工作的例子：</p>
+<div class="note"><pre><code><span class="notes">// This script has to go outside of the Editor Folder.
+//这个脚本放在编辑器文件的外面</span>
+var curveX : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>;
+var curveY : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>;
+var curveZ : <a href="../AnimationCurve/AnimationCurve.html">AnimationCurve</a>;
+
+function SetCurves(xC : AnimationCurve, yC : AnimationCurve, zC : AnimationCurve) {
+curveX = xC;
+curveY = yC;
+curveZ = zC;
+}
+function Update() {
+	transform.position = <a href="../Vector3/Vector3.html">Vector3</a>(curveX.Evaluate(<a href="../Time/Time.time.html">Time.time</a>),
+	curveY.Evaluate(<a href="../Time/Time.time.html">Time.time</a>),
+	curveZ.Evaluate(<a href="../Time/Time.time.html">Time.time</a>));
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年7月14日 Thursday  17:43<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

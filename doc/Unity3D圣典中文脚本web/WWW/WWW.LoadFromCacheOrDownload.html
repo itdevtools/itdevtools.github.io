@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>WWW.LoadFromCacheOrDownload 加载自缓存或下载</title>
+<meta name="Keywords" content="unity,WWW,LoadFromCacheOrDownload,加载自缓存或下载" />
+<meta name="Description" content="从缓存加载一个资源包，如果没有被缓存，或从下载加载。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="WWW.html">WWW</a> <span class="transer">坏坏/咖啡</span>
+                <ul>
+                    <li><a href="WWW.assetBundle.html">assetBundle</a></li>
+                    <li><a href="WWW.audioClip.html">audioClip</a></li>
+                    <li><a href="WWW.bytes.html">bytes</a></li>
+                    <li><a href="WWW.error.html">error</a></li>
+                    <li><a href="WWW.EscapeURL.html">EscapeURL</a></li>
+                    <li><a href="WWW.isDone.html">isDone</a></li>
+                    <li><a href="WWW.LoadImageIntoTexture.html">LoadImageIntoTexture</a></li>
+                    <li><a href="WWW.LoadUnityWeb.html">LoadUnityWeb</a></li>
+                    <li><a href="WWW.movie.html">movie</a></li>
+                    <li><a href="WWW.oggVorbis.html">oggVorbis</a></li>
+                    <li><a href="WWW.progress.html">progress</a></li>
+                    <li><a href="WWW.texture.html">texture</a></li>
+                    <li><a href="WWW.text.html">text</a></li>
+                    <li><a href="WWW.threadPriority.html">threadPriority</a></li>
+                    <li><a href="WWW.UnEscapeURL.html">UnEscapeURL</a></li>
+                    <li><a href="WWW.uploadProgress.html">uploadProgress</a></li>
+                    <li><a href="WWW.url.html">url</a></li>
+                    <li><a href="WWW.WWW.html">WWW</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="WWW.html">WWW</a>.LoadFromCacheOrDownload 加载自缓存或下载</h1>
+<p class="h1inherit"></p>
+<p>static function <em>LoadFromCacheOrDownload</em> (<em>url</em> : string, <em>version</em> : int) : WWW </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><em>string</em></div>
+    	<div class="licontent"> url The URL to download the data from (if it is not cached). @paramint   version Version of the data. The file will only be loaded from the disk   cache if it has previously been downloaded with the same version parameter. This lets you force clients to re-download updated data from the network. <br />
+    		url是从该URL下载数据（如果没有被缓存）。version是@paramint数据的版本。如果文件带有相同版本参数之前已经被下载，该文件只能从磁盘高速缓存中加载。这使您可以从网络强制客户端重新下载更新的数据。</div>
+    </li>
+</ul>
+<p><em>Returns</em></p>
+<p>WWW - a WWW instance, which can be used to access the data once the operation is completed. * var www = <a href="WWW.LoadFromCacheOrDownload.html">WWW.LoadFromCacheOrDownload</a>(&quot;http://myserver.com/myassetBundle.unity3d&quot;, 5); * * yield www; * * if (www.error != null) * { * <a href="../Debug/Debug.Log.html">Debug.Log</a>(www.error); * return null; * } * var myLoadedAssetBundle = www.assetBundle;</p>
+<p>返回一个WWW实例，一旦操作完成，它可用于访问数据。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Loads an assetBundle from the cache, or downloads it, in case it is not cached.</p>
+<p>从缓存加载一个资源包，如果没有被缓存，或从下载加载。</p>
+<p> This works just like &quot;new WWW(url)&quot;, with the   difference that the download will be written to the disk cache, and only   be actually performed if the AssetBundle is not already cached. Unlike   &quot;new WWW()&quot;, this can only be used to load AssetBundles.  A cached asset bundle is identified by the name / the last path   component of the url. If a cached asset does not yet exist, or the   version number for the cached asset does not match exactly, it will be   downloaded and stored in the cache along with the version number   provided by the version parameter.  Since cached asset bundles are identified by name instead of full url,   you can change the directory from where the asset bundle is downloaded   at any time. This is useful for pushing out new versions of the game and   ensuring that files are not cached incorrectly by the browser or by a   CDN.  If the cache folder does not have any space for caching additional   files, LoadFromCacheOrDownload will try to delete the   least-recently-used AssetBundle from the Cache. If making space is not   possible (because the hard disk is full, or all files in the cache are   in use), LoadFromCacheOrDownload() will simply download the file to   memory like a normal &quot;new WWW()&quot; call. </p>
+<p>这个工作就像&quot;new WWW(url)&quot;，不同之处在于下载将被写入到磁盘高速缓存，并且如果资源包尚未被缓存，仅实际执行。不像&quot;new WWW()&quot;这只能用来加载资源包，一个缓存的资源包用过名称或URL的最后一个路径组件被识别。如果缓存的资源不存在，或资源的版本号不完全匹配，它将下载并连同有版本参数提供的版本号储存在缓存中。因为缓存的资源包是通过名称识别，而不是完整的URL，您可以更改从该资产包是在任何时候下载的目录。这对于发布了新游戏版本和确保文件不被浏览器或CDN不正确的缓存。如果缓存文件夹没有空间用于缓存其他文件，LoadFromCacheOrDownload将尝试从缓存删除最近最少使用的资源包。如果利用空间是不可能的（因为影片已满，或在缓存所有文件在使用），LoadFromCacheOrDownload()将会下载文件到内存，就像一个普通的&quot;new WWW()&quot;调用。</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月25日 Monday  10:26<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

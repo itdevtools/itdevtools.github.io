@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Rigidbody 刚体</title>
+<meta name="Keywords" content="unity,Rigidbody,刚体" />
+<meta name="Description" content="通过物理模拟控制一个物体的位置。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Rigidbody.html">Rigidbody</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Rigidbody.AddExplosionForce.html">AddExplosionForce</a></li>
+                    <li><a href="Rigidbody.AddForceAtPosition.html">AddForceAtPosition</a></li>
+                    <li><a href="Rigidbody.AddForce.html">AddForce</a></li>
+                    <li><a href="Rigidbody.AddRelativeForce.html">AddRelativeForce</a></li>
+                    <li><a href="Rigidbody.AddRelativeTorque.html">AddRelativeTorque</a></li>
+                    <li><a href="Rigidbody.AddTorque.html">AddTorque</a></li>
+                    <li><a href="Rigidbody.angularDrag.html">angularDrag</a></li>
+                    <li><a href="Rigidbody.angularVelocity.html">angularVelocity</a></li>
+                    <li><a href="Rigidbody.centerOfMass.html">centerOfMass</a></li>
+                    <li><a href="Rigidbody.ClosestPointOnBounds.html">ClosestPointOnBounds</a></li>
+                    <li><a href="Rigidbody.collisionDetectionMode.html">collisionDetectionMode</a></li>
+                    <li><a href="Rigidbody.detectCollisions.html">detectCollisions</a></li>
+                    <li><a href="Rigidbody.drag.html">drag</a></li>
+                    <li><a href="Rigidbody.freezeRotation.html">freezeRotation</a></li>
+                    <li><a href="Rigidbody.GetPointVelocity.html">GetPointVelocity</a></li>
+                    <li><a href="Rigidbody.GetRelativePointVelocity.html">GetRelativePointVelocity</a></li>
+                    <li><a href="Rigidbody.inertiaTensorRotation.html">inertiaTensorRotation</a></li>
+                    <li><a href="Rigidbody.inertiaTensor.html">inertiaTensor</a></li>
+                    <li><a href="Rigidbody.interpolation.html">interpolation</a></li>
+                    <li><a href="Rigidbody.isKinematic.html">isKinematic</a></li>
+                    <li><a href="Rigidbody.IsSleeping.html">IsSleeping</a></li>
+                    <li><a href="Rigidbody.mass.html">mass</a></li>
+                    <li><a href="Rigidbody.maxAngularVelocity.html">maxAngularVelocity</a></li>
+                    <li><a href="Rigidbody.MovePosition.html">MovePosition</a></li>
+                    <li><a href="Rigidbody.MoveRotation.html">MoveRotation</a></li>
+                    <li><a href="Rigidbody.OnCollisionEnter.html">OnCollisionEnter</a></li>
+                    <li><a href="Rigidbody.OnCollisionExit.html">OnCollisionExit</a></li>
+                    <li><a href="Rigidbody.OnCollisionStay.html">OnCollisionStay</a></li>
+                    <li><a href="Rigidbody.position.html">position</a></li>
+                    <li><a href="Rigidbody.rotation.html">rotation</a></li>
+                    <li><a href="Rigidbody.SetDensity.html">SetDensity</a></li>
+                    <li><a href="Rigidbody.sleepAngularVelocity.html">sleepAngularVelocity</a></li>
+                    <li><a href="Rigidbody.sleepVelocity.html">sleepVelocity</a></li>
+                    <li><a href="Rigidbody.Sleep.html">Sleep</a></li>
+                    <li><a href="Rigidbody.solverIterationCount.html">solverIterationCount</a></li>
+                    <li><a href="Rigidbody.SweepTestAll.html">SweepTestAll</a></li>
+                    <li><a href="Rigidbody.SweepTest.html">SweepTest</a></li>
+                    <li><a href="Rigidbody.useConeFriction.html">useConeFriction</a></li>
+                    <li><a href="Rigidbody.useGravity.html">useGravity</a></li>
+                    <li><a href="Rigidbody.velocity.html">velocity</a></li>
+                    <li><a href="Rigidbody.WakeUp.html">WakeUp</a></li>
+                    <li><a href="Rigidbody.worldCenterOfMass.html">worldCenterOfMass</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Rigidbody 刚体</h1>
+<p class="h1inherit">Inherits from <a href="../Component/Component.html">Component</a></p>
+<p> Control of an object's position through physics simulation. </p>
+<p>通过物理模拟控制一个物体的位置。</p>
+<p> Rigidbody components take control over an object's position - it makes the objects fall down under the influence of gravity,   and can calculate how objects will respond to collisions. </p>
+<p>Rigidbody组件控制物体的位置 - 它使物体在重力影响下下落，并可计算物体将怎样响应碰撞。</p>
+<p> When manipulating rigidbody parameters you should work inside the <a href="../MonoBehaviour/MonoBehaviour.FixedUpdate.html">FixedUpdate function</a>.  Physics simulation is carried out in discrete timesteps. The <a href="../MonoBehaviour/MonoBehaviour.FixedUpdate.html">FixedUpdate function</a> is called immediately before each step. </p>
+<p>当操作刚体参数的时候，你应该在FixedUpdate函数中使用它，物理模拟以离散的时间步执行。FixedUpdate函数在每一步之前被立即调用。</p>
+<p> Things to watch out for when using rigid bodies: </p>
+<p>使用刚体需要注意的事：</p>
+<p> 1. If your simulation looks like slow motion and not solid:   This is a problem of scale. When your game world is huge everything will   appear to be move very slowly.  Make sure all your models are in real world sizes. For example a car   should be around 4 meters long. A character around 2 meters high.  An object falls at the same acceleration no matter big or small, heavy   or light.  If your game world has a large scale, objects will still fall at the   same acceleration. But since everything is larger, objects will appear   like they fall slower.</p>
+<p>如果你的模拟看起来像慢动作并且不真实： 这是缩放的问题。如果你的游戏世界非常大，所以的东西将显示移动非常慢，确保你所有的模型为真实世界大小。例如，一个汽车应该有4米长，一个角色约2米高。物体以相同的加速度下落，不论大或小，重或轻。如果你的游戏世界有较大的缩放，物体仍以相同的加速度下落，但是因为所有的物体都比较大，物体的下落显得就比较慢。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Rigidbody.velocity.html">velocity</a></div>
+    	<div class="licontent">The velocity vector of the rigidbody.<br />
+   	    刚体的速度向量。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.angularVelocity.html">angularVelocity</a></div>
+    	<div class="licontent">The angular velocity vector of the rigidbody.<br />
+   	    刚体的角速度向量。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.drag.html">drag</a></div>
+    	<div class="licontent">The drag of the object.<br />
+   	    物体的阻力。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.angularDrag.html">angularDrag</a></div>
+    	<div class="licontent">The angular drag of the object.<br />
+   	    物体的角阻力。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.mass.html">mass</a></div>
+    	<div class="licontent">The mass of the rigidbody.<br />
+   	    刚体的质量。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.useGravity.html">useGravity</a></div>
+    	<div class="licontent">Controls whether gravity affects this rigidbody.<br />
+   	    控制重力是否影响整个刚体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.isKinematic.html">isKinematic</a></div>
+    	<div class="licontent">Controls whether physics affects the rigidbody.<br />
+   	    控制物理是够影响这个刚体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.freezeRotation.html">freezeRotation</a></div>
+    	<div class="licontent">Controls whether physics will change the rotation of the object.<br />
+   	    控制物理是否改变物体的旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.collisionDetectionMode.html">collisionDetectionMode</a></div>
+    	<div class="licontent">The Rigidbody's collision detection mode.<br />
+   	    刚体的碰撞检测模式。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.centerOfMass.html">centerOfMass</a></div>
+    	<div class="licontent">The center of mass relative to the transform's origin.<br />
+   	    相对于变换原点的重心。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.worldCenterOfMass.html">worldCenterOfMass</a></div>
+    	<div class="licontent">The center of mass of the rigidbody in world space (Read Only).<br />
+   	    在世界坐标空间的刚体的重心。（只读） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.inertiaTensorRotation.html">inertiaTensorRotation</a></div>
+    	<div class="licontent">The rotation of the inertia tensor.<br />
+   	    惯性张量的旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.inertiaTensor.html">inertiaTensor</a></div>
+    	<div class="licontent">The diagonal inertia tensor of mass relative to the center of mass.<br />
+   	    相对于重心的质量的惯性张量对角线。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.detectCollisions.html">detectCollisions</a></div>
+    	<div class="licontent">Should collision detection be enabled? (By default always enabled)<br />
+   	    碰撞检测应否启用？（默认总是启用的） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.useConeFriction.html">useConeFriction</a></div>
+    	<div class="licontent">Force cone friction to be used for this rigidbody.<br />
+   	    用于该刚体的锥形摩擦力。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.position.html">position</a></div>
+    	<div class="licontent">The position of the rigidbody.<br />
+   	    该刚体的位置。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.rotation.html">rotation</a></div>
+    	<div class="licontent">The rotation of the rigdibody.<br />
+   	    该刚体的旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.interpolation.html">interpolation</a></div>
+    	<div class="licontent">Interpolation allows you to smooth out the effect of running physics at a fixed frame rate.<br />
+   	    插值允许你以固定的帧率平滑物理运行效果。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.solverIterationCount.html">solverIterationCount</a></div>
+    	<div class="licontent">Allows you to override the solver iteration count per rigidbody.<br />
+   	    允许你覆盖每个刚体的求解迭代次数。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.sleepVelocity.html">sleepVelocity</a></div>
+    	<div class="licontent">The linear velocity, below which objects start going to sleep. (Default 0.14) range { 0, infinity }<br />
+   	    线性速度，低于该值的物体将开始休眠。（默认0.14）范围{0, infinity} </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.sleepAngularVelocity.html">sleepAngularVelocity</a></div>
+    	<div class="licontent">The angular velocity, below which objects start going to sleep. (Default 0.14) range { 0, infinity }<br />
+   	    角速度，低于该值的物体将开始休眠。（默认0.14）范围{0, infinity} </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.maxAngularVelocity.html">maxAngularVelocity</a></div>
+    	<div class="licontent">The maximimum angular velocity of the rigidbody. (Default 7) range { 0, infinity }<br />
+   	    刚体的最大角速度，（默认7）范围{0, infinity} </div>
+    </li>
+</ul>
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Rigidbody.SetDensity.html">SetDensity</a></div>
+    	<div class="licontent">Sets the mass based on the attached colliders assuming a constant density.<br />
+   	    基于附加的碰撞器假设一个固定的密度设置质量。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.AddForce.html">AddForce</a></div>
+    	<div class="licontent">Adds a force to the rigidbody. As a result the rigidbody will start moving.<br />
+   	    添加一个力到刚体。作为结果刚体将开始移动。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.AddRelativeForce.html">AddRelativeForce</a></div>
+    	<div class="licontent">Adds a force to the rigidbody relative to its coordinate system.<br />
+   	    添加一个力到刚体。相对于它的系统坐标。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.AddTorque.html">AddTorque</a></div>
+    	<div class="licontent">Adds a torque to the rigidbody.<br />
+   	    添加一个力矩到刚体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.AddRelativeTorque.html">AddRelativeTorque</a></div>
+    	<div class="licontent">Adds a torque to the rigidbody relative to the rigidbodie's own coordinate system.<br />
+   	    添加一个力矩到刚体，相对于刚体自身的坐标系统。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.AddForceAtPosition.html">AddForceAtPosition</a></div>
+    	<div class="licontent">Applies force at position. As a result this will apply a torque and force on the object.<br />
+   	    在position位置应用force力。作为结果这个将在这个物体上应用一个力矩和力。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.AddExplosionForce.html">AddExplosionForce</a></div>
+    	<div class="licontent">Applies a force to the rigidbody that simulates explosion effects. The explosion force will fall off linearly with distance to the rigidbody.<br />
+   	    应用一个力到刚体来模拟爆炸效果。爆炸力将随着到刚体的距离线形衰减。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.ClosestPointOnBounds.html">ClosestPointOnBounds</a></div>
+    	<div class="licontent">The closest point to the bounding box of the attached colliders.<br />
+   	    到附加的碰撞器包围盒上的最近点。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.GetRelativePointVelocity.html">GetRelativePointVelocity</a></div>
+    	<div class="licontent">The velocity relative to the rigidbody at the point relativePoint.<br />
+   	    相对于刚体在relativePoint点的速度。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.GetPointVelocity.html">GetPointVelocity</a></div>
+    	<div class="licontent">The velocity of the rigidbody at the point worldPoint in global space.<br />
+   	    刚体在世界坐标空间中worldPoint点的速度。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.MovePosition.html">MovePosition</a></div>
+    	<div class="licontent">Moves the rigidbody to position.<br />
+   	    移动刚体到position。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.MoveRotation.html">MoveRotation</a></div>
+    	<div class="licontent">Rotates the rigidbody to rotation.<br />
+   	    旋转刚体到rot。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.Sleep.html">Sleep</a></div>
+    	<div class="licontent">Forces a rigidbody to sleep at least one frame.<br />
+   	    强制一个刚体休眠至少一帧。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.IsSleeping.html">IsSleeping</a></div>
+    	<div class="licontent">Is the rigidbody sleeping?<br />
+   	    刚体在休眠么？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.WakeUp.html">WakeUp</a></div>
+    	<div class="licontent">Forces a rigidbody to wake up.<br />
+   	    强制唤醒一个刚体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.SweepTest.html">SweepTest</a></div>
+    	<div class="licontent">Tests if a rigidbody would collide with anything, if it was moved through the scene.<br />
+   	    如果一个刚体碰到任何东西触发测试，如果它是穿过场景。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.SweepTestAll.html">SweepTestAll</a></div>
+    	<div class="licontent">Like Rigidbody.SweepTest, but returns all hits.<br />
+   	    像<a href="Rigidbody.SweepTest.html">Rigidbody.SweepTest</a>，但是返回所有碰撞点。 </div>
+    </li>
+</ul>
+
+<h3>Messages Sent<span class="trans">发送消息</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Rigidbody.OnCollisionEnter.html">OnCollisionEnter</a></div>
+    	<div class="licontent">OnCollisionEnter is called when this collider/rigidbody has begun touching another rigidbody/collider.<br />
+   	    当这个collider/rigidbody已经开始接触另一个rigidbody/collider时，OnCollisionEnter被调用。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.OnCollisionExit.html">OnCollisionExit</a></div>
+    	<div class="licontent">OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.<br />
+   	    当这个collider/rigidbody停止接触另一个rigidbody/collider时，OnCollisionExit被调用。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Rigidbody.OnCollisionStay.html">OnCollisionStay</a></div>
+    	<div class="licontent">OnCollisionStay is called once per frame for every collider/rigidbody that is touching rigidbody/collider.<br />
+   	    对于每个collider/rigidbody接触另一个rigidbody/collider时，OnCollisionStay每帧被调用一次。 </div>
+    </li>
+</ul>
+
+<h2>Inherited members<span class="trans">继承成员</span></h2>
+<h3>Inherited Variables<span class="trans">继承变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="../Component/Component.transform.html">transform</a></div>
+    	<div class="licontent">The <a href="../Transform/Transform.html">Transform</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Transform/Transform.html">Transform</a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.rigidbody.html">rigidbody</a></div>
+    	<div class="licontent">The <a href="../Rigidbod/Rigidbody.html">Rigidbody</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Rigidbod/Rigidbody.html">Rigidbody</a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.camera.html">camera</a></div>
+    	<div class="licontent">The <a href="../Camera/Camera.html">Camera</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Camera/Camera.html">Camera</a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.light.html">light</a></div>
+    	<div class="licontent">The <a href="../Light/Light.html">Light</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Light/Light.html">Light</a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.animation.html">animation</a></div>
+    	<div class="licontent">The <a href="../Animation/Animation.html">Animation</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Animation/Animation.html">Animation</a><a href="../Light/Light.html"></a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.constantForce.html">constantForce</a></div>
+    	<div class="licontent">The <a href="../ConstantForce/ConstantForce.html">ConstantForce</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../ConstantForce/ConstantForce.html">ConstantForce</a><a href="../Animation/Animation.html"></a><a href="../Light/Light.html"></a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.renderer.html">renderer</a></div>
+    	<div class="licontent">The <a href="../Renderer/Renderer.html">Renderer</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Renderer/Renderer.html">Renderer</a><a href="../ConstantForce/ConstantForce.html"></a><a href="../Animation/Animation.html"></a><a href="../Light/Light.html"></a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.audio.html">audio</a></div>
+    	<div class="licontent">The <a href="../AudioSource/AudioSource.html">AudioSource</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../AudioSource/AudioSource.html">AudioSource</a><a href="../Renderer/Renderer.html"></a><a href="../ConstantForce/ConstantForce.html"></a><a href="../Animation/Animation.html"></a><a href="../Light/Light.html"></a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.guiText.html">guiText</a></div>
+    	<div class="licontent">The <a href="../GUIText/GUIText.html">GUIText</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../GUIText/GUIText.html">GUIText</a><a href="../AudioSource/AudioSource.html"></a><a href="../Renderer/Renderer.html"></a><a href="../ConstantForce/ConstantForce.html"></a><a href="../Animation/Animation.html"></a><a href="../Light/Light.html"></a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.networkView.html">networkView</a></div>
+    	<div class="licontent">The <a href="../NetworkView/NetworkView.html">NetworkView</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (Read Only). (null if there is none attached)<br />
+   	    <a href="../NetworkView/NetworkView.html">NetworkView</a><a href="../GUIText/GUIText.html"></a><a href="../AudioSource/AudioSource.html"></a><a href="../Renderer/Renderer.html"></a><a href="../ConstantForce/ConstantForce.html"></a><a href="../Animation/Animation.html"></a><a href="../Light/Light.html"></a><a href="../Camera/Camera.html"></a><a href="../Rigidbod/Rigidbody.html"></a><a href="../Transform/Transform.html"></a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（只读）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.guiTexture.html">guiTexture</a></div>
+    	<div class="licontent">The <a href="../GUITexture/GUITexture.html">GUITexture</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (Read Only). (null if there is none attached)<br />
+   	    <a href="../GUITexture/GUITexture.html">GUITexture</a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（只读）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.collider.html">collider</a></div>
+    	<div class="licontent">The <a href="../Collider/Collider.html">Collider</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../Collider/Collider.html">Collider</a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.hingeJoint.html">hingeJoint</a></div>
+    	<div class="licontent">The <a href="../HingeJoint/HingeJoint.html">HingeJoint</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../HingeJoint/HingeJoint.html">HingeJoint</a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.particleEmitter.html">particleEmitter</a></div>
+    	<div class="licontent">The <a href="../ParticleEmitter/ParticleEmitter.html">ParticleEmitter</a> attached to this <a href="../GameObject/GameObject.html">GameObject</a> (null if there is none attached).<br />
+   	    <a href="../ParticleEmitter/ParticleEmitter.html">ParticleEmitter</a>附加到<a href="../GameObject/GameObject.html">GameObject</a>（游戏物体）（如无附加则为空）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.gameObject.html">gameObject</a></div>
+    	<div class="licontent">The game object this component is attached to. A component is always attached to a game object.<br />
+   	    组件附加的游戏物体。一个组件总是被附加到一个游戏物体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.tag.html">tag</a></div>
+    	<div class="licontent">The tag of this game object.<br />
+   	    游戏物体的标签。 </div>
+    </li>
+</ul>
+
+<ul class="tableli">
+    <li>
+		<div class="lititle"><a href="../Object/Object.name.html">name</a></div>
+		<div class="licontent">The name of the object. //物体的名字</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.hideFlags.html">hideFlags</a></div>
+    	<div class="licontent">Should the object be hidden, saved with the scene or modifiable by the user?<br />
+    	物体是否被隐藏、保存在场景中或被用户修改？</div>
+    </li>
+</ul>
+
+<h3>Inherited Functions<span class="trans">继承函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="../Component/Component.GetComponent.html">GetComponent</a></div>
+    	<div class="licontent">Returns the component of Type type if the game object has one attached, null if it doesn't.<br />
+   	    如果游戏物体有一个附加，则返回Type类型的组件，如果没有则为null。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.GetComponent.ltTgt.html">GetComponent.&lt;T&gt;</a></div>
+    	<div class="licontent">&nbsp;</div>
+  </li>
+  	<li>
+      <div class="lititle"><a href="../Component/Component.GetComponent.html">GetComponent</a></div>
+    	<div class="licontent">Returns the component with name type if the game object has one attached, null if it doesn't.<br />
+   	    如果游戏物体有一个附加，则返回名字类型组件，如果没有则为null。</div>
+    </li>
+	<li>
+      <div class="lititle"><a href="../Component/Component.GetComponentInChildren.html">GetComponentInChildren</a></div>
+    	<div class="licontent">Returns the component of Type type in the <a href="../GameObject/GameObject.html">GameObject</a> or any of its children using depth first search.<br />
+返回Type类型组件，在<a href="../GameObject/GameObject.html">GameObject</a>或它的任何子物体使用深度优先搜索，仅返回激活的组件。 </div>
+    </li>
+<li>
+      <div class="lititle"><a href="../Component/Component.GetComponentInChildren.ltTgt.html">GetComponentInChildren.&lt;T&gt;</a></div>
+   	<div class="licontent">&nbsp;</div>
+  </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.GetComponentsInChildren.html">GetComponentsInChildren</a></div>
+    	<div class="licontent">Returns all components of Type type in the <a href="../GameObject/GameObject.html">GameObject</a> or any of its children.<br />
+   	    在<a href="../GameObject/GameObject.html">GameObject</a>或任何它的子物体，返回全部Type类型组件 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.GetComponentsInChildren.ltTgt.html">GetComponentsInChildren.&lt;T&gt; </a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.GetComponents.html">GetComponents</a></div>
+    	<div class="licontent">Returns all components of Type type in the <a href="../GameObject/GameObject.html">GameObject</a>.<br />
+   	    在游戏物体返回全部Type类型组件。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.GetComponents.ltTgt.html">GetComponents.&lt;T&gt; </a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.CompareTag.html">CompareTag</a></div>
+    	<div class="licontent">Is this game object tagged tag?<br />
+   	    游戏物体有被标记标签么？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.SendMessageUpwards.html">SendMessageUpwards</a></div>
+    	<div class="licontent">Calls the method named methodName on every <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> in this game object and on every ancestor of the behaviour<br />
+   	    在游戏物体每一个<a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a>和每一个behaviour的祖先上调用名为methodName的方法。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.SendMessage.html">SendMessage</a></div>
+    	<div class="licontent">Calls the method named methodName on every <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> in this game object.<br />
+   	    在游戏物体每一个<a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a>上调用名为methodName的方法。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="../Component/Component.BroadcastMessage.html">BroadcastMessage</a></div>
+    	<div class="licontent">Calls the method named methodName on every <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> in this game object or any of its children.<br />
+   	    在游戏物体每一个<a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a>和它的全部子物体上调用名为methodName的方法。 </div>
+    </li>
+</ul>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.GetInstanceID.html">GetInstanceID</a></div>
+    	<div class="licontent">Returns the instance id of the object.<br />
+    	返回物体的实例ID</div>
+    </li>
+	<li><div class="lititle"><a href="../Object/Object.ToString.html">ToString</a></div>
+    	<div class="licontent">Returns the name of the game object.<br />返回游戏物体的名称。</div>
+    </li>
+</ul>
+
+<h3>Inherited Class Functions<span class="trans">继承类函数</span></h3>
+
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_bool.html">operator bool</a></div>
+    	<div class="licontent">Does the object exist?<br />
+    	物体是否存在？</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.html">Instantiate</a></div>
+    	<div class="licontent">Clones the object original and returns the clone.<br />
+    	克隆原始物体，并返回克隆的物体</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.ltTgt.html">Instantiate.&lt;T&gt;</a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Destroy.html">Destroy</a></div>
+    	<div class="licontent">Removes a gameobject, component or asset.<br />
+    	删除一个游戏物体、组件或资源</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DestroyImmediate.html">DestroyImmediate</a></div>
+    	<div class="licontent">Destroys the object obj immediately. It is strongly recommended to use Destroy instead.<br />
+    	立即销毁物体obj，强烈建议使用Destroy代替。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectsOfType.html">FindObjectsOfType</a></div>
+    	<div class="licontent">Returns a list of all active loaded objects of Type type.<br />
+    	返回Type类型的所有激活的加载的物体列表</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectOfType.html">FindObjectOfType</a></div>
+    	<div class="licontent">Returns the first active loaded object of Type type.<br />
+    	返回Type类型第一个激活的加载的物体。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_eq.html">operator ==</a></div>
+    	<div class="licontent">Compares if two objects refer to the same<br />
+    	比较如果两个物体相同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_ne.html">operator !=</a></div>
+    	<div class="licontent">Compares if two objects refer to a different object<br />
+    	比较如果两个物体不同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></div>
+    	<div class="licontent">Makes the object target not be destroyed automatically when loading a new scene.<br />
+    	加载新场景的时候使目标物体不被自动销毁。</div>
+    </li>
+</ul>
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年2月10日 Thursday  21:59<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

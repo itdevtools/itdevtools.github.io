@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Overview: Writing Scripts in C# 使用C#书写脚本</title>
+<meta name="keywords" content="unity,C#" />
+<meta name="description" content="除了句法规则, 使用C#或Boo编写脚本还有一些不同" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="../index.html">Unity脚本概述</a> <span class="transer">翻译：脚本_树</span>
+<ul>
+  <li><a title="Common Operations" href="Overview.Common_Operations.html">Common Operations</a></li>
+  <li><a title="Keeping Track of Time" href="Overview.Keeping_Track_of_Time.html">Time</a></li>
+  <li><a title="Accessing Other Components" href="Overview.Accessing_Other_Components.html">Accessing Components</a></li>
+  <li><a title="Accessing Other Game Objects" href="Overview.Accessing_Other_Game_Objects.html">Accessing Objects</a></li>
+  <li><a title="Vectors" href="Overview.Vectors.html">Vectors</a></li>
+  <li><a title="Member Variables &amp; Global Variables" href="Overview.Member_Variables/Global_Variables.html">Variables</a></li>
+  <li><a title="Instantiate" href="Overview.Instantiate.html">Instantiate</a></li>
+  <li><a title="Coroutines &amp; Yield" href="Overview.Coroutines/Yield.html">Coroutines &amp; Yield</a></li>
+  <li><a title="Writing Scripts in C#" href="Overview.Writing_Scripts_in_C.html">Using C#</a></li>
+  <li><a title="The most important classes" href="Overview.The_most_important_classes.html">Important Classes</a></li>
+  <li><span title="Performance Optimization"><a href="Overview.Performance_Optimization.html">Performance Optimization</a></span></li>
+  <li><a title="Script compilation (Advanced)" href="Overview.Script_compilation.html">Script Compilation</a></li>
+</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Overview : Writing Scripts in C# 使用C#书写脚本</h1>
+<p></p>
+<p>Apart from syntax, there are some differences   when writing scripts in C# or Boo. Most notable are: </p>
+<p>除了句法规则, 使用C#或Boo编写脚本还有一些不同,当.需要特别注意的是:</p>
+<p><em>1. Inherit from MonoBehaviour<br />
+</em>继承自MonoBehaviour</p>
+<p>All behaviour scripts must inherit from   MonoBehaviour (directly or indirectly). This happens automatically in   Javascript, but must be explicitly explicitly inside C# or Boo scripts. If you   create your script inside Unity through the Asset -&gt;?Create -&gt;?C Sharp/Boo   Script menu, the created   template will already contain the necessary definition. </p>
+
+<p>所有的行为脚本必须从MonoBehaviour继承(直接的或间接的).在JavaScript中这个是自动完成的,但是在C#或Boo中,必须显示注明.如果你通过Asset -&gt;?Create -&gt;?C Sharp/Boo   Script创建脚本,系统模版已经包含了必要的定义.</p>
+<pre><p class="note">public class NewBehaviourScript : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {...} <span class="notes">// C#</span><br />
+class NewBehaviourScript (MonoBehaviour): ... <span class="notes"># Boo</span></p></pre>
+<p><em>2. Use the Awake or Start function to do   initialisation. </em><br />
+<em>使用Awake或Start函数初始化.</em></p>
+<p>What you would put outside any functions in   Javascript, you put inside <a href="../MonoBehaviour/MonoBehaviour.Awake.html">Awake </a>or <a href="../MonoBehaviour/MonoBehaviour.Start.html">Start </a>function in C# or Boo. </p>
+<p>JavaScript中放在函数之外的代码,在C#或Boo中必须置于<a href="../MonoBehaviour/MonoBehaviour.Awake.html">Awake</a>或<a href="../MonoBehaviour/MonoBehaviour.Start.html">Start</a>函数里.</p>
+<p>The difference between Awake and Start is that   Awake is run when a scene is loaded and Start is called just before the first   call to an Update or a FixedUpdate function. All Awake functions are called   before any Start functions are called. </p>
+<p>Awake和Start的不同之处在于,Awake是在加载场景时运行,Start是在第一次调用Update或FixedUpdate函数之前被调用,Awake函数运行在所有Start函数之前.</p>
+<p><em>3. The class name must match the file   name.</em><br />
+  <em>类名字必须匹配文件名.</em></p>
+<p>In Javascript, the class name is implicitly set   to the file name of the script (minus the file extension). This must be done   manually in C# and Boo. </p>
+<p>JavaScript中类名被隐式的设置为脚本的文件名(不包含文件扩展名).在C#和Boo中必须手工编写.</p>
+<p><em>4. Coroutines have a different syntax in   C#. </em><br />
+   <em>C#中协同程序有不同的句法规则</em></p>
+<p>Coroutines have to have a return type of   IEnumerator and you yield using yield return ...   ; instead of just yield ...   ;. </p>
+<p>Coroutines必须是IEnumerator返回类型,并且yield用yield return替代.</p>
+
+<pre><p class="note">using System.Collections;
+using UnityEngine;
+public class NewBehaviourScript : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	<span class="notes">// C# coroutine // C# 协同程序</span>
+	IEnumerator SomeCoroutine () {
+		<span class="notes">// Wait for one frame // 等一帧</span>
+		yield return 0;
+
+		<span class="notes">// Wait for two seconds // 等两秒</span>
+		yield return new WaitForSeconds (2);
+	}
+}</p></pre>
+<p><em>5. Don't use namespaces. <br />
+  不要使用命名空间</em></p>
+<p>Unity doesn't support placing your scripts inside   of a namespace at the moment. This requirement will be removed in a future   version. </p>
+<p>目前Unity暂不支持命名空间.或许未来版本会有.</p>
+<p><em>6. Only member variables are serialized and are   shown in the Inspector. <br />
+  只有序列化的成员变量才能显示在检视面板</em></p>
+<p>Private and protected member variables are shown   only in Expert Mode. Properties are not serialized or shown in the inspector. </p>
+<p>私有和保护变量只能在专家模式中显示.属性不被序列化或显示在检视面板.</p>
+<p><em>7. Avoid using the constructor. <br />
+  避免使用构造函数</em></p>
+<p>Never initialize any values in the constructor.   Instead use Awake or Start for this purpose. Unity automatically invokes the   constructor even when in edit mode. This usually happens directly after   compilation of a script, because the constructor needs to be invoked in order to   retrieve default values of a script. Not only will the constructor be called at   unforeseen times, it might also be called for prefabs or inactive game objects. </p>
+<p>不要在构造函数中初始化任何变量.要用Awake或Start函数来实现.即便是在编辑模式,Unity仍会自动调用构造函数.这通常是在一个脚本编译之后,因为需要调用脚本的构造函数来取回脚本的默认值.我们无法预计何时调用构造函数,它或许会被预置体或未激活的游戏对象所调用.</p>
+<p>In the case of eg. a singleton pattern using the   constructor this can have severe consequences and lead to seemingly random null   reference exceptions. </p>
+<p>单一模式使用构造函数可能会导致严重后果,会带来类似随机的空参数异常.</p>
+<p>So if you want to implement eg. a singleton   pattern do not use the the   constructor, instead use <a href="../MonoBehaviour/MonoBehaviour.Awake.html">Awake </a>. Actually there is no reason why   you should ever have any code in a constructor for a class that inherits from <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour </a>. </p>
+<p>因此,如果你想实现单一模式不要用构造函数,要用Awake函数.事实上,你没必要在继承自MonoBehaviour的类的构造函数中写任何代码.</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年11月30日 Tuesday  18:14<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

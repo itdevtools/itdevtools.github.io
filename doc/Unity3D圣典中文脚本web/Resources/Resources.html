@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Resources 资源</title>
+<meta name="Keywords" content="unity,Resources,资源" />
+<meta name="Description" content="Resources类允许你按照它们的路径名查找并加载物体。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Resources.html">Resources</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Resources.FindObjectsOfTypeAll.html">FindObjectsOfTypeAll</a></li>
+                    <li><a href="Resources.LoadAll.html">LoadAll</a></li>
+                    <li><a href="Resources.LoadAssetAtPath.html">LoadAssetAtPath</a></li>
+                    <li><a href="Resources.Load.html">Load</a></li>
+                    <li><a href="Resources.UnloadUnusedAssets.html">UnloadUnusedAssets</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Resources 资源</h1>
+<p class="h1inherit"></p>
+<p> The Resources class allows you to Find and Load Objects by their path name.</p>
+<p>Resources类允许你按照它们的路径名查找并加载物体。</p>
+<p> All assets that are in a folder named &quot;Resources&quot; anywhere in the Assets folder can be accessed via the <a href="Resources.Load.html">Resources.Load</a> functions. </p>
+<p>所有位于Assets文件夹下名为&quot;Resources&quot;的文件夹中的资源，都可以Resources.Load 函数访问。</p>
+<p> In Unity you usually don't use path names to access assets, instead you   expose a reference to an   asset by declaring a member-variable, and then assign it in the   inspector.  When using this technique Unity can automatically calculate which assets   are used when building a player.  This radically minimizes the size of your players to the assets that you   actually use in the built game.  When you place assets in the &quot;Resources&quot; folder this can not be done,   thus all assets in the &quot;Resources&quot; folder will be included in a build. </p>
+<p>在Unity中通常不需要使用路径名来访问资源，相反你可以通过声明一个成员变量来暴露一个资源的引用，然后在检视面板中指定它。使用这个技巧的时候Unity可以在构建的时候自动计算哪个资源被使用。这从根本上最大限度地减少了实际用于游戏的资源的尺寸。当你放资源在&quot;Resources&quot;文件夹中时这个不会这么做，因此所有在&quot;Resources&quot;文件夹中的资源都将被包含在游戏中。</p>
+<p> Another disadvantage of using path names is that it leads to less   reusable code since scripts will have specific hard coded requirements   on where the used assets are placed.  On the other hand using references that are exposed in the inspector are   self-documenting and immediately obvious to the user of your script. </p>
+<p>另一个使用路径名的缺点是，缺乏可重用性，因为脚本对于使用的资源具有硬编码要求。另一方面使用暴露在检视面板中的资源引用，是自文档化的，对于使用脚本的用户来说也是立竿见影的。</p>
+<p> However there are situations where it is more convenient to fetch an   asset by its name instead of linking to it in the inspector.  Essentially whenever it is inconvenient to assign the reference to the   object in the inspector.   For example you might want to create a game object procedurally from a   script and for example assign a texture to a procedurally generated   mesh.</p>
+<p>然而，有些情况下按照名称而不是在检视面板中取回一个资源是更方便的，尤其是当在检视面板中指定引用是不方便的时候。例如你或许想从脚本创建一个游戏物体，为程序生成的网格赋值一个纹理。</p>
+<div class="note">
+  <pre><code>var go = new <a href="../GameObject/GameObject.CreatePrimitive.html">GameObject.CreatePrimitive</a>(<a href="../Enumerations/PrimitiveType/PrimitiveType.Plane.html">PrimitiveType.Plane</a>);
+go.renderer.material.mainTexture = <a href="Resources.Load.html">Resources.Load</a>("glass");</code></pre></div>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Resources.FindObjectsOfTypeAll.html">FindObjectsOfTypeAll</a></div>
+    	<div class="licontent">Returns a list of all objects of Type type.<br />
+   	    返回Type类型的所有物体的一个列表。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Resources.Load.html">Load</a></div>
+    	<div class="licontent">Loads an asset stored at path in the Resources folder.<br />
+   	    加载储存在Resources文件夹中path处的资源。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Resources.LoadAll.html">LoadAll</a></div>
+    	<div class="licontent">Loads all assets in a folder or file at path in the Resources folder.<br />
+   	    加载Resources文件夹中的path文件夹或者文件中的所有资源。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Resources.LoadAssetAtPath.html">LoadAssetAtPath</a></div>
+    	<div class="licontent">Returns a resource at an asset path (Editor Only).<br />
+   	    返回所在资源路径上的一个资源(编辑器仅仅)。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Resources.UnloadUnusedAssets.html">UnloadUnusedAssets</a></div>
+    	<div class="licontent">Unloads assets that are not used.<br />
+   	    卸载未使用的资源。 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月13日 Sunday  20:26<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

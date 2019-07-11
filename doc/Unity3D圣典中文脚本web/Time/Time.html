@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Time 时间</title>
+<meta name="Keywords" content="unity,Time,时间" />
+<meta name="Description" content="从Unity获取时间信息的接口。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Time.html">Time</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Time.captureFramerate.html">captureFramerate</a></li>
+                    <li><a href="Time.deltaTime.html">deltaTime</a></li>
+                    <li><a href="Time.fixedDeltaTime.html">fixedDeltaTime</a></li>
+                    <li><a href="Time.fixedTime.html">fixedTime</a></li>
+                    <li><a href="Time.frameCount.html">frameCount</a></li>
+                    <li><a href="Time.maximumDeltaTime.html">maximumDeltaTime</a></li>
+                    <li><a href="Time.realtimeSinceStartup.html">realtimeSinceStartup</a></li>
+                    <li><a href="Time.smoothDeltaTime.html">smoothDeltaTime</a></li>
+                    <li><a href="Time.timeScale.html">timeScale</a></li>
+                    <li><a href="Time.timeSinceLevelLoad.html">timeSinceLevelLoad</a></li>
+                    <li><a href="Time.time.html">time</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Time 时间</h1>
+
+<p class="h1inherit"></p>
+<p> The interface to get time information from Unity.</p>
+<p>从Unity获取时间信息的接口。</p>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Time.time.html">time</a></div>
+    	<div class="licontent">The time this frame has started (Read Only). This is the time in seconds since the start of the game.<br />
+   	    从游戏开始到到现在所用的时间（只读）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.timeSinceLevelLoad.html">timeSinceLevelLoad</a></div>
+    	<div class="licontent">The time this frame has started (Read Only). This is the time in seconds since the last level has been loaded.<br />
+   	    此帧开始的时间（只读）。这是以秒计算到最后的关卡已经加载完的时间。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.deltaTime.html">deltaTime</a></div>
+    	<div class="licontent">The time in seconds it took to complete the last frame (Read Only).<br />
+   	    以秒计算，完成最后一帧的时间（只读）。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.fixedTime.html">fixedTime</a></div>
+    	<div class="licontent">The time the latest FixedUpdate has started (Read Only). This is the time in seconds since the start of the game.<br />
+   	    最近的<a href="../MonoBehaviour/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>已开始的时间（只读）。这是以秒计自游戏开始的时间。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.fixedDeltaTime.html">fixedDeltaTime</a></div>
+    	<div class="licontent">The interval in seconds at which physics and other fixed frame rate updates (like MonoBehaviour's FixedUpdate) are performed.<br />
+   	    以秒计间隔，在物理和其他固定帧速率进行更新（像MonoBehaviour的<a href="../MonoBehaviour/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.maximumDeltaTime.html">maximumDeltaTime</a></div>
+    	<div class="licontent">The maximum time a frame can take. Physics and other fixed frame rate updates (like MonoBehaviour's FixedUpdate)<br />
+   	    一帧能获得的最大时间。物理和其他固定帧速率更新（像<a href="../MonoBehaviour/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.smoothDeltaTime.html">smoothDeltaTime</a></div>
+    	<div class="licontent">A smoothed out Time.deltaTime (Read Only).<br />
+   	    一个平滑淡出<a href="Time.deltaTime.html">Time.deltaTime</a>（只读）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.timeScale.html">timeScale</a></div>
+    	<div class="licontent">The scale at which the time is passing. This can be used for slow motion effects.<br />
+   	    传递时间的缩放。这可以用于减慢运动效果。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.frameCount.html">frameCount</a></div>
+    	<div class="licontent">The total number of frames that have passed (Read Only).<br />
+   	    已经传递的帧的总数（只读）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.realtimeSinceStartup.html">realtimeSinceStartup</a></div>
+    	<div class="licontent">The real time in seconds since the game started (Read Only).<br />
+   	    以秒计，自游戏开始的实时时间（只读）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Time.captureFramerate.html">captureFramerate</a></div>
+    	<div class="licontent">If captureFramerate is set to a value larger than 0, time will advance in<br />
+   	    如果captureFramerate设置比0大的值，时间会在每帧 (1.0 / captureFramerate) 前进，不考虑真实时间。 </div>
+    </li>
+</ul>
+	
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月27日 Monday  20:25<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

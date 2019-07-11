@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>BuildPipeline.BuildPlayer 编译播放器</title>
+<meta name="Keywords" content="unity,BuildPipeline,BuildPlayer,编译播放器" />
+<meta name="Description" content="生成一个播放器（仅用于Unity Pro）。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="BuildPipeline.html">BuildPipeline</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="BuildPipeline.BuildAssetBundleExplicitAssetNames.html" title="BuildAssetBundleExplicitAssetNames">BuildAssetBundleExplicit...</a></li>
+                    <li><a href="BuildPipeline.BuildAssetBundle.html">BuildAssetBundle</a></li>
+                    <li><a href="BuildPipeline.BuildPlayer.html">BuildPlayer</a></li>
+                    <li><a href="BuildPipeline.PopAssetDependencies.html">PopAssetDependencies</a></li>
+                    <li><a href="BuildPipeline.PushAssetDependencies.html">PushAssetDependencies</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="BuildPipeline.html">BuildPipeline</a>.BuildPlayer 编译播放器</h1>
+<p class="h1inherit"></p>
+<p>static function <em>BuildPlayer</em> (<em>levels</em> : string[], <em>locationPathName</em> : string, <em>target</em> : <a href="../Editor_Enumerations/BuildTarget/BuildTarget.html">BuildTarget</a>, <em>options</em> : BuildOptions) : string </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><em>levels</em></div>
+    	<div class="licontent">The scenes to be included in the build. If empty, the currently open scene will be built. Paths are relative to the project folder (Assets/MyLevels/MyScene.unity).<br />
+    	包含在编译中的场景，如果为空，当前打开的场景将被编译。路径相对于项目文件夹(Assets/MyLevels/MyScene.unity).</div>
+    </li>
+    <li>
+    	<div class="lititle"><em>locationPathName</em></div>
+    	<div class="licontent">The path where the application will be built. Must include any necessary file extensions, like .exe, .app, .unity3d or .wdgt.<br />
+    	将被编译应用程序的路径，必须包括所有必要的文件扩展名。</div>
+    </li>
+	<li>
+		<div class="lititle"><em>target</em></div>
+    	<div class="licontent">The <a href="../Editor_Enumerations/BuildTarget/BuildTarget.html">BuildTarget</a> to build.<br />
+    	要编译的BuildTarget。</div>
+    </li>
+	<li>
+		<div class="lititle"><em>options</em></div>
+    	<div class="licontent">Additional <a href="../Editor_Enumerations/BuildOptions/BuildOptions.html">BuildOptions</a>, like whether to run the built player. <br />
+    	添加编译选项，例如是否运行那种播放器。</div>
+    </li>
+</ul>
+<em>Returns</em>
+<p>string - an error message if an error occurred.</p>
+<p>如果产生错误，返回一个错误消息。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Builds a player (Unity Pro only).</p>
+<p>生成一个播放器（仅用于Unity Pro）。</p>
+<p> Use this function to programatically create a build of your project. </p>
+<p>使用这个函数通过编程来创建一个你的项目编译。</p>
+<div class="note"><pre><code><span class="notes">// Build a streamed unity3d file. This contain one scene that can be downloaded
+// on demand and loaded once it's asset bundle has been loaded.
+//生成一个流unity3d文件。这包含一个场景，可以按需下载和加载，一旦它的资源包已被加载。</span>
+
+@<a href="../MenuItem/MenuItem.html">MenuItem</a> (&quot;Build/BuildWebplayerStreamed&quot;)
+static function MyBuild(){
+	var levels : <a href="../String/String.html">String</a>[] = [&quot;Assets/StreamedScene1.unity&quot;, &quot;Assets/StreamedScene2.unity&quot;,
+		&quot;Assets/StreamedScene3.unity&quot;];
+	BuildPipeline.BuildPlayer( levels, &quot;StreamedWebplayer.unity3d&quot;,
+		<a href="Editor_Enumerations/BuildTarget/BuildTarget.WebPlayer.html">BuildTarget.WebPlayer</a>, <a href="Editor_Enumerations/BuildOptions/BuildOptions.BuildAdditionalStreamedScenes.html">BuildOptions.BuildAdditionalStreamedScenes</a>);
+}</code></pre></div>
+<p>When <a href="Editor_Enumerations/BuildOptions/BuildOptions.BuildAdditionalStreamedScenes.html">BuildOptions.BuildAdditionalStreamedScenes</a> is used, the resulting file will not be a traditional player. The result will be a file that can be dynamically loaded in  at runtime. In order to dynamically load one of these extra scenes in, download the file using the <a href="../WWW/WWW.html">WWW</a> class, and make sure to call <a href="../WWW/WWW.assetBundle.html">WWW.assetBundle</a>. You don't actually have to call <a href="../WWW/WWW.LoadAll.html">AssetBundle.LoadAll</a>(). As soon as you assigned <a href="../WWW/WWW.assetBundle.html">WWW.assetBundle</a> to a variable, from that point on, you can use regular <a href="../WWW/WWW.LoadLevel.html">Application.LoadLevel</a>() and <a href="../Application/Application.LoadLevelAdditive.html">Application.LoadLevelAdditive</a>() calls  to load the level as you would usually do.</p>
+<p>当<a href="Editor_Enumerations/BuildOptions/BuildOptions.BuildAdditionalStreamedScenes.html">BuildOptions.BuildAdditionalStreamedScenes</a>被使用，生成的文件将不是传统的播放器。其结果将是一个可以在运行时动态加载的文件。为了动态加载另一个场景，使用<a href="../WWW/WWW.html">WWW</a>类下载文件，并确保调用了<a href="../WWW/WWW.assetBundle.html">WWW.assetBundle</a>。你实际上并不需要调用<a href="../WWW/WWW.LoadAll.html">AssetBundle.LoadAll</a>()。只要你指定<a href="../WWW/WWW.assetBundle.html">WWW.assetBundle</a>到一个变量，通常会这样做，可以使用普通的<a href="../WWW/WWW.LoadLevel.html">Application.LoadLevel</a>()和<a href="../Application/Application.LoadLevelAdditive.html">Application.LoadLevelAdditive</a>() 调用来加载关卡。</p>
+<div class="note">
+	<pre><code><span class="notes">// Build a streamed unity3d file. This contain one scene that can be downloaded
+// on demand and loaded once it's asset bundle has been loaded.
+//生成一个流unity3d文件。这包含一个场景，可以按需下载和加载，一旦它的资源包已被加载。</span>
+
+BuildPipeline.BuildPlayer(
+	[&quot;Assets/DynamicallyLoadedScene.unity&quot;], &quot;DynamicallyLoadedScene.unity3d&quot;,
+	<a href="Editor_Enumerations/BuildTarget/BuildTarget.WebPlayer.html">BuildTarget.WebPlayer</a>, <a href="Editor_Enumerations/BuildOptions/BuildOptions.BuildAdditionalStreamedScenes.html">BuildOptions.BuildAdditionalStreamedScenes</a>); </code></pre></div>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月7日 Saturday  17:14<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

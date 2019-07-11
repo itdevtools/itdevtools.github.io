@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>RaycastHit.textureCoord2 第二纹理坐标</title>
+<meta name="Keywords" content="unity,RaycastHit,textureCoord2,第二纹理坐标" />
+<meta name="Description" content="碰撞点的第二个UV纹理坐标。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="RaycastHit.html">RaycastHit</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="RaycastHit.barycentricCoordinate.html">barycentricCoordinate</a></li>
+                    <li><a href="RaycastHit.collider.html">collider</a></li>
+                    <li><a href="RaycastHit.distance.html">distance</a></li>
+                    <li><a href="RaycastHit.lightmapCoord.html">lightmapCoord</a></li>
+                    <li><a href="RaycastHit.normal.html">normal</a></li>
+                    <li><a href="RaycastHit.point.html">point</a></li>
+                    <li><a href="RaycastHit.rigidbody.html">rigidbody</a></li>
+                    <li><a href="RaycastHit.textureCoord2.html">textureCoord2</a></li>
+                    <li><a href="RaycastHit.textureCoord.html">textureCoord</a></li>
+                    <li><a href="RaycastHit.transform.html">transform</a></li>
+                    <li><a href="RaycastHit.triangleIndex.html">triangleIndex</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="RaycastHit.html">RaycastHit</a>.textureCoord2 第二纹理坐标</h1>
+<p class="h1inherit"></p>
+<p>var <em>textureCoord2</em> : <a href="../Vector2/Vector2.html">Vector2</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> The secondary uv texture coordinate at the impact point.</p>
+<p>碰撞点的第二个UV纹理坐标。</p>
+<p> This can be used for 3D texture painting or drawing bullet marks.  If the collider is not a mesh collider, <a href="../Vector2/Vector2.zero.html">Vector2.zero</a> will be returned.  If the mesh contains no secondary uv set, the uv of the primary uv set will be returned.</p>
+<p>这个可用于3D纹理绘制或绘制弹痕。如果碰撞器时非网格碰撞器，将返回Vector2.zero。如果网格没有包含第二个uv集，主uv集将被返回。</p>
+<div class="note"><pre><code><span class="notes">// Attach this script to a camera and it will paint black pixels in 3D
+// on whatever the user clicks. Make sure the mesh you want to paint
+// on has a mesh collider attached.
+//附加这个脚本到相机，当用户点击时
+//它将在3D中绘制黑色的像素. 确保你想绘制的网格附加有一个网格碰撞器.</span>
+function Update () {
+	<span class="notes">// Only when we press the mouse
+	//只有当按下鼠标</span>
+	if (!<a href="../Input/Input.GetMouseButton.html">Input.GetMouseButton</a> (0))
+		return;
+
+	<span class="notes">// Only if we hit something, do we continue
+	//只有在碰到某些东西时，继续</span>
+	var hit : RaycastHit;
+	if (!<a href="../Physics/Physics.Raycast.html">Physics.Raycast</a> (camera.ScreenPointToRay(<a href="../Input/Input.mousePosition.html">Input.mousePosition</a>), hit))
+		return;
+
+	<span class="notes">// Just in case, also make sure the collider also has a renderer
+	// material and texture. Also we should ignore primitive colliders.
+	//以防万一，还要确保碰撞器也有一个渲染器、材质和纹理.我们也应该忽略几何体碰撞器.</span>
+	var renderer : <a href="../Renderer/Renderer.html">Renderer</a> = hit.collider.renderer;
+	var meshCollider = hit.collider as <a href="../MeshCollider/MeshCollider.html">MeshCollider</a>;
+	if (renderer == null || renderer.sharedMaterial == null ||
+		renderer.sharedMaterial.mainTexture == null || meshCollider == null)
+	return;
+
+	<span class="notes">// Now draw a pixel where we hit the object
+	//在我们碰到的物体上，现在绘制一个像素</span>
+	var tex : <a href="../Texture2D/Texture2D.html">Texture2D</a> = renderer.material.mainTexture;
+	var pixelUV = hit.textureCoord2;
+	pixelUV.x *= tex.width;
+	pixelUV.y *= tex.height;
+
+	tex.SetPixel(pixelUV.x, pixelUV.y, <a href="../Color/Color.black.html">Color.black</a>);
+
+	tex.Apply();
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月13日 Sunday  14:19<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

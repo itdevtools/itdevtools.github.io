@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>GL 图像库</title>
+<meta name="Keywords" content="unity,GL,图像库" />
+<meta name="Description" content="底层的图像库。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="GL.html">GL</a><span class="transer">翻译：詹姆斯卡梅隆</span>
+                <ul>
+                    <li><a href="GL.Begin.html">Begin</a></li>
+                    <li><a href="GL.ClearWithSkybox.html">ClearWithSkybox</a></li>
+                    <li><a href="GL.Clear.html">Clear</a></li>
+                    <li><a href="GL.Color.html">Color</a></li>
+                    <li><a href="GL.End.html">End</a></li>
+                    <li><a href="GL.InvalidateState.html">InvalidateState</a></li>
+                    <li><a href="GL.LINES.html">LINES</a></li>
+                    <li><a href="GL.LoadIdentity.html">LoadIdentity</a></li>
+                    <li><a href="GL.LoadOrtho.html">LoadOrtho</a></li>
+                    <li><a href="GL.LoadPixelMatrix.html">LoadPixelMatrix</a></li>
+                    <li><a href="GL.LoadProjectionMatrix.html">LoadProjectionMatrix</a></li>
+                    <li><a href="GL.modelview.html">modelview</a></li>
+                    <li><a href="GL.MultiTexCoord2.html">MultiTexCoord2</a></li>
+                    <li><a href="GL.MultiTexCoord3.html">MultiTexCoord3</a></li>
+                    <li><a href="GL.MultiTexCoord.html">MultiTexCoord</a></li>
+                    <li><a href="GL.MultMatrix.html">MultMatrix</a></li>
+                    <li><a href="GL.PopMatrix.html">PopMatrix</a></li>
+                    <li><a href="GL.PushMatrix.html">PushMatrix</a></li>
+                    <li><a href="GL.QUADS.html">QUADS</a></li>
+                    <li><a href="GL.SetRevertBackfacing.html">SetRevertBackfacing</a></li>
+                    <li><a href="GL.TexCoord2.html">TexCoord2</a></li>
+                    <li><a href="GL.TexCoord3.html">TexCoord3</a></li>
+                    <li><a href="GL.TexCoord.html">TexCoord</a></li>
+                    <li><a href="GL.TRIANGLE_STRIP.html">TRIANGLE_STRIP</a></li>
+                    <li><a href="GL.TRIANGLES.html">TRIANGLES</a></li>
+                    <li><a href="GL.Vertex3.html">Vertex3</a></li>
+                    <li><a href="GL.Vertex.html">Vertex</a></li>
+                    <li><a href="GL.Viewport.html">Viewport</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>GL 图像库</h1>
+<p class="h1inherit"></p>
+<p> Low-level graphics library.</p>
+<p>底层的图像库。</p>
+<p> Use this class to manipulate active transformation matrices,  issue rendering commands similar to OpenGL's immediate mode and do other low-level  graphics tasks. Note that in almost all cases using <a href="../Graphics/Graphics.DrawMesh.html">Graphics.DrawMesh</a> is more efficient than  using immediate mode drawing. </p>
+<p>这个类进行底层的矩阵变换。通过用函数命令来实现。这和OpenGL（和D3D不同的图形库）的立即模式一样。注意在大部分情况下用<a href="../Graphics/Graphics.DrawMesh.html" >Graphics.DrawMesh</a>&nbsp;比这个立即模式更有效率。</p>
+<p> GL immediate drawing functions use whatever is the &quot;current material&quot; set up right now.   The material controls how the rendering is done (blending, textures, etc.), so unless you explicitly  set it to something before using GL draw functions, the material can happen to be anything.  Also, if you call any other drawing commands from inside GL drawing code, they can set  material to something else, so make sure it's under control as well. </p>
+<p>GL的立即模式用在当材质建立的时候。材质控制着物体该如何渲染（混合纹理等等）。在用GL类前你要明确的设定材质的属性，GL类可以使材质做任何改变。&nbsp;&nbsp;（下面的实例代码看看会清楚一点）</p>
+<p> GL drawing commands execute immediately. That means if you call them in Update(), they will be executed   before the camera is rendered (and the camera will most likely clear the screen, making the GL drawing  not visible). </p>
+<p>GL函数命令会立即执行。不要在Update()函数内放置GL代码，这样会看不到效果。因为GL在&nbsp;Camera&nbsp;之前被执行。</p>
+<p> The usual place to call GL drawing is most often in OnPostRender() from a script attached to a camera </p>
+<p>常用的方法是GL代码放在OnPostRender()函数里面。OnPostRender()作为camera&nbsp;脚本里的一个函数。</p>
+<div class="note"><pre><code>static var lineMaterial : <a href="../Material/Material.html">Material</a>;
+
+static function CreateLineMaterial() {
+	if( !lineMaterial ) {
+		lineMaterial = new <a href="../Material/Material.html">Material</a>( "<a href="../Shader/Shader.html">Shader</a> \"Lines/Colored Blended\" {" +
+			"SubShader { Pass { " +
+			" Blend SrcAlpha OneMinusSrcAlpha " +
+			" ZWrite Off Cull Off Fog { Mode Off } " +
+			" BindChannels {" +
+			" Bind \"vertex\", vertex Bind \"color\", color }" +
+			"} } }" );
+		lineMaterial.hideFlags = <a href="../HideFlags/HideFlags.HideAndDontSave.html">HideFlags.HideAndDontSave</a>;
+		lineMaterial.shader.hideFlags = <a href="../HideFlags/HideFlags.HideAndDontSave.html">HideFlags.HideAndDontSave</a>;
+	}
+}
+
+function OnPostRender() {
+	CreateLineMaterial();
+	<span class="notes">// set the current material
+	//设置当前的材质</span>
+	lineMaterial.SetPass( 0 );
+	<a href="GL.Begin.html">GL.Begin</a>( <a href="GL.LINES.html">GL.LINES</a> );
+	<a href="GL.Color.html">GL.Color</a>( <a href="../Color/Color.html">Color</a>(1,1,1,0.5) );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 0, 0, 0 );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 1, 0, 0 );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 0, 1, 0 );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 1, 1, 0 );
+	<a href="GL.Color.html">GL.Color</a>( <a href="../Color/Color.html">Color</a>(0,0,0,0.5) );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 0, 0, 0 );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 0, 1, 0 );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 1, 0, 0 );
+	<a href="GL.Vertex3.html">GL.Vertex3</a>( 1, 1, 0 );
+	<a href="GL.End.html">GL.End</a>();
+} </code></pre></div>
+<p>Note: This class is almost used when you need to draw a couple of lines or triangles, and don't want to deal with meshes.  If you want to avoid surprises the usage pattern is this:</p>
+<div class="note">
+  <pre><code>function OnPostRender() {
+	<span class="notes">// Set your materials
+	//设置材质</span>
+	<a href="GL.PushMatrix.html">GL.PushMatrix</a>();
+	<span class="notes">// yourMaterial.SetPass( );
+	// Draw your stuff
+	//绘制你的东西</span>
+	<a href="GL.PopMatrix.html">GL.PopMatrix</a>();
+}</code></pre></div>
+<p>where at the &quot;// Draw your stuff&quot; you should do SetPass() on some material previously declared, which will be used for drawing.  If you dont call SetPass, then you'll get basically a random material (whatever was used before) which is not good. So do it. </p>
+<p> This class is only available in <em>Unity Pro</em>. </p>
+<p>这个类只能在Unity&nbsp;Pro专业版可用。</p>
+<p> IMPORTANT: This class has no effect on iPhone.</p>
+<p><em>重要事项：</em>这个类在iphone上没有效果。</p>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="GL.TRIANGLES.html">TRIANGLES</a></div>
+    	<div class="licontent">Mode for <a href="GL.Begin.html">Begin</a>: draw triangles.<br />
+   	    从<a href="GL.Begin.html">Begin</a>模式开始后，然后绘制三角形。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.TRIANGLE_STRIP.html">TRIANGLE_STRIP</a></div>
+    	<div class="licontent">Mode for <a href="GL.Begin.html">Begin</a>: draw triangle strip.<br />
+   	    从<a href="GL.Begin.html">Begin</a>模式开始后，然后绘制三角形带。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.QUADS.html">QUADS</a></div>
+    	<div class="licontent">Mode for <a href="GL.Begin.html">Begin</a>: draw quads.<br />
+   	    从<a href="GL.Begin.html">Begin</a>模式开始后，然后绘制四边形。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.LINES.html">LINES</a></div>
+    	<div class="licontent">Mode for <a href="GL.Begin.html">Begin</a>: draw lines.<br />
+   	    从<a href="GL.Begin.html">Begin</a>模式开始后，然后绘制线。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.modelview.html">modelview</a></div>
+    	<div class="licontent">The current modelview matrix.<br />
+   	    返回目前的模型视图矩阵。 </div>
+    </li>
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="GL.Vertex3.html">Vertex3</a></div>
+    	<div class="licontent">Submit a vertex.<br />
+   	    绘制一个顶点。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.Vertex.html">Vertex</a></div>
+    	<div class="licontent">Submit a vertex.<br />
+   	    绘制一个顶点。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.Color.html">Color</a></div>
+    	<div class="licontent">Sets current vertex color.<br />
+   	    设置目前顶点颜色。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.TexCoord.html">TexCoord</a></div>
+    	<div class="licontent">Sets current texture coordinate (v.x,v.y,v.z) for all texture units.<br />
+   	    设置当前纹理(v.x,v.y,v.z)坐标用于所有的纹理单元。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.TexCoord2.html">TexCoord2</a></div>
+    	<div class="licontent">Sets current texture coordinate (x,y) for all texture units.<br />
+   	    设置纹理(x,y)坐标对于所有的纹理单元。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.TexCoord3.html">TexCoord3</a></div>
+    	<div class="licontent">Sets current texture coordinate (x,y,z) for all texture units.<br />
+   	    设置纹理(x,y,z)坐标对于所有的纹理单元。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.MultiTexCoord2.html">MultiTexCoord2</a></div>
+    	<div class="licontent">Sets current texture coordinate (x,y) for the actual texture unit.<br />
+   	    设置纹理(x,y,)坐标对于当前的纹理单元。（多重纹理） </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.MultiTexCoord3.html">MultiTexCoord3</a></div>
+    	<div class="licontent">Sets current texture coordinate (x,y,z) to the actual texture unit.<br />
+   	    设置纹理(x,y,z)坐标对于当前的纹理单元（多重纹理）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.MultiTexCoord.html">MultiTexCoord</a></div>
+    	<div class="licontent">Sets current texture coordinate (v.x,v.y,v.z) to the actual texture unit.<br />
+   	    设置纹理(x,y,z)坐标对于当前的纹理单元（多重纹理）。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.Begin.html">Begin</a></div>
+    	<div class="licontent">Begin drawing 3D primitives.<br />
+   	    开始绘制3d原始物体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.End.html">End</a></div>
+    	<div class="licontent">End drawing 3D primitives.<br />
+   	    结束绘制3D原始物体。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.LoadOrtho.html">LoadOrtho</a></div>
+    	<div class="licontent">Helper function to set up an ortho perspective transform.<br />
+   	    辅助函数用来做一个正交投影变换。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.LoadPixelMatrix.html">LoadPixelMatrix</a></div>
+    	<div class="licontent">Setup a matrix for pixel-correct rendering.<br />
+   	    设置一个矩阵用于像素矫正渲染。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.Viewport.html">Viewport</a></div>
+    	<div class="licontent">Set the rendering viewport.<br />
+   	    定义渲染的视口。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.LoadProjectionMatrix.html">LoadProjectionMatrix</a></div>
+    	<div class="licontent">Load an arbitrary matrix to the current projection matrix.<br />
+   	    加载一个任意的矩阵到当前的投影矩阵。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.LoadIdentity.html">LoadIdentity</a></div>
+    	<div class="licontent">Load the identity matrix to the current modelview matrix.<br />
+   	    加载一个单位矩阵到当前的模型视图矩阵。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.MultMatrix.html">MultMatrix</a></div>
+    	<div class="licontent">Multiplies the current modelview matrix with the one specified.<br />
+        用当前的模型视图矩阵乘以矩阵。
+    	</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.PushMatrix.html">PushMatrix</a></div>
+    	<div class="licontent">Saves both projection and modelview matrices to the matrix stack.<br />
+   	    把投影视图矩阵和模型视图矩阵压入堆栈保存。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.PopMatrix.html">PopMatrix</a></div>
+    	<div class="licontent">Restores both projection and modelview matrices off the top of the matrix stack.<br />
+   	    把投影视图矩阵和模型视图矩阵弹出堆栈。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.GetGPUProjectionMatrix.html">GetGPUProjectionMatrix</a></div>
+    	<div class="licontent">Compute GPU projection matrix from camera's projection matrix.<br />
+   	    从Camera的投影矩阵得到GPU（图形处理器）的投影矩阵。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.SetRevertBackfacing.html">SetRevertBackfacing</a></div>
+    	<div class="licontent">Select whether to invert the backface culling (true) or not (false).<br />
+   	    是否关闭背面消隐功能。默认情况下，背面消隐功能是打开的。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.Clear.html">Clear</a></div>
+    	<div class="licontent">Clear the current render buffer.<br />
+   	    清除当前的缓冲区。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.ClearWithSkybox.html">ClearWithSkybox</a></div>
+    	<div class="licontent">Clear the current render buffer with camera's skybox.<br />
+   	    用camera的天空盒清空缓冲区。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="GL.InvalidateState.html">InvalidateState</a></div>
+    	<div class="licontent">Invalidate the internally cached renderstates.<br />
+   	    使内部渲染绘制状态无效。 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月22日 Tuesday  15:08<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Quaternion 四元数</title>
+<meta name="Keywords" content="unity,Quaternion,四元数" />
+<meta name="Description" content="四元数用于表示旋转。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Quaternion.html">Quaternion</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Quaternion.AngleAxis.html">AngleAxis</a></li>
+                    <li><a href="Quaternion.Angle.html">Angle</a></li>
+                    <li><a href="Quaternion.Dot.html">Dot</a></li>
+                    <li><a href="Quaternion.eulerAngles.html">eulerAngles</a></li>
+                    <li><a href="Quaternion.Euler.html">Euler</a></li>
+                    <li><a href="Quaternion.FromToRotation.html">FromToRotation</a></li>
+                    <li><a href="Quaternion.identity.html">identity</a></li>
+                    <li><a href="Quaternion.Inverse.html">Inverse</a></li>
+                    <li><a href="Quaternion.Lerp.html">Lerp</a></li>
+                    <li><a href="Quaternion.LookRotation.html">LookRotation</a></li>
+                    <li><a href="Quaternion.operator_ne.html">operator !=</a></li>
+                    <li><a href="Quaternion.operator_multiply.html">operator *</a></li>
+                    <li><a href="Quaternion.operator_eq.html">operator ==</a></li>
+                    <li><a href="Quaternion.Quaternion.html">Quaternion</a></li>
+                    <li><a href="Quaternion.RotateTowards.html">RotateTowards</a></li>
+                    <li><a href="Quaternion.SetFromToRotation.html">SetFromToRotation</a></li>
+                    <li><a href="Quaternion.SetLookRotation.html">SetLookRotation</a></li>
+                    <li><a href="Quaternion.Slerp.html">Slerp</a></li>
+                    <li><a href="Quaternion.Index_operator.html">this [int index</a>]</li>
+                    <li><a href="Quaternion.ToAngleAxis.html">ToAngleAxis</a></li>
+                    <li><a href="Quaternion.ToString.html">ToString</a></li>
+                    <li><a href="Quaternion.w.html">w</a></li>
+                    <li><a href="Quaternion.x.html">x</a></li>
+                    <li><a href="Quaternion.y.html">y</a></li>
+                    <li><a href="Quaternion.z.html">z</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Quaternion 四元数</h1>
+<p class="h1inherit">Struct</p>
+<p> Quaternions are used to represent rotations.</p>
+<p>四元数用于表示旋转。</p>
+<p> They are compact, don't suffer from gimbal lock and can easily be interpolated.  Unity internally uses Quaternions to represent all rotations. </p>
+<p>它们是紧凑的，不会出现万向节锁并且能够很容易被插值。Unity内使用Quaternion表示所有旋转。</p>
+<p> However, they are based on complex numbers and are not easy to understand intuitively.  Thus you almost never access or modify individual Quaternion components (x,y,z,w);  most often you would just take existing rotations (e.g. from the <a href="../Transform/Transform.html">Transform</a>) and use them  to construct new rotations (e.g. to smoothly interpolate between two rotations).  The Quaternion functions that you use 99% of the time (The other functions are only for exoctic uses) <a href="Quaternion.LookRotation.html">Quaternion.LookRotation</a>, <a href="Quaternion.Angle.html">Quaternion.Angle</a>, <a href="Quaternion.Euler.html">Quaternion.Euler</a>, <a href="Quaternion.Slerp.html">Quaternion.Slerp</a>, <a href="Quaternion.FromToRotation.html">Quaternion.FromToRotation</a>, <a href="Quaternion.identity.html">Quaternion.identity</a></p>
+<p>然而，它们基于复数的并不容易被直观地理解，因此你没有必要访问或修改单个Quaternion组件(x,y,z,w)；通常你只需把现有的旋转（例如，来自Transform）并使用它们来构造新的旋转（例如，在两个旋转间平滑地插值）。四元数函数你99%的时间你会使用它（其他函数仅额外使用）<a href="Quaternion.LookRotation.html">Quaternion.LookRotation</a>, <a href="Quaternion.Angle.html">Quaternion.Angle</a>, <a href="Quaternion.Euler.html">Quaternion.Euler</a>, <a href="Quaternion.Slerp.html">Quaternion.Slerp</a>, <a href="Quaternion.FromToRotation.html">Quaternion.FromToRotation</a>, <a href="Quaternion.identity.html">Quaternion.identity</a>。</p>
+<p> You can use <a href="Quaternion.operator_multiply.html">Quaternion.operator *</a> to rotate one rotation by another, or to rotate a vector by a rotation.</p>
+<p>你可以使用<a href="Quaternion.operator_multiply.html">Quaternion.operator *</a>由另一个四元数来旋转一个旋转角度，或由一个旋转角度来旋转一个向量。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Quaternion.x.html">x</a></div>
+    	<div class="licontent">X component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
+   	    四元数的X组件。不要直接修改这个，除非你很了解四元数。 </div>
+    </li>
+    <li><div class="lititle"><a href="Quaternion.y.html">y</a></div>
+    	<div class="licontent">Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
+   	    四元数的Y组件。不要直接修改这个，除非你很了解四元数。 </div>
+    </li>
+    <li><div class="lititle"><a href="Quaternion.z.html">z</a></div>
+    	<div class="licontent">Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
+   	    四元数的Z组件。不要直接修改这个，除非你很了解四元数。 </div>
+    </li>
+    <li><div class="lititle"><a href="Quaternion.w.html">w</a></div>
+    	<div class="licontent">W component of the Quaternion. Don't modify this directly unless you know quaternions inside out.<br />
+   	    四元数的W组件。不要直接修改这个，除非你很了解四元数。 </div>
+    </li>
+    <li><div class="lititle"><a href="Quaternion.Index_operator.html">this [int index]</a></div>
+    	<div class="licontent">Access the x, y, z, w components using [0], [1], [2], [3] respectively.<br />
+   	    分别使用 [0]、[1]、 [2]、 [3]，访问x、y、z、w组件。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.eulerAngles.html">eulerAngles</a></div>
+    	<div class="licontent">Returns the euler angle representation of the rotation.<br />
+   	    返回表示旋转的欧拉角度。 </div>
+    </li>
+</ul>
+<h3>Constructors<span class="trans">构造器</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Quaternion.Quaternion.html">Quaternion</a></div>
+    	<div class="licontent">Constructs new Quaternion with given x,y,z,w components.<br />
+   	    用给定的x、y、z、w组件，构造新的四元数。 </div>
+    </li>
+</ul>
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Quaternion.ToAngleAxis.html">ToAngleAxis</a></div>
+    	<div class="licontent">Converts a rotation to angle-axis representation.<br />
+   	    转换一个旋转用“角-轴”表示。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.SetFromToRotation.html">SetFromToRotation</a></div>
+    	<div class="licontent">Creates a rotation which rotates from fromDirection to toDirection.<br />
+   	    创建一个从fromDirection到toDirection的旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.SetLookRotation.html">SetLookRotation</a></div>
+    	<div class="licontent">Creates a rotation that looks along forward with the the head upwards along upwards<br />
+   	    创建一个旋转，沿着forward（z轴）并且头部沿着up（y轴）的约束注视。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.ToString.html">ToString</a></div>
+    	<div class="licontent">Returns a nicely formatted string of the Quaternion<br />
+   	    返回一个格式化好的四元数字符串。 </div>
+    </li>
+</ul>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Quaternion.identity.html">identity</a></div>
+    	<div class="licontent">The identity rotation (Read Only). This quaternion corresponds to "no rotation": the object<br />
+   	    返回恒等式旋转（只读）。这个四元数对于“无旋转”：这个物体完全对齐于世界或父轴。 </div>
+    </li>
+</ul>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="Quaternion.operator_multiply.html">operator *</a></div>
+    	<div class="licontent">Combines rotations lhs and rhs.<br />
+   	    组合旋转lhs和rhs。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.operator_eq.html">operator ==</a></div>
+    	<div class="licontent">Are two quaternions equal to each other?<br />
+   	    两个四元数相等？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.operator_ne.html">operator !=</a></div>
+    	<div class="licontent">Are two quaternions different from each other?<br />
+   	    两个四元数是不相等的？ </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.Dot.html">Dot</a></div>
+    	<div class="licontent">The dot product between two rotations.<br />
+   	    两个旋转之间的点乘。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.AngleAxis.html">AngleAxis</a></div>
+    	<div class="licontent">Creates a rotation which rotates angle degrees around axis.<br />
+   	    绕axis轴旋转angle，创建一个旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.FromToRotation.html">FromToRotation</a></div>
+    	<div class="licontent">Creates a rotation which rotates from fromDirection to toDirection.<br />
+   	    从fromDirection到toDirection创建一个旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.LookRotation.html">LookRotation</a></div>
+    	<div class="licontent">Creates a rotation that looks along forward with the the head upwards along upwards<br />
+   	    创建一个旋转，沿着forward（z轴）并且头部沿着upwards（y轴）的约束注视。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.Slerp.html">Slerp</a></div>
+    	<div class="licontent">Spherically interpolates from towards to by t.<br />
+   	    球形插值，通过t值from向to之间插值。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.Lerp.html">Lerp</a></div>
+    	<div class="licontent">Interpolates from towards to by t and normalizes the result afterwards.<br />
+   	    通过t值from向to之间插值，并且规范化结果。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.RotateTowards.html">RotateTowards</a></div>
+    	<div class="licontent">Rotates a rotation from towards to.<br />
+   	    旋转一个角度从from向to。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.Inverse.html">Inverse</a></div>
+    	<div class="licontent">Returns the Inverse of rotation.<br />
+   	    返回反向的旋转。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.Angle.html">Angle</a></div>
+    	<div class="licontent">Returns the angle in degrees between two rotations a and b.<br />
+   	    返回a和b两者之间的角度。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="Quaternion.Euler.html">Euler</a></div>
+    	<div class="licontent">Returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis (in that order).<br />
+   	    返回一个旋转角度，绕z轴旋转z度，绕x轴旋转x度，绕y轴旋转y度（像这样的顺序）。 </div>
+    </li>
+</ul>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月16日 Sunday  18:10<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

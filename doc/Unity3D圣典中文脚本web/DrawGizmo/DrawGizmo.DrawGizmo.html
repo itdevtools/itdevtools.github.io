@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>DrawGizmo.DrawGizmo 构造DrawGizmo</title>
+<meta name="Keywords" content="unity,DrawGizmo" />
+<meta name="Description" content="当gizmo应该绘制调用时定义。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="DrawGizmo.html">DrawGizmo</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="DrawGizmo.DrawGizmo.html">DrawGizmo</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="DrawGizmo.html">DrawGizmo</a>.DrawGizmo 构造DrawGizmo</h1>
+<p class="h1inherit"></p>
+<p>static function <em>DrawGizmo</em> (<em>gizmo</em> : <a href="../Editor_Enumerations/GizmoType/GizmoType.html">GizmoType</a>) : DrawGizmo </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Defines when the gizmo should be invoked for drawing.</p>
+<p>当gizmo应该绘制调用时定义。</p>
+<p> 参见：<a href="../Editor_Enumerations/GizmoType/GizmoType.html">GizmoType</a></p>
+<div class="note"><pre><code><span class="notes">/// The RenderLightGizmo function will be called if the light is not selected.
+/// The gizmo is drawn when picking.
+///如果灯光不选择RenderLightGizmo函数将被调用
+///当点选时gizmo被绘制</span>
+
+@DrawGizmo (<a href="../Editor_Enumerations/GizmoType/GizmoType.NotSelected.html">GizmoType.NotSelected</a> | <a href="../Editor_Enumerations/GizmoType/GizmoType.Pickable.html">GizmoType.Pickable</a>)
+static function RenderLightGizmo (light : <a href="../Light/Light.html">Light</a>, gizmoType : <a href="../Editor_Enumerations/GizmoType/GizmoType.html">GizmoType</a>) {
+	var position = light.transform.position;
+	<span class="notes">// Draw the light icon //绘制灯光图标
+	// (A bit above the one drawn by the builtin light gizmo renderer)</span>
+	<a href="../Gizmos/Gizmos.DrawIcon.html">Gizmos.DrawIcon</a> (position + <a href="../Vector3/Vector3.up.html">Vector3.up</a>, &quot;Light Gizmo.tiff&quot;);
+
+	<span class="notes">// Are we selected? Draw a solid sphere surrounding the light
+	//当选择时，围绕灯光绘制一个球形</span>
+	if ((gizmoType &amp; <a href="../Editor_Enumerations/GizmoType/GizmoType.SelectedOrChild.html">GizmoType.SelectedOrChild</a>) != 0) {
+	<span class="notes">	// Indicate that this is the active object by using a brighter color.
+		//使用明亮的颜色，表明这是激活的物体</span>
+		if ((gizmoType &amp; <a href="../Editor_Enumerations/GizmoType/GizmoType.Active.html">GizmoType.Active</a>) != 0)
+			<a href="../Gizmos/Gizmos.color.html">Gizmos.color</a> = <a href="../Color/Color.red.html">Color.red</a>;
+		else
+			<a href="../Gizmos/Gizmos.color.html">Gizmos.color </a>= <a href="../Color/Color.red.html">Color.red</a> * 0.5;
+		<a href="../Gizmos/Gizmos.DrawSphere.html">Gizmos.DrawSphere</a> (position, light.range);
+	}
+}
+
+<span class="notes">/*
+// Draw the gizmo if it is selected or a child of the selection.
+// This is the most common way to render a gizmo
+//如果它或它的子物体被选择，绘制gizmo；这是最常用的渲染gizmo方法
+
+@DrawGizmo (<a href="../Editor_Enumerations/GizmoType/GizmoType.SelectedOrChild.html">GizmoType.SelectedOrChild</a>)
+
+// Draw the gizmo only if it is the active object.
+//仅绘制激活物体的gizmo
+
+@DrawGizmo (<a href="../Editor_Enumerations/GizmoType/GizmoType.Active.html">GizmoType.Active</a>)]
+*/</span></code></pre></div>
+<div class="note"><pre><code><span class="notes">/// C# example</span>
+using UnityEditor;
+using UnityEngine;
+
+class GizmoTest {
+	<span class="notes">/// The RenderLightGizmo function will be called if the light is not selected.
+	/// The gizmo is drawn when picking.</span>
+	[DrawGizmo (<a href="../Editor_Enumerations/GizmoType/GizmoType.NotSelected.html">GizmoType.NotSelected</a> | <a href="../Editor_Enumerations/GizmoType/GizmoType.Pickable.html">GizmoType.Pickable</a>)]
+	static void RenderLightGizmo (<a href="../Light/Light.html">Light</a> light, <a href="../Editor_Enumerations/GizmoType/GizmoType.html">GizmoType</a> gizmoType) {
+		<a href="../Vector3/Vector3.html">Vector3</a> position = light.transform.position;
+		<span class="notes">// Draw the light icon
+		// (A bit above the one drawn by the builtin light gizmo renderer)</span>
+		<a href="../Gizmos/Gizmos.DrawIcon.html">Gizmos.DrawIcon</a> (position + <a href="../Vector3/Vector3.up.html">Vector3.up</a>, &quot;Light Gizmo.tiff&quot;);
+
+		<span class="notes">// Are we selected? Draw a solid sphere surrounding the light</span>
+		if ((gizmoType &amp; <a href="../Editor_Enumerations/GizmoType/GizmoType.SelectedOrChild.html">GizmoType.SelectedOrChild</a>) != 0) {
+			// Indicate that this is the active object by using a brighter color.
+			if ((gizmoType &amp; <a href="../Editor_Enumerations/GizmoType/GizmoType.Active.html">GizmoType.Active</a>) != 0)
+				<a href="../Gizmos/Gizmos.color.html">Gizmos.color</a> = <a href="../Color/Color.red.html">Color.red</a>;
+			else
+				<a href="../Gizmos/Gizmos.color.html">Gizmos.color</a> = <a href="../Color/Color.red.html">Color.red</a> * 0.5F;
+			<a href="../Gizmos/Gizmos.DrawSphere.html">Gizmos.DrawSphere</a> (position, light.range);
+		}
+	}
+}
+<span class="notes">/*
+// Draw the gizmo if it is selected or a child of the selection.
+// This is the most common way to render a gizmo
+[DrawGizmo (<a href="../Editor_Enumerations/GizmoType/GizmoType.SelectedOrChild.html">GizmoType.SelectedOrChild</a>)]
+
+// Draw the gizmo only if it is the active object.
+[DrawGizmo (<a href="../Editor_Enumerations/GizmoType/GizmoType.Active.html">GizmoType.Active</a>)]
+*/</span></code></pre></div>
+<p>&#8226; static function <em>DrawGizmo</em> (<em>gizmo</em> : <a href="../Editor_Enumerations/GizmoType/GizmoType.html">GizmoType</a>, <em>drawnGizmoType</em> : Type) : DrawGizmo </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Same as above. drawnGizmoType determines of what type the object we are drawing the gizmo of has to be.</p>
+<p>同上。drawnGizmoType确定了要绘制gizmo物体是什么类型。</p>
+<p> If drawnGizmoType is null, the type will be determined from the first parameter of the draw gizmo method.</p>
+<p>如果drawnGizmoType类型为null，该类型将从绘制gizmo方法的首个参数来确定。</p>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月27日 Friday  17:36<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

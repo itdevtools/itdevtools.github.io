@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Application.LoadLevelAsync 异步加载关卡</title>
+<meta name="Keywords" content="unity,Application,应用程序,LoadLevelAsync,异步加载关卡" />
+<meta name="Description" content="在后台异步加载关卡，也就是说，在后台非同步加载新的场景。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Application.html">Application</a><span class="transer">翻译：^牛^魔王 </span>
+                <ul>
+                    <li><a href="Application.absoluteURL.html">absoluteURL</a></li>
+                    <li><a href="Application.backgroundLoadingPriority.html">backgroundLoadingPriority</a></li>
+                    <li><a href="Application.CancelQuit.html">CancelQuit</a></li>
+                    <li><a href="Application.CanStreamedLevelBeLoaded.html">CanStreamedLevelBeLoaded</a></li>
+                    <li><a href="Application.CaptureScreenshot.html">CaptureScreenshot</a></li>
+                    <li><a href="Application.dataPath.html">dataPath</a></li>
+                    <li><a href="Application.ExternalCall.html">ExternalCall</a></li>
+                    <li><a href="Application.ExternalEval.html">ExternalEval</a></li>
+                    <li><a href="Application.GetStreamProgressForLevel.html">GetStreamProgressForLevel</a></li>
+                    <li><a href="Application.isEditor.html">isEditor</a></li>
+                    <li><a href="Application.isLoadingLevel.html">isLoadingLevel</a></li>
+                    <li><a href="Application.isPlaying.html">isPlaying</a></li>
+                    <li><a href="Application.isWebPlayer.html">isWebPlayer</a></li>
+                    <li><a href="Application.levelCount.html">levelCount</a></li>
+                    <li><a href="Application.loadedLevelName.html">loadedLevelName</a></li>
+                    <li><a href="Application.loadedLevel.html">loadedLevel</a></li>
+                    <li><a href="Application.LoadLevelAdditiveAsync.html">LoadLevelAdditiveAsync</a></li>
+                    <li><a href="Application.LoadLevelAdditive.html">LoadLevelAdditive</a></li>
+                    <li><a href="Application.LoadLevelAsync.html">LoadLevelAsync</a></li>
+                    <li><a href="Application.LoadLevel.html">LoadLevel</a></li>
+                    <li><a href="Application.LogCallback.html">LogCallback</a></li>
+                    <li><a href="Application.OpenURL.html">OpenURL</a></li>
+                    <li><a href="Application.persistentDataPath.html">persistentDataPath</a></li>
+                    <li><a href="Application.platform.html">platform</a></li>
+                    <li><a href="Application.Quit.html">Quit</a></li>
+                    <li><a href="Application.RegisterLogCallbackThreaded.html">RegisterLogCallbackThreaded</a></li>
+                    <li><a href="Application.RegisterLogCallback.html">RegisterLogCallback</a></li>
+                    <li><a href="Application.runInBackground.html">runInBackground</a></li>
+                    <li><a href="Application.srcValue.html">srcValue</a></li>
+                    <li><a href="Application.streamedBytes.html">streamedBytes</a></li>
+                    <li><a href="Application.systemLanguage.html">systemLanguage</a></li>
+                    <li><a href="Application.targetFrameRate.html">targetFrameRate</a></li>
+                    <li><a href="Application.temporaryCachePath.html">temporaryCachePath</a></li>
+                    <li><a href="Application.unityVersion.html">unityVersion</a></li>
+                    <li><a href="Application.webSecurityEnabled.html">webSecurityEnabled</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Application.html">Application</a>.LoadLevelAsync 异步加载关卡</h1>
+<p class="h1inherit"></p>
+<p>static function <em>LoadLevelAsync</em> (<em>levelName</em> : string) : <a href="../AsyncOperation/AsyncOperation.html">AsyncOperation</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Loads the level asynchronously in the   background.</p>
+<p>在后台异步加载关卡，也就是说，在后台非同步加载新的场景。</p>
+<p>Unity will completely load all assets and all   objects in the scene in a background loading thread. This allows you to load new   levels while still playing the current one, show a progress bar or create a   completely streaming world where you constantly load and unload different parts   of the world based on the player position, without any hiccups in game   play.</p>
+<p>Unity将在后台线程完整加载场景所有资源和物体。这允许你加载一个新的关卡，同时当前的关卡仍在播运行，显示进度条或者创建一个完整的流世界，在那里你不断的加载和卸载基于程序位置不同的部分，在游戏中不会有任何的中断。</p>
+<p><a href="../AsyncOperation/AsyncOperation.isDone.html">isDone </a>variable from the resulting <a href="../AsyncOperation/AsyncOperation.html">AsyncOperation </a>can be used to query if the level load has   completed. The result of a LoadLevelAsync can also be used to yield   in a coroutine.</p>
+<p>isDone变量来自<a href="../AsyncOperation/AsyncOperation.html">AsyncOperation</a>异步操作的结果，可以用于如果关卡加载完成的查询。</p>
+<p>When building a player Unity automatically   optimizes assets in such a way that LoadLevelAsync will load them from disk   linearly to avoid seek times. Note that background loading performance in the   Unity Editor is much lower than in the web player or standalone build. In the   Editor you might also get more loading hiccups than in the player.</p>
+<p>当编译一个游戏Unity自动优化资源，LoadLevelAsync将从硬盘以线性加载它们避免从磁盘寻道时间。</p>
+<p>注意，背景加载优先级在Unity编辑器远远低于网页播放器或独立版编译。在编辑器你或许也得到比播放器更多的加载中断。</p>
+<p>This function requires   <em>Unity Pro</em>.</p>
+<p>这个函数需运行在<em>Unity专业版</em>。</p>
+<p>参见: <a href="../AsyncOperation/AsyncOperation.html">AsyncOperation </a>, <a href="Application.backgroundLoadingPriority.html">Application.backgroundLoadingPriority </a>, <a href="Application.LoadLevelAdditiveAsync.html">Application.LoadLevelAdditiveAsync </a>.</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	IEnumerator Start() {
+		AsyncOperation async = Application.LoadLevelAsync("MyBigLevel");
+		yield return async;
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>("Loading complete");
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>function Start () {
+	<span class="notes">// Load the level named "MyBigLevel".
+	//加载名为MyBigLevel的场景</span>
+	var async : AsyncOperation = Application.LoadLevelAsync ("MyBigLevel");
+	yield async;
+	<a href="../Debug/Debug.Log.html">Debug.Log</a>("Loading complete");
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月15日 Wednesday  20:18<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

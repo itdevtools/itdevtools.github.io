@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Overview: Accessing Other Components  概述：访问其他组件</title>
+<meta name="keywords" content="unity,组件,Transform,Camera" />
+<meta name="description" content="组件附属于游戏物体.附一个渲染 Renderer 组件到游戏物体,使他显示到场景,附一个摄像机 Camera 把他变成一个摄像机物体.所有脚本都是组件,因此都能附到游戏物体上." />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+<body>
+
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="../index.html">Unity脚本概述</a> <span class="transer">翻译：脚本_树</span>
+<ul>
+  <li><a title="Common Operations" href="Overview.Common_Operations.html">Common Operations</a></li>
+  <li><a title="Keeping Track of Time" href="Overview.Keeping_Track_of_Time.html">Time</a></li>
+  <li><a title="Accessing Other Components" href="Overview.Accessing_Other_Components.html">Accessing Components</a></li>
+  <li><a title="Accessing Other Game Objects" href="Overview.Accessing_Other_Game_Objects.html">Accessing Objects</a></li>
+  <li><a title="Vectors" href="Overview.Vectors.html">Vectors</a></li>
+  <li><a title="Member Variables &amp; Global Variables" href="Overview.Member_Variables/Global_Variables.html">Variables</a></li>
+  <li><a title="Instantiate" href="Overview.Instantiate.html">Instantiate</a></li>
+  <li><a title="Coroutines &amp; Yield" href="Overview.Coroutines/Yield.html">Coroutines &amp; Yield</a></li>
+  <li><a title="Writing Scripts in C#" href="Overview.Writing_Scripts_in_C.html">Using C#</a></li>
+  <li><a title="The most important classes" href="Overview.The_most_important_classes.html">Important Classes</a></li>
+  <li><span title="Performance Optimization"><a href="Overview.Performance_Optimization.html">Performance Optimization</a></span></li>
+  <li><a title="Script compilation (Advanced)" href="Overview.Script_compilation.html">Script Compilation</a></li>
+</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Overview: Accessing Other Components  访问其他组件</h1>
+<p></p>
+<p>Components are attached to game objects.   Attaching a <a href="../Renderer/Renderer.html">Renderer </a>component to a game object is   what makes it render on the screen, attaching a <a href="../Camera/Camera.html">Camera </a>turns it into a camera object. All   scripts are components thus they can be attached to game objects. </p>
+<p>组件附属于游戏物体.把一个 <a href="../Renderer/Renderer.html">Renderer </a>(渲染器)组件附到游戏对象,可以使游戏对象显示到场景,附一个 <a href="../Camera/Camera.html">Camera </a>(摄像机)可以把物体变成一个摄像机物体.所有脚本都是组件,因此都能附到游戏对象上.</p>
+<p>The most common components are accessible as   simple member variables: </p>
+<p>常用的组件可以通过简单的成员变量取得:</p>
+<p><pre><em>Component</em>	<em>Accessible as</em>
+Transform	         transform
+Rigidbody	         rigidbody
+Renderer	         renderer
+Camera	         camera (only on camera objects)
+Light	                 light (only on light objects)
+Animation	         animation
+Collider	         collider
+... etc.</pre></p>
+<p>For the full list of predefined member variables   see the documentation for the <a href="../Component/Component.html">Component </a>, <a href="../Behaviour/Behaviour.html">Behaviour </a>and <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour </a>classes. If the game object   does not have a component of the type you wish to fetch, the above variables   will be set to null. </p>
+<p>要看所有的预定义成员变量,请查看文档 <a href="../Component/Component.html">Component </a>, <a href="../Behaviour/Behaviour.html">Behaviour </a>和 <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour </a>类.如果游戏对象中没有你想要取得的组件类型,上面的变量值将为null.</p>
+<p>Any component or script attached to a game object   can be accessed through GetComponent.</p>
+<p>附在游戏对象上的组件或脚本可以通过GetComponent获取.</p>
+<div class="wrap">
+    <ul class="tabs">
+        <li><a href="#">C#</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Awake() {
+		transform.Translate(0, 1, 0);
+		GetComponent&lt;Transform&gt;().Translate(0, 1, 0);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>transform.Translate(0, 1, 0);
+<span class="notes">// is equivalent to //相当于</span>
+GetComponent(Transform).Translate(0, 1, 0);</code></pre></div>
+</div>
+<p>Note the case difference between transform and <a href="../Transform/Transform.html">Transform </a>. The former is a variable   (lower case), the latter is a class or script name (upper case). This case   difference lets you to differentiate variables from class&amp;script names. </p>
+<p>注意transform 和 <a href="../Transform/Transform.html">Transform </a>的差异.前面是一个变量(小写),后面是一个类或脚本名称(大写).这个不同之处可以让你区分变量,类和脚本名称.</p>
+<p>Applying what we have learned, we can now find   any script or builtin component which is attached to the same game object using <a href="../Component/Component.GetComponent.html">GetComponent </a>. Please note that to make   the following example work you need to have a script called OtherScript   containing a function DoSomething. The OtherScript script must be attached to   the same game object as the following script.</p>
+<p>应用我们学到的,我们现在能使用 <a href="../Component/Component.GetComponent.html">GetComponent </a>找到附在游戏对象上的脚本或已有的组件.请注意下面的例子,假设你要调用一个名叫OtherScript的脚本,它包含有一个函数DoSomething. OtherScript脚本要附于下面脚本所在的同一游戏对象上.</p>
+<div class="wrap">
+    <ul class="tabs">
+        <li><a href="#">C#</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Update() {
+		System.Object otherScript = GetComponent&lt;OtherScript&gt;();
+		otherScript.DoSomething();
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// This finds the script called OtherScript in the same game object
+// 这个获得同一个物体上的OtherScript脚本
+// and calls DoSomething on it.
+// 访问他的 DoSomething .</span>
+function Update () 
+{
+    otherScript = GetComponent (OtherScript);
+    otherScript.DoSomething();
+}
+
+</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月16日 Monday  21:49<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>

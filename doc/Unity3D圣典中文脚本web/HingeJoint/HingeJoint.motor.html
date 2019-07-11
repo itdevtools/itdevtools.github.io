@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>HingeJoint.motor 动力</title>
+<meta name="Keywords" content="unity,HingeJoint,motor,动力" />
+<meta name="Description" content="动力将应用一个最大力来试图达到目标速度，以 度/秒 为单位。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="HingeJoint.html">HingeJoint</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="HingeJoint.angle.html">angle</a></li>
+                    <li><a href="HingeJoint.limits.html">limits</a></li>
+                    <li><a href="HingeJoint.motor.html">motor</a></li>
+                    <li><a href="HingeJoint.spring.html">spring</a></li>
+                    <li><a href="HingeJoint.useLimits.html">useLimits</a></li>
+                    <li><a href="HingeJoint.useMotor.html">useMotor</a></li>
+                    <li><a href="HingeJoint.useSpring.html">useSpring</a></li>
+                    <li><a href="HingeJoint.velocity.html">velocity</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="HingeJoint.html">HingeJoint</a>.motor 动力</h1>
+<p class="h1inherit"></p>
+<p>var <em>motor</em> : <a href="../JointMotor/JointMotor.html">JointMotor</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> The motor will apply a force up to a maximum force to achieve the target velocity in degrees per second.</p>
+<p>动力将应用一个最大力来试图达到目标速度，以 度/秒 为单位。</p>
+<p> The motor tries to reach motor.targetVelocity angular velocity in degrees per second.  The motor will only be able to reach motor.targetVelocity, if motor.force is sufficiently large.  If the joint is spinning faster than motor.targetVelocity the motor will break.  A negative motor.targetVelocity will make the motor spin in the opposite direction. </p>
+<p>动力试图达到motor.targetVelocity角速度，以 度/秒 为单位。 如果motor.force足够大，动力只能达到motor.targetVelocity。如果关节旋转比motor.targetVelocity快，该动力将断开，负motor.targetVelocity值将使得动力以相反的方向旋转。</p>
+<p> The motor.force is the maximum torque the motor can exert. If it is zero the motor is disabled.     The motor will brake when it is spinning faster than motor.targetVelocity only, if motor.freeSpin is false.  If motor.freeSpin is true the motor will not brake. </p>
+<p>motor.force是动力能够施加的最大力矩。如果为0，动力将禁用。如果 motor.freeSpin为false，动力将只在旋转比motor.targetVelocity快时断开。如果motor.freeSpin为true，动力不会断开。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public void Awake() {
+		hingeJoint.motor.force = 100;
+		hingeJoint.motor.targetVelocity = 90;
+		hingeJoint.motor.freeSpin = false;
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Make the hinge motor rotate with 90 degrees per second and a strong force.
+//创建铰链动力每秒旋转90度和一个强大的力</span>
+
+hingeJoint.motor.force = 100;
+hingeJoint.motor.targetVelocity = 90;
+hingeJoint.motor.freeSpin = false;</code></pre></div>
+</div>
+<p><span>Modifying the motor automatically enables the motor by setting <a href="HingeJoint.useMotor.html">HingeJoint.useMotor</a> to true. </span></p>
+<p>通过设置<a href="HingeJoint.useMotor.html">HingeJoint.useMotor</a>为true，修改动力为自动启用动力。</p>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月28日 Friday  14:42<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

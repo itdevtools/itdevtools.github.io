@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>AndroidJNI 安卓JNI</title>
+<meta name="Keywords" content="unity,Android,安卓,AndroidJNI,安卓JNI" />
+<meta name="Description" content="从Mono (CS/JS)，原始JNI接口到安卓Dalvik (Java)虚拟机。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="AndroidJNI.html">AndroidJNI</a><span class="transer">翻译：U_鹰 </span>
+              <ul>
+                    <li><a href="AndroidJNI.AllocObject.html">AllocObject</a></li>
+                    <li><a href="AndroidJNI.AttachCurrentThread.html">AttachCurrentThread</a></li>
+                    <li><a href="AndroidJNI.CallBooleanMethod.html">CallBooleanMethod</a></li>
+                    <li><a href="AndroidJNI.CallByteMethod.html">CallByteMethod</a></li>
+                    <li><a href="AndroidJNI.CallCharMethod.html">CallCharMethod</a></li>
+                    <li><a href="AndroidJNI.CallDoubleMethod.html">CallDoubleMethod</a></li>
+                    <li><a href="AndroidJNI.CallFloatMethod.html">CallFloatMethod</a></li>
+                    <li><a href="AndroidJNI.CallIntMethod.html">CallIntMethod</a></li>
+                    <li><a href="AndroidJNI.CallLongMethod.html">CallLongMethod</a></li>
+                    <li><a href="AndroidJNI.CallObjectMethod.html">CallObjectMethod</a></li>
+                    <li><a href="AndroidJNI.CallShortMethod.html">CallShortMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticBooleanMethod.html">CallStaticBooleanMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticByteMethod.html">CallStaticByteMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticCharMethod.html">CallStaticCharMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticDoubleMethod.html">CallStaticDoubleMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticFloatMethod.html">CallStaticFloatMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticIntMethod.html">CallStaticIntMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticLongMethod.html">CallStaticLongMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticObjectMethod.html">CallStaticObjectMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticShortMethod.html">CallStaticShortMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticStringMethod.html">CallStaticStringMethod</a></li>
+                    <li><a href="AndroidJNI.CallStaticVoidMethod.html">CallStaticVoidMethod</a></li>
+                    <li><a href="AndroidJNI.CallStringMethod.html">CallStringMethod</a></li>
+                    <li><a href="AndroidJNI.CallVoidMethod.html">CallVoidMethod</a></li>
+                    <li><a href="AndroidJNI.DeleteGlobalRef.html">DeleteGlobalRef</a></li>
+                    <li><a href="AndroidJNI.DeleteLocalRef.html">DeleteLocalRef</a></li>
+                    <li><a href="AndroidJNI.DetachCurrentThread.html">DetachCurrentThread</a></li>
+                    <li><a href="AndroidJNI.EnsureLocalCapacity.html">EnsureLocalCapacity</a></li>
+                    <li><a href="AndroidJNI.ExceptionClear.html">ExceptionClear</a></li>
+                    <li><a href="AndroidJNI.ExceptionDescribe.html">ExceptionDescribe</a></li>
+                    <li><a href="AndroidJNI.ExceptionOccurred.html">ExceptionOccurred</a></li>
+                    <li><a href="AndroidJNI.FatalError.html">FatalError</a></li>
+                    <li><a href="AndroidJNI.FindClass.html">FindClass</a></li>
+                    <li><a href="AndroidJNI.FromBooleanArray.html">FromBooleanArray</a></li>
+                    <li><a href="AndroidJNI.FromByteArray.html">FromByteArray</a></li>
+                    <li><a href="AndroidJNI.FromCharArray.html">FromCharArray</a></li>
+                    <li><a href="AndroidJNI.FromDoubleArray.html">FromDoubleArray</a></li>
+                    <li><a href="AndroidJNI.FromFloatArray.html">FromFloatArray</a></li>
+                    <li><a href="AndroidJNI.FromIntArray.html">FromIntArray</a></li>
+                    <li><a href="AndroidJNI.FromLongArray.html">FromLongArray</a></li>
+                    <li><a href="AndroidJNI.FromObjectArray.html">FromObjectArray</a></li>
+                    <li><a href="AndroidJNI.FromReflectedField.html">FromReflectedField</a></li>
+                    <li><a href="AndroidJNI.FromReflectedMethod.html">FromReflectedMethod</a></li>
+                    <li><a href="AndroidJNI.FromShortArray.html">FromShortArray</a></li>
+                    <li><a href="AndroidJNI.GetArrayLength.html">GetArrayLength</a></li>
+                    <li><a href="AndroidJNI.GetBooleanArrayElement.html">GetBooleanArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetBooleanField.html">GetBooleanField</a></li>
+                    <li><a href="AndroidJNI.GetByteArrayElement.html">GetByteArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetByteField.html">GetByteField</a></li>
+                    <li><a href="AndroidJNI.GetCharArrayElement.html">GetCharArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetCharField.html">GetCharField</a></li>
+                    <li><a href="AndroidJNI.GetDoubleArrayElement.html">GetDoubleArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetDoubleField.html">GetDoubleField</a></li>
+                    <li><a href="AndroidJNI.GetFieldID.html">GetFieldID</a></li>
+                    <li><a href="AndroidJNI.GetFloatArrayElement.html">GetFloatArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetFloatField.html">GetFloatField</a></li>
+                    <li><a href="AndroidJNI.GetIntArrayElement.html">GetIntArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetIntField.html">GetIntField</a></li>
+                    <li><a href="AndroidJNI.GetLongArrayElement.html">GetLongArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetLongField.html">GetLongField</a></li>
+                    <li><a href="AndroidJNI.GetMethodID.html">GetMethodID</a></li>
+                    <li><a href="AndroidJNI.GetObjectArrayElement.html">GetObjectArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetObjectClass.html">GetObjectClass</a></li>
+                    <li><a href="AndroidJNI.GetObjectField.html">GetObjectField</a></li>
+                    <li><a href="AndroidJNI.GetShortArrayElement.html">GetShortArrayElement</a></li>
+                    <li><a href="AndroidJNI.GetShortField.html">GetShortField</a></li>
+                    <li><a href="AndroidJNI.GetStaticBooleanField.html">GetStaticBooleanField</a></li>
+                    <li><a href="AndroidJNI.GetStaticByteField.html">GetStaticByteField</a></li>
+                    <li><a href="AndroidJNI.GetStaticCharField.html">GetStaticCharField</a></li>
+                    <li><a href="AndroidJNI.GetStaticDoubleField.html">GetStaticDoubleField</a></li>
+                    <li><a href="AndroidJNI.GetStaticFieldID.html">GetStaticFieldID</a></li>
+                    <li><a href="AndroidJNI.GetStaticFloatField.html">GetStaticFloatField</a></li>
+                    <li><a href="AndroidJNI.GetStaticIntField.html">GetStaticIntField</a></li>
+                    <li><a href="AndroidJNI.GetStaticLongField.html">GetStaticLongField</a></li>
+                    <li><a href="AndroidJNI.GetStaticMethodID.html">GetStaticMethodID</a></li>
+                    <li><a href="AndroidJNI.GetStaticObjectField.html">GetStaticObjectField</a></li>
+                    <li><a href="AndroidJNI.GetStaticShortField.html">GetStaticShortField</a></li>
+                    <li><a href="AndroidJNI.GetStaticStringField.html">GetStaticStringField</a></li>
+                    <li><a href="AndroidJNI.GetStringField.html">GetStringField</a></li>
+                    <li><a href="AndroidJNI.GetStringUTFChars.html">GetStringUTFChars</a></li>
+                    <li><a href="AndroidJNI.GetStringUTFLength.html">GetStringUTFLength</a></li>
+                    <li><a href="AndroidJNI.GetSuperclass.html">GetSuperclass</a></li>
+                    <li><a href="AndroidJNI.GetVersion.html">GetVersion</a></li>
+                    <li><a href="AndroidJNI.IsAssignableFrom.html">IsAssignableFrom</a></li>
+                    <li><a href="AndroidJNI.IsInstanceOf.html">IsInstanceOf</a></li>
+                    <li><a href="AndroidJNI.IsSameObject.html">IsSameObject</a></li>
+                    <li><a href="AndroidJNI.NewBooleanArray.html">NewBooleanArray</a></li>
+                    <li><a href="AndroidJNI.NewByteArray.html">NewByteArray</a></li>
+                    <li><a href="AndroidJNI.NewCharArray.html">NewCharArray</a></li>
+                    <li><a href="AndroidJNI.NewDoubleArray.html">NewDoubleArray</a></li>
+                    <li><a href="AndroidJNI.NewFloatArray.html">NewFloatArray</a></li>
+                    <li><a href="AndroidJNI.NewGlobalRef.html">NewGlobalRef</a></li>
+                    <li><a href="AndroidJNI.NewIntArray.html">NewIntArray</a></li>
+                    <li><a href="AndroidJNI.NewLocalRef.html">NewLocalRef</a></li>
+                    <li><a href="AndroidJNI.NewLongArray.html">NewLongArray</a></li>
+                    <li><a href="AndroidJNI.NewObjectArray.html">NewObjectArray</a></li>
+                    <li><a href="AndroidJNI.NewObject.html">NewObject</a></li>
+                    <li><a href="AndroidJNI.NewShortArray.html">NewShortArray</a></li>
+                    <li><a href="AndroidJNI.NewStringUTF.html">NewStringUTF</a></li>
+                    <li><a href="AndroidJNI.PopLocalFrame.html">PopLocalFrame</a></li>
+                    <li><a href="AndroidJNI.PushLocalFrame.html">PushLocalFrame</a></li>
+                    <li><a href="AndroidJNI.SetBooleanArrayElement.html">SetBooleanArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetBooleanField.html">SetBooleanField</a></li>
+                    <li><a href="AndroidJNI.SetByteArrayElement.html">SetByteArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetByteField.html">SetByteField</a></li>
+                    <li><a href="AndroidJNI.SetCharArrayElement.html">SetCharArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetCharField.html">SetCharField</a></li>
+                    <li><a href="AndroidJNI.SetDoubleArrayElement.html">SetDoubleArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetDoubleField.html">SetDoubleField</a></li>
+                    <li><a href="AndroidJNI.SetFloatArrayElement.html">SetFloatArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetFloatField.html">SetFloatField</a></li>
+                    <li><a href="AndroidJNI.SetIntArrayElement.html">SetIntArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetIntField.html">SetIntField</a></li>
+                    <li><a href="AndroidJNI.SetLongArrayElement.html">SetLongArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetLongField.html">SetLongField</a></li>
+                    <li><a href="AndroidJNI.SetObjectArrayElement.html">SetObjectArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetObjectField.html">SetObjectField</a></li>
+                    <li><a href="AndroidJNI.SetShortArrayElement.html">SetShortArrayElement</a></li>
+                    <li><a href="AndroidJNI.SetShortField.html">SetShortField</a></li>
+                    <li><a href="AndroidJNI.SetStaticBooleanField.html">SetStaticBooleanField</a></li>
+                    <li><a href="AndroidJNI.SetStaticByteField.html">SetStaticByteField</a></li>
+                    <li><a href="AndroidJNI.SetStaticCharField.html">SetStaticCharField</a></li>
+                    <li><a href="AndroidJNI.SetStaticDoubleField.html">SetStaticDoubleField</a></li>
+                    <li><a href="AndroidJNI.SetStaticFloatField.html">SetStaticFloatField</a></li>
+                    <li><a href="AndroidJNI.SetStaticIntField.html">SetStaticIntField</a></li>
+                    <li><a href="AndroidJNI.SetStaticLongField.html">SetStaticLongField</a></li>
+                    <li><a href="AndroidJNI.SetStaticObjectField.html">SetStaticObjectField</a></li>
+                    <li><a href="AndroidJNI.SetStaticShortField.html">SetStaticShortField</a></li>
+                    <li><a href="AndroidJNI.SetStaticStringField.html">SetStaticStringField</a></li>
+                    <li><a href="AndroidJNI.SetStringField.html">SetStringField</a></li>
+                    <li><a href="AndroidJNI.ThrowNew.html">ThrowNew</a></li>
+                    <li><a href="AndroidJNI.Throw.html">Throw</a></li>
+                    <li><a href="AndroidJNI.ToBooleanArray.html">ToBooleanArray</a></li>
+                    <li><a href="AndroidJNI.ToByteArray.html">ToByteArray</a></li>
+                    <li><a href="AndroidJNI.ToCharArray.html">ToCharArray</a></li>
+                    <li><a href="AndroidJNI.ToDoubleArray.html">ToDoubleArray</a></li>
+                    <li><a href="AndroidJNI.ToFloatArray.html">ToFloatArray</a></li>
+                    <li><a href="AndroidJNI.ToIntArray.html">ToIntArray</a></li>
+                    <li><a href="AndroidJNI.ToLongArray.html">ToLongArray</a></li>
+                    <li><a href="AndroidJNI.ToObjectArray.html">ToObjectArray</a></li>
+                    <li><a href="AndroidJNI.ToReflectedField.html">ToReflectedField</a></li>
+                    <li><a href="AndroidJNI.ToReflectedMethod.html">ToReflectedMethod</a></li>
+                    <li><a href="AndroidJNI.ToShortArray.html">ToShortArray</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>AndroidJNI 安卓JNI</h1>
+<p class="h1inherit"></p>
+<p> 'Raw' JNI interface to Android Dalvik (Java) VM from Mono (CS/JS)</p>
+<p>从Mono (CS/JS)，原始JNI接口到安卓Dalvik (Java)虚拟机。</p>
+<blockquote>JNI是Java Native Interface的缩写，中文为JAVA本地调用。从Java1.1开始，Java Native Interface(JNI)标准成为java平台的一部分，它允许Java代码和其他语言写的代码进行交互。JNI一开始是为了本地已编译语言，尤其是C和C++而设计的，但是它并不妨碍你使用其他语言，只要调用约定受支持就可以了。
+</blockquote>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="AndroidJNI.AttachCurrentThread.html">AttachCurrentThread</a></div>
+    	<div class="licontent">Attaches the current thread to a Java (Dalvik) VM.<br />
+    		附加当前线程到一个Java(Dalvik)虚拟机。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.DetachCurrentThread.html">DetachCurrentThread</a></div>
+    	<div class="licontent">Detaches the current thread from a Java (Dalvik) VM.<br />
+    		从一个Java（Dalvik）虚拟机，分类当前线程。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetVersion.html">GetVersion</a></div>
+    	<div class="licontent">Returns the version of the native method interface.<br />
+    		返回本地方法接口的版本。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FindClass.html">FindClass</a></div>
+    	<div class="licontent">This function loads a locally-defined class.<br />
+    		这个函数加载一个本地定义的类。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromReflectedMethod.html">FromReflectedMethod</a></div>
+    	<div class="licontent">Converts a java.lang.reflect.Method or java.lang.reflect.Constructor object to a method ID.<br />
+    		转换一个java.lang.reflect.Method或java.lang.reflect.Constructor对象到一个方法ID。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromReflectedField.html">FromReflectedField</a></div>
+    	<div class="licontent">Converts a java.lang.reflect.Field to a field ID.<br />
+    		转换一个java.lang.reflect.Field到一个域ID。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToReflectedMethod.html">ToReflectedMethod</a></div>
+    	<div class="licontent">Converts a method ID derived from clazz to a java.lang.reflect.Method or java.lang.reflect.Constructor object.<br />
+    		转换一个取自clazz的方法ID到一个java.lang.reflect.Method 或 java.lang.reflect.Constructor对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToReflectedField.html">ToReflectedField</a></div>
+    	<div class="licontent">Converts a field ID derived from cls to a java.lang.reflect.Field object.<br />
+    		转换一个取自clazz的域ID到一个java.lang.reflect.Field对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetSuperclass.html">GetSuperclass</a></div>
+    	<div class="licontent">If clazz represents any class other than the class Object, then this function returns the object that represents the superclass of the class specified by clazz.<br />
+    		如果&nbsp;clazz&nbsp;代表类而非类&nbsp;object，则该函数返回由&nbsp;clazz&nbsp;所指定的类的超类。&nbsp;</div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.IsAssignableFrom.html">IsAssignableFrom</a></div>
+    	<div class="licontent">Determines whether an object of clazz1 can be safely cast to clazz2.<br />
+    		确定&nbsp;clazz1&nbsp;的对象是否可安全地强制转换为&nbsp;clazz2。&nbsp; </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.Throw.html">Throw</a></div>
+    	<div class="licontent">Causes a java.lang.Throwable object to be thrown.<br />
+    		利用指定类的消息（由&nbsp;message&nbsp;指定）构造异常对象并抛出该异常。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ThrowNew.html">ThrowNew</a></div>
+    	<div class="licontent">Constructs an exception object from the specified class with the message specified by message and causes that exception to be thrown.<br />
+    		利用指定类的消息（由&nbsp;message&nbsp;指定）构造异常对象并抛出该异常。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ExceptionOccurred.html">ExceptionOccurred</a></div>
+    	<div class="licontent">Determines if an exception is being thrown<br />
+    		确定是否某个异常正被抛出。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ExceptionDescribe.html">ExceptionDescribe</a></div>
+    	<div class="licontent">Prints an exception and a backtrace of the stack to the logcat<br />
+    		将异常及堆栈的回溯输出到系统错误报告信道。该例程可便利调试操作。&nbsp;</div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ExceptionClear.html">ExceptionClear</a></div>
+    	<div class="licontent">Clears any exception that is currently being thrown.<br />
+    		清除当前抛出的任何异常。如果当前无异常，则此例程不产生任何效果。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FatalError.html">FatalError</a></div>
+    	<div class="licontent">Raises a fatal error and does not expect the VM to recover. This function does not return.<br />
+    		抛出致命错误并且不希望虚拟机进行修复。该函数无返回值。&nbsp; </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.PushLocalFrame.html">PushLocalFrame</a></div>
+    	<div class="licontent">Creates a new local reference frame, in which at least a given number of local references can be created.<br />
+    		创建一个新的局部引入帧，至少一个给定的局部引用可以被创建的数。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.PopLocalFrame.html">PopLocalFrame</a></div>
+    	<div class="licontent">Pops off the current local reference frame, frees all the local references, and returns a local reference in the previous local reference frame for the given result object.<br />
+    		弹出关闭当前局部引用帧，释放所有的本地引用，并返回一个局部引用，在前一个局部引用帧，用于给定的结果对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewGlobalRef.html">NewGlobalRef</a></div>
+    	<div class="licontent">Creates a new global reference to the object referred to by the obj argument.<br />
+    		创建 obj 参数所引用对象的新全局引用。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.DeleteGlobalRef.html">DeleteGlobalRef</a></div>
+    	<div class="licontent">Deletes the global reference pointed to by obj.<br />
+    		删除 obj 所指向的全局引用。&nbsp; </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewLocalRef.html">NewLocalRef</a></div>
+    	<div class="licontent">Creates a new local reference that refers to the same object as obj.<br />
+    		创建 obj 参数对象的新局部引用。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.DeleteLocalRef.html">DeleteLocalRef</a></div>
+    	<div class="licontent">Deletes the local reference pointed to by obj.<br />
+    		删除 obj 所指向的局部引用。&nbsp; </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.IsSameObject.html">IsSameObject</a></div>
+    	<div class="licontent">Tests whether two references refer to the same Java object.<br />
+    		测试两个引用是否引用同一&nbsp;Java&nbsp;对象。&nbsp; </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.EnsureLocalCapacity.html">EnsureLocalCapacity</a></div>
+    	<div class="licontent">Ensures that at least a given number of local references can be created in the current thread.<br />
+    		在当前线程确保至少一个可以被创建的给定局部引用数。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.AllocObject.html">AllocObject</a></div>
+    	<div class="licontent">Allocates a new Java object without invoking any of the constructors for the object.<br />
+    		分配新&nbsp;Java&nbsp;对象而不调用该对象的任何构造函数。返回该对象的引用。&nbsp; </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewObject.html">NewObject</a></div>
+    	<div class="licontent">Constructs a new Java object. The method ID indicates which constructor method to invoke. This ID must be obtained by calling GetMethodID() with as the method name and void (V) as the return type.<br />
+    		构造新的&nbsp;Java&nbsp;对象。方法&nbsp;ID指示应调用的构造函数方法。该&nbsp;ID&nbsp;必须通过调用&nbsp;GetMethodID()&nbsp;获得，且调用时的方法名必须为&nbsp;&lt;init&gt;，而返回类型必须为&nbsp;void&nbsp;(V)。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetObjectClass.html">GetObjectClass</a></div>
+    	<div class="licontent">Returns the class of an object.<br />
+    		返回一个对象的类。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.IsInstanceOf.html">IsInstanceOf</a></div>
+    	<div class="licontent">Tests whether an object is an instance of a class.<br />
+    		测试对象是否为某个类的实例。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetMethodID.html">GetMethodID</a></div>
+    	<div class="licontent">Returns the method ID for an instance (nonstatic) method of a class or interface.<br />
+    		返回类或接口实例（非静态）方法的方法&nbsp;ID。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetFieldID.html">GetFieldID</a></div>
+    	<div class="licontent">Returns the field ID for an instance (nonstatic) field of a class.<br />
+    		返回类的实例（非静态）域的域&nbsp;ID。该域由其名称及签名指定。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticMethodID.html">GetStaticMethodID</a></div>
+    	<div class="licontent">Returns the method ID for a static method of a class.<br />
+    		返回类的静态方法的方法&nbsp;ID。方法由其名称和签名指定。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticFieldID.html">GetStaticFieldID</a></div>
+    	<div class="licontent">Returns the field ID for a static field of a class.<br />
+    		返回类的静态域的域&nbsp;ID。域由其名称和签名指定。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewStringUTF.html">NewStringUTF</a></div>
+    	<div class="licontent">Constructs a new java.lang.String object from an array of characters in modified UTF-8 encoding.<br />
+    		利用&nbsp;UTF-8&nbsp;字符数组构造新的 java.lang.String 对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStringUTFLength.html">GetStringUTFLength</a></div>
+    	<div class="licontent">Returns the length in bytes of the modified UTF-8 representation of a string.<br />
+    		以字节为单位返回字符串的&nbsp;UTF-8&nbsp;长度。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStringUTFChars.html">GetStringUTFChars</a></div>
+    	<div class="licontent">Returns a managed string object representing the string in modified UTF-8 encoding.<br />
+    		返回由UTF-8修改的托管的字符串对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStringMethod.html">CallStringMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallObjectMethod.html">CallObjectMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallIntMethod.html">CallIntMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallBooleanMethod.html">CallBooleanMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallShortMethod.html">CallShortMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallByteMethod.html">CallByteMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallCharMethod.html">CallCharMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallFloatMethod.html">CallFloatMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallDoubleMethod.html">CallDoubleMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallLongMethod.html">CallLongMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallVoidMethod.html">CallVoidMethod</a></div>
+    	<div class="licontent">Calls an instance (nonstatic) Java method defined by methodID, optionally passing an array of arguments (args) to the method.<br />
+    		调用一个由methodID定义的实例的Java方法，可选择传递参数（args）的数组到这个方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStringField.html">GetStringField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。</div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetObjectField.html">GetObjectField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetBooleanField.html">GetBooleanField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetByteField.html">GetByteField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetCharField.html">GetCharField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetShortField.html">GetShortField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetIntField.html">GetIntField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetLongField.html">GetLongField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetFloatField.html">GetFloatField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetDoubleField.html">GetDoubleField</a></div>
+    	<div class="licontent">This function returns the value of an instance (nonstatic) field of an object.<br />
+    		这个函数返回一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStringField.html">SetStringField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetObjectField.html">SetObjectField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetBooleanField.html">SetBooleanField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetByteField.html">SetByteField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetCharField.html">SetCharField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetShortField.html">SetShortField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetIntField.html">SetIntField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetLongField.html">SetLongField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetFloatField.html">SetFloatField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetDoubleField.html">SetDoubleField</a></div>
+    	<div class="licontent">This function sets the value of an instance (nonstatic) field of an object.<br />
+    		这个函数设置一个对象实例（非静态）域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticStringMethod.html">CallStaticStringMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticObjectMethod.html">CallStaticObjectMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticIntMethod.html">CallStaticIntMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticBooleanMethod.html">CallStaticBooleanMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticShortMethod.html">CallStaticShortMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticByteMethod.html">CallStaticByteMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticCharMethod.html">CallStaticCharMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticFloatMethod.html">CallStaticFloatMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticDoubleMethod.html">CallStaticDoubleMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticLongMethod.html">CallStaticLongMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.CallStaticVoidMethod.html">CallStaticVoidMethod</a></div>
+    	<div class="licontent">Invokes a static method on a Java object, according to the specified methodID, optionally passing an array of arguments (args) to the method.<br />
+    		在一个Java对象调用一个静态方法，根据指定的methodID，可选传递参数（args）的数组到该方法。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticStringField.html">GetStaticStringField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticObjectField.html">GetStaticObjectField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticBooleanField.html">GetStaticBooleanField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticByteField.html">GetStaticByteField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticCharField.html">GetStaticCharField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticShortField.html">GetStaticShortField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticIntField.html">GetStaticIntField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticLongField.html">GetStaticLongField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticFloatField.html">GetStaticFloatField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetStaticDoubleField.html">GetStaticDoubleField</a></div>
+    	<div class="licontent">This function returns the value of a static field of an object.<br />
+    		这个函数返回一个对象静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticStringField.html">SetStaticStringField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticObjectField.html">SetStaticObjectField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticBooleanField.html">SetStaticBooleanField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticByteField.html">SetStaticByteField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticCharField.html">SetStaticCharField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticShortField.html">SetStaticShortField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticIntField.html">SetStaticIntField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticLongField.html">SetStaticLongField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticFloatField.html">SetStaticFloatField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetStaticDoubleField.html">SetStaticDoubleField</a></div>
+    	<div class="licontent">This function ets the value of a static field of an object.<br />
+    		这个函数设置一个对象的静态域的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToBooleanArray.html">ToBooleanArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Boolean to a Java array of boolean.<br />
+    		转换一个System.Boolean的托管数组到一个Java布尔数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToByteArray.html">ToByteArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Byte to a Java array of byte.<br />
+    		转换一个System.Byte的托管数组到一个Java的字节数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToCharArray.html">ToCharArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Char to a Java array of char.<br />
+    		转换一个System.Char的托管数组到一个Java的字符数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToShortArray.html">ToShortArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Int16 to a Java array of short.<br />
+    		转换一个System.Int16的托管数组到一个Java的短整数数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToIntArray.html">ToIntArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Int32 to a Java array of int.<br />
+    		转换一个System.Int32的托管数组到一个Java的整数数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToLongArray.html">ToLongArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Int64 to a Java array of long.<br />
+    		转换一个System.Int64的托管数组到一个Java的长整数数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToFloatArray.html">ToFloatArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Single to a Java array of float.<br />
+    		转换一个System.Single的托管数组到一个Java的浮点数数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToDoubleArray.html">ToDoubleArray</a></div>
+    	<div class="licontent">Convert a managed array of System.Double to a Java array of double.<br />
+    		转换一个System.Double的托管数组到一个Java的双精度浮点数数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.ToObjectArray.html">ToObjectArray</a></div>
+    	<div class="licontent">Convert a managed array of System.IntPtr, representing Java objects, to a Java array of java.lang.Object.<br />
+    		转换一个System.IntPtr的托管数组，表示Java对象，到一个Java的java.lang.Object数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromBooleanArray.html">FromBooleanArray</a></div>
+    	<div class="licontent">Convert a Java array of boolean to a managed array of System.Boolean.<br />
+    		转换一个Java布尔数组到一个托管System.Boolean数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromByteArray.html">FromByteArray</a></div>
+    	<div class="licontent">Convert a Java array of byte to a managed array of System.Byte.<br />
+    		转换一个Java字节数组到一个托管的System.Byte数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromCharArray.html">FromCharArray</a></div>
+    	<div class="licontent">Convert a Java array of char to a managed array of System.Char.<br />
+    		转换一个Java字符数组到一个托管的System.Char数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromShortArray.html">FromShortArray</a></div>
+    	<div class="licontent">Convert a Java array of short to a managed array of System.Int16.<br />
+    		转换一个Java短整数数组到一个托管的System.Int16数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromIntArray.html">FromIntArray</a></div>
+    	<div class="licontent">Convert a Java array of int to a managed array of System.Int32.<br />
+    		转换一个Java整数数组到一个托管的System.Int32数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromLongArray.html">FromLongArray</a></div>
+    	<div class="licontent">Convert a Java array of long to a managed array of System.Int64.<br />
+    		转换一个Java长整数数组到一个托管的System.Int64数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromFloatArray.html">FromFloatArray</a></div>
+    	<div class="licontent">Convert a Java array of float to a managed array of System.Single.<br />
+    		转换一个Java浮点数数组到一个托管的System.Single数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromDoubleArray.html">FromDoubleArray</a></div>
+    	<div class="licontent">Convert a Java array of double to a managed array of System.Double.<br />
+    		转换一个Java双精度浮点数数组到一个托管的System.Double数组。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.FromObjectArray.html">FromObjectArray</a></div>
+    	<div class="licontent">Convert a Java array of java.lang.Object to a managed array of System.IntPtr, representing Java objects.<br />
+    		转换一个Java的java.lang.Object数组到一个托管的System.IntPtr数组，表示Java对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetArrayLength.html">GetArrayLength</a></div>
+    	<div class="licontent">Returns the number of elements in the array.<br />
+    		返回数组的元素数。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewBooleanArray.html">NewBooleanArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewByteArray.html">NewByteArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewCharArray.html">NewCharArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewShortArray.html">NewShortArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewIntArray.html">NewIntArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewLongArray.html">NewLongArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewFloatArray.html">NewFloatArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewDoubleArray.html">NewDoubleArray</a></div>
+    	<div class="licontent">Construct a new primitive array object.<br />
+    		构造一个新的基本数组对象。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.NewObjectArray.html">NewObjectArray</a></div>
+    	<div class="licontent">Constructs a new array holding objects in class clazz. All elements are initially set to obj.<br />
+    		构造新的数组，它将保存在类 clazz&nbsp;中的对象。所有元素初始值均设为&nbsp;obj。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetBooleanArrayElement.html">GetBooleanArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetByteArrayElement.html">GetByteArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetCharArrayElement.html">GetCharArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetShortArrayElement.html">GetShortArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetIntArrayElement.html">GetIntArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetLongArrayElement.html">GetLongArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetFloatArrayElement.html">GetFloatArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetDoubleArrayElement.html">GetDoubleArrayElement</a></div>
+    	<div class="licontent">Returns the value of one element of a primitive array.<br />
+    		返回一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.GetObjectArrayElement.html">GetObjectArrayElement</a></div>
+    	<div class="licontent">Returns an element of an Object array.<br />
+    		返回一个对象数组的一个元素。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetBooleanArrayElement.html">SetBooleanArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetByteArrayElement.html">SetByteArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetCharArrayElement.html">SetCharArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetShortArrayElement.html">SetShortArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetIntArrayElement.html">SetIntArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetLongArrayElement.html">SetLongArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetFloatArrayElement.html">SetFloatArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetDoubleArrayElement.html">SetDoubleArrayElement</a></div>
+    	<div class="licontent">Sets the value of one element in a primitive array.<br />
+    		设置一个基本数组一个元素的值。 </div>
+    </li>
+    <li><div class="lititle"><a href="AndroidJNI.SetObjectArrayElement.html">SetObjectArrayElement</a></div>
+    	<div class="licontent">Sets an element of an Object array.<br />
+    		设置一个对象数组的一个元素。</div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月15日 Friday  19:49<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

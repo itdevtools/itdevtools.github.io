@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>GUI.BeginScrollView 开始滚动视图</title>
+<meta name="Keywords" content="unity,GUI,界面,BeginScrollView,滚动视图" />
+<meta name="Description" content="在你的GUI里，开始一个滚动视图" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="GUI.html">GUI</a> <span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="GUI.backgroundColor.html">backgroundColor</a></li>
+                    <li><a href="GUI.BeginGroup.html">BeginGroup</a></li>
+                    <li><a href="GUI.BeginScrollView.html">BeginScrollView</a></li>
+                    <li><a href="GUI.Box.html">Box</a></li>
+                    <li><a href="GUI.BringWindowToBack.html">BringWindowToBack</a></li>
+                    <li><a href="GUI.BringWindowToFront.html">BringWindowToFront</a></li>
+                    <li><a href="GUI.Button.html">Button</a></li>
+                    <li><a href="GUI.changed.html">changed</a></li>
+                    <li><a href="GUI.color.html">color</a></li>
+                    <li><a href="GUI.contentColor.html">contentColor</a></li>
+                    <li><a href="GUI.depth.html">depth</a></li>
+                    <li><a href="GUI.DragWindow.html">DragWindow</a></li>
+                    <li><a href="GUI.DrawTexture.html">DrawTexture</a></li>
+                    <li><a href="GUI.enabled.html">enabled</a></li>
+                    <li><a href="GUI.EndGroup.html">EndGroup</a></li>
+                    <li><a href="GUI.EndScrollView.html">EndScrollView</a></li>
+                    <li><a href="GUI.FocusControl.html">FocusControl</a></li>
+                    <li><a href="GUI.FocusWindow.html">FocusWindow</a></li>
+                    <li><a href="GUI.GetNameOfFocusedControl.html">GetNameOfFocusedControl</a></li>
+                    <li><a href="GUI.GUI.html">GUI</a></li>
+                    <li><a href="GUI.HorizontalScrollbar.html">HorizontalScrollbar</a></li>
+                    <li><a href="GUI.HorizontalSlider.html">HorizontalSlider</a></li>
+                    <li><a href="GUI.Label.html">Label</a></li>
+                    <li><a href="GUI.matrix.html">matrix</a></li>
+                    <li><a href="GUI.PasswordField.html">PasswordField</a></li>
+                    <li><a href="GUI.RepeatButton.html">RepeatButton</a></li>
+                    <li><a href="GUI.ScrollTo.html">ScrollTo</a></li>
+                    <li><a href="GUI.SelectionGrid.html">SelectionGrid</a></li>
+                    <li><a href="GUI.SetNextControlName.html">SetNextControlName</a></li>
+                    <li><a href="GUI.skin.html">skin</a></li>
+                    <li><a href="GUI.TextArea.html">TextArea</a></li>
+                    <li><a href="GUI.TextField.html">TextField</a></li>
+                    <li><a href="GUI.Toggle.html">Toggle</a></li>
+                    <li><a href="GUI.Toolbar.html">Toolbar</a></li>
+                    <li><a href="GUI.tooltip.html">tooltip</a></li>
+                    <li><a href="GUI.UnfocusWindow.html">UnfocusWindow</a></li>
+                    <li><a href="GUI.VerticalScrollbar.html">VerticalScrollbar</a></li>
+                    <li><a href="GUI.VerticalSlider.html">VerticalSlider</a></li>
+                    <li><a href="GUI.Window.html">Window</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="GUI.html">GUI</a>.BeginScrollView  开始滚动视图</h1>
+<p></p>
+<p>static function <em>BeginScrollView</em> (<em>position</em> : <a href="../Rect/Rect.html">Rect</a>, <em>scrollPosition</em> : <a href="../Vector2/Vector2.html">Vector2</a>, <em>viewRect</em> : <a href="../Rect/Rect.html">Rect</a>) : <a href="../Vector2/Vector2.html">Vector2</a><br />
+static function <em>BeginScrollView</em> (<em>position</em> : <a href="../Rect/Rect.html">Rect</a>, <em>scrollPosition</em> : <a href="../Vector2/Vector2.html">Vector2</a>, <em>viewRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>alwaysShowHorizontal</em> : bool, <em>alwaysShowVertical</em> : bool) : <a href="../Vector2/Vector2.html">Vector2</a><br />
+static function <em>BeginScrollView</em> (<em>position</em> : <a href="../Rect/Rect.html">Rect</a>, <em>scrollPosition</em> : <a href="../Vector2/Vector2.html">Vector2</a>, <em>viewRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>horizontalScrollbar</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>, <em>verticalScrollbar</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>) : <a href="../Vector2/Vector2.html">Vector2</a><br />
+static function <em>BeginScrollView</em> (<em>position</em> : <a href="../Rect/Rect.html">Rect</a>, <em>scrollPosition</em> : <a href="../Vector2/Vector2.html">Vector2</a>, <em>viewRect</em> : <a href="../Rect/Rect.html">Rect</a>, <em>alwaysShowHorizontal</em> : bool, <em>alwaysShowVertical</em> : bool, <em>horizontalScrollbar</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>, <em>verticalScrollbar</em> : <a href="../GUIStyle/GUIStyle.html">GUIStyle</a>) : <a href="../Vector2/Vector2.html">Vector2</a></p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><em>position</em></div>
+    	<div class="licontent">Rectangle on the screen to use for the ScrollView.<br />
+    	用于滚动视图在屏幕上矩形的位置</div>
+    </li>
+    <li><div class="lititle"><em>scrollPosition</em></div>
+    	<div class="licontent">The position to use display.<br />
+    	  用来显示滚动位置<br />
+    	</div>
+    </li>
+    <li><div class="lititle"><em>viewRect</em></div>
+    	<div class="licontent">The rectangle used inside the scrollview.<br />
+    	滚动视图内使用的矩形</div>
+    </li>
+    <li><div class="lititle"><em>alwayShowHorizontal</em></div>
+    	<div class="licontent">Optional parameter to always show the horizontal scrollbar. If false or left out, it is only shown when clientRect is wider than position.<br />
+    	可选参数，总是显示水平滚动条，如果false或者不设置，它仅在内矩形比外矩形大的时候显示。</div>
+    </li>
+    <li><div class="lititle"><em>alwayShowVertical</em></div>
+    	<div class="licontent">Optional parameter to always show the vertical scrollbar. If false or left out, it is only shown when clientRect is taller than position.<br />
+   	    可选参数，总是显示垂直滚动条，如果false或者不设置，它仅在内矩形比外矩形大的时候显示。</div>
+    </li>
+    <li><div class="lititle"><em>horizontalScrollbar</em></div>
+    	<div class="licontent">Optional GUIStyle to use for the horizontal scrollbar. If left out, the horizontalScrollbar style from the current GUISkin is used.<br />
+    	用于水平滚动条的可选GUIStyle，如果不设置，水平滚动条样式应用当前的GUISkin皮肤。</div>
+    </li>
+    <li><div class="lititle"><em>verticalScrollbar</em></div>
+    	<div class="licontent">Optional GUIStyle to use for the vertical scrollbar. If left out, the verticalScrollbar style from the current GUISkin is used. <br />
+   	    用于垂直滚动条的可选GUIStyle，如果不设置，垂直滚动条样式应用当前的GUISkin皮肤。 </div>
+    </li>
+</ul>
+	
+	
+	
+	
+	
+	
+	
+<em>Returns</em>
+
+<p><a href="../Vector2/Vector2.html">Vector2</a> - The modified scrollPosition. Feed this back into the variable you pass in, as shown in the example.</p>
+<p>返回Vector2类型，被修改的滚动位置<em>scrollPosition</em>。返回值应回传给你的变量，看下面的例子。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+
+<p> Begin a scrolling view inside your GUI. </p>
+<p>在你的GUI里，开始一个滚动视图，  注意BeginScrollView和EndScrollView它们是成对出现的。  </p>
+<p> ScrollViews let you make a smaller area on-screen   look 'into' a much larger area, using scrollbars placed on the sides of   the ScrollView. </p>
+<p>滚动视图让你在屏幕上一个小的区域，使用滚动是视图的滚动条查看一个大的区域。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Vector2/Vector2.html">Vector2</a> scrollPosition = <a href="../Vector2/Vector2.zero.html">Vector2.zero</a>;
+	void OnGUI() {
+		scrollPosition = <a href="GUI.BeginScrollView.html">GUI.BeginScrollView</a>(new <a href="../Rect/Rect.html">Rect</a>(10, 300, 100, 100), scrollPosition, new <a href="../Rect/Rect.html">Rect</a>(0, 0, 220, 200));
+		<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(0, 0, 100, 20), &quot;Top-left&quot;);
+		<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(120, 0, 100, 20), &quot;Top-right&quot;);
+		<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(0, 180, 100, 20), &quot;Bottom-left&quot;);
+		<a href="GUI.Button.html">GUI.Button</a>(new <a href="../Rect/Rect.html">Rect</a>(120, 180, 100, 20), &quot;Bottom-right&quot;);
+		<a href="GUI.EndScrollView.html">GUI.EndScrollView</a>();
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">//定义默认的滚动条位置为0,0</span>
+var scrollPosition : <a href="../Vector2/Vector2.html">Vector2</a> = <a href="../Vector2/Vector2.zero.html">Vector2.zero</a>;
+
+function OnGUI () {
+	<span class="notes">//我们创建一个100,100的滚动视图，滚动内容为220,200，就是我们要查看的内容比滚动视图大</span>
+	scrollPosition = <a href="GUI.BeginScrollView.html">GUI.BeginScrollView</a> (<a href="../Rect/Rect.html">Rect</a> (10,300,100,100),scrollPosition, <a href="../Rect/Rect.html">Rect</a> (0, 0, 220, 200));
+
+	<span class="notes">// 我们创建一个100,100的滚动视图，滚动内容为220,200，就是我们要查看的内容比滚动视图大
+	// 返回值赋回给我们定义的变量</span>
+	<a href="GUI.Button.html">GUI.Button</a> (<a href="../Rect/Rect.html">Rect</a> (0,0,100,20), &quot;Top-left&quot;);
+	<a href="GUI.Button.html">GUI.Button</a> (<a href="../Rect/Rect.html">Rect</a> (120,0,100,20), &quot;Top-right&quot;);
+	<a href="GUI.Button.html">GUI.Button</a> (<a href="../Rect/Rect.html">Rect</a> (0,180,100,20), &quot;Bottom-left&quot;);
+	<a href="GUI.Button.html">GUI.Button</a> (<a href="../Rect/Rect.html">Rect</a> (120,180,100,20), &quot;Bottom-right&quot;);
+
+	<span class="notes">// 结束滚动视图</span>
+	<a href="GUI.EndScrollView.html">GUI.EndScrollView</a> ();
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月14日 Friday  20:17<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

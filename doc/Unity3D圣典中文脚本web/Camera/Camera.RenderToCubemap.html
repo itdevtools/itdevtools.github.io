@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Camera.RenderToCubemap 渲染到立方图</title>
+<meta name="Keywords" content="unity,Camera,RenderToCubemap,渲染到立方图" />
+<meta name="Description" content="从这个相机渲染到一个立方贴图。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Camera.html">Camera</a><span class="transer">翻译：Ｙīm</span>
+                <ul>
+                    <li><a href="Camera.actualRenderingPath.html">actualRenderingPath</a></li>
+                    <li><a href="Camera.allCameras.html">allCameras</a></li>
+                    <li><a href="Camera.aspect.html">aspect</a></li>
+                    <li><a href="Camera.backgroundColor.html">backgroundColor</a></li>
+                    <li><a href="Camera.cameraToWorldMatrix.html">cameraToWorldMatrix</a></li>
+                    <li><a href="Camera.clearFlags.html">clearFlags</a></li>
+                    <li><a href="Camera.CopyFrom.html">CopyFrom</a></li>
+                    <li><a href="Camera.cullingMask.html">cullingMask</a></li>
+                    <li><a href="Camera.current.html">current</a></li>
+                    <li><a href="Camera.depthTextureMode.html">depthTextureMode</a></li>
+                    <li><a href="Camera.depth.html">depth</a></li>
+                    <li><a href="Camera.farClipPlane.html">farClipPlane</a></li>
+                    <li><a href="Camera.fieldOfView.html">fieldOfView</a></li>
+                    <li><a href="Camera.layerCullDistances.html">layerCullDistances</a></li>
+                    <li><a href="Camera.main.html">main</a></li>
+                    <li><a href="Camera.nearClipPlane.html">nearClipPlane</a></li>
+                    <li><a href="Camera.OnPostRender.html">OnPostRender</a></li>
+                    <li><a href="Camera.OnPreCull.html">OnPreCull</a></li>
+                    <li><a href="Camera.OnPreRender.html">OnPreRender</a></li>
+                    <li><a href="Camera.OnRenderImage.html">OnRenderImage</a></li>
+                    <li><a href="Camera.OnRenderObject.html">OnRenderObject</a></li>
+                    <li><a href="Camera.OnWillRenderObject.html">OnWillRenderObject</a></li>
+                    <li><a href="Camera.orthographicSize.html">orthographicSize</a></li>
+                    <li><a href="Camera.orthographic.html">orthographic</a></li>
+                    <li><a href="Camera.pixelHeight.html">pixelHeight</a></li>
+                    <li><a href="Camera.pixelRect.html">pixelRect</a></li>
+                    <li><a href="Camera.pixelWidth.html">pixelWidth</a></li>
+                    <li><a href="Camera.projectionMatrix.html">projectionMatrix</a></li>
+                    <li><a href="Camera.rect.html">rect</a></li>
+                    <li><a href="Camera.renderingPath.html">renderingPath</a></li>
+                    <li><a href="Camera.RenderToCubemap.html">RenderToCubemap</a></li>
+                    <li><a href="Camera.RenderWithShader.html">RenderWithShader</a></li>
+                    <li><a href="Camera.Render.html">Render</a></li>
+                    <li><a href="Camera.ResetAspect.html">ResetAspect</a></li>
+                    <li><a href="Camera.ResetProjectionMatrix.html">ResetProjectionMatrix</a></li>
+                    <li><a href="Camera.ResetReplacementShader.html">ResetReplacementShader</a></li>
+                    <li><a href="Camera.ResetWorldToCameraMatrix.html">ResetWorldToCameraMatrix</a></li>
+                    <li><a href="Camera.ScreenPointToRay.html">ScreenPointToRay</a></li>
+                    <li><a href="Camera.ScreenToViewportPoint.html">ScreenToViewportPoint</a></li>
+                    <li><a href="Camera.ScreenToWorldPoint.html">ScreenToWorldPoint</a></li>
+                    <li><a href="Camera.SetReplacementShader.html">SetReplacementShader</a></li>
+                    <li><a href="Camera.targetTexture.html">targetTexture</a></li>
+                    <li><a href="Camera.velocity.html">velocity</a></li>
+                    <li><a href="Camera.ViewportPointToRay.html">ViewportPointToRay</a></li>
+                    <li><a href="Camera.ViewportToScreenPoint.html">ViewportToScreenPoint</a></li>
+                    <li><a href="Camera.ViewportToWorldPoint.html">ViewportToWorldPoint</a></li>
+                    <li><a href="Camera.worldToCameraMatrix.html">worldToCameraMatrix</a></li>
+                    <li><a href="Camera.WorldToScreenPoint.html">WorldToScreenPoint</a></li>
+                    <li><a href="Camera.WorldToViewportPoint.html">WorldToViewportPoint</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Camera.html">Camera</a>.RenderToCubemap 渲染到立方图</h1>
+<p class="h1inherit"></p>
+<p>function <em>RenderToCubemap</em> (<em>cubemap</em> : <a href="../Cubemap/Cubemap.html">Cubemap</a>, <em>faceMask</em> : int = 63) : bool </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Render into a cubemap from this camera.</p>
+<p>从这个相机渲染到一个立方贴图。</p>
+<p> This is mostly useful in the editor for &quot;baking&quot; static cubemaps of your scene. See  wizard example below. </p>
+<p>这是非常有用的，可以在编辑器中烘焙场景的静态立方贴图。参考下面的向导实例。</p>
+<p> Camera's position, clear flags and clipping plane distances will be used to  render into cubemap faces. faceMask is a bitfield indicating which cubemap faces should be rendered into. Each  bit that is set corresponds to a face. Bit numbers are integer values of <a href="../CubemapFace/CubemapFace.html">CubemapFace</a> enum.  By default all six cubemap faces will be rendered (default value 63 has six lowest bits on). </p>
+<p>相机的位置，清除标志和裁剪面距离将被使用来渲染到立方贴图表面，FaceMask是一比特域，表示那个立方贴图面应该被渲染，每个位对应于一个面。比特数是Cubemapface枚举的整型值。默认的所有六个立方贴图面都被渲染（默认值63的低6位是打开的）。</p>
+<p> This function will return false if rendering to cubemap fails. Some graphics hardware does not  support the functionality. </p>
+<p>如果渲染失败这个函数将返回false，某些显卡不支持这个函数。</p>
+<p> Note: This is a Unity PRO feature. </p>
+<p>注意：这是一个Unity 专业版属性</p>
+<div class="note"><pre><code><span class="notes">// Render scene from a given point into a static cube map.
+//从给定的点渲染香精到以静态立方贴图
+// Place this script in Editor folder of your project.
+//放置这个脚本到工程的Editor文件夹中
+// Then use the cubemap with one of Reflective shaders!
+//然后用一个Reflective shaders 来使用这个立方贴图</span>
+class RenderCubemapWizard extends ScriptableWizard {
+	var renderFromPosition : <a href="../Transform/Transform.html">Transform</a>;
+	var cubemap : <a href="../Cubemap/Cubemap.html">Cubemap</a>;
+
+	function OnWizardUpdate () {
+		helpString = &quot;Select transform to render from and cubemap to render into&quot;;
+		isValid = (renderFromPosition != null) &amp;&amp; (cubemap != null);
+	}
+
+	function OnWizardCreate () {
+		<span class="notes">// create temporary camera for rendering
+		//为渲染创建临时相机</span>
+		var go = new <a href="../GameObject/GameObject.html">GameObject</a>( &quot;CubemapCamera&quot;, Camera );
+		<span class="notes">// place it on the object
+		//放置它到物体上</span>
+		go.transform.position = renderFromPosition.position;
+		go.transform.rotation = <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>;
+
+		<span class="notes">// render into cubemap
+		//渲染到立方贴图    </span>
+		go.camera.RenderToCubemap( cubemap );
+
+		<span class="notes">// destroy temporary camera
+		//销毁临时相机</span>
+		DestroyImmediate( go );
+	}
+
+	@MenuItem(&quot;GameObject/Render into Cubemap&quot;)
+	static function RenderCubemap () {
+		ScriptableWizard.DisplayWizard.&lt;RenderCubemapWizard&gt;(
+		&quot;Render cubemap&quot;, &quot;Render!&quot;);
+	}
+}</code></pre></div>
+<p>&#8226;function <em>RenderToCubemap</em> (<em>cubemap</em> : <a href="../RenderTexture/RenderTexture.html">RenderTexture</a>, <em>faceMask</em> : int = 63) : bool </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Render into a cubemap from this camera.</p>
+<p>从这个相机渲染到一个立方贴图</p>
+<p> This is used for real-time reflections into cubemap render textures. It can be quite expensive though,  especially if all six cubemap faces are rendered each frame. </p>
+<p>这个用于实时反射到立方贴图渲染纹理。这是非常耗时的，尤其是所有六个立方贴图面在每一帧中都被渲染。</p>
+<p> Camera's position, clear flags and clipping plane distances will be used to  render into cubemap faces. faceMask is a bitfield indicating which cubemap faces should be rendered into. Each  bit that is set corresponds to a face. Bit numbers are integer values of <a href="../CubemapFace/CubemapFace.html">CubemapFace</a> enum.  By default all six cubemap faces will be rendered (default value 63 has six lowest bits on). </p>
+<p>相机的位置，清除标志和裁剪面距离将被使用来渲染到立方贴图表面，FaceMask是一比特域，表示那个立方贴图面应该被渲染，每个位对应于一个面。比特数是Cubemapface枚举的整型值。默认的所有六个立方贴图面都被渲染（默认值63的低6位是打开的）。</p>
+<p> This function will return false if rendering to cubemap fails. Some graphics hardware does not  support the functionality. </p>
+<p>如果渲染失败这个函数将返回false，某些显卡不支持这个函数。</p>
+<p> Note: This is a Unity PRO feature. </p>
+<p>注意：这是一个Unity 专业版属性</p>
+<p> 参见： <a href="../RenderTexture/RenderTexture.isCubemap.html">RenderTexture.isCubemap</a></p>
+<div class="note">
+  <pre><code><span class="notes">// Attach this script to an object that uses a Reflective shader.
+// Realtime reflective cubemaps!
+//附加这个脚本到使用了Reflective shader的物体上 
+//实时反射立方贴图</span>
+
+@script ExecuteInEditMode
+
+var cubemapSize = 128;
+var oneFacePerFrame = false;
+private var cam : <a href="Camera.html">Camera</a>;
+private var rtex : <a href="../RenderTexture/RenderTexture.html">RenderTexture</a>;
+
+function Start () {
+	<span class="notes">// render all six faces at startup
+	//在启动时渲染所有六个面</span>
+	UpdateCubemap( 63 );
+}
+
+function LateUpdate () {
+	if (oneFacePerFrame) {
+		var faceToRender = <a href="../Time/Time.frameCount.html">Time.frameCount</a> % 6;
+		var faceMask = 1 &lt;&lt; faceToRender;
+		UpdateCubemap (faceMask);
+	} else {
+		UpdateCubemap (63); <span class="notes">// all six faces 所有六个面</span>
+	}
+}
+
+function UpdateCubemap (faceMask : int) {
+	if (!cam) {
+		var go = new <a href="../GameObject/GameObject.html">GameObject</a> (&quot;CubemapCamera&quot;, Camera);
+		go.hideFlags = <a href="../HideFlags/HideFlags.HideAndDontSave.html">HideFlags.HideAndDontSave</a>;
+		go.transform.position = transform.position;
+		go.transform.rotation = <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>;
+		cam = go.camera;
+		cam.farClipPlane = 100; <span class="notes">// don't render very far into cubemap //不要渲染较远的部</span>分
+		cam.enabled = false;
+	}
+
+	if (!rtex) {
+		rtex = new <a href="../RenderTexture/RenderTexture.html">RenderTexture</a> (cubemapSize, cubemapSize, 16);
+		rtex.isPowerOfTwo = true;
+		rtex.isCubemap = true;
+		rtex.hideFlags = <a href="../HideFlags/HideFlags.HideAndDontSave.html">HideFlags.HideAndDontSave</a>;
+		renderer.sharedMaterial.SetTexture (&quot;_Cube&quot;, rtex);
+	}
+
+	cam.transform.position = transform.position;
+	cam.RenderToCubemap (rtex, faceMask);
+}
+
+function OnDisable () {
+	DestroyImmediate (cam);
+	DestroyImmediate (rtex);
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月7日 Monday  12:12<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

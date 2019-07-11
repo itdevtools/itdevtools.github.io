@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Material 材质</title>
+<meta name="Keywords" content="unity,Material,材质" />
+<meta name="Description" content="材质类此类暴露了一个材质的所有属性，允许您对它们进行动画处理。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Material.html">Material</a><span class="trans">材质</span> <span class="transer">翻译：titan-志广</span>
+                <ul>
+                    <li><a href="Material.color.html">color</a></li>
+                    <li><a href="Material.CopyPropertiesFromMaterial.html">CopyPropertiesFromMaterial</a></li>
+                    <li><a href="Material.GetColor.html">GetColor</a></li>
+                    <li><a href="Material.GetFloat.html">GetFloat</a></li>
+                    <li><a href="Material.GetMatrix.html">GetMatrix</a></li>
+                    <li><a href="Material.GetTag.html">GetTag</a></li>
+                    <li><a href="Material.GetTextureOffset.html">GetTextureOffset</a></li>
+                    <li><a href="Material.GetTextureScale.html">GetTextureScale</a></li>
+                    <li><a href="Material.GetTexture.html">GetTexture</a></li>
+                    <li><a href="Material.GetVector.html">GetVector</a></li>
+                    <li><a href="Material.HasProperty.html">HasProperty</a></li>
+                    <li><a href="Material.Lerp.html">Lerp</a></li>
+                    <li><a href="Material.mainTextureOffset.html">mainTextureOffset</a></li>
+                    <li><a href="Material.mainTextureScale.html">mainTextureScale</a></li>
+                    <li><a href="Material.mainTexture.html">mainTexture</a></li>
+                    <li><a href="Material.Material.html">Material</a></li>
+                    <li><a href="Material.passCount.html">passCount</a></li>
+                    <li><a href="Material.renderQueue.html">renderQueue</a></li>
+                    <li><a href="Material.SetColor.html">SetColor</a></li>
+                    <li><a href="Material.SetFloat.html">SetFloat</a></li>
+                    <li><a href="Material.SetMatrix.html">SetMatrix</a></li>
+                    <li><a href="Material.SetPass.html">SetPass</a></li>
+                    <li><a href="Material.SetTextureOffset.html">SetTextureOffset</a></li>
+                    <li><a href="Material.SetTextureScale.html">SetTextureScale</a></li>
+                    <li><a href="Material.SetTexture.html">SetTexture</a></li>
+                    <li><a href="Material.SetVector.html">SetVector</a></li>
+                    <li><a href="Material.shader.html">shader</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Material 材质</h1>
+<p class="h1inherit">Inherits from <a href="../Object/Object.html">Object</a></p>
+<p> The material class.</p>
+<p>材质类。</p>
+<p> This class exposes all properties from a material, allowing you to animate them.  You can also use it to set custom shader properties that can't be accessed through  the inspector (e.g. matrices). </p>
+<p>此类暴露了一个材质的所有属性，允许您对它们进行动画处理。你也可以使用它来设置自定义的Shader属性，但是无法通过检视面板访问属性（例如矩阵）。</p>
+<p> In order to get the material used by an object, use the <a href="../Renderer/Renderer.material.html">Renderer.material</a> property:  </p>
+<p>为了获得一个对象使用的材质，可以使用 <a href="../Renderer/Renderer.material.html">Renderer.material </a>属性：</p>
+<p>参考：<a href="../Materials/Materials.html">Materials</a></p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public void Awake() {
+		renderer.material.color = <a href="../Color/Color.red.html">Color.red</a>;
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code>renderer.material.color = <a href="../Color/Color.red.html">Color.red</a>;</code></pre></div>
+</div>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+  <li>
+    <div class="lititle"><a href="Material.shader.html">shader</a></div>
+    <div class="licontent">The shader used by the material.<br />
+    	材质使用的着色器。 </div>
+  </li>
+  <li>
+    <div class="lititle"><a href="Material.color.html">color</a></div>
+    <div class="licontent">The main material's color.<br />主材质的颜色。
+    </div>
+  </li>
+  <li><div class="lititle"><a href="Material.mainTexture.html">mainTexture</a></div>
+    	<div class="licontent">The main material's texture.<br />主材质的纹理。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.mainTextureOffset.html">mainTextureOffset</a></div>
+    	<div class="licontent">The texture offset of the main texture.<br />主纹理中的纹理偏移量。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.mainTextureScale.html">mainTextureScale</a></div>
+    	<div class="licontent">The texture scale of the main texture.<br />主纹理中的纹理缩放量。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.passCount.html">passCount</a></div>
+    	<div class="licontent">How many passes are in this material (Read Only).<br />
+   	    在这个材质中有多少pass。（只读）</div>
+    </li>
+    <li><div class="lititle"><a href="Material.renderQueue.html">renderQueue</a></div>
+    	<div class="licontent">Render queue of this material<br />这个材质的渲染队列
+    	</div>
+    </li>
+</ul>
+<h3>Constructors<span class="trans">构造器</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Material.Material.html">Material</a></div>
+    	<div class="licontent">Create a temporary material from a shader source string.<br />从一个源Shader字符串创建一个材质
+    	</div>
+    </li>
+</ul>	
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Material.SetColor.html">SetColor</a></div>
+    	<div class="licontent">Set a named color value.<br />设置已命名的颜色值。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetColor.html">GetColor</a></div>
+    	<div class="licontent">Get a named color value.<br />
+   	    获取已命名的颜色值</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetVector.html">SetVector</a></div>
+    	<div class="licontent">Set a named vector value.<br />设置已命名的向量值
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetVector.html">GetVector</a></div>
+    	<div class="licontent">Get a named vector value.<br />获取已命名的向量值
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetTexture.html">SetTexture</a></div>
+    	<div class="licontent">Set a named texture.<br />设置已命名的纹理
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetTexture.html">GetTexture</a></div>
+    	<div class="licontent">Get a named texture.<br />设置已命名的纹理
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetTextureOffset.html">SetTextureOffset</a></div>
+    	<div class="licontent">Sets the placement offset of texture propertyName.<br />设置纹理propertyName的偏移量。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetTextureOffset.html">GetTextureOffset</a></div>
+    	<div class="licontent">Gets the placement offset of texture propertyName.<br />获取纹理propertyName的偏移量。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetTextureScale.html">SetTextureScale</a></div>
+    	<div class="licontent">Sets the placement scale of texture propertyName.<br />
+    	设置纹理propertyName的缩放量。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetTextureScale.html">GetTextureScale</a></div>
+    	<div class="licontent">Gets the placement scale of texture propertyName.<br />获取纹理propertyName的缩放量
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetMatrix.html">SetMatrix</a></div>
+    	<div class="licontent">Set a named matrix for the shader.<br />为这个shader设置一个命名矩阵
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetMatrix.html">GetMatrix</a></div>
+    	<div class="licontent">Get a named matrix value from the shader.<br />从这个shader中获取命名矩阵的值
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetFloat.html">SetFloat</a></div>
+    	<div class="licontent">Set a named float value.<br />设置一个命名的浮点数
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetFloat.html">GetFloat</a></div>
+    	<div class="licontent">Get a named float value.<br />
+   	    获取一个命名的浮点数</div>
+    </li>
+    <li><div class="lititle"><a href="Material.HasProperty.html">HasProperty</a></div>
+    	<div class="licontent">Checks if material's shader has a property of a given name.<br />检查材质的着色器是否具有给定名称的属性
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.GetTag.html">GetTag</a></div>
+    	<div class="licontent">Get the value of material's shader tag.<br />获取材质着色器的标签值。
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.Lerp.html">Lerp</a></div>
+    	<div class="licontent">Interpolate properties between two materials.<br />在两个材质之间插值
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.SetPass.html">SetPass</a></div>
+    	<div class="licontent">Activate the given pass for rendering.<br />为渲染激活给定的pass
+    	</div>
+    </li>
+    <li><div class="lititle"><a href="Material.CopyPropertiesFromMaterial.html">CopyPropertiesFromMaterial</a></div>
+    	<div class="licontent">Copy properties from other material into this material.<br />拷贝其他材质的属性到这个材质
+    	</div>
+    </li>
+</ul>
+<h2>Inherited members<span class="trans">继承成员</span></h2>
+<h3>Inherited Variables<span class="trans">继承变量</span></h3>
+<ul class="tableli">
+    <li>
+		<div class="lititle"><a href="../Object/Object.name.html">name</a></div>
+		<div class="licontent">The name of the object. //物体的名字</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.hideFlags.html">hideFlags</a></div>
+    	<div class="licontent">Should the object be hidden, saved with the scene or modifiable by the user?<br />
+    	物体是否被隐藏、保存在场景中或被用户修改？</div>
+    </li>
+</ul>
+<h3>Inherited Functions<span class="trans">继承函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.GetInstanceID.html">GetInstanceID</a></div>
+    	<div class="licontent">Returns the instance id of the object.<br />
+    	返回物体的实例ID</div>
+    </li>
+	<li><div class="lititle"><a href="../Object/Object.ToString.html">ToString</a></div>
+    	<div class="licontent">Returns the name of the game object.<br />返回游戏物体的名称。</div>
+    </li>
+</ul>
+<h3>Inherited Class Functions<span class="trans">继承类函数</span></h3>
+
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_bool.html">operator bool</a></div>
+    	<div class="licontent">Does the object exist?<br />
+    	物体是否存在？</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.html">Instantiate</a></div>
+    	<div class="licontent">Clones the object original and returns the clone.<br />
+    	克隆原始物体，并返回克隆的物体</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.ltTgt.html">Instantiate.&lt;T&gt;</a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Destroy.html">Destroy</a></div>
+    	<div class="licontent">Removes a gameobject, component or asset.<br />
+    	删除一个游戏物体、组件或资源</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DestroyImmediate.html">DestroyImmediate</a></div>
+    	<div class="licontent">Destroys the object obj immediately. It is strongly recommended to use Destroy instead.<br />
+    	立即销毁物体obj，强烈建议使用Destroy代替。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectsOfType.html">FindObjectsOfType</a></div>
+    	<div class="licontent">Returns a list of all active loaded objects of Type type.<br />
+    	返回Type类型的所有激活的加载的物体列表</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectOfType.html">FindObjectOfType</a></div>
+    	<div class="licontent">Returns the first active loaded object of Type type.<br />
+    	返回Type类型第一个激活的加载的物体。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_eq.html">operator ==</a></div>
+    	<div class="licontent">Compares if two objects refer to the same<br />
+    	比较如果两个物体相同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_ne.html">operator !=</a></div>
+    	<div class="licontent">Compares if two objects refer to a different object<br />
+    	比较如果两个物体不同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></div>
+    	<div class="licontent">Makes the object target not be destroyed automatically when loading a new scene.<br />
+    	加载新场景的时候使目标物体不被自动销毁。</div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月9日 Monday  10:58<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

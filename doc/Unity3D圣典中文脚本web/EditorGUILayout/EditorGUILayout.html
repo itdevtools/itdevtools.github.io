@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorGUILayout 编辑器界面布局</title>
+<meta name="Keywords" content="unity,EditorGUILayout,编辑器界面布局" />
+<meta name="Description" content="EditorGUI的自动布局版本。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorGUILayout.html">EditorGUILayout</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorGUILayout.BeginHorizontal.html">BeginHorizontal</a></li>
+			<li><a href="EditorGUILayout.BeginScrollView.html">BeginScrollView</a></li>
+			<li><a href="EditorGUILayout.BeginToggleGroup.html">BeginToggleGroup</a></li>
+			<li><a href="EditorGUILayout.BeginVertical.html">BeginVertical</a></li>
+			<li><a href="EditorGUILayout.ColorField.html">ColorField</a></li>
+			<li><a href="EditorGUILayout.CurveField.html">CurveField</a></li>
+			<li><a href="EditorGUILayout.EndHorizontal.html">EndHorizontal</a></li>
+			<li><a href="EditorGUILayout.EndScrollView.html">EndScrollView</a></li>
+			<li><a href="EditorGUILayout.EndToggleGroup.html">EndToggleGroup</a></li>
+			<li><a href="EditorGUILayout.EndVertical.html">EndVertical</a></li>
+			<li><a href="EditorGUILayout.EnumPopup.html">EnumPopup</a></li>
+			<li><a href="EditorGUILayout.FloatField.html">FloatField</a></li>
+			<li><a href="EditorGUILayout.Foldout.html">Foldout</a></li>
+			<li><a href="EditorGUILayout.InspectorTitlebar.html">InspectorTitlebar</a></li>
+			<li><a href="EditorGUILayout.IntField.html">IntField</a></li>
+			<li><a href="EditorGUILayout.IntPopup.html">IntPopup</a></li>
+			<li><a href="EditorGUILayout.IntSlider.html">IntSlider</a></li>
+			<li><a href="EditorGUILayout.LabelField.html">LabelField</a></li>
+			<li><a href="EditorGUILayout.LayerField.html">LayerField</a></li>
+			<li><a href="EditorGUILayout.MinMaxSlider.html">MinMaxSlider</a></li>
+			<li><a href="EditorGUILayout.ObjectField.html">ObjectField</a></li>
+			<li><a href="EditorGUILayout.PasswordField.html">PasswordField</a></li>
+			<li><a href="EditorGUILayout.Popup.html">Popup</a></li>
+			<li><a href="EditorGUILayout.PrefixLabel.html">PrefixLabel</a></li>
+			<li><a href="EditorGUILayout.PropertyField.html">PropertyField</a></li>
+			<li><a href="EditorGUILayout.RectField.html">RectField</a></li>
+			<li><a href="EditorGUILayout.Slider.html">Slider</a></li>
+			<li><a href="EditorGUILayout.Space.html">Space</a></li>
+			<li><a href="EditorGUILayout.TagField.html">TagField</a></li>
+			<li><a href="EditorGUILayout.TextArea.html">TextArea</a></li>
+			<li><a href="EditorGUILayout.TextField.html">TextField</a></li>
+			<li><a href="EditorGUILayout.Toggle.html">Toggle</a></li>
+			<li><a href="EditorGUILayout.Vector2Field.html">Vector2Field</a></li>
+			<li><a href="EditorGUILayout.Vector3Field.html">Vector3Field</a></li>
+			<li><a href="EditorGUILayout.Vector4Field.html">Vector4Field</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>EditorGUILayout 编辑器界面布局</h1>
+<p class="h1inherit"></p>
+<p> Auto-layouted version of <a href="../EditorGUI/EditorGUI.html">EditorGUI</a></p>
+<p><a href="../EditorGUI/EditorGUI.html">EditorGUI</a>的自动布局版本。</p>
+<p class="note">Note: This is an editor class. To use it you have to place your script in Assets/Editor inside your project folder. Editor classes are in the UnityEditor namespace so for C# scripts you need to add "using UnityEditor;" at the beginning of the script.<br />
+  注意：这是一个编辑器类，如果想使用它你需要把它放到工程目录下的Assets/Editor文件夹下。编辑器类在UnityEditor命名空间下。所以当使用C#脚本时，你需要在脚本前面加上 &quot;using UnityEditor&quot;引用。</p>
+
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="EditorGUILayout.LabelField.html">LabelField</a></div>
+    	<div class="licontent">Make a label field. (Useful for showing read-only info.)<br />
+    		制作一个标签字段。（通常用于显示只读信息） </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="EditorGUILayout.Toggle.html">Toggle</a></div>
+    	<div class="licontent">Make a toggle. // 制作开关按钮。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.TextField.html">TextField</a></div>
+    	<div class="licontent">Make a text field. // 制作一个文本字段。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.TextArea.html">TextArea</a></div>
+    	<div class="licontent">Make a text area. // 制作一个文本区域。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.PasswordField.html">PasswordField</a></div>
+    	<div class="licontent">Make a text field where the user can enter a password.<br />
+    		创建一个文本字段，在那里用户可以输入密码。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.FloatField.html">FloatField</a></div>
+    	<div class="licontent">Make a text field for entering float values.<br />
+    		制作文本字段用于输入浮点值。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.IntField.html">IntField</a></div>
+    	<div class="licontent">Make a text field for entering integers.<br />
+    		制作一个文本字段用于输入整数。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Slider.html">Slider</a></div>
+    	<div class="licontent">Make a slider the user can drag to change a value between a min and a max.<br />
+    		制作一个滑动条用户可以拖动来改变值，在最小和最大值之间。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.IntSlider.html">IntSlider</a></div>
+    	<div class="licontent">Make a slider the user can drag to change an integer value between a min and a max.<br />
+    		制作一个滑动条用户可以拖动来改变一个整数值，在最小和最大值之间。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.MinMaxSlider.html">MinMaxSlider</a></div>
+    	<div class="licontent">Make a special slider the user can use to specify a range between a min and a max.<br />
+    		制作一个特殊滑动条，用户可以使用指定的范围，在最小和最大值之间。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Popup.html">Popup</a></div>
+    	<div class="licontent">Make a generic popup selection field.<br />
+    		制作一个标准弹出选择字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.EnumPopup.html">EnumPopup</a></div>
+    	<div class="licontent">Make an enum popup selection field.<br />
+    		制作一个枚举弹出选择字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.IntPopup.html">IntPopup</a></div>
+    	<div class="licontent">Make an integer popup selection field.<br />
+    		制作一个整数弹出选择字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.TagField.html">TagField</a></div>
+    	<div class="licontent">Make a tag selection field.<br />
+    		制作一个标签选择字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.LayerField.html">LayerField</a></div>
+    	<div class="licontent">Make a layer selection field.<br />
+    		制作一个层选择字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.ObjectField.html">ObjectField</a></div>
+    	<div class="licontent">Make an object drop slot field.<br />
+    		制作一个物体的拖拽槽字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Vector2Field.html">Vector2Field</a></div>
+    	<div class="licontent">Make an X & Y field for entering a Vector2.<br />
+    		制作X &amp; Y字段用于输入Vector2。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Vector3Field.html">Vector3Field</a></div>
+    	<div class="licontent">Make an X, Y & Z field for entering a Vector3.<br />
+    		制作X , Y &amp; Z字段用于输入Vector3。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Vector4Field.html">Vector4Field</a></div>
+    	<div class="licontent">Make an X, Y, Z & W field for entering a Vector4.<br />
+    		制作X, Y, Z &amp; W字段用于输入Vector4。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.RectField.html">RectField</a></div>
+    	<div class="licontent">Make an X, Y, W & H field for entering a Rect.<br />
+    		制作 X, Y, W &amp; H字段用于输入矩形。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.ColorField.html">ColorField</a></div>
+    	<div class="licontent">Make a field for selecting a Color.<br />
+    		制作一个用于选择颜色的字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.CurveField.html">CurveField</a></div>
+    	<div class="licontent">Make a field for editing an AnimationCurve.<br />
+    		制作一个用于编辑动画曲线的字段。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.InspectorTitlebar.html">InspectorTitlebar</a></div>
+    	<div class="licontent">Make an inspector-window-like titlebar.<br />
+    		制作一个检视面板的标题栏。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Foldout.html">Foldout</a></div>
+    	<div class="licontent">Make a label with a foldout arrow to the left of it.<br />
+    		制作一个左侧带有箭头的折叠标签。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.PrefixLabel.html">PrefixLabel</a></div>
+    	<div class="licontent">Make a label in front of some control.<br />
+    		制作一个在某些控件前面的标签。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.Space.html">Space</a></div>
+    	<div class="licontent">Make a small space between the previous control and the following.<br />
+    		在上一个控件和跟随的控件之间，制作一个小的空距。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.BeginToggleGroup.html">BeginToggleGroup</a></div>
+    	<div class="licontent">Begin a vertical group with a toggle to enable or disable all the controls within at once.<br />
+    		开始带有开关按钮的一个垂直组，在这里立即启用或禁用控件。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.EndToggleGroup.html">EndToggleGroup</a></div>
+    	<div class="licontent">Close a group started with BeginToggleGroup<br />
+关闭BeginToggleGroup开始的组。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.BeginHorizontal.html">BeginHorizontal</a></div>
+    	<div class="licontent">Begin a horizontal group and get its rect back.<br />
+    		开始一个水平组并获取返回矩形。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.EndHorizontal.html">EndHorizontal</a></div>
+    	<div class="licontent">Close a group started with BeginHorizontal<br />
+    		关闭一个BeginHorizontal开始的组。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.BeginVertical.html">BeginVertical</a></div>
+    	<div class="licontent">Begin a vertical group and get its rect back.<br />
+    		开始一个垂直组并获取它的返回矩形。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.EndVertical.html">EndVertical</a></div>
+    	<div class="licontent">Close a group started with BeginVertical<br />
+    		结束一个由BeginVertical开始的组。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.BeginScrollView.html">BeginScrollView</a></div>
+    	<div class="licontent">Begin an automatically layouted scrollview.<br />
+    		开始一个自动布局滚动视图。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.EndScrollView.html">EndScrollView</a></div>
+    	<div class="licontent">Ends a scrollview started with a call to BeginScrollView.<br />
+    		结束一个由BeginScrollView开始的滚动视图。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="EditorGUILayout.PropertyField.html">PropertyField</a></div>
+    	<div class="licontent">Make a field for SerializedProperty.<br />
+    		制作一个用于SerializedProperty的属性字段。 </div>
+    </li>
+</ul>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年7月14日 Thursday  20:58<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

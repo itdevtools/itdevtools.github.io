@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Component.BroadcastMessage 广播消息</title>
+<meta name="Keywords" content="unity,Component,组件,BroadcastMessage,广播消息" />
+<meta name="Description" content="在游戏物体每一个MonoBehaviour和它的全部子物体上调用名为methodName的方法。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Component.html">Component</a><span class="transer">翻译：U_鹰 </span>
+	<ul>
+		<li><a href="Component.animation.html">animation</a></li>
+		<li><a href="Component.audio.html">audio</a></li>
+		<li><a href="Component.BroadcastMessage.html">BroadcastMessage</a></li>
+		<li><a href="Component.camera.html">camera</a></li>
+		<li><a href="Component.collider.html">collider</a></li>
+		<li><a href="Component.CompareTag.html">CompareTag</a></li>
+		<li><a href="Component.constantForce.html">constantForce</a></li>
+		<li><a href="Component.gameObject.html">gameObject</a></li>
+		<li><a href="Component.GetComponent.ltTgt.html">GetComponent.&lt;T&gt; </a></li>
+		<li><a href="Component.GetComponentInChildren.ltTgt.html">GetComponentInChildren.&lt;T&gt; </a></li>
+		<li><a href="Component.GetComponentInChildren.html">GetComponentInChildren</a></li>
+		<li><a href="Component.GetComponents.ltTgt.html">GetComponents.&lt;T&gt; </a></li>
+		<li><a href="Component.GetComponentsInChildren.ltTgt.html">GetComponentsInChildren.&lt;T&gt; </a></li>
+		<li><a href="Component.GetComponentsInChildren.html">GetComponentsInChildren</a></li>
+		<li><a href="Component.GetComponents.html">GetComponents</a></li>
+		<li><a href="Component.GetComponent.html">GetComponent</a></li>
+		<li><a href="Component.guiTexture.html">guiTexture</a></li>
+		<li><a href="Component.guiText.html">guiText</a></li>
+		<li><a href="Component.hingeJoint.html">hingeJoint</a></li>
+		<li><a href="Component.light.html">light</a></li>
+		<li><a href="Component.networkView.html">networkView</a></li>
+		<li><a href="Component.particleEmitter.html">particleEmitter</a></li>
+		<li><a href="Component.renderer.html">renderer</a></li>
+		<li><a href="Component.rigidbody.html">rigidbody</a></li>
+		<li><a href="Component.SendMessageUpwards.html">SendMessageUpwards</a></li>
+		<li><a href="Component.SendMessage.html">SendMessage</a></li>
+		<li><a href="Component.tag.html">tag</a></li>
+		<li><a href="Component.transform.html">transform</a></li>
+	</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Component.html">Component</a>.BroadcastMessage 广播消息</h1>
+<p class="h1inherit"></p>
+<p>function <em>BroadcastMessage</em> (<em>methodName</em> : string, <em>parameter</em> : object = null, <em>options</em> : <a href="../SendMessageOptions/SendMessageOptions.html">SendMessageOptions</a> = <a href="../SendMessageOptions/SendMessageOptions.RequireReceiver.html">SendMessageOptions.RequireReceiver</a>) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Calls the method named methodName on every <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> in this game object or any of its children.</p>
+<p>在游戏物体每一个<a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a>和它的全部子物体上调用名为methodName的方法。</p>
+<p>通俗的解释：</p>
+<p>BroadcastMessage朝物体和所有子物体发送消息。</p>
+<p>对一个物体及其所有子物体，进行消息的广播，如果其中任何子物体上贴有脚本，而脚本中有相应的处理此消息的函数，则Invoke调用之。</p>
+<p> The receiving method can choose to ignore parameter by having zero arguments.  if options is set to <a href="../SendMessageOptions/SendMessageOptions.RequireReceiver.html">SendMessageOptions.RequireReceiver</a> an error is printed when the message is not picked up by any component. </p>
+<p>接受消息的此方法（函数）可以通过设置没有引用参数表来忽略传过来的消息中的参数。如果选项Option中设置成了SendMessageOptions.RequireReceiver，那么当没有任何脚本组件接受此消息时，一个相应的错误会弹出来</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void ApplyDamage(float damage) {
+		print(damage);
+	}
+	public void Awake() {
+		BroadcastMessage("ApplyDamage", 5.0F);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Calls the function ApplyDamage with a value of 5
+//调用函数 ApplyDamage 值为5</span>
+BroadcastMessage ("ApplyDamage", 5.0);
+
+<span class="notes">// Every script attached to the game object and all its children
+// that has a ApplyDamage function will be called.
+//附加到游戏物体的每个脚本和全部的子物体，有一个ApplyDamage函数将被调用</span>
+function ApplyDamage (damage : float) {
+	print (damage);
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月13日 Monday  18:40<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

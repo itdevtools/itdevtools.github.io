@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>PlayerSettings 播放器设置</title>
+<meta name="Keywords" content="unity,PlayerSettings,播放器设置" />
+<meta name="Description" content="播放器设置，为将在Unity编译的最终游戏定义各种参数。当打开一个独立游戏，其中一些值使用在分辨率对话框。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="PlayerSettings.html">PlayerSettings</a><span class="transer">翻译：U_鹰 </span>
+				<ul>
+					<li><a href="PlayerSettings.advancedLicense.html">advancedLicense</a></li>
+					<li><a href="PlayerSettings.alwaysDisplayWatermark.html">alwaysDisplayWatermark</a></li>
+					<li><a href="PlayerSettings.apiCompatibilityLevel.html">apiCompatibilityLevel</a></li>
+					<li><a href="PlayerSettings.bundleIdentifier.html">bundleIdentifier</a></li>
+					<li><a href="PlayerSettings.bundleVersion.html">bundleVersion</a></li>
+					<li><a href="PlayerSettings.captureSingleScreen.html">captureSingleScreen</a></li>
+					<li><a href="PlayerSettings.companyName.html">companyName</a></li>
+					<li><a href="PlayerSettings.defaultInterfaceOrientation.html">defaultInterfaceOrientation</a></li>
+					<li><a href="PlayerSettings.defaultIsFullScreen.html">defaultIsFullScreen</a></li>
+					<li><a href="PlayerSettings.defaultScreenHeight.html">defaultScreenHeight</a></li>
+					<li><a href="PlayerSettings.defaultScreenWidth.html">defaultScreenWidth</a></li>
+					<li><a href="PlayerSettings.defaultWebScreenHeight.html">defaultWebScreenHeight</a></li>
+					<li><a href="PlayerSettings.defaultWebScreenWidth.html">defaultWebScreenWidth</a></li>
+					<li><a href="PlayerSettings.displayResolutionDialog.html">displayResolutionDialog</a></li>
+					<li><a href="PlayerSettings.firstStreamedLevelWithResources.html">firstStreamedLevelWithResources</a></li>
+					<li><a href="PlayerSettings.HasAspectRatio.html">HasAspectRatio</a></li>
+					<li><a href="PlayerSettings.iPhoneBundleIdentifier.html">iPhoneBundleIdentifier</a></li>
+					<li><a href="PlayerSettings.keyaliasPass.html">keyaliasPass</a></li>
+					<li><a href="PlayerSettings.keystorePass.html">keystorePass</a></li>
+					<li><a href="PlayerSettings.productName.html">productName</a></li>
+					<li><a href="PlayerSettings.resolutionDialogBanner.html">resolutionDialogBanner</a></li>
+					<li><a href="PlayerSettings.runInBackground.html">runInBackground</a></li>
+					<li><a href="PlayerSettings.SetAspectRatio.html">SetAspectRatio</a></li>
+					<li><a href="PlayerSettings.strippingLevel.html">strippingLevel</a></li>
+					<li><a href="PlayerSettings.useAlphaInDashboard.html">useAlphaInDashboard</a></li>
+					<li><a href="PlayerSettings.usePlayerLog.html">usePlayerLog</a></li>
+					<li><a href="PlayerSettings.xboxGenerateSpa.html">xboxGenerateSpa</a></li>
+					<li><a href="PlayerSettings.xboxImageXexFilePath.html">xboxImageXexFilePath</a></li>
+					<li><a href="PlayerSettings.xboxSpaFilePath.html">xboxSpaFilePath</a></li>
+					<li><a href="PlayerSettings.xboxTitleId.html">xboxTitleId</a></li>
+				</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>PlayerSettings 播放器设置</h1>
+<p class="h1inherit">Inherits from UnityEngine.<a href="../Object/Object.html">Object</a></p>
+<p>Player Settings is where you define various parameters for the final   game that you will build in Unity. Some of these values are used in the   Resolution Dialog that launches when you open a standalone game.</p>
+<p>玩家设置，为将在Unity编译的最终游戏定义各种参数。当打开一个独立游戏，其中一些值使用在分辨率对话框。</p>
+<p class="note">Note: This is an editor class. To use it you have to place your script in Assets/Editor inside your project folder. Editor classes are in the UnityEditor namespace so for C# scripts you need to add "using UnityEditor;" at the beginning of the script.<br />
+  注意：这是一个编辑器类，如果想使用它你需要把它放到工程目录下的Assets/Editor文件夹下。编辑器类在UnityEditor命名空间下。所以当使用C#脚本时，你需要在脚本前面加上 &quot;using UnityEditor&quot;引用。</p>
+<h3>Class Variables<span class="trans">类变量</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="PlayerSettings.companyName.html">companyName</a></div>
+    	<div class="licontent">The name of your company. // 公司名称。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="PlayerSettings.productName.html">productName</a></div>
+    	<div class="licontent">The name of your product. // 产品名称。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.defaultScreenWidth.html">defaultScreenWidth</a></div>
+    	<div class="licontent">Default horizontal dimension of stand-alone player window.<br />
+    		独立版窗口的默认水平方向。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.defaultScreenHeight.html">defaultScreenHeight</a></div>
+    	<div class="licontent">Default vertical dimension of stand-alone player window.<br />
+    		独立版窗口的默认垂直方向。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.defaultWebScreenWidth.html">defaultWebScreenWidth</a></div>
+    	<div class="licontent">Default horizontal dimension of web player window.<br />
+    		Web播放器窗口的默认水平方向。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.defaultWebScreenHeight.html">defaultWebScreenHeight</a></div>
+    	<div class="licontent">Default vertical dimension of web player window.<br />
+    		Web播放器窗口的默认垂直方向。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.displayResolutionDialog.html">displayResolutionDialog</a></div>
+    	<div class="licontent">Defines the behaviour of the Resolution Dialog on product launch.<br />
+    		定义产品发布分辨率对话框的行为。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.defaultIsFullScreen.html">defaultIsFullScreen</a></div>
+    	<div class="licontent">If enabled, the game will default to fullscreen mode.<br />
+    		如果启用，游戏将默认全屏模式。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.useAlphaInDashboard.html">useAlphaInDashboard</a></div>
+    	<div class="licontent">Enables OSX Dashboard widgets with transparent backgrounds.<br />
+    		开启OSX仪表板具有透明背景。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.runInBackground.html">runInBackground</a></div>
+    	<div class="licontent">If enabled, your game will continue to run after lost focus.<br />
+    		如果启用，游戏将在失去焦点之后继续运行。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.captureSingleScreen.html">captureSingleScreen</a></div>
+    	<div class="licontent">Defines if fullscreen games should darken secondary displays.<br />
+    		定义，是否游戏全屏应该变暗第二显示器。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.usePlayerLog.html">usePlayerLog</a></div>
+    	<div class="licontent">Write a log file with debugging information.<br />
+    		写入日志文件，带有调试信息。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.alwaysDisplayWatermark.html">alwaysDisplayWatermark</a></div>
+    	<div class="licontent">Defines if the Unity watermark should be constantly displayed.<br />
+    		定义，是否Unity水印应持续显示出来。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.firstStreamedLevelWithResources.html">firstStreamedLevelWithResources</a></div>
+    	<div class="licontent">First level to have access to all Resources.Load assets in Streamed Web Players.<br />
+    		第一级能够访问Web播放器所有<a href="../Resources/Resources.Load.html">Resources.Load</a>资源，以流方式。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.resolutionDialogBanner.html">resolutionDialogBanner</a></div>
+    	<div class="licontent">The image to display in the Resolution Dialog window.<br />
+    		图像显示在分辨率对话框窗口。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.iPhoneBundleIdentifier.html">iPhoneBundleIdentifier</a></div>
+    	<div class="licontent">The bundle identifier of the iPhone application.<br />
+    		该iPhone应用程序包的标识符。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.keystorePass.html">keystorePass</a></div>
+    	<div class="licontent">Password used for interacting with the Android Keystore.<br />
+    		密码用于与Android的密钥库进行交互。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.keyaliasPass.html">keyaliasPass</a></div>
+    	<div class="licontent">Password for the key used for signing an Android application.<br />
+    		密码为签约一个安卓应用程序中使用的密钥。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.xboxTitleId.html">xboxTitleId</a></div>
+    	<div class="licontent">Xbox 360 title id // Xbox 360 标题ID。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.xboxImageXexFilePath.html">xboxImageXexFilePath</a></div>
+    	<div class="licontent">Xbox 360 ImageXex override configuration file path<br />
+    		Xbox360 ImageXex 覆盖配置文件路径。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.xboxSpaFilePath.html">xboxSpaFilePath</a></div>
+    	<div class="licontent">Xbox 360 SPA file path //Xbox360 SPA文件路径。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.xboxGenerateSpa.html">xboxGenerateSpa</a></div>
+    	<div class="licontent">Xbox 360 _SPAConfig.cs auto-generation<br />
+    		Xbox360的_SPAConfig.cs文件自动生成。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.bundleIdentifier.html">bundleIdentifier</a></div>
+    	<div class="licontent">Application bundle identifier shared between iOS & Android platforms<br />
+    		应用程序包标识在iOS和Andriod平台共享。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.bundleVersion.html">bundleVersion</a></div>
+    	<div class="licontent">Application bundle version shared between iOS & Android platforms<br />
+    		在iOS和Andriod平台共享的应用程序包版本。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.strippingLevel.html">strippingLevel</a></div>
+    	<div class="licontent">Managed code stripping level<br />
+    		管理代码的剥离级别。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.defaultInterfaceOrientation.html">defaultInterfaceOrientation</a></div>
+    	<div class="licontent">Default screen orientation for mobiles<br />
+    		默认手机屏幕方向。 </div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.apiCompatibilityLevel.html">apiCompatibilityLevel</a></div>
+    	<div class="licontent">.NET API compatibility level // .NET API 兼容级别。</div>
+    </li>
+	<li>
+		<div class="lititle"><a href="PlayerSettings.advancedLicense.html">advancedLicense</a></div>
+    	<div class="licontent">高级许可证</div>
+    </li>
+</ul>
+
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="PlayerSettings.HasAspectRatio.html">HasAspectRatio</a></div>
+    	<div class="licontent">Returns whether or not the specified aspect ratio is enabled.<br />
+    		返回是否指定的宽高比被启用。 </div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="PlayerSettings.SetAspectRatio.html">SetAspectRatio</a></div>
+    	<div class="licontent">Enables the specified aspect ratio.<br />
+    		启用指定的宽高比。 </div>
+    </li>
+</ul>	
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年6月27日 Monday  10:38<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

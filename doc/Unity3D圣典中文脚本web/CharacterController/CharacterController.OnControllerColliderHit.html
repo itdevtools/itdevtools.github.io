@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>CharacterController.OnControllerColliderHit 控制碰撞器碰撞</title>
+<meta name="Keywords" content="unity,CharacterController,角色控制器,OnControllerColliderHit,控制碰撞器碰撞" />
+<meta name="Description" content="当控制器碰撞一个正在运动的碰撞器时，OnControllerColliderHit 被调用。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="CharacterController.html">CharacterController</a> <span class="transer">翻译：U3D-小才 </span>
+                <ul>
+                    <li><a href="CharacterController.center.html">center</a></li>
+                    <li><a href="CharacterController.collisionFlags.html">collisionFlags</a></li>
+                    <li><a href="CharacterController.detectCollisions.html">detectCollisions</a></li>
+                    <li><a href="CharacterController.height.html">height</a></li>
+                    <li><a href="CharacterController.isGrounded.html">isGrounded</a></li>
+                    <li><a href="CharacterController.Move.html">Move</a></li>
+                    <li><a href="CharacterController.OnControllerColliderHit.html">OnControllerColliderHit</a></li>
+                    <li><a href="CharacterController.radius.html">radius</a></li>
+                    <li><a href="CharacterController.SimpleMove.html">SimpleMove</a></li>
+                    <li><a href="CharacterController.slopeLimit.html">slopeLimit</a></li>
+                    <li><a href="CharacterController.stepOffset.html">stepOffset</a></li>
+                    <li><a href="CharacterController.velocity.html">velocity</a></li>
+                </ul>
+                </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="CharacterController.html">CharacterController</a>.OnControllerColliderHit 控制碰撞器碰撞</h1>
+<p class="h1inherit"></p>
+<p>function <em>OnControllerColliderHit</em> (<em>hit</em> : <a href="../ControllerColliderHit/ControllerColliderHit.html">ControllerColliderHit</a>) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>OnControllerColliderHit is called when the   controller hits a collider while performing a Move.</p>
+<p>当控制器碰撞一个正在运动的碰撞器时，OnControllerColliderHit 被调用。</p>
+<p>This can be used to push objects when they   collide with the character</p>
+<p>这个可以被用于推动物体，当他们碰撞角色时。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public float pushPower = 2.0F;
+	void OnControllerColliderHit(ControllerColliderHit hit) {
+		Rigidbody body = hit.collider.attachedRigidbody;
+		if (body == null || body.isKinematic)
+			return;
+
+		if (hit.moveDirection.y &lt; -0.3F)
+			return;
+
+		Vector3 pushDir = new <a href="../Vector3/Vector3.html">Vector3</a>(hit.moveDirection.x, 0, hit.moveDirection.z);
+		body.velocity = pushDir * pushPower;
+	}
+}
+</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// this script pushes all rigidbodies that the character touches
+// 这个脚本推动所有的角色碰撞到的刚体。</span>
+var pushPower = 2.0;
+function OnControllerColliderHit (hit : ControllerColliderHit) {
+   var body : Rigidbody = hit.collider.attachedRigidbody;
+   <span class="notes">// no rigidbody
+   // 没有刚体。</span>
+   if (body == null || body.isKinematic)
+     return;   
+
+   <span class="notes">// We dont want to push objects below us
+   // 我们不想推动在我们下边的物体。</span>
+   if (hit.moveDirection.y &lt; -0.3) 
+     return; 
+
+   <span class="notes">// Calculate push direction from move direction, 
+   // we only push objects to the sides never up and down
+   // 通过移动方向计算推动方向，我们只把物体推到两侧，从不向上和向下推。</span>
+   var pushDir : <a href="../Vector3/Vector3.html">Vector3</a> = <a href="../Vector3/Vector3.html">Vector3</a>(hit.moveDirection.x, 0, hit.moveDirection.z);
+   
+   <span class="notes">// If you know how fast your character is trying to move,
+   // then you can also multiply the push velocity by that.
+   // 如果你知道你的角色移动的有多快，那么你也可以用它乘以推动速度。
+   // Apply the push
+   // 应用推力。</span>
+   body.velocity = pushDir * pushPower;
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月14日 Tuesday  15:13<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

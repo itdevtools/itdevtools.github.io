@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>GL.modelview 模型视图</title>
+<meta name="Keywords" content="unity,GL,modelview,模型视图" />
+<meta name="Description" content="返回目前的模型视图矩阵。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="GL.html">GL</a><span class="transer">翻译：詹姆斯卡梅隆</span>
+                <ul>
+                    <li><a href="GL.Begin.html">Begin</a></li>
+                    <li><a href="GL.ClearWithSkybox.html">ClearWithSkybox</a></li>
+                    <li><a href="GL.Clear.html">Clear</a></li>
+                    <li><a href="GL.Color.html">Color</a></li>
+                    <li><a href="GL.End.html">End</a></li>
+                    <li><a href="GL.InvalidateState.html">InvalidateState</a></li>
+                    <li><a href="GL.LINES.html">LINES</a></li>
+                    <li><a href="GL.LoadIdentity.html">LoadIdentity</a></li>
+                    <li><a href="GL.LoadOrtho.html">LoadOrtho</a></li>
+                    <li><a href="GL.LoadPixelMatrix.html">LoadPixelMatrix</a></li>
+                    <li><a href="GL.LoadProjectionMatrix.html">LoadProjectionMatrix</a></li>
+                    <li><a href="GL.modelview.html">modelview</a></li>
+                    <li><a href="GL.MultiTexCoord2.html">MultiTexCoord2</a></li>
+                    <li><a href="GL.MultiTexCoord3.html">MultiTexCoord3</a></li>
+                    <li><a href="GL.MultiTexCoord.html">MultiTexCoord</a></li>
+                    <li><a href="GL.MultMatrix.html">MultMatrix</a></li>
+                    <li><a href="GL.PopMatrix.html">PopMatrix</a></li>
+                    <li><a href="GL.PushMatrix.html">PushMatrix</a></li>
+                    <li><a href="GL.QUADS.html">QUADS</a></li>
+                    <li><a href="GL.SetRevertBackfacing.html">SetRevertBackfacing</a></li>
+                    <li><a href="GL.TexCoord2.html">TexCoord2</a></li>
+                    <li><a href="GL.TexCoord3.html">TexCoord3</a></li>
+                    <li><a href="GL.TexCoord.html">TexCoord</a></li>
+                    <li><a href="GL.TRIANGLE_STRIP.html">TRIANGLE_STRIP</a></li>
+                    <li><a href="GL.TRIANGLES.html">TRIANGLES</a></li>
+                    <li><a href="GL.Vertex3.html">Vertex3</a></li>
+                    <li><a href="GL.Vertex.html">Vertex</a></li>
+                    <li><a href="GL.Viewport.html">Viewport</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="GL.html">GL</a>.modelview 模型视图</h1>
+<p class="h1inherit"></p>
+<p>static var <em>modelview</em> : <a href="../Matrix4x4/Matrix4x4.html">Matrix4x4</a></p>
+
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> The current modelview matrix.</p>
+<p>返回目前的模型视图矩阵。</p>
+<p> Assigning to this variable is equivalent to glLoadMatrix(mat) in OpenGL; in other  graphics APIs the corresponding functionality is emulated. </p>
+<p>这个参数和OpenGL中的glLoadMatrix(mat)&nbsp;一样。在其它的图形API中也有对应的功能参数。</p>
+<p> Changing modelview matrix overrides current camera's view parameters, so most  often you want to save and restore matrix using <a href="GL.PushMatrix.html">GL.PushMatrix</a> and <a href="GL.PopMatrix.html">GL.PopMatrix</a>. </p>
+<p>改变模型视图矩阵会覆盖当前的camera'&nbsp;的参数，许多情况下你需要用到<a href="GL.PushMatrix.html" >GL.PushMatrix</a>&nbsp;和<a href="GL.PopMatrix.html" >GL.PopMatrix</a>矩阵函数.来保存和恢复。</p>
+<p> Reading this variable returns the current modelview matrix.</p>
+<p>读这个参数返回当前的模型视图矩阵。</p>
+<div class="wrap">
+  <ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Material/Material.html">Material</a> mat;
+	private <a href="../Vector3/Vector3.html">Vector3</a> startVertex;
+	private <a href="../Vector3/Vector3.html">Vector3</a> mousePos;
+	void Update() {
+	mousePos = <a href="../Input/Input.mousePosition.html">Input.mousePosition</a>;
+		if (<a href="../Input/Input.GetKeyDown.html">Input.GetKeyDown</a>(<a href="../Enumerations/KeyCode/KeyCode.Space.html">KeyCode.Space</a>))
+			startVertex = new <a href="../Vector3/Vector3.html">Vector3</a>(mousePos.x / <a href="../Screen/Screen.width.html">Screen.width</a>, mousePos.y / <a href="../Screen/Screen.height.html">Screen.height</a>, 0);
+
+	}
+	void OnPostRender() {
+		if (!mat) {
+			<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;Please Assign a material on the inspector&quot;);
+			return;
+		}
+		<a href="GL.PushMatrix.html">GL.PushMatrix</a>();
+		mat.SetPass(0);
+		<a href="GL.LoadOrtho.html">GL.LoadOrtho</a>();
+		<a href="GL.Begin.html">GL.Begin</a>(<a href="GL.LINES.html">GL.LINES</a>);
+		<a href="GL.Color.html">GL.Color</a>(<a href="../Color/Color.red.html">Color.red</a>);
+		<a href="GL.Vertex.html">GL.Vertex</a>(startVertex);
+		<a href="GL.Vertex.html">GL.Vertex</a>(new <a href="../Vector3/Vector3.html">Vector3</a>(mousePos.x / <a href="../Screen/Screen.width.html">Screen.width</a>, mousePos.y / <a href="../Screen/Screen.height.html">Screen.height</a>, 0));
+		<a href="GL.End.html">GL.End</a>();
+		<a href="GL.PopMatrix.html">GL.PopMatrix</a>();
+	}
+	void Awake() {
+		startVertex = new <a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 0);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Draws a line from &quot;startVertex&quot; var to the curent mouse position.
+//从startVertex绘制一条线到当前的鼠标位置</span>
+var mat : <a href="../Material/Material.html">Material</a>;
+private var startVertex : <a href="../Vector3/Vector3.html">Vector3</a>;
+private var mousePos : <a href="../Vector3/Vector3.html">Vector3</a>;
+startVertex = <a href="../Vector3/Vector3.html">Vector3</a>(0,0,0);
+
+function Update() {
+	mousePos = <a href="../Input/Input.mousePosition.html">Input.mousePosition</a>;
+	<span class="notes">// Press space to update startVertex
+	//按下空格更新startVertex</span>
+	if(<a href="../Input/Input.GetKeyDown.html">Input.GetKeyDown</a>(<a href="../Enumerations/KeyCode/KeyCode.Space.html">KeyCode.Space</a>)){
+		startVertex = <a href="../Vector3/Vector3.html">Vector3</a>(mousePos.x/<a href="../Screen/Screen.width.html">Screen.width</a>, mousePos.y/<a href="../Screen/Screen.height.html">Screen.height</a>, 0);
+	}
+}
+
+function OnPostRender() {
+	if (!mat) {
+		<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;Please Assign a material on the inspector&quot;);
+		return;
+	}
+	<a href="GL.PushMatrix.html">GL.PushMatrix</a>();
+	mat.SetPass(0);
+	<a href="GL.LoadOrtho.html">GL.LoadOrtho</a>();
+	<a href="GL.Begin.html">GL.Begin</a>(<a href="GL.LINES.html">GL.LINES</a>);
+	<a href="GL.Color.html">GL.Color</a>(<a href="Color.red.html">Color.red</a>);
+	<a href="GL.Vertex.html">GL.Vertex</a>(startVertex);
+	<a href="GL.Vertex.html">GL.Vertex</a>(<a href="../Vector3/Vector3.html">Vector3</a>(mousePos.x/<a href="../Screen/Screen.width.html">Screen.width</a>, mousePos.y/<a href="../Screen/Screen.height.html">Screen.height</a>, 0));
+	<a href="GL.End.html">GL.End</a>();
+	<a href="GL.PopMatrix.html">GL.PopMatrix</a>();
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月21日 Monday  12:19<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

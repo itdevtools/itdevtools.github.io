@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>WWW.oggVorbis 免费音频格式</title>
+<meta name="Keywords" content="unity,WWW,oggVorbis" />
+<meta name="Description" content="加载一个Ogg Vorbis文件到音频剪辑。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="WWW.html">WWW</a> <span class="transer">坏坏/咖啡</span>
+                <ul>
+                    <li><a href="WWW.assetBundle.html">assetBundle</a></li>
+                    <li><a href="WWW.audioClip.html">audioClip</a></li>
+                    <li><a href="WWW.bytes.html">bytes</a></li>
+                    <li><a href="WWW.error.html">error</a></li>
+                    <li><a href="WWW.EscapeURL.html">EscapeURL</a></li>
+                    <li><a href="WWW.isDone.html">isDone</a></li>
+                    <li><a href="WWW.LoadImageIntoTexture.html">LoadImageIntoTexture</a></li>
+                    <li><a href="WWW.LoadUnityWeb.html">LoadUnityWeb</a></li>
+                    <li><a href="WWW.movie.html">movie</a></li>
+                    <li><a href="WWW.oggVorbis.html">oggVorbis</a></li>
+                    <li><a href="WWW.progress.html">progress</a></li>
+                    <li><a href="WWW.texture.html">texture</a></li>
+                    <li><a href="WWW.text.html">text</a></li>
+                    <li><a href="WWW.threadPriority.html">threadPriority</a></li>
+                    <li><a href="WWW.UnEscapeURL.html">UnEscapeURL</a></li>
+                    <li><a href="WWW.uploadProgress.html">uploadProgress</a></li>
+                    <li><a href="WWW.url.html">url</a></li>
+                    <li><a href="WWW.WWW.html">WWW</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="WWW.html">WWW</a>.oggVorbis 免费音频格式</h1>
+<p class="h1inherit"></p>
+<p>var <em>oggVorbis</em> : <a href="../AudioClip/AudioClip.html">AudioClip</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Load an Ogg Vorbis file into the audio clip.</p>
+<p>加载一个Ogg Vorbis文件到音频剪辑。</p>
+<p> If the stream has not been downloaded completely, null will be returned.  Use <a href="WWW.isDone.html">isDone</a> or yield to see if the data is available. </p>
+<p>如果流没有被完全下载，将返回null。使用isDone或yield来查看数据是否可用。</p>
+<blockquote>
+<p>Ogg全称应该是OGG Vobis是一种新的音频压缩格式，类似于MP3等现有的音乐格式。但有一点不同的是，它是完全免费、开放和没有专利限制的。OGG Vobis有一个很出众的特点，就是支持多声道，随着它的流行，以后用随身听来听DTS编码的多声道作品将不会是梦想。</p><p>Vorbis 是这种音频压缩机制的名字，而Ogg则是一个计划的名字，该计划意图设计一个完全开放性的多媒体系统。目前该计划只实现了OggVorbis这一部分。</p><p>Ogg Vorbis文件的扩展名是.OGG。这种文件的设计格式是非常先进的。现在创建的OGG文件可以在未来的任何播放器上播放，因此，这种文件格式可以不断地进行大小和音质的改良，而不影响旧有的编码器或播放器。</p>
+</blockquote>
+<p> 参考：<a href="../AudioClip/AudioClip.html">AudioClip</a>, <a href="../AudioSource/AudioSource.html">AudioSource</a>.</p>
+<div class="note"><pre><code>var path = &quot;http://ia301106.us.archive.org/2/items/abird2005-02-10/abird2005-02-10t02.ogg&quot;;
+
+function Start () {
+<span class="notes">	// Start downloading
+	//开始下载</span>
+	var download = new WWW (path);
+<span class="notes">	// Wait for download to finish
+	//等待下载完成</span>
+	yield download;
+<span class="notes">	// Create ogg vorbis file</span>
+	var clip : <a href="../AudioClip/AudioClip.html">AudioClip</a> = download.oggVorbis;
+<span class="notes">	// Play it
+	//播放</span>
+	if (clip != null) {
+		audio.clip = clip;
+		audio.Play();
+	} else { <span class="notes">// Handle error 处理错误</span>
+		<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Ogg vorbis download failed. (Incorrect link?)&quot;);
+	}
+}
+
+@script RequireComponent (AudioSource) </code></pre></div>
+<p>又一个例子：</p>
+<div class="note"><pre><code><span class="notes">// A generic stream music player.
+//一个普通的流音乐播放器
+// Downloads music successively, then starts playing them randomly.
+//连续下载音乐，然后随机播放它们</span>
+var downloadPath : <a href="../String/String.html">String</a>[] = [&quot;http://ia301106.us.archive.org/2/items/abird2005-02-10/abird2005-02-10t02.ogg&quot;];
+private var downloadedClips : <a href="../AudioClip/AudioClip.html">AudioClip</a>[];
+private var playedSongs = new <a href="../Array/Array.html">Array</a> ();
+
+function Start () {
+	downloadedClips = new <a href="../AudioClip/AudioClip.html">AudioClip</a>[downloadPath.Length];
+
+	DownloadAll ();
+
+	PlaySongs ();
+}
+
+function DownloadAll () {
+	for (var i = 0;i &lt; downloadPath.length; i++) {
+		var path = downloadPath[i];
+		var download = new WWW (path);
+		yield download;
+		downloadedClips[i] = download.oggVorbis;
+
+		if (downloadedClips[i] == null)
+			<a href="../Debug/Debug.Log.html">Debug.Log</a>(&quot;Failed audio download &quot; + path);
+	}
+}
+
+function PickRandomSong () : <a href="../AudioClip/AudioClip.html">AudioClip</a> {
+	var possibleSongs = <a href="../Array/Array.html">Array</a> ();
+
+<span class="notes">	// Build a list of all songs that completed their download
+	//下载完成，建立一个所有歌曲列表</span>
+	for (var i = 0; i &lt; downloadedClips.length; i++) {
+		if (downloadedClips[i] != null)
+			possibleSongs.Add(i);
+	}
+
+<span class="notes">	// No songs downloaded yet
+	//仍没有歌曲下载</span>
+	if (possibleSongs.length == 0)
+		return null;
+
+<span class="notes">	// We played all songs, pick from any song now
+	//我们播放的所有歌曲，从现在挑选任何歌曲</span>
+	if (possibleSongs.length == playedSongs.length)
+		playedSongs.Clear();
+
+<span class="notes">	// Remove songs that were played already from the list of songs
+	//从播放列表移除播放完的歌曲</span>
+	for (i = 0; i &lt; playedSongs.length; i++)
+		possibleSongs.Remove (playedSongs[i]);
+
+<span class="notes">	// Pick a random song
+	//选择一个随机播放歌曲</span>
+	if (possibleSongs.length != 0) {
+		var index : int= possibleSongs[<a href="../Random/Random.Range.html">Random.Range</a>(0, possibleSongs.length)];
+		playedSongs.Add(index);
+		return downloadedClips[index];
+	}
+	else
+	return null;
+}
+
+function PlaySongs () {
+	while (true) {
+		var clip : <a href="../AudioClip/AudioClip.html">AudioClip</a> = PickRandomSong ();
+		if (clip != null) {
+			audio.clip = clip;
+			audio.Play();
+			yield <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a>(clip.length);
+		}
+		yield;
+	}
+}
+
+@script <a href="../Attributes/RequireComponent.html">RequireComponent</a>(<a href="../AudioSource/AudioSource.html">AudioSource</a>)</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月25日 Monday  9:23<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>NetworkView.RPC 远程过程调用</title>
+<meta name="Keywords" content="unity,NetworkView,RPC,远程过程调用" />
+<meta name="Description" content="在所有连接端调用一个RPC函数。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="NetworkView.html">NetworkView</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="NetworkView.Find.html">Find</a></li>
+                    <li><a href="NetworkView.group.html">group</a></li>
+                    <li><a href="NetworkView.isMine.html">isMine</a></li>
+                    <li><a href="NetworkView.observed.html">observed</a></li>
+                    <li><a href="NetworkView.owner.html">owner</a></li>
+                    <li><a href="NetworkView.RPC.html">RPC</a></li>
+                    <li><a href="NetworkView.SetScope.html">SetScope</a></li>
+                    <li><a href="NetworkView.stateSynchronization.html">stateSynchronization</a></li>
+                    <li><a href="NetworkView.viewID.html">viewID</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="NetworkView.html">NetworkView</a>.RPC 远程过程调用 </h1>
+<p class="h1inherit"></p>
+<p>function <em><a href="../Attributes/RPC.html">RPC</a></em> (<em>name</em> : string, <em>mode</em> : <a href="../Enumerations/RPCMode/RPCMode.html">RPCMode</a>, <em>params args</em> : object[]) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Call a <a href="../Attributes/RPC.html">RPC</a> function on all connected peers.</p>
+<p>在所有连接端调用一个RPC函数。</p>
+<p> The called function must have the @RPC tag set ([RPC] for C Sharp code).  A NetworkView must be attached to the <a href="../GameObject/GameObject.html">GameObject</a> where the RPC function is being called. It doesn't matter if the   NetworkView is being used for something else or just for the RPC   function. If it is just for the RPC function, state synchronization   should be turned off and the observed property can be set to none.  RPC function names should be unique accross the scene, if two RPC   functions in different scripts   have the same name only one of them is called when RPC is invoked.  RPC calls are always guaranteed to be executed in the same order as they   are sent.  The communication group set for the network view, with <a href="NetworkView.group.html">NetworkView.group</a>, is used for the RPC call.  To get information on the RPC itelf, you can add a NetworkMessageInfo parameter to the function declaration  which will automatically contain the information. You don't need to change the way you call the RPC  function when you do this. For more information see the RPC section of the manual.  Valid RPC parameters are int, float, string, <a href="../NetworkPlayer/NetworkPlayer.html">NetworkPlayer</a>, <a href="../NetworkViewID/NetworkViewID.html">NetworkViewID</a>, <a href="../Vector3/Vector3.html">Vector3</a> and <a href="../Quaternion/Quaternion.html">Quaternion</a>. </p>
+<p>调用的函数必须有@RPC标识（[RPC]用于C#）。NetworkView必须附加到GameObject上，RPC函数才能够被调用。NetworkView用于其他地方或者是仅用于RPC函数是没有关系的。如果仅用于RPC函数，stateSynchronization应该被关掉，并且Ovserved属性设置为none，在整个场景中RPC函数的名称应该是唯一的，如果不同脚本的两个RPC函数具有相同的名称，仅有一个会被调用。RPC调用总是确保执行的顺序与他们调用的顺序相同。用NetworkView.group为NetworkView设置的通信组，被用于RPC调用。为了获取RPC自身的信息，可以添加一个NetworkMessageInfo参数到函数声明中，它将自动包含这个信息。这样的做的时候你不需要改变调用RPC函数的方式，可以参考手册中的RPC部分以便获取更多关于RPC的信息。可用的RPC参数为int，float，string，NetworkPlayer，NetworkViewID，Vector3和Quaternion。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Transform/Transform.html">Transform</a> cubePrefab;
+	void OnGUI() {
+		if (<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a>("SpawnBox")) {
+			<a href="../NetworkViewID/NetworkViewID.html">NetworkViewID</a> viewID = Network.AllocateViewID();
+			networkView.RPC("SpawnBox", RPCMode.AllBuffered, viewID, transform.position);
+		}
+	}
+	[RPC]
+	void SpawnBox(NetworkViewID viewID, Vector3 location) {
+		Transform clone;
+		clone = Instantiate(cubePrefab, location, Quaternion.identity) as Transform;
+		NetworkView nView;
+		nView = clone.GetComponent&lt;NetworkView&gt;();
+		nView.viewID = viewID;
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code></code></pre></div>
+</div>
+<p>&#8226; function <em><a href="../Attributes/RPC.html">RPC</a></em> (<em>name</em> : string, <em>target</em> : <a href="../NetworkPlayer/NetworkPlayer.html">NetworkPlayer</a>, <em>params args</em> : object[]) : void</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Call a RPC function on a specific player</p>
+<p>在一个特定的玩家，调用一个RPC函数。</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月30日 Wednesday  17:15<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

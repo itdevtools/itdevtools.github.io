@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorGUI.DrawPreviewTexture 绘制预览纹理</title>
+<meta name="Keywords" content="unity,EditorGUI,DrawPreviewTexture,绘制预览纹理" />
+<meta name="Description" content="在矩形内绘制纹理。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorGUI.html">EditorGUI</a><span class="transer">翻译：宗宗 </span>
+		<ul>
+			<li><a href="EditorGUI.actionKey.html">actionKey</a></li>
+			<li><a href="EditorGUI.ColorField.html">ColorField</a></li>
+			<li><a href="EditorGUI.CurveField.html">CurveField</a></li>
+			<li><a href="EditorGUI.DrawPreviewTexture.html">DrawPreviewTexture</a></li>
+			<li><a href="EditorGUI.DrawTextureAlpha.html">DrawTextureAlpha</a></li>
+			<li><a href="EditorGUI.DropShadowLabel.html">DropShadowLabel</a></li>
+			<li><a href="EditorGUI.EnumPopup.html">EnumPopup</a></li>
+			<li><a href="EditorGUI.FloatField.html">FloatField</a></li>
+			<li><a href="EditorGUI.Foldout.html">Foldout</a></li>
+			<li><a href="EditorGUI.indentLevel.html">indentLevel</a></li>
+			<li><a href="EditorGUI.InspectorTitlebar.html">InspectorTitlebar</a></li>
+			<li><a href="EditorGUI.IntField.html">IntField</a></li>
+			<li><a href="EditorGUI.IntPopup.html">IntPopup</a></li>
+			<li><a href="EditorGUI.IntSlider.html">IntSlider</a></li>
+			<li><a href="EditorGUI.LabelField.html">LabelField</a></li>
+			<li><a href="EditorGUI.LayerField.html">LayerField</a></li>
+			<li><a href="EditorGUI.MinMaxSlider.html">MinMaxSlider</a></li>
+			<li><a href="EditorGUI.ObjectField.html">ObjectField</a></li>
+			<li><a href="EditorGUI.PasswordField.html">PasswordField</a></li>
+			<li><a href="EditorGUI.Popup.html">Popup</a></li>
+			<li><a href="EditorGUI.PrefixLabel.html">PrefixLabel</a></li>
+			<li><a href="EditorGUI.ProgressBar.html">ProgressBar</a></li>
+			<li><a href="EditorGUI.PropertyField.html">PropertyField</a></li>
+			<li><a href="EditorGUI.RectField.html">RectField</a></li>
+			<li><a href="EditorGUI.Slider.html">Slider</a></li>
+			<li><a href="EditorGUI.TagField.html">TagField</a></li>
+			<li><a href="EditorGUI.TextArea.html">TextArea</a></li>
+			<li><a href="EditorGUI.TextField.html">TextField</a></li>
+			<li><a href="EditorGUI.Toggle.html">Toggle</a></li>
+			<li><a href="EditorGUI.Vector2Field.html">Vector2Field</a></li>
+			<li><a href="EditorGUI.Vector3Field.html">Vector3Field</a></li>
+			<li><a href="EditorGUI.Vector4Field.html">Vector4Field</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="EditorGUI.html">EditorGUI</a>.DrawPreviewTexture 绘制预览纹理</h1>
+<p class="h1inherit"></p>
+<p>static function <em>DrawPreviewTexture</em> (<em>position</em> : <a href="../Rect/Rect.html">Rect</a>, <em>image</em> : <a href="../Texture/Texture.html">Texture</a>, <em>mat</em> : <a href="../Material/Material.html">Material</a> = null, <em>scaleMode</em> : <a href="../ScaleMode/ScaleMode.html">ScaleMode</a> = <a href="../ScaleMode/ScaleMode.StretchToFill.html">ScaleMode.StretchToFill</a>, <em>imageAspect</em> : float = 0) : void </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><em>position</em></div>
+    	<div class="licontent">Rectangle on the screen to draw the texture within.<br />屏幕上绘制纹理的矩形区域 
+    	</div>
+    </li>
+    <li><div class="lititle"><em>image</em></div>
+    	<div class="licontent">Texture to display. // 显示的纹理</div>
+    </li>
+	<li>
+		<div class="lititle"><em>scaleMode</em></div>
+    	<div class="licontent">How to scale the image when the aspect ratio of it doesn't fit the aspect ratio to be drawn within.<br />当纹理的尺寸不适合这个区域时如何缩放
+    	</div>
+    </li>
+	<li>
+		<div class="lititle"><em>mat</em></div>
+    	<div class="licontent">Material to be used when drawing the texture. <br />
+    		当绘制纹理时使用的材质
+    	</div>
+    </li>
+	<li>
+		<div class="lititle"><em>imageAspect</em></div>
+    	<div class="licontent">Aspect ratio to use for the source image. If 0 (the default), the aspect ratio from the image is used. 	<br />用于源图片的纵横比。如果为0（默认），使用源图片的纵横比
+    	</div>
+    </li>
+</ul>	
+	
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Draws the texture within a rectangle.</p>
+<p>在矩形内绘制纹理。</p>
+<p> If mat is null (the default), an appropriate material will be chosen for a RGBM or doubleLDR lightmap or a normal map  and the fallback blit material will be chosen otherwise. </p>
+<p>如果mat为空（默认），一个适当的材料将被选择为RGBM或doubleLDR&nbsp;&nbsp;lightmap或者一个正常的贴图和背景材料，否则将使用被选择的材质</p>
+<p><img src="EditorGUIDrawPreviewTexture.png" alt="EditorGUI.DrawPreviewTexture 绘制预览纹理" width="510" height="250" /></p>
+<p> Preview Texture in an Editor Window. <br />
+编辑器中的预览纹理。</p>
+<div class="note"><pre><code><span class="notes">// Load a texture, display the texture, display its alpha channel and
+// show a preview of the inverted texture
+//加载并这个纹理，显示其Alpha通道，并显示该纹理的反向预览</span>
+
+class EditorGUITextures extends <a href="../EditorWindow/EditorWindow.html">EditorWindow</a> {
+
+	var texture : <a href="../Texture2D/Texture2D.html">Texture2D</a>;
+	var invertedTexture : <a href="../Texture2D/Texture2D.html">Texture2D</a>;
+	var showInverted = false;
+
+	@<a href="../MenuItem/MenuItem.html">MenuItem</a>(&quot;Examples/Texture Previewer&quot;)
+	static function Init() {
+		var window = GetWindow(EditorGUITextures);
+		window.position = <a href="../Rect/Rect.html">Rect</a>(0,0,400, 200);
+		window.Show();
+	}
+
+	function OnGUI() {
+		texture = <a href="EditorGUI.ObjectField.html">EditorGUI.ObjectField</a>(<a href="../Rect/Rect.html">Rect</a>(3,3,200,20),
+		&quot;Add a Texture:&quot;,
+		texture,
+		Texture);
+		if(<a href="../GUI/GUI.Button.html">GUI.Button</a>(<a href="../Rect/Rect.html">Rect</a>(208,3, position.width - 210, 20),&quot;Process Inverted&quot;)) {
+			if(invertedTexture)
+				DestroyImmediate(invertedTexture);
+			<span class="notes">//Copy the new texture
+			//复制新的纹理</span>
+			invertedTexture = new <a href="../Texture2D/Texture2D.html">Texture2D</a>(texture.width,
+			texture.height,
+			texture.format,
+			(texture.mipmapCount != 0));
+			for (var m : int = 0; m &lt; texture.mipmapCount; m++)
+				invertedTexture.SetPixels(texture.GetPixels(m), m);
+				InvertColors();
+			showInverted = true;
+		}
+		if(texture) {
+			<a href="EditorGUI.PrefixLabel.html">EditorGUI.PrefixLabel</a>(<a href="../Rect/Rect.html">Rect</a>(25,45,100,15),0,<a href="../GUIContent/GUIContent.html">GUIContent</a>(&quot;Preview:&quot;));
+			<a href="EditorGUI.DrawPreviewTexture.html">EditorGUI.DrawPreviewTexture</a>(<a href="../Rect/Rect.html">Rect</a>(25,60,100,100),texture);
+			<a href="EditorGUI.PrefixLabel.html">EditorGUI.PrefixLabel</a>(<a href="../Rect/Rect.html">Rect</a>(150,45,100,15),0,<a href="../GUIContent/GUIContent.html">GUIContent</a>(&quot;Alpha:&quot;));
+			<a href="EditorGUI.DrawTextureAlpha">EditorGUI.DrawTextureAlpha</a>(<a href="../Rect/Rect.html">Rect</a>(150,60,100,100),texture);
+			<a href="EditorGUI.PrefixLabel.html">EditorGUI.PrefixLabel</a>(<a href="../Rect/Rect.html">Rect</a>(275,45,100,15),0,<a href="../GUIContent/GUIContent.html">GUIContent</a>(&quot;Inverted:&quot;));
+			if(showInverted)
+				<a href="EditorGUI.DrawPreviewTexture.html">EditorGUI.DrawPreviewTexture</a>(<a href="../Rect/Rect.html">Rect</a>(275,60,100,100),invertedTexture);
+			if(<a href="../GUI/GUI.Button.html">GUI.Button</a>(<a href="../Rect/Rect.html">Rect</a>(3,position.height - 25, position.width-6,20),&quot;Clear texture&quot;)) {
+				texture = EditorGUIUtility.whiteTexture;
+				showInverted = false;
+			}
+		} else {
+			<a href="EditorGUI.PrefixLabel.html">EditorGUI.PrefixLabel</a>(
+			<a href="../Rect/Rect.html">Rect</a>(3,position.height - 25,position.width - 6, 20),
+			0,
+			<a href="../GUIContent/GUIContent.html">GUIContent</a>(&quot;No texture found&quot;));
+		}
+	}
+
+	function InvertColors() {
+		for (var m : int = 0; m &lt; invertedTexture.mipmapCount; m++) {
+			var c : Color[] = invertedTexture.GetPixels(m);
+			for (var i : int = 0 ;i &lt; c.Length; i++) {
+				c[i].r = 1 - c[i].r;
+				c[i].g = 1 - c[i].g;
+				c[i].b = 1 - c[i].b;
+			}
+			invertedTexture.SetPixels(c, m);
+		}
+		invertedTexture.Apply();
+	}
+	function OnInspectorUpdate() {
+		Repaint();
+	}
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年6月23日 Thursday  19:39<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

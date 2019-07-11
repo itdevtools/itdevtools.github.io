@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>WheelHit 车轮碰撞</title>
+<meta name="Keywords" content="unity,WheelHit,车轮碰撞" />
+<meta name="Description" content="由WheelCollider报告的车轮的接触信息。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="WheelHit.html">WheelHit</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="WheelHit.collider.html">collider</a></li>
+                    <li><a href="WheelHit.force.html">force</a></li>
+                    <li><a href="WheelHit.forwardDir.html">forwardDir</a></li>
+                    <li><a href="WheelHit.forwardSlip.html">forwardSlip</a></li>
+                    <li><a href="WheelHit.normal.html">normal</a></li>
+                    <li><a href="WheelHit.point.html">point</a></li>
+                    <li><a href="WheelHit.sidewaysDir.html">sidewaysDir</a></li>
+                    <li><a href="WheelHit.sidewaysSlip.html">sidewaysSlip</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>WheelHit 车轮碰撞</h1>
+<p class="h1inherit">Struct</p>
+<p> Contact information for the wheel, reported by <a href="../WheelCollider/WheelCollider.html">WheelCollider</a>.</p>
+<p>由<a href="../WheelCollider/WheelCollider.html">WheelCollider</a>报告的车轮的接触信息。</p>
+<p> Friction for the <a href="../WheelCollider/WheelCollider.html">WheelCollider</a> is computed separately from the rest of the physics, using  a slip based tire friction model. This allows for more realistic behaviour, but makes  wheel colliders ignore standard <a href="../PhysicMaterial/PhysicMaterial.html">PhysicMaterial</a> settings. </p>
+<p>用于<a href="../WheelCollider/WheelCollider.html">WheelCollider</a>的摩擦力是独立于物理系统计算的，使用一个基于轮胎摩擦力模型的滑动。这样就可以有更加真实的行为，而且使车轮忽略标准的<a href="../PhysicMaterial/PhysicMaterial.html">PhysicMaterial</a>设置。</p>
+<p> The way to simulate different ground materials is to query <a href="../WheelCollider/WheelCollider.html">WheelCollider</a> for its collision  information (see <a href="../WheelCollider/WheelCollider.GetGroundHit.html">WheelCollider.GetGroundHit</a>). Usually you get the other <a href="WheelHit.collider.html">collider</a> the wheel  is hitting, and modify wheel's <a href="../WheelCollider/WheelCollider.forwardFriction.html">forwardFriction</a> and <a href="../WheelCollider/WheelCollider.sidewaysFriction.html">sidewaysFriction</a> based on ground's <a href="../Collider/Collider.material.html">material</a>. </p>
+<p>模拟不同地面材质的方法是查询<a href="../WheelCollider/WheelCollider.html">WheelCollider</a>获取它的碰撞信息（参考<a href="../WheelCollider/WheelCollider.GetGroundHit.html">WheelCollider.GetGroundHit</a>）。通常你可以获取车轮碰到的其他<a href="WheelHit.collider.html">collider</a>，并基于地面的<a href="../Collider/Collider.material.html">material</a>修改车轮的<a href="../WheelCollider/WheelCollider.forwardFriction.html">forwardFriction</a>和<a href="../WheelCollider/WheelCollider.sidewaysFriction.html">sidewaysFriction</a>。</p>
+<p> The other members of WheelHit structure are usually queried for information purposes or special  effects. E.g. a &quot;slipping tire&quot; sound can be played if <a href="WheelHit.forwardSlip.html">forwardSlip</a> or <a href="WheelHit.sidewaysSlip.html">sidewaysSlip</a> exceed some threshold. </p>
+<p>WheelHit结构的其他成员通常查询用于信息参考之用或特定效果。例如，如果<a href="WheelHit.forwardSlip.html">forwardSlip</a> 或 <a href="WheelHit.sidewaysSlip.html">sidewaysSlip</a>，超过一定的阈值，播放一个轮胎刹滑动的声音。</p>
+<p> 参见：<a href="../WheelCollider/WheelCollider.GetGroundHit.html">WheelCollider.GetGroundHit</a>.</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="WheelHit.collider.html">collider</a></div>
+    	<div class="licontent">The other Collider the wheel is hitting.<br />
+   	    车轮碰到的其他碰撞器。 </div>
+    </li>
+    <li><div class="lititle"><a href="WheelHit.point.html">point</a></div>
+    	<div class="licontent">The point of contact between the wheel and the ground.<br />
+   	    轮胎和地面之间的接触点。 </div>
+    </li>
+    <li><div class="lititle"><a href="WheelHit.normal.html">normal</a></div>
+    	<div class="licontent">The normal at the point of contact.<br />
+   	    接触点的法线。 </div>
+    </li>
+    <li><div class="lititle"><a href="WheelHit.forwardDir.html">forwardDir</a></div>
+    	<div class="licontent">The direction the wheel is pointing in.<br />
+   	    车轮指向的方向。 </div>
+    </li>
+    <li><div class="lititle"><a href="WheelHit.sidewaysDir.html">sidewaysDir</a></div>
+    	<div class="licontent">The sideways direction of the wheel.<br />
+   	    车轮的侧面方向。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="WheelHit.force.html">force</a></div>
+    	<div class="licontent">The magnitude of the force being applied for the contact.<br />
+   	    应用到接触点的力的大小。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="WheelHit.forwardSlip.html">forwardSlip</a></div>
+    	<div class="licontent">Tire slip in the rolling direction. Acceleration slip is negative, braking slip is positive.<br />
+   	    在滚动方向上的滑动，加速滑动为负，制动滑动为正。 </div>
+    </li>
+    <li><div class="lititle"><a href="WheelHit.sidewaysSlip.html">sidewaysSlip</a></div>
+    	<div class="licontent">Tire slip in the sideways direction.<br />
+   	    在侧面方向上的滑动。 </div>
+    </li>
+</ul>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月16日 Monday  21:16<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

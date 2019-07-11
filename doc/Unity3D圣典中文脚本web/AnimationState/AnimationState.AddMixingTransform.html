@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>AnimationState.AddMixingTransform 添加混合变换</title>
+<meta name="Keywords" content="unity,AnimationState,AddMixingTransform,添加混合变换" />
+<meta name="Description" content="加入一个动画变换。这使你减少创建动画的工作量。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="AnimationState.html">AnimationState</a><span class="transer">翻译：脚本_树 </span>
+                <ul>
+                    <li><a href="AnimationState.AddMixingTransform.html">AddMixingTransform</a></li>
+                    <li><a href="AnimationState.blendMode.html">blendMode</a></li>
+                    <li><a href="AnimationState.clip.html">clip</a></li>
+                    <li><a href="AnimationState.enabled.html">enabled</a></li>
+                    <li><a href="AnimationState.layer.html">layer</a></li>
+                    <li><a href="AnimationState.length.html">length</a></li>
+                    <li><a href="AnimationState.name.html">name</a></li>
+                    <li><a href="AnimationState.normalizedSpeed.html">normalizedSpeed</a></li>
+                    <li><a href="AnimationState.normalizedTime.html">normalizedTime</a></li>
+                    <li><a href="AnimationState.speed.html">speed</a></li>
+                    <li><a href="AnimationState.time.html">time</a></li>
+                    <li><a href="AnimationState.weight.html">weight</a></li>
+                    <li><a href="AnimationState.wrapMode.html">wrapMode</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="AnimationState.html">AnimationState</a>.AddMixingTransform 添加混合变换</h1>
+<p class="h1inherit"></p>
+<p>function <em>AddMixingTransform</em> (<em>mix</em> : <a href="../Transform/Transform.html">Transform</a>, <em>recursive</em> : bool = true) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+
+<p>Adds a transform which should be animated. This   allows you to reduce the number of animations you have to create.</p>
+<p>加入一个动画变换。这使你减少创建动画的工作量。</p>
+<p>For example you might have a handwaving   animation. You might want to play the hand waving animation on a idle character   or on a walking character. Either you have to create 2 hand waving animations   one for idle, one for walking. By using mixing the hand waving animation will   have full control of the shoulder. But the lower body will not be affected by   it, and continue playing the idle or walk animation. Thus you only need one hand   waving animation.</p>
+<p>例如你可能有一个挥手(hand-waving)动画. 你可能需要让一个空闲站立(idle)角色或者一个走动(walking)角色 来挥手. 如果没有动画混合你可能需要制作两个挥手hand-waving动画 : 一个给 idle, 一个给walking. 可是, 如果你将挥手(hand-waving)动画作为一个mixing transform 添加到shoulder transform,挥手动画将只控制肩膀. 身体余下部位不受其影响, 下半身会继续播放 idle 或者 walk 动画. 因而你只需要一个挥手(hand-waving)动画.</p>
+<p>If recursive is true all children of the mix   transform will also be animated. If you don't call AddMixingTransform, all   animation curves will be used.</p>
+<p>如果循环模式为true所有混合transform的子项将动画处理。如果你不调用AddMixingTransform，所有的动画曲线将被使用.</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Transform/Transform.html">Transform</a> shoulder;
+	public void Awake() {
+		animation[&quot;wave_hand&quot;].AddMixingTransform(shoulder);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Adds a mixing transform using a path instead
+// 不用路径增加一个混合transform</span>
+
+var shoulder : <a href="../Transform/Transform.html">Transform</a> ;
+animation[&quot;wave_hand&quot;].AddMixingTransform(shoulder);</code></pre></div>
+</div>
+<p>另一个例子：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Start() {
+		<a href="../Transform/Transform.html">Transform</a> mixTransform = transform.Find(&quot;root/upper_body/left_shoulder&quot;);
+		animation[&quot;wave_hand&quot;].AddMixingTransform(mixTransform);
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code>function Start () {
+	<span class="notes">// Adds a mixing transform using a path
+	// 用路径增加一个混合transform</span>
+	var mixTransform : <a href="../Transform/Transform.html">Transform</a> = transform.Find(&quot;root/upper_body/left_shoulder&quot;);
+	animation[&quot;wave_hand&quot;].AddMixingTransform(mixTransform);
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月28日 Thursday  14:09<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

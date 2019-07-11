@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Graphics.DrawMesh 绘制网格</title>
+<meta name="Keywords" content="unity,Graphics,DrawMesh,绘制网格" />
+<meta name="Description" content="绘制一个网格。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Graphics.html">Graphics</a> <span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Graphics.BlitMultiTap.html">BlitMultiTap</a></li>
+                    <li><a href="Graphics.Blit.html">Blit</a></li>
+                    <li><a href="Graphics.DrawMeshNow.html">DrawMeshNow</a></li>
+                    <li><a href="Graphics.DrawMesh.html">DrawMesh</a></li>
+                    <li><a href="Graphics.DrawTexture.html">DrawTexture</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Graphics.html">Graphics</a>.DrawMesh 绘制网格</h1>
+<p class="h1inherit"></p>
+<p>static function <em>DrawMesh</em> (<em>mesh</em> : <a href="../Mesh/Mesh.html">Mesh</a>, <em>position</em> : <a href="../Vector3/Vector3.html">Vector3</a>, <em>rotation</em> : <a href="../Quaternion/Quaternion.html">Quaternion</a>, <em>material</em> : <a href="../Material/Material.html">Material</a>, <em>layer</em> : int, <em>camera</em> : <a href="../Camera/Camera.html">Camera</a> = null, <em>submeshIndex</em> : int = 0, <em>properties</em> : <a href="../MaterialPropertyBlock/MaterialPropertyBlock.html">MaterialPropertyBlock</a> = null) : void<br />
+static function <em>DrawMesh</em> (<em>mesh</em> : <a href="../Mesh/Mesh.html">Mesh</a>, <em>matrix</em> : <a href="../Matrix4x4/Matrix4x4.html">Matrix4x4</a>, <em>material</em> : <a href="../Material/Material.html">Material</a>, <em>layer</em> : int, <em>camera</em> : <a href="../Camera/Camera.html">Camera</a> = null, <em>submeshIndex</em> : int = 0, <em>properties</em> : <a href="../MaterialPropertyBlock/MaterialPropertyBlock.html">MaterialPropertyBlock</a> = null) : void </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><em>mesh</em></div>
+    	<div class="licontent">The Mesh to draw.<br />
+   	    用来绘制的网格。 </div>
+    </li>
+    <li><div class="lititle"><em>position</em></div>
+    	<div class="licontent">Position of the mesh.<br />
+    	网格的位置。</div>
+    </li>
+    <li><div class="lititle"><em>rotation</em></div>
+    	<div class="licontent">Rotation of the mesh.<br />
+    	网格的旋转。</div>
+    </li>
+    <li><div class="lititle"><em>matrix</em></div>
+    	<div class="licontent">Transformation matrix of the mesh (combines position, rotation and other transformations).<br />
+   	    网格的变换矩阵（组合位置，旋转和其他变换） </div>
+    </li>
+    <li><div class="lititle"><em>material</em></div>
+    	<div class="licontent">Material to use.<br />
+    	使用的材质。</div>
+    </li>
+    <li><div class="lititle"><em>layer</em></div>
+    	<div class="licontent">Layer to use.<br />
+    	使用的层。</div>
+    </li>
+    <li><div class="lititle"><em>camera</em></div>
+    	<div class="licontent">If null (default), the mesh will be drawn in all cameras. Otherwise it will be rendered in the given camera only.<br />
+   	    如果是null(缺省)，该网格将在所有相机中被绘制，否则它将只会在给定的相机中渲染。 </div>
+    </li>
+    <li><div class="lititle"><em>submeshIndex</em></div>
+    	<div class="licontent">Which subset of the mesh to draw. This applies only to meshes that are composed of several materials.<br />
+   	    绘制哪个子网格。这只在网格使用了多个材质的时候使用。 </div>
+    </li>
+    <li><div class="lititle"><em>properties</em></div>
+    	<div class="licontent">Additional material properties to apply onto material just before this mesh will be drawn. See <a href="../MaterialPropertyBlock/MaterialPropertyBlock.html">MaterialPropertyBlock</a>. <br />
+   	    在网格绘制前应用到材质的额外材质属性。 </div>
+    </li>
+</ul>
+
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Draw a mesh.</p>
+<p>绘制一个网格。</p>
+<p> DrawMesh draws a mesh for one frame. The mesh will be affected by the lights, can cast and receive shadows and be  affected by Projectors - just like it was part of some game object. It can be drawn for all cameras or just for  some specific camera. </p>
+<p>DrawMesh     在一帧中绘制一个网格。这个网格将受到光照的影响，可以投射和接收阴影并受投射器影响，就像它是某个游戏物体的一部分。他可以绘制于所有相机或者只在特定的一些相机。</p>
+<p> Use DrawMesh in situations where you want to draw large amount of meshes, but don't want the overhead of creating and  managing game objects. Note that DrawMesh does not draw the mesh immediately; it merely &quot;submits&quot; it for rendering. The mesh  will be rendered as part of normal rendering process. If you want to draw a mesh immediately, use <a href="Graphics.DrawMeshNow.html">Graphics.DrawMeshNow</a>. </p>
+<p>使用DrawMesh的情况，你想绘制大量的网格，而又不想在创建和管理游戏物体的开销。注意，DrawMesh不会立即绘制网格；它仅仅提交它用于渲染。网格将被作为普通渲染过程的一部分。如果想立即绘制一个网格。使用<a href="Graphics.DrawMeshNow.html">Graphics.DrawMeshNow</a>。</p>
+<p> Because DrawMesh does not draw mesh immediately, modifying material properties between calls to this function won't make  the meshes pick up them. If you want to draw series of meshes with the same material, but slightly different  properties (e.g. change color of each mesh), use <a href="../MaterialPropertyBlock/MaterialPropertyBlock.html">MaterialPropertyBlock</a> parameter. </p>
+<p>因为DrawMesh不会立即绘制网格，在调用这个函数期间修改材质属性不会使材质指定它们。如果你想绘制一系列相同材质的网格，但是稍微有些不同的属性（例如，改变每个网格的颜色），那么使用<a href="../MaterialPropertyBlock/MaterialPropertyBlock.html">MaterialPropertyBlock</a>参数。</p>
+<p> 参见：<a href="../MaterialPropertyBlock/MaterialPropertyBlock.html">MaterialPropertyBlock</a>. </p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Mesh/Mesh.html">Mesh</a> aMesh;
+	public <a href="../Material/Material.html">Material</a> aMaterial;
+	void Update() {
+		Graphics.DrawMesh(aMesh, <a href="../Vector3/Vector3.zero.html">Vector3.zero</a>, <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0);
+	}	
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// Draws aMesh with aMaterial at (0,0,0) with no rotation for one frame
+//绘制网格和材质在(0,0,0) 在一帧不带有旋转</span>
+
+var aMesh : <a href="../Mesh/Mesh.html">Mesh</a>;
+var aMaterial : <a href="../Material/Material.html">Material</a>;
+
+function Update() {
+	Graphics.DrawMesh(aMesh, <a href="../Vector3/Vector3.zero.html">Vector3.zero</a>, <a href="../Quaternion/Quaternion.identity.html">Quaternion.identity</a>, aMaterial, 0);
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年2月27日 Sunday  19:36<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

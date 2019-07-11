@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>TrueTypeFontImporter 字体导入器</title>
+<meta name="Keywords" content="unity,TrueTypeFontImporter,TrueType,字体导入器" />
+<meta name="Description" content="用于导入字体的资源导入器。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="TrueTypeFontImporter.html">TrueTypeFontImporter</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="TrueTypeFontImporter.fontNames.html">fontNames</a></li>
+                    <li><a href="TrueTypeFontImporter.fontRenderMode.html">fontRenderMode</a></li>
+                    <li><a href="TrueTypeFontImporter.fontSize.html">fontSize</a></li>
+                    <li><a href="TrueTypeFontImporter.fontTextureCase.html">fontTextureCase</a></li>
+                    <li><a href="TrueTypeFontImporter.fontTTFName.html">fontTTFName</a></li>
+                    <li><a href="TrueTypeFontImporter.includeFontData.html">includeFontData</a></li>
+                    <li><a href="TrueTypeFontImporter.IsFormatSupported.html">IsFormatSupported</a></li>
+                    <li><a href="TrueTypeFontImporter.style.html">style</a></li>
+                    <li><a href="TrueTypeFontImporter.use2xBehaviour.html">use2xBehaviour</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>TrueTypeFontImporter 字体导入器</h1>
+<p class="h1inherit">Inherits from <a href="../AssetImporter/AssetImporter.html">AssetImporter</a></p>
+<p> AssetImporter for importing Fonts</p>
+<p>用于导入字体的资源导入器。</p>
+<p class="note">Note: This is an editor class. To use it you have to place your script in Assets/Editor inside your project folder. Editor classes are in the UnityEditor namespace so for C# scripts you need to add "using UnityEditor;" at the beginning of the script.<br />
+  注意：这是一个编辑器类，如果想使用它你需要把它放到工程目录下的Assets/Editor文件夹下。编辑器类在UnityEditor命名空间下。所以当使用C#脚本时，你需要在脚本前面加上 &quot;using UnityEditor&quot;引用。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="TrueTypeFontImporter.fontSize.html">fontSize</a></div>
+    	<div class="licontent">Font size to use for importing the characters.<br />
+    		用于导入字符的字体大小。 </div>
+    </li>
+    <li><div class="lititle"><a href="TrueTypeFontImporter.fontTextureCase.html">fontTextureCase</a></div>
+    	<div class="licontent">Use this to adjust which characters should be imported.<br />
+    		使用这个调整哪个字符可以被导入。 </div>
+    </li>
+	<li><div class="lititle"><a href="TrueTypeFontImporter.fontRenderMode.html">fontRenderMode</a></div>
+    	<div class="licontent">How to render the font when generating the font Texture<br />
+    		当生成字体纹理时，字体怎样渲染。 </div>
+    </li>
+	<li><div class="lititle"><a href="TrueTypeFontImporter.includeFontData.html">includeFontData</a></div>
+    	<div class="licontent">If this is enabled, the actual font will be embedded into the asset for Dynamic fonts.<br />
+    		如果这个被启用，实际字体将嵌入到资源中，用于动态字体。 </div>
+    </li>
+	<li><div class="lititle"><a href="TrueTypeFontImporter.use2xBehaviour.html">use2xBehaviour</a></div>
+    	<div class="licontent">If this is enabled, font layouting will be the same as in Unity 2.x.<br />
+    		如果这个被启用，字体布局将同 Unity 2.x 用一样。 </div>
+    </li>
+	<li><div class="lititle"><a href="TrueTypeFontImporter.fontNames.html">fontNames</a></div>
+    	<div class="licontent">An array of font names, to be used when includeFontData is set to false.<br />
+    		字体名称的一个数组，用于当includeFontData设置为false时。 </div>
+    </li>
+	<li><div class="lititle"><a href="TrueTypeFontImporter.fontTTFName.html">fontTTFName</a></div>
+    	<div class="licontent">The internal font name of the TTF file.<br />
+    		TTF文件的内部字体名称。 </div>
+    </li>
+	<li><div class="lititle"><a href="TrueTypeFontImporter.style.html">style</a></div>
+    	<div class="licontent">Default style to use for dynamic fonts.	<br />
+    		用于动态字体默认的样式。 </div>
+    </li>
+</ul>	
+
+<h3>Functions<span class="trans">函数</span></h3>	
+<ul class="tableli">
+	<li><div class="lititle"><a href="TrueTypeFontImporter.IsFormatSupported.html">IsFormatSupported</a></div>
+    	<div class="licontent">格式是否支持</div>
+    </li>
+</ul>
+	
+<h2>Inherited members<span class="trans">继承成员</span></h2>
+<h3>Inherited Variables<span class="trans">继承变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="../AssetImporter/AssetImporter.assetPath.html">assetPath</a></div>
+    	<div class="licontent">The path name of the asset for this importer (Read Only)<br />
+   	    用于这个导入器，资源的路径名（只读）。 </div>
+    </li>
+</ul>
+<ul class="tableli">
+    <li>
+		<div class="lititle"><a href="../Object/Object.name.html">name</a></div>
+		<div class="licontent">The name of the object. //物体的名字</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.hideFlags.html">hideFlags</a></div>
+    	<div class="licontent">Should the object be hidden, saved with the scene or modifiable by the user?<br />
+    	物体是否被隐藏、保存在场景中或被用户修改？</div>
+    </li>
+</ul>
+<h3>Inherited Functions<span class="trans">继承函数</span></h3>
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.GetInstanceID.html">GetInstanceID</a></div>
+    	<div class="licontent">Returns the instance id of the object.<br />
+    	返回物体的实例ID</div>
+    </li>
+	<li><div class="lititle"><a href="../Object/Object.ToString.html">ToString</a></div>
+    	<div class="licontent">Returns the name of the game object.<br />返回游戏物体的名称。</div>
+    </li>
+</ul>
+<h3>Inherited Class Functions<span class="trans">继承类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="../AssetImporter/AssetImporter.GetAtPath.html">GetAtPath</a></div>
+    	<div class="licontent">Retrieves the asset importer for the asset at path.<br />
+   	    为所在路径的资源，导入器重新获取资源。 </div>
+    </li>
+</ul>
+
+<ul class="tableli">
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_bool.html">operator bool</a></div>
+    	<div class="licontent">Does the object exist?<br />
+    	物体是否存在？</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.html">Instantiate</a></div>
+    	<div class="licontent">Clones the object original and returns the clone.<br />
+    	克隆原始物体，并返回克隆的物体</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Instantiate.ltTgt.html">Instantiate.&lt;T&gt;</a></div>
+    	<div class="licontent">&nbsp;</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.Destroy.html">Destroy</a></div>
+    	<div class="licontent">Removes a gameobject, component or asset.<br />
+    	删除一个游戏物体、组件或资源</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DestroyImmediate.html">DestroyImmediate</a></div>
+    	<div class="licontent">Destroys the object obj immediately. It is strongly recommended to use Destroy instead.<br />
+    	立即销毁物体obj，强烈建议使用Destroy代替。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectsOfType.html">FindObjectsOfType</a></div>
+    	<div class="licontent">Returns a list of all active loaded objects of Type type.<br />
+    	返回Type类型的所有激活的加载的物体列表</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.FindObjectOfType.html">FindObjectOfType</a></div>
+    	<div class="licontent">Returns the first active loaded object of Type type.<br />
+    	返回Type类型第一个激活的加载的物体。</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_eq.html">operator ==</a></div>
+    	<div class="licontent">Compares if two objects refer to the same<br />
+    	比较如果两个物体相同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.operator_ne.html">operator !=</a></div>
+    	<div class="licontent">Compares if two objects refer to a different object<br />
+    	比较如果两个物体不同</div>
+    </li>
+    <li>
+    	<div class="lititle"><a href="../Object/Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></div>
+    	<div class="licontent">Makes the object target not be destroyed automatically when loading a new scene.<br />
+    	加载新场景的时候使目标物体不被自动销毁。</div>
+    </li>
+</ul>
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月27日 Friday  10:39<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

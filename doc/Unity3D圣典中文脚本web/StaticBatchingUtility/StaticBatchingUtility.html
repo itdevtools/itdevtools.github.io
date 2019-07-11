@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>StaticBatchingUtility 静态批处理工具</title>
+<meta name="Keywords" content="unity,StaticBatchingUtility,静态批处理工具" />
+<meta name="Description" content="StaticBatchingUtility可以准备你的物体，利用Unity的静态批处理优势批处理。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="StaticBatchingUtility.html">StaticBatchingUtility</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="StaticBatchingUtility.Combine.html">Combine</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>StaticBatchingUtility 静态批处理工具</h1>
+<p class="h1inherit"></p>
+<p> StaticBatchingUtility can prepare your objects to take advantage of Unity's static batching.</p>
+<p>StaticBatchingUtility可以准备你的物体，利用Unity的静态批处理优势批处理。</p>
+<p> This step is useful as a performance optimization allowing engine to reduce number of draw-calls dramatically,  but keep amount of rendered geometry intact. </p>
+<p>这步是非常有用的，作为性能优化允许引擎去减少大幅的draw-calls（描绘指令）数，但保持完整的渲染几何量。</p>
+<p> By calling one of the Combine methods you will create an internal mesh which will contain combined geometry,  however each original GameObject will be present in the scene and will be culled individually.  The fact that GameObjects can be culled individually allows run-time to render the same amount of geometry  as it would without batching, unlike combining geometry in the modeling tool. Combining geometry in the modeling tool  prevents effecient culling and results in much higher amount of geometry being rendered. </p>
+<p>通过调用Combine方法，将创建一个内部网格，其中包含合并的几何体，然而每个原始游戏物体，将出现在场景，并且被单独检选。事实上，GameObjects可以单独检选，允许运行时渲染同样数量几何体，因此没有批处理，不像在建模工具合并几何体。在建模工具合并几何体，防止生效的剔除和导致较高的几何体数量被渲染。</p>
+<p> Note that you do not need to call Combine methods on objects which were already marked as &quot;Static&quot; in the Editor. They will  be prepared for static batching automatically during the Build Player step. </p>
+<p>注意，你不需要在物体上调用Combine方法，本来就在编辑器已经标识为“Static”。它们将准备在生成时，自动静态批处理。</p>
+<p> IMPORTANT: only objects with the same material can be batched, thus it is useful to share as many textures/material as you can.</p>
+<p>主要事项：仅在物体具有相同材质可以被批处理，因此你可以用于共享尽可能多的纹理/材质。</p>
+<h3>Class Functions<span class="trans">类函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="StaticBatchingUtility.Combine.html">Combine</a></div>
+    	<div class="licontent">Combine will prepare all children of the staticBatchRoot for static batching.<br />
+   	    合并将准备staticBatchRoot的所有子物体用于静态批处理。 </div>
+    </li>
+</ul>	
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月25日 Friday  10:37<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

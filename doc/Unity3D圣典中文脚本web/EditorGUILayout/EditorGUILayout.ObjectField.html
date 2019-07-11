@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorGUILayout.ObjectField 物体字段</title>
+<meta name="Keywords" content="unity,EditorGUILayout,ObjectField,物体字段" />
+<meta name="Description" content="制作一个物体的拖拽槽字段。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorGUILayout.html">EditorGUILayout</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorGUILayout.BeginHorizontal.html">BeginHorizontal</a></li>
+			<li><a href="EditorGUILayout.BeginScrollView.html">BeginScrollView</a></li>
+			<li><a href="EditorGUILayout.BeginToggleGroup.html">BeginToggleGroup</a></li>
+			<li><a href="EditorGUILayout.BeginVertical.html">BeginVertical</a></li>
+			<li><a href="EditorGUILayout.ColorField.html">ColorField</a></li>
+			<li><a href="EditorGUILayout.CurveField.html">CurveField</a></li>
+			<li><a href="EditorGUILayout.EndHorizontal.html">EndHorizontal</a></li>
+			<li><a href="EditorGUILayout.EndScrollView.html">EndScrollView</a></li>
+			<li><a href="EditorGUILayout.EndToggleGroup.html">EndToggleGroup</a></li>
+			<li><a href="EditorGUILayout.EndVertical.html">EndVertical</a></li>
+			<li><a href="EditorGUILayout.EnumPopup.html">EnumPopup</a></li>
+			<li><a href="EditorGUILayout.FloatField.html">FloatField</a></li>
+			<li><a href="EditorGUILayout.Foldout.html">Foldout</a></li>
+			<li><a href="EditorGUILayout.InspectorTitlebar.html">InspectorTitlebar</a></li>
+			<li><a href="EditorGUILayout.IntField.html">IntField</a></li>
+			<li><a href="EditorGUILayout.IntPopup.html">IntPopup</a></li>
+			<li><a href="EditorGUILayout.IntSlider.html">IntSlider</a></li>
+			<li><a href="EditorGUILayout.LabelField.html">LabelField</a></li>
+			<li><a href="EditorGUILayout.LayerField.html">LayerField</a></li>
+			<li><a href="EditorGUILayout.MinMaxSlider.html">MinMaxSlider</a></li>
+			<li><a href="EditorGUILayout.ObjectField.html">ObjectField</a></li>
+			<li><a href="EditorGUILayout.PasswordField.html">PasswordField</a></li>
+			<li><a href="EditorGUILayout.Popup.html">Popup</a></li>
+			<li><a href="EditorGUILayout.PrefixLabel.html">PrefixLabel</a></li>
+			<li><a href="EditorGUILayout.PropertyField.html">PropertyField</a></li>
+			<li><a href="EditorGUILayout.RectField.html">RectField</a></li>
+			<li><a href="EditorGUILayout.Slider.html">Slider</a></li>
+			<li><a href="EditorGUILayout.Space.html">Space</a></li>
+			<li><a href="EditorGUILayout.TagField.html">TagField</a></li>
+			<li><a href="EditorGUILayout.TextArea.html">TextArea</a></li>
+			<li><a href="EditorGUILayout.TextField.html">TextField</a></li>
+			<li><a href="EditorGUILayout.Toggle.html">Toggle</a></li>
+			<li><a href="EditorGUILayout.Vector2Field.html">Vector2Field</a></li>
+			<li><a href="EditorGUILayout.Vector3Field.html">Vector3Field</a></li>
+			<li><a href="EditorGUILayout.Vector4Field.html">Vector4Field</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="EditorGUILayout.html">EditorGUILayout</a>.ObjectField 物体字段</h1>
+<p class="h1inherit"></p>
+<p>static function <em>ObjectField</em> (<em>obj</em> : <a href="../Object/Object.html">Object</a>, <em>objType</em> : System.Type, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : Object<br />
+static function <em>ObjectField</em> (<em>label</em> : string, <em>obj</em> : <a href="../Object/Object.html">Object</a>, <em>objType</em> : System.Type, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : Object<br />
+static function <em>ObjectField</em> (<em>label</em> : <a href="../GUIContent/GUIContent.html">GUIContent</a>, <em>obj</em> : <a href="../Object/Object.html">Object</a>, <em>objType</em> : System.Type, <em>params options</em> : <a href="../GUILayoutOption/GUILayoutOption.html">GUILayoutOption</a>[]) : Object </p>
+<h3>Parameters<span class="trans">参数</span></h3>
+<ul class="tableli">
+	<li>
+    	<div class="lititle"><em>label</em></div>
+    	<div class="licontent"> Optional label in front of the field.  // 字段前面的可选标签。</div>
+    </li>
+    <li>
+    	<div class="lititle"><em>obj</em></div>
+    	<div class="licontent">	The object the field shows. // 字段显示的物体</div>
+    </li>
+    <li><div class="lititle"><em>objType</em></div>
+    	<div class="licontent">The type of the object. // 物体的类型</div>
+    	</li>
+	<li>
+		<div class="lititle"><em>options</em></div>
+		<div class="licontent">An optional list of layout options that specify extra layouting   properties. Any values passed in here will override settings defined by   the style.  See Also: <a href="GUILayout.Width.html">GUILayout.Width</a>, <a href="GUILayout.Height.html">GUILayout.Height</a>, <a href="GUILayout.MinWidth.html">GUILayout.MinWidth</a>, <a href="GUILayout.MaxWidth.html">GUILayout.MaxWidth</a>, <a href="GUILayout.MinHeight.html">GUILayout.MinHeight</a>, <a href="GUILayout.MaxHeight.html">GUILayout.MaxHeight</a>, <a href="GUILayout.ExpandWidth.html">GUILayout.ExpandWidth</a>, <a href="GUILayout.ExpandHeight.html">GUILayout.ExpandHeight</a><br />
+			指定额外布局属性的可选列表。这里传递任意值，将覆盖样式定义的设置。</div>
+	</li>
+</ul>
+<em>Returns</em>
+<p><a href="../Object/Object.html">Object</a> - The object that has been set by the user.</p>
+<p>返回Object，由用户设置的物体。</p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Make an object drop slot field.</p>
+<p>制作一个物体的拖拽槽字段。</p>
+<p><img src="QuickHelperObjectField.png" alt="EditorGUILayout.ObjectField 物体字段" width="195" height="152" /></p>
+<p> Search for a help page by selecting the GameObject in the Object Field. <br />
+搜索在这个物体字段选择的物体帮助页面。</p>
+<div class="note"><pre><code><span class="notes">// EditorScript that quickly searchs for a help page
+// of the selected Object.
+//搜索选择物体的帮助页面
+// If there is no page found on the Manual it opens the Unity forum.
+//如果没有发现页面，将打开Unity论坛</span>
+import UnityEditor;
+
+class QuickHelper extends <a href="../EditorWindow/EditorWindow.html">EditorWindow</a> {
+
+	var source : Object;
+
+	@<a href="../MenuItem/MenuItem.html">MenuItem</a>(&quot;Example/QuickHelper _h&quot;)
+	static function Init() {
+	var window : QuickHelper = <a href="../EditorWindow/EditorWindow.GetWindowWithRect.html">EditorWindow.GetWindowWithRect</a>(QuickHelper, <a href="../Rect/Rect.html">Rect</a>(0,0,165,100));
+	window.Show();
+	}
+
+	function OnGUI() {
+		<a href="EditorGUILayout.BeginHorizontal.html">EditorGUILayout.BeginHorizontal</a>();
+		source = <a href="EditorGUILayout.ObjectField.html">EditorGUILayout.ObjectField</a>(source, Object);
+		<a href="EditorGUILayout.EndHorizontal.html">EditorGUILayout.EndHorizontal</a>();
+
+		if(<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a>(&quot;Search!&quot;)) {
+			if(source == null) {
+			this.ShowNotification(<a href="../GUIContent/GUIContent.html">GUIContent</a>(&quot;No object selected for searching&quot;));
+			} else {
+				if(<a href="../Help/Help.HasHelpForObject.html">Help.HasHelpForObject</a>(source))
+					<a href="../Help/Help.HasHelpForObject.html">Help.ShowHelpForObject</a>(source);
+				else
+					<a href="../Help/Help.BrowseURL.html">Help.BrowseURL</a>(&quot;http://forum.unity3d.com/search.php&quot;);
+			}
+		}
+	}
+}</code></pre></div>
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年7月14日 Thursday  12:43<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

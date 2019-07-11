@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>WWW.LoadUnityWeb 加载UnityWeb文件</title>
+<meta name="Keywords" content="unity,WWW,LoadUnityWeb" />
+<meta name="Description" content="加载新的web播放器数据文件。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="WWW.html">WWW</a> <span class="transer">坏坏/咖啡</span>
+                <ul>
+                    <li><a href="WWW.assetBundle.html">assetBundle</a></li>
+                    <li><a href="WWW.audioClip.html">audioClip</a></li>
+                    <li><a href="WWW.bytes.html">bytes</a></li>
+                    <li><a href="WWW.error.html">error</a></li>
+                    <li><a href="WWW.EscapeURL.html">EscapeURL</a></li>
+                    <li><a href="WWW.isDone.html">isDone</a></li>
+                    <li><a href="WWW.LoadImageIntoTexture.html">LoadImageIntoTexture</a></li>
+                    <li><a href="WWW.LoadUnityWeb.html">LoadUnityWeb</a></li>
+                    <li><a href="WWW.movie.html">movie</a></li>
+                    <li><a href="WWW.oggVorbis.html">oggVorbis</a></li>
+                    <li><a href="WWW.progress.html">progress</a></li>
+                    <li><a href="WWW.texture.html">texture</a></li>
+                    <li><a href="WWW.text.html">text</a></li>
+                    <li><a href="WWW.threadPriority.html">threadPriority</a></li>
+                    <li><a href="WWW.UnEscapeURL.html">UnEscapeURL</a></li>
+                    <li><a href="WWW.uploadProgress.html">uploadProgress</a></li>
+                    <li><a href="WWW.url.html">url</a></li>
+                    <li><a href="WWW.WWW.html">WWW</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="WWW.html">WWW</a>.LoadUnityWeb 加载UnityWeb文件</h1>
+<p class="h1inherit"></p>
+<p>function <em>LoadUnityWeb</em> () : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Loads the new web player data file.</p>
+<p>加载新的web播放器数据文件。</p>
+<p> The first level of the loaded .unity3d file will automatically be loaded.  All objects, scripts and static variables from the previous .unity3d file will be unloaded.  You can move information between the two sessions using <a href="../PlayerPrefs/PlayerPrefs.html">PlayerPrefs</a> class. </p>
+<p>加载的unity3d文件的第一个关卡将自动被加载，所有来自前一个.unity3d文件的物体、脚本和静态变量将被卸载。你可以使用PlayerPrefab类在两个绘画间移动信息。 	</p>
+<p> This function is only supported in the web player. </p>
+<p>这个函数只能在web播放器中使用。</p>
+<p> If the object has not finished downloading the unity3d file will not be loaded.  Use <a href="WWW.isDone.html">isDone</a> or yield to see if the data is available.</p>
+<p>如果对象尚未完成下载，unity3d文件将不会被加载。使用<a href="WWW.isDone.html">isDone</a>或yield查看数据是否可用。</p>
+<div class="note"><pre><code>function Start () {
+<span class="notes">	// Start streaming the data file
+	//开始流数据文件</span>
+	var stream = new WWW (&quot;http://www.unity3d.com/webplayers/Lightning/lightning.unity3d&quot;);
+<span class="notes">	// Yield until stream is done
+	//等待流完成</span>
+	yield stream;
+<span class="notes">	// Load it!
+	//加载</span>
+	stream.LoadUnityWeb();
+}</code></pre></div>
+<p>又一个例子：</p>
+<div class="note"><pre><code><span class="notes">// Streams a .unity3d file and displays the progress in a GUI texture.
+// You need to make sure the GUI texture is set up to have a pixel inset.
+// 下载一个.unity3d文件并在GUI纹理中显示进度，你需要确保GUI纹理被设置为具有一个pixelInset</span>
+function Start () {
+	<span class="notes">// Store the original pixel inset and modify it from there.
+	// 保存原始的pixelInset并修改它</span>
+	var originalPixelRect = guiTexture.pixelInset;
+
+	<span class="notes">// Update the progress bar by scaling the gui texture until we reach the end
+	// 通过缩放GUI纹理来更新进度条，直到到达末尾</span>
+	var stream = new WWW (&quot;http://www.unity3d.com/webplayers/Lightning/lightning.unity3d&quot;);
+	while (!stream.isDone) {
+		guiTexture.pixelInset.xMax = originalPixelRect.xMin + stream.progress * originalPixelRect.width;
+
+		yield;
+	}
+	<span class="notes">// Update it one last time before loading
+	// 在加载之前更新最后一次</span>
+	guiTexture.pixelInset.xMax = originalPixelRect.xMax;
+
+	stream.LoadUnityWeb();
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月25日 Monday  9:22<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

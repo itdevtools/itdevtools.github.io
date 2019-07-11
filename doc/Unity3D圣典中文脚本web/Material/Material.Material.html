@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Material.Material 构造材质</title>
+<meta name="Keywords" content="unity,Material,材质,Material,构造材质" />
+<meta name="Description" content="从一个源Shader字符串创建一个材质。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Material.html">Material</a><span class="trans">材质</span> <span class="transer">翻译：titan-志广</span>
+                <ul>
+                    <li><a href="Material.color.html">color</a></li>
+                    <li><a href="Material.CopyPropertiesFromMaterial.html">CopyPropertiesFromMaterial</a></li>
+                    <li><a href="Material.GetColor.html">GetColor</a></li>
+                    <li><a href="Material.GetFloat.html">GetFloat</a></li>
+                    <li><a href="Material.GetMatrix.html">GetMatrix</a></li>
+                    <li><a href="Material.GetTag.html">GetTag</a></li>
+                    <li><a href="Material.GetTextureOffset.html">GetTextureOffset</a></li>
+                    <li><a href="Material.GetTextureScale.html">GetTextureScale</a></li>
+                    <li><a href="Material.GetTexture.html">GetTexture</a></li>
+                    <li><a href="Material.GetVector.html">GetVector</a></li>
+                    <li><a href="Material.HasProperty.html">HasProperty</a></li>
+                    <li><a href="Material.Lerp.html">Lerp</a></li>
+                    <li><a href="Material.mainTextureOffset.html">mainTextureOffset</a></li>
+                    <li><a href="Material.mainTextureScale.html">mainTextureScale</a></li>
+                    <li><a href="Material.mainTexture.html">mainTexture</a></li>
+                    <li><a href="Material.Material.html">Material</a></li>
+                    <li><a href="Material.passCount.html">passCount</a></li>
+                    <li><a href="Material.renderQueue.html">renderQueue</a></li>
+                    <li><a href="Material.SetColor.html">SetColor</a></li>
+                    <li><a href="Material.SetFloat.html">SetFloat</a></li>
+                    <li><a href="Material.SetMatrix.html">SetMatrix</a></li>
+                    <li><a href="Material.SetPass.html">SetPass</a></li>
+                    <li><a href="Material.SetTextureOffset.html">SetTextureOffset</a></li>
+                    <li><a href="Material.SetTextureScale.html">SetTextureScale</a></li>
+                    <li><a href="Material.SetTexture.html">SetTexture</a></li>
+                    <li><a href="Material.SetVector.html">SetVector</a></li>
+                    <li><a href="Material.shader.html">shader</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Material.html">Material</a>.Material 构造材质</h1>
+<p class="h1inherit"></p>
+<p>static function <em>Material</em> (<em>contents</em> : string) : Material </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Create a temporary material from a shader source string.</p>
+<p>从一个源Shader字符串创建一个材质。</p>
+<p> If you have a script which implements a custom special effect, you implement all the graphic setup  using shaders &amp; materials. Use this function to create a custom shader &amp; material inside your script.  After creating the material, use <a href="Material.SetColor.html">SetColor</a>, <a href="Material.SetTexture.html">SetTexture</a>, <a href="Material.SetFloat.html">SetFloat</a>, <a href="Material.SetVector.html">SetVector</a>, <a href="Material.SetMatrix.html">SetMatrix</a> to populate the shader property values. </p>
+<p>如果您有一个用于实现自定义的特殊效果的脚本，您需要使用shader和材质实现所有图形设置。在您的脚本中使用此函数创建一个自定义shader和材质。创建材质后，使用 <a href="Material.SetColor.html">SetColor </a>, <a href="Material.SetTexture.html">SetTexture </a>, <a href="Material.SetFloat.html">SetFloat </a>, <a href="Material.SetVector.html">SetVector </a>, <a href="Material.SetMatrix.html">SetMatrix </a>来设置shader的属性值</p>
+<div class="note">
+  <pre><code><span class="notes">// Creates an additive-blended material and uses it for rendering
+//创建一个加色混合材质并用它来渲染。</span>
+
+var <a href="../Color/Color.html">color</a> = <a href="../Color/Color.white.html">Color.white</a> ;
+function Start () {
+	var shaderText =
+	&quot; Shader \&quot;Alpha Additive\&quot; {&quot; +
+	&quot;Properties { _Color (\&quot;Main <a href="../Color/Color.html">Color</a> \&quot;, <a href="../Color/Color.html">Color</a> ) = (1,1,1,0) }&quot; +
+	&quot;SubShader {&quot; +
+	&quot;    Tags { \&quot;Queue\&quot; = \&quot;Transparent\&quot; }&quot; +
+	&quot;    Pass {&quot; +
+	&quot;      Blend One One ZWrite Off ColorMask RGB&quot; +
+	&quot;      Material { Diffuse [_Color] Ambient [_Color] }&quot; +
+	&quot;      Lighting On&quot; +
+	&quot;      SetTexture [_Dummy] { combine primary double, primary }&quot; +
+	&quot;    }&quot; +
+	&quot;}&quot; +
+	&quot;}&quot;;
+	renderer.material = new Material( shaderText );
+	renderer.material.color = color;
+}
+</code></pre></div>
+<p>&#8226; static function <em>Material</em> (<em>shader</em> : <a href="../Shader/Shader.html">Shader</a>) : Material </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Create a temporary Material from a <a href="http://unity3d.com/support/documentation/ScriptReference/Shader.html">Shader </a>.</p>
+<p>从一个源Shader字符串创建一个材质</p>
+<p>If you have a script which implements a custom   special effect, you implement all the graphic setup using shaders &amp;   materials. Use this function to create a custom shader &amp; material inside   your script. After creating the material, use <a href="Material.SetColor.html">SetColor </a>, <a href="Material.SetTexture.html">SetTexture </a>, <a href="Material.SetFloat.html">SetFloat </a>, <a href="Material.SetVector.html">SetVector </a>, <a href="Material.SetMatrix.html">SetMatrix </a>to populate the   shader property values.</p>
+<p>如果您有一个用于实现自定义的特殊效果的脚本，您需要使用shader和材质实现所有图形设置。在您的脚本中使用此函数创建一个自定义shader和材质。创建材质后，使用 <a href="Material.SetColor.html">SetColor </a>, <a href="Material.SetTexture.html">SetTexture </a>, <a href="Material.SetFloat.html">SetFloat </a>, <a href="Material.SetVector.html">SetVector </a>, <a href="Material.SetMatrix.html">SetMatrix </a>来设置shader的属性值</p>
+<div class="note"><pre><code><span class="notes">// Creates a material from shader&amp;texture references
+//使用shader和纹理创建一个材质</span>
+
+var shader : <a href="../Shader/Shader.html">Shader</a> ;
+var texture : <a href="../Texture/Texture.html">Texture</a> ;
+var color : <a href="../Color/Color.html">Color</a> ;
+function Start () {
+	renderer.material = new Material (shader);
+	renderer.material.mainTexture = texture;
+	renderer.material.color = color;
+}
+</code></pre></div>
+
+<div class="note"><pre><code><span class="notes">// Creates a cube and assigns a material with a builtin Glossy shader.
+//创建一个cube并且赋予它一个内建的Glossy shader材质</span>
+
+function Start () {
+	var cube = <a href="../GameObject/GameObject.CreatePrimitive.html">GameObject.CreatePrimitive</a> ( <a href="../PrimitiveType/PrimitiveType.Cube.html">PrimitiveType.Cube</a> );
+	cube.renderer.material = new Material ( <a href="../Shader/Shader.Find.html">Shader.Find</a> (&quot; Glossy&quot;));
+}
+</code></pre></div>
+<p>&#8226; static function <em>Material</em> (<em>source</em> : Material) : Material </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Create a temporary Material by copying the shader   and all properties from the source Material.</p>
+<p>通过从源材质复制shader以及其所有属性创建一个实时材质。</p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月22日 Saturday  20:31<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

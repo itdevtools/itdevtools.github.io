@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Array 数组</title>
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Array.html">Array</a><span class="transer">翻译：U_鹰 </span>
+              <ul>
+                    <li><a href="Array.Add.html">Add</a></li>
+                    <li><a href="Array.Array.html">Array</a></li>
+                    <li><a href="Array.Clear.html">Clear</a></li>
+                    <li><a href="Array.Concat.html">Concat</a></li>
+                    <li><a href="Array.Join.html">Join</a></li>
+                    <li><a href="Array.length.html">length</a></li>
+                    <li><a href="Array.Pop.html">Pop</a></li>
+                    <li><a href="Array.Push.html">Push</a></li>
+                    <li><a href="Array.RemoveAt.html">RemoveAt</a></li>
+                    <li><a href="Array.Reverse.html">Reverse</a></li>
+                    <li><a href="Array.Shift.html">Shift</a></li>
+                    <li><a href="Array.Sort.html">Sort</a></li>
+                    <li><a href="Array.Unshift.html">Unshift</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>Array<span class="trans">数组</span></h1>
+<p class="h1inherit"></p>
+<p>Arrays allow you to store multiple objects in a single variable.</p>
+<p>The Array class is only only available in Javascript. For more information about ArrayLists, Dictionaries or Hashtables in C# or Javascript see <a href="http://msdn2.microsoft.com/en-us/library/system.collections.arraylist_members%28VS.80%29.aspx">here</a>.</p>
+<p>数组允许你在一个变量中储存多个对象。</p>
+<p>这个 数组类仅仅用于Javascript。更多用于C#或Javascript关于ArrayLists，字典或哈希表，看<a href="http://msdn2.microsoft.com/en-us/library/system.collections.arraylist_members(VS.80).aspx">这里</a>。</p>
+<p>这里是一个你能用数组类做什么的基本的例子。</p>
+<div class="wrap">
+	<ul class="tabs">
+    	<li><a href="#">C#</a></li>
+        <li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">Array不能用于C#.</div>
+    <div class="panes"><pre><code>function Start () {
+	var arr = new Array ();
+
+	<span class="notes">// 添加一个元素</span>
+	arr.Push ("Hello");
+
+	<span class="notes">// 打印第一个元素"Hello"</span>
+	print(arr[0]);
+
+	<span class="notes">// 调整数组大小</span>
+	arr.length = 2;
+	<span class="notes">// 把 "World" 赋给第二个元素</span>
+	arr[1] = "World";
+
+	<span class="notes">// 遍历这个数组</span>
+	for (var value : String in arr) {
+		print(value);
+	}
+}</code></pre></div>
+</div>
+
+<p>There are two types of arrays in Unity, builtin arrays and normal Javascript Arrays. </p>
+<p>Unity 有两种类型的数组，内置数组和标准的Javascript数组。</p>
+<p><em>Builtin arrays (native .NET arrays), are extremely fast and efficient but they can not be resized.</em><br />
+内置的数组 (原始的.NET 数组), 是非常快速和有效的, 但是他们不能被调整大小。</p>
+<p>They are statically typed which allows them to be edited in the inspector. Here is a basic example of how you can use builtin arrays.</p>
+<p>它们是静态类型的, 这允许他们在检视面板中被编辑。  </p>
+<p>这里是一个如何使用内置数组的基本例子</p>
+<div class="wrap">
+	<ul class="tabs">
+        <li><a href="#">C#</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+	<div class="panes">Array不能用于C#.</div>
+    <div class="panes"><pre><code><span class="notes">// 在检视面板中暴露一个浮点数组，你可以在那里编辑它</span>
+var values : float[];
+
+function Start () {
+	<span class="notes">// 遍历数组</span>
+	for (var value in values) {
+		print(value);
+	}
+	<span class="notes">// 由于我们不能调整内置数组的大小, 我们必须重新创建一个数组来调整其大小</span>
+	values = new float[10];
+	<span class="notes">// 给第二个元素赋值</span>
+	values[1] = 5.0;
+}</code></pre></div>
+</div>
+<p>Builtin arrays are useful in performance critical code (With Unity's javascript and builtin arrays you could easily process 2 million vertices using the mesh interface in one second.) </p>
+<p>Normal Javascript Arrays on the other hand can be resized, sorted and can do all other operations you would expect from an array class. Javascript Arrays do not show up in the inspector. <em>You can easily convert between Javascript Arrays and builtin arrays. </em></p>
+<p>内置数组在性能相关代码中是非常有用的 (使用Unity javascript 数组和内置数组可以很容易使用 <a href="../Mesh.html">mesh interface</a> 在一秒内处理200万个顶点)。</p>
+<p>另一方面，标准Javascript数组可以调整大小、排序，并可以做所有你期望的数组类的操作，Javascript数组不显示在检视面板。你能很容易的在Javascript数组和内置数组之间转换。</p>
+<div class="wrap">
+	<ul class="tabs">
+        <li><a href="#">C#</a></li>
+        <li><a href="#">JavaScript</a></li>
+	</ul>
+	<div class="panes">Array不能用于C#.</div>
+    <div class="panes"><pre><code>function Start () {
+	var array = new Array (<a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 0), <a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 1));
+	array.Push(<a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 2));
+	array.Push(<a href="../Vector3/Vector3.html">Vector3</a>(0, 0, 3));
+	<span class="notes">// 复制JS数组到内置数组</span>
+	var builtinArray : <a href="../Vector3/Vector3.html">Vector3</a>[] = array.ToBuiltin(Vector3);
+	<span class="notes">// 将内置数组赋给JS数组</span>
+	var newarr = new Array (builtinArray);
+	<span class="notes">// newarr包含相同的元素作为数组</span>
+	print (newarr);
+}</code></pre></div>
+</div>
+<p>Note that in the following all functions are upper case following Unity's naming convention. As a convenience for javascript users, Unity also accepts lower case functions for the array class. </p>
+<p><em>Note: </em>Unity doesn't support serialization of a List of Lists, nor an Array of Arrays.</p>
+<p>注意按照Unity的命名规则下面所有函数首字母均为大写，为方便Javascript用户，Unity也接受数组类小写函数。</p>
+<p><em>注意：</em>Unity不支持一个列表的列表序列化，不是一个数组的数组。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Array.length.html">length</a></div>
+    <div class="licontent">the length property of the array that returns or sets the number of elements in array.<br />
+      数组的长度属性, 返回或设置数组中元素的数量
+  。</div></li>
+</ul>
+<h3>Constructors<span class="trans">构造函数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Array.Array.html">Array</a></div><div class="licontent">Creates an Array of a fixed size.<br />
+  创建一个固定大小的数组。</div></li>
+</ul>
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="Array.Concat.html">Concat</a></div><div class="licontent">Concat joins two or more arrays. The method does not change the existing arrays<br />
+    连接两个或更多数组，这个方法不会改变现有的数组。</div></li>
+    <li><div class="lititle"><a href="Array.Join.html">Join</a></div><div class="licontent">Joins the contents of an array into one string.<br />
+    连接数组的内容到一个字符串。</div></li>
+    <li><div class="lititle"><a href="Array.Push.html">Push</a></div><div class="licontent">Adds value to the end of the array.<br />
+    在数组的末端添加值。</div></li>
+    <li><div class="lititle"><a href="Array.Add.html">Add</a></div><div class="licontent">Adds value to the end of the array.<br />
+    在数组的末端添加值。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.Pop.html">Pop</a></div>
+    <div class="licontent">Removes the last element of the array and returns it.<br />
+    移除数组最后一个元素并返回它。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.Shift.html">Shift</a></div>
+    <div class="licontent">Removes the first element of the array and returns it.<br />
+    移除数组第一个元素并返回它。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.RemoveAt.html">RemoveAt</a></div><div class="licontent">Removes the element at index from the array.<br />
+    从数组中移除位于索引的元素。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.Unshift.html">Unshift</a></div><div class="licontent">Unshift adds one or more elements to the beginning of an array and returns the new length of the array.<br />
+    在数组开始位置添加一个或多个元素并返回新的数组长度。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.Clear.html">Clear</a></div><div class="licontent">Empties the array. The length of the array will be zero.<br />
+    清空数组，数组长度将变为0。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.Reverse.html">Reverse</a></div>
+    <div class="licontent">Reverses the order of all elements contained in the array.<br />
+    反转数组中所有元素的顺序。</div>
+    </li>
+    <li><div class="lititle"><a href="Array.Sort.html">Sort</a></div><div class="licontent">Sorts all Array elements<br />
+    排序所有数组元素
+    。</div>
+      </li>
+</ul>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月1日 Wednesday  22:39<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

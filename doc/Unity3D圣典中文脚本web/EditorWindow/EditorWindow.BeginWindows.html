@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>EditorWindow.BeginWindows 开始窗口</title>
+<meta name="Keywords" content="unity,EditorWindow,BeginWindows,开始窗口" />
+<meta name="Description" content="标记所有弹出窗口的开始区域。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="EditorWindow.html">EditorWindow</a><span class="transer">翻译：U_鹰 </span>
+		<ul>
+			<li><a href="EditorWindow-autoRepaintOnSceneChange.html">autoRepaintOnSceneChange</a></li>
+			<li><a href="EditorWindow.BeginWindows.html">BeginWindows</a></li>
+			<li><a href="EditorWindow.Close.html">Close</a></li>
+			<li><a href="EditorWindow.EndWindows.html">EndWindows</a></li>
+			<li><a href="EditorWindow-focusedWindow.html">focusedWindow</a></li>
+			<li><a href="EditorWindow.FocusWindowIfItsOpen.ltTgt.html">FocusWindowIfItsOpen.&lt;T&gt; </a></li>
+			<li><a href="EditorWindow.FocusWindowIfItsOpen.html">FocusWindowIfItsOpen</a></li>
+			<li><a href="EditorWindow.Focus.html">Focus</a></li>
+			<li><a href="EditorWindow.GetWindow.ltTgt.html">GetWindow.&lt;T&gt; </a></li>
+			<li><a href="EditorWindow.GetWindowWithRect.ltTgt.html">GetWindowWithRect.&lt;T&gt; </a></li>
+			<li><a href="EditorWindow.GetWindowWithRect.html">GetWindowWithRect</a></li>
+			<li><a href="EditorWindow.GetWindow.html">GetWindow</a></li>
+			<li><a href="EditorWindow-mouseOverWindow.html">mouseOverWindow</a></li>
+			<li><a href="EditorWindow.OnDestroy.html">OnDestroy</a></li>
+			<li><a href="EditorWindow.OnFocus.html">OnFocus</a></li>
+			<li><a href="EditorWindow.OnGUI.html">OnGUI</a></li>
+			<li><a href="EditorWindow.OnHierarchyChange.html">OnHierarchyChange</a></li>
+			<li><a href="EditorWindow.OnInspectorUpdate.html">OnInspectorUpdate</a></li>
+			<li><a href="EditorWindow.OnLostFocus.html">OnLostFocus</a></li>
+			<li><a href="EditorWindow.OnProjectChange.html">OnProjectChange</a></li>
+			<li><a href="EditorWindow.OnSelectionChange.html">OnSelectionChange</a></li>
+			<li><a href="EditorWindow-position.html">position</a></li>
+			<li><a href="EditorWindow.RemoveNotification.html">RemoveNotification</a></li>
+			<li><a href="EditorWindow.Repaint.html">Repaint</a></li>
+			<li><a href="EditorWindow.SendEvent.html">SendEvent</a></li>
+			<li><a href="EditorWindow.ShowAuxWindow.html">ShowAuxWindow</a></li>
+			<li><a href="EditorWindow.ShowNotification.html">ShowNotification</a></li>
+			<li><a href="EditorWindow.ShowPopup.html">ShowPopup</a></li>
+			<li><a href="EditorWindow.ShowTab.html">ShowTab</a></li>
+			<li><a href="EditorWindow.ShowUtility.html">ShowUtility</a></li>
+			<li><a href="EditorWindow.Show.html">Show</a></li>
+			<li><a href="EditorWindow.Update.html">Update</a></li>
+			<li><a href="EditorWindow-wantsMouseMove.html">wantsMouseMove</a></li>
+		</ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="EditorWindow.html">EditorWindow</a>.BeginWindows 开始窗口</h1>
+<p class="h1inherit"></p>
+<p>function <em>BeginWindows</em> () : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Mark the beginning area of all popup windows.</p>
+<p>标记所有弹出窗口的开始区域。</p>
+<p> <a href="../GUI/GUI.Window.html">GUI.Window</a> behaves somewhat differently in the editor than inside your games. In games, <a href="../GUI/GUI.Window.html">GUI.Window</a> pops up a window on your screen. In the editor, <a href="../GUI/GUI.Window.html">GUI.Window</a> shows a subwindow inside one of your editor windows. Begin/EndWindows is used to determine where these can go.  You need to have all calls to <a href="../GUI/GUI.Window.html">GUI.Window</a> or <a href="../GUILayout/GUILayout.Window.html">GUILayout.Window</a> inside a <a href="EditorWindow.BeginWindows.html">BeginWindows</a> / <a href="EditorWindow.EndWindows.html">EndWindows</a> pair. Like this: </p>
+<p><a href="../GUI/GUI.Window.html">GUI.Window</a>的行为在编辑器中比在游戏中有所不同。在游戏中，<a href="../GUI/GUI.Window.html">GUI.Window</a>在屏幕上弹出一个窗口；在编辑器中，<a href="../GUI/GUI.Window.html">GUI.Window</a>在编辑器窗口中显示一个子窗口。Begin/EndWindows用于定义窗口。你需要让所有调用的<a href="../GUI/GUI.Window.html">GUI.Window</a>或<a href="../GUILayout/GUILayout.Window.html">GUILayout.Window</a>在<a href="EditorWindow.BeginWindows.html">BeginWindows</a> / <a href="EditorWindow.EndWindows.html">EndWindows</a>对内。</p>
+<p><img src="GUIWindowDemo.png" width="300" height="279" /></p>
+<p> Simple editor Window with a window and a button inside. </p>
+<p>带有一个窗口和一个按钮的简单编辑器窗口。</p>
+<div class="note">
+	<pre><code>class GUIWindowDemo extends EditorWindow {
+	<span class="notes">// The position of the window
+	//窗口的位置</span>
+	var windowRect = <a href="../Rect/Rect.html">Rect</a> (100,100,200,200);
+
+	<span class="notes">// Main GUI Function //主GUI函数</span>
+	function OnGUI () {
+		<span class="notes">// Begin Window</span>
+		BeginWindows ();
+
+		<span class="notes">// All GUI.Window or GUILayout.Window must come inside here
+		//所有GUI.Window 或 GUILayout.Window 必须在这里面</span>
+		windowRect = <a href="../GUILayout/GUILayout.Window.html">GUILayout.Window</a> (1, windowRect, DoWindow, &quot;Hi There&quot;);
+
+		<span class="notes">// Collect all the windows between the two.
+		//在这两者之间搜集所有窗口</span>
+		EndWindows ();
+	}
+
+	<span class="notes">// The window function. This works just like ingame GUI.Window
+	//窗口函数，这就像游戏内的GUI.Window</span>
+	function DoWindow () {
+		<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a> (&quot;Hi&quot;);
+		<a href="../GUI/GUI.DragWindow.html">GUI.DragWindow</a> ();
+	}
+
+	<span class="notes">// Add menu item to show this demo.
+	//添加菜单项来显示这个演示</span>
+	@MenuItem (&quot;Test/GUIWindow Demo&quot;)
+	static function Init () {
+		<a href="EditorWindow.GetWindow.html">EditorWindow.GetWindow</a> (GUIWindowDemo);
+	}
+}</code></pre>
+</div>
+<p>The placement of the <a href="EditorWindow.BeginWindows.html">BeginWindows</a> / <a href="EditorWindow.EndWindows.html">EndWindows</a> pair determines where popup windows will appear; all windows are clipped to the clipping area   defined by <a href="../GUI/GUI.BeginGroup.html">GUI.BeginGroup</a> or <a href="../GUI/GUI.BeginScrollView.html">GUI.BeginScrollview</a>. A small example of that </p>
+<p><a href="EditorWindow.BeginWindows.html">BeginWindows</a> / <a href="EditorWindow.EndWindows.html">EndWindows</a>对的放置决定弹出窗口的显示。所有窗口都放到<a href="../GUI/GUI.BeginGroup.html">GUI.BeginGroup</a> 或 <a href="../GUI/GUI.BeginScrollView.html">GUI.BeginScrollview</a>中定义。一个简单的例子：</p>
+<p><img src="GUIWindowDemo2.png" alt="EditorWindow.BeginWindows 开始窗口" width="305" height="291" /></p>
+<p> Simple editor window with a window and a button inside using scroll bars. </p>
+<p>带有一个窗口和一个按钮，使用滚动条的简单编辑器窗口。</p>
+<div class="note"><pre><code>class GUIWindowDemo2 extends EditorWindow {
+	<span class="notes">// The position of the window
+	//窗口的位置</span>
+	var windowRect = <a href="../Rect/Rect.html">Rect</a> (100,100,200,200);
+
+	<span class="notes">// Scroll position 滚动位置</span>
+	var scrollPos = <a href="../Vector2/Vector2.zero.html">Vector2.zero</a>;
+
+	function OnGUI () {
+		<span class="notes">// Set up a scroll view 设置滚动视图</span>
+		scrollPos = <a href="../GUI/GUI.BeginScrollView.html">GUI.BeginScrollView</a> (
+			new <a href="../Rect/Rect.html">Rect</a> (0, 0, position.width, position.height),
+			scrollPos,
+			new <a href="../Rect/Rect.html">Rect</a> (0, 0, 1000, 1000)
+		);
+
+		<span class="notes">// Same code as before - make a window. Only now, it's INSIDE the scrollview
+		//创建一个窗口，仅限在，在滚动视图中</span>
+		BeginWindows ();
+		windowRect = <a href="../GUILayout/GUILayout.Window.html">GUILayout.Window</a> (1, windowRect, DoWindow, &quot;Hi There&quot;);
+		EndWindows ();
+
+		<span class="notes">// Close the scroll view 关闭滚动视图</span>
+		<a href="../GUI/GUI.EndScrollView.html">GUI.EndScrollView</a> ();
+	}
+
+	function DoWindow () {
+		<a href="../GUILayout/GUILayout.Button.html">GUILayout.Button</a> (&quot;Hi&quot;);
+		<a href="../GUI/GUI.DragWindow.html">GUI.DragWindow</a> ();
+	}
+
+	@<a href="../MenuItem/MenuItem.html">MenuItem</a> (&quot;Test/GUIWindow Demo 2&quot;)
+	static function Init () {
+		<a href="EditorWindow.GetWindow.html">EditorWindow.GetWindow</a> (GUIWindowDemo2);
+	}
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月29日 Sunday  12:33<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

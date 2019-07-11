@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Texture2D.SetPixel 设置像素颜色</title>
+<meta name="Keywords" content="unity,Texture2D,二维纹理,SetPixel,设置像素颜色" />
+<meta name="Description" content="在坐标（x,y）设置一个像素的颜色" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Texture2D.html">Texture2D</a><span class="transer"> 翻译：titan-志广</span>
+                <ul>
+                    <li><a href="Texture2D.Apply.html">Apply</a></li>
+                    <li><a href="Texture2D.Compress.html">Compress</a></li>
+                    <li><a href="Texture2D.EncodeToPNG.html">EncodeToPNG</a></li>
+                    <li><a href="Texture2D.format.html">format</a></li>
+                    <li><a href="Texture2D.GetPixelBilinear.html">GetPixelBilinear</a></li>
+                    <li><a href="Texture2D.GetPixels.html">GetPixels</a></li>
+                    <li><a href="Texture2D.GetPixel.html">GetPixel</a></li>
+                    <li><a href="Texture2D.LoadImage.html">LoadImage</a></li>
+                    <li><a href="Texture2D.mipmapCount.html">mipmapCount</a></li>
+                    <li><a href="Texture2D.PackTextures.html">PackTextures</a></li>
+                    <li><a href="Texture2D.ReadPixels.html">ReadPixels</a></li>
+                    <li><a href="Texture2D.Resize.html">Resize</a></li>
+                    <li><a href="Texture2D.SetPixels.html">SetPixels</a></li>
+                    <li><a href="Texture2D.SetPixel.html">SetPixel</a></li>
+                    <li><a href="Texture2D.Texture2D.html">Texture2D</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Texture2D.html">Texture2D</a>.SetPixel 设置像素颜色</h1>
+<p class="h1inherit"></p>
+<p>function <em>SetPixel</em> (<em>x</em> : int, <em>y</em> : int, <em>color</em> : <a href="../Color/Color.html">Color</a>) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Sets pixel color at coordinates (x,y).</p>
+<p>在坐标（x,y）设置一个像素的颜色</p>
+<p> Call <a href="Texture2D.Apply.html">Apply</a> to actually upload the changed pixels to the graphics card.  Uploading is an expensive operation, so you'll want to change as many pixels  as possible between Apply calls. </p>
+<p>调用Apply实际上将结果以像素为单位更新到显卡上，这是一个代价很高的操作，因此你要在调用 Apply前尽可能多的更改像素</p>
+<p> If you're constantly regenerating a texture at runtime, it may be faster  to generate an array of pixel colors and set all of them at once with <a href="Texture2D.SetPixels.html">SetPixels</a>. </p>
+<p>如果你需要在运行时不断地重新计算纹理，或许生成一个像素颜色组并一次调用 <a href="Texture2D.SetPixels.html">SetPixels </a>会更快一些</p>
+<p> This function works only on ARGB32, RGB24 and Alpha8 texture formats.  For other formats SetPixel is ignored.  The texture also has to have <strong>Is Readable</strong> flag set in the import settings.  See Also: <a href="Texture2D.SetPixels.html">SetPixels</a>, <a href="Texture2D.GetPixel.html">GetPixel</a>, <a href="Texture2D.Apply.html">Apply</a>. </p>
+<p>这个函数只工作在格式为ARGB32 和 RGB24以及Alpha8位的纹理上，对于其他格式SetPixels　将会被会略，另外这个纹理的导入设置需要设置为 Is Readable（可读）</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Start() {
+		Texture2D texture = new Texture2D(128, 128);
+		renderer.material.mainTexture = texture;
+		int y = 0;
+		while (y &lt; texture.height) {
+			int x = 0;
+			while (x &lt; texture.width) {
+				Color color = x &amp; yColor.whiteColor.gray;
+				texture.SetPixel(x, y, color);
+				++x;
+			}
+			++y;
+		}
+		texture.Apply();
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>function Start () {
+	// Create a new texture and assign it to the renderer's material
+	//创建一个新的贴图并将它分配给渲染材质
+	var texture = new Texture2D(128, 128);
+	renderer.material.mainTexture = texture;
+
+	// Fill the texture with Sierpinski's fractal pattern!
+	//使用Sierpinski's分形图案填充纹理！
+	for (var y : int = 0; y &lt; texture.height; ++y) {
+		for (var x : int = 0; x &lt; texture.width; ++x) {
+			var color = (x&amp;y) ? Color.white : Color.gray;
+			texture.SetPixel (x, y, color);
+		}
+	}
+	// Apply all SetPixel calls
+	//应用全部 SetPixel 的调用
+	texture.Apply();
+}</code></pre></div>
+</div>
+
+<p>参见: <a href="Texture2D.SetPixels.html">SetPixels</a>, <a href="Texture2D.GetPixel.html">GetPixel</a>, <a href="Texture2D.Apply.html">Apply</a>. </p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月17日 Friday  23:54<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

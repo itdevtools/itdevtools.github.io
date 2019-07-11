@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Overview: Performance Optimization 性能优化</title>
+<meta name="Keywords" content="unity,性能优化,JavaScript" />
+<meta name="Description" content="使用JavaScript很重要的优化是使用静态类型替代动态类型.Unity使用一种叫做类型推理的技术来自动转换JavaScript为静态类型而无需你做任何工作。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script> 
+        <div class="subclass"><a href="../index.html">Unity脚本概述</a> <span class="transer">翻译：脚本_树</span>
+<ul>
+  <li><a title="Common Operations" href="Overview.Common_Operations.html">Common Operations</a></li>
+  <li><a title="Keeping Track of Time" href="Overview.Keeping_Track_of_Time.html">Time</a></li>
+  <li><a title="Accessing Other Components" href="Overview.Accessing_Other_Components.html">Accessing Components</a></li>
+  <li><a title="Accessing Other Game Objects" href="Overview.Accessing_Other_Game_Objects.html">Accessing Objects</a></li>
+  <li><a title="Vectors" href="Overview.Vectors.html">Vectors</a></li>
+  <li><a title="Member Variables &amp; Global Variables" href="Overview.Member_Variables/Global_Variables.html">Variables</a></li>
+  <li><a title="Instantiate" href="Overview.Instantiate.html">Instantiate</a></li>
+  <li><a title="Coroutines &amp; Yield" href="Overview.Coroutines/Yield.html">Coroutines &amp; Yield</a></li>
+  <li><a title="Writing Scripts in C#" href="Overview.Writing_Scripts_in_C.html">Using C#</a></li>
+  <li><a title="The most important classes" href="Overview.The_most_important_classes.html">Important Classes</a></li>
+  <li><span title="Performance Optimization"><a href="Overview.Performance_Optimization.html">Performance Optimization</a></span></li>
+  <li><a title="Script compilation (Advanced)" href="Overview.Script_compilation.html">Script Compilation</a></li>
+</ul>
+</div>       
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+    <h1>Overview: Performance Optimization 性能优化</h1>
+    <p></p>
+      <p><em>1. Use Static Typing</em><br />使用静态类型</p>
+      <p>When using JavaScript the most important   optimization is to use static typing instead of dynamic typing. Unity uses a   technique called type inference to automatically convert JavaScript constructs   to statically typed code without you having to do any work.</p>
+      <p>使用JavaScript很重要的优化是使用静态类型替代动态类型。Unity使用一种叫做类型推理的技术来自动转换JavaScript为静态类型而无需你做任何工作。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public int foo = 5;
+}</code></pre></div>
+    <div class="panes"><pre><code>var foo = 5;
+</code></pre></div>
+</div>
+      <p>In the above example foo will automatically be inferred to be an   integer value. Thus Unity can apply a lot of compile time optimizations, without   costly dynamic name variable lookups etc. This is one of the reasons why Unity's   JavaScript is on average around 20 times faster than other JavaScript   implementations. </p>
+      <p>上面例子中的foo将自动推断为一个整数值。因此Unity能节约大量时间，而不使用动态名称变量查找等耗时的计算。这就是为什么Unity的执行平均速度比其他JavaScript快20倍的原因之一。</p>
+      <p>The only problem is that sometimes not everything   can be type inferred, thus Unity will fall back to dynamic typing for those   variables. By falling back to dynamic typing, writing JavaScript code is   simpler. However it also makes the code run slower. </p>
+      <p>唯一的问题是,有时不是所有的东西都能被类型推断，因此Unity会对这些变量重新使用动态类型.通过这样,书写JavaScript代码会很简单。不过他也使代码执行变慢。</p>
+      <p>Let's see some examples.</p>
+      <p>我们来看一些例子.</p>
+      <div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Start() {
+		duck foo = GetComponent&lt;MyScript&gt;();
+		foo.DoSomething();
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>function Start () {
+	var foo = GetComponent(MyScript);
+	foo.DoSomething();
+}</code></pre></div>
+</div>
+      <p>Here foo will be dynamically typed, thus calling the function DoSomething   takes longer than necessary - because the type of foo is unknown, it has to figure out whether   it supports DoSomething   function, and if it does, invoke that function. </p>
+      <p>这里foo将是动态类型,因此调用函数DoSomething必须要更长时间 – 因为foo的类型未知，它必须弄明白是否支持DoSomething函数，如果支持，就调用那个函数。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Start() {
+		MyScript foo = GetComponent&lt;MyScript&gt;();
+		foo.DoSomething();
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>function Start () {
+	var foo : MyScript = GetComponent(MyScript);
+	foo.DoSomething();
+}</code></pre></div>
+</div>      
+
+<p>Here we're forcing foo to be of specific type. You will get   much better performance. </p>
+<p>这里我们指定foo为静态类型.你将获得更好的性能.</p>
+<p><em>2. Use #pragma strict</em><br />
+  使用#pragma strict</p>
+<p>Now the problem is of course, that you don't   usually notice when you are using dynamic typing. #pragma strict to the rescue! Simply add   #pragma strict at the top of a script and Unity will disable dynamic typing in   that script, forcing you to use static typing. Wherever a type is not known,   Unity will report compile errors. So in this case, foo will produce an error when compiling: </p>
+<p>现在问题是。你通常意识不到你使用了动态类型。 #pragma strict可解决!只需在脚本开始处简单的添加#pragma strict.   Unity将会禁用脚本的动态类型,强制你使用静态类型。当一个类型未知，Unity就会报告编译错误。所以，如下代码，foo编译时将会产生一个错误:</p>
+<div class="wrap">
+  <ul class="tabs">
+    <li><a href="#">C#</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+  <div class="panes">
+    <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Start() {
+		MyScript foo = GetComponent&lt;MyScript&gt;() as MyScript;
+		foo.DoSomething();
+	}
+}</code></pre>
+  </div>
+  <div class="panes">
+    <pre><code>#pragma strict
+function Start ()
+{
+	var foo = GetComponent(MyScript);
+	foo.DoSomething();
+}</code></pre>
+  </div>
+</div>
+
+<p><em>3. Cache component lookups</em><br />
+  缓存组件查找</p>
+<p>Another optimization is caching of components.   This optimization unfortunately requires a bit of coding effort and is not   always worth it. But if your script is really used a lot and you need to get the   last bit of performance out of it, this can be a very good optimization. </p>
+<p>另一个优化是组件缓存.不过它需要一些代码，而且不一定都有必要。但是如果你的代码真是很大，且你需要一定量的性能提升，那么它可以提供很好的优化。</p>
+<p>Whenever you access a component through   GetComponent or an accessor variable, Unity has to find the right component from   the game object. This time can easily be saved by caching a reference to the   component in a private variable. </p>
+<p>当你通过GetComponent访问一个组件或一个变量，Unity必须从游戏对象里找到正确的组件。这时你可以将参数缓存致一个私有的组件。</p>
+<p>Simply turn this: ?只要把这个:</p>
+
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void Update() {
+		transform.Translate(0, 0, 5);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>function Update () {
+	transform.Translate(0, 0, 5);
+}</code></pre></div>
+</div>
+<p>Into this:  变成这样</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	private Transform myTransform;
+	void Awake() {
+		myTransform = transform;
+	}
+	void Update() {
+		myTransform.Translate(0, 0, 5);
+	}
+}
+
+</code></pre></div>
+    <div class="panes"><pre><code>private var myTransform : <a href="../Transform/Transform.html">Transform</a> ;
+function Awake () {
+	myTransform = transform;
+}
+
+function Update () {
+	myTransform.Translate(0, 0, 5);
+}</code></pre></div>
+</div>
+<p>The latter code will run a lot faster since Unity   doesn't have to find the transform component in the game object each frame. The   same applies for scripted components, where you use GetComponent instead of the   transform or other shorthand property. </p>
+<p>后者运行得快一些，因为Unity不再在每帧查找transform组件。它同样适用于脚本组件，在你用GetComponent替换transform或其他快捷属性。</p>
+<p><em>4. Use Builtin arrays </em><br />
+  使用Builtin arrays</p>
+<p>Builtin arrays are FAST, very fast, so use them.   While the ArrayList or <a href="../Array/Array.html">Array </a>classes are easier to use since   you can easily add elements they don't have nearly the same speed. Builtin   arrays have a fixed size but most of the time you know the maximum size in   advance and can just fill it out later. The best thing about builtin arrays is   that they directly embed struct data types in one tightly packed buffer, without   any extra type information or other overhead. Thus iterating through is very   easy on the cache as everything is aligned. </p>
+<p>Builtin arrays运行速度很快。虽然ArrayList或 <a href="../Array/Array.html">Array </a>类很容易使用,你能轻易添加组件，但是他们有完全不同的速度。Builtin arrays有一个固定的长度，而且多数情况下你事先知道最大长度，且能扩展它。builtin arrays最大好处是它直接嵌入struct数据类型在一个缓冲区里，不需要额外类型信息或其他。因此更易于做缓存遍历。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	private <a href="../Vector3/Vector3.html">Vector3</a>[] positions;
+	void Awake() {
+		positions = new Vector3[100];
+		int i = 0;
+		while (i &lt; 100) {
+			positions[i] = <a href="../Vector3/Vector3.zero.html">Vector3.zero</a>;
+			i++;
+		}
+	}
+}
+</code></pre></div>
+    <div class="panes"><pre><code>private var positions : <a href="../Vector3/Vector3.html">Vector3</a> [];
+function Awake () {
+	positions = new Vector3 [100];
+	for (var i=0;i&lt;100;i++)
+	positions[i] = <a href="../Vector3/Vector3.zero.html">Vector3.zero</a> ;
+}</code></pre></div>
+</div>
+<p><em>5. Don't call a function if you don't have   to </em><br />
+  如果不是必须，不要调用函数</p>
+<p>The simplest and best of all optimizations is to   perform less work. For example , when an enemy is far away it is most of the   time perfectly acceptable to have the enemy fall asleep. That is do nothing   until the player comes close. The slow way of handling this situation would   be:</p>
+<p>最简单和最好的优化是执行最少的工作。例如,当一个敌人足够远，很多时候可以理想的认为敌人已沉睡。他什么都不做，直到角色接近。慢方法处理这种情况将是这样：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="../Transform/Transform.html">Transform</a> target;
+	void Update() {
+		if (Vector3.Distance(transform.position, target.position) &gt; 100)
+			return;
+
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code>function Update ()
+{
+	<span class="notes">// Early out if the player is too far away.
+
+	// 尽早离开如果玩家太远</span>
+	if ( Vector3.Distance (transform.position, target.position) &gt; 100)
+		return;
+	<span class="notes">//perform real work work...</span>
+}</code></pre></div>
+</div>
+<p>This is not a good idea since Unity has to invoke   the update function and you are performing work every frame. A better solution   is to disabling the behaviour until the player comes closer. There are 3 ways to   do this: 1. Use OnBecameVisible and OnBecameInvisible. These call backs are tied   into the rendering system. As soon as any camera can see the object,   OnBecameVisible will be called, when no camera sees it anymore OnBecameInvisible   will be called. This is useful in some cases, but often for AI it is not useful   because enemies would become disabled as soon as you turn the camera away from   them.</p>
+<p>这并不是很好的方法，因为Unity不得不访问update函数，且你得在每一帧执行它。更好的方法是禁用该行为直到玩家靠近。有3种方法实现它：</p>
+<p>1.使用OnBecameVisible和OnBecameInvisible。这些回调函数绑定在渲染系统，一旦摄像机能看到对象，OnBecameVisible将被调用，当没有摄像机看他OnBecameInvisible被调用。这有时很有用，但是对AI来讲就不能用了，因为你将摄像机移开敌人后，敌人就失效了，(敌人的AI就失效了)</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void OnBecameVisible() {
+		enabled = true;
+	}
+	void OnBecameInvisible() {
+		enabled = false;
+	}
+}
+</code></pre></div>
+    <div class="panes"><pre><code>function OnBecameVisible () {
+	enabled = true;
+}
+
+function OnBecameInvisible ()
+{
+	enabled = false;
+}</code></pre></div>
+</div>
+<p>2. Use triggers. A simple sphere trigger can work   wonders though. You get OnTriggerEnter/Exit calls when exiting the sphere of   influence you want</p>
+<p>使用触发。一个简单的范围触发能获得惊人的效果。   当你要使物体在你期望的作用范围触发事件的时候，你可以调用OnTriggerEnter/Exit</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	void OnTriggerEnter(Collider c) {
+		if (c.CompareTag(&quot;Player&quot;))
+			enabled = true;
+
+	}
+	void OnTriggerExit(Collider c) {
+		if (c.CompareTag(&quot;Player&quot;))
+			enabled = false;
+
+	}
+}
+</code></pre></div>
+    <div class="panes"><pre><code>function OnTriggerEnter (c : Collider )
+{
+	if (c.CompareTag(&quot;Player&quot;))
+		enabled = true;
+}
+
+function OnTriggerExit (c : Collider )
+{
+	if (c.CompareTag(&quot;Player&quot;))
+		enabled = false;
+}</code></pre></div>
+</div>
+<p>3. Use Coroutines. The problem with Update calls   is that they happen every frame. Quite possibly checking the distance to the   player could be performed only every 5 seconds. This would save a lot of   processing power.</p>
+<p>使用协同程序。 Update的问题是他在每帧都调用。完全可以让它每5秒检查一次玩家的距离，这将节约大量的处理能力。 </p>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年5月31日 Tuesday  10:55<!-- #EndDate --></span></div>    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

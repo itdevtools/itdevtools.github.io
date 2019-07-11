@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>MonoBehaviour.StartCoroutine 开始协同程序</title>
+<meta name="Keywords" content="unity,MonoBehaviour,Behaviour,行为,StartCoroutine" />
+<meta name="Description" content="开始协同程序。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="MonoBehaviour.html">MonoBehaviour</a><span class="transer">翻译： 脚本_树 </span>
+                <ul>
+                    <li><a href="MonoBehaviour.Awake.html">Awake</a></li>
+                    <li><a href="MonoBehaviour.CancelInvoke.html">CancelInvoke</a></li>
+                    <li><a href="MonoBehaviour.FixedUpdate.html">FixedUpdate</a></li>
+                    <li><a href="MonoBehaviour.InvokeRepeating.html">InvokeRepeating</a></li>
+                    <li><a href="MonoBehaviour.Invoke.html">Invoke</a></li>
+                    <li><a href="MonoBehaviour.IsInvoking.html">IsInvoking</a></li>
+                    <li><a href="MonoBehaviour.LateUpdate.html">LateUpdate</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationFocus.html">OnApplicationFocus</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationPause.html">OnApplicationPause</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationQuit.html">OnApplicationQuit</a></li>
+                    <li><a href="MonoBehaviour.OnBecameInvisible.html">OnBecameInvisible</a></li>
+                    <li><a href="MonoBehaviour.OnBecameVisible.html">OnBecameVisible</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionEnter.html">OnCollisionEnter</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionExit.html">OnCollisionExit</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionStay.html">OnCollisionStay</a></li>
+                    <li><a href="MonoBehaviour.OnConnectedToServer.html">OnConnectedToServer</a></li>
+                    <li><a href="MonoBehaviour.OnControllerColliderHit.html">OnControllerColliderHit</a></li>
+                    <li><a href="MonoBehaviour.OnDestroy.html">OnDestroy</a></li>
+                    <li><a href="MonoBehaviour.OnDisable.html">OnDisable</a></li>
+                    <li><a href="MonoBehaviour.OnDisconnectedFromServer.html">OnDisconnectedFromServer</a></li>
+                    <li><a href="MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a></li>
+                    <li><a href="MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a></li>
+                    <li><a href="MonoBehaviour.OnEnable.html">OnEnable</a></li>
+                    <li><a href="MonoBehaviour.OnFailedToConnectToMasterServer.html" title="OnFailedToConnectToMasterServer">OnFailedToConnectToM...</a></li>
+                    <li><a href="MonoBehaviour.OnFailedToConnect.html">OnFailedToConnect</a></li>
+                    <li><a href="MonoBehaviour.OnGUI.html">OnGUI</a></li>
+                    <li><a href="MonoBehaviour.OnJointBreak.html">OnJointBreak</a></li>
+                    <li><a href="MonoBehaviour.OnLevelWasLoaded.html">OnLevelWasLoaded</a></li>
+                    <li><a href="MonoBehaviour.OnMasterServerEvent.html">OnMasterServerEvent</a></li>
+                    <li><a href="MonoBehaviour.OnMouseDown.html">OnMouseDown</a></li>
+                    <li><a href="MonoBehaviour.OnMouseDrag.html">OnMouseDrag</a></li>
+                    <li><a href="MonoBehaviour.OnMouseEnter.html">OnMouseEnter</a></li>
+                    <li><a href="MonoBehaviour.OnMouseExit.html">OnMouseExit</a></li>
+                    <li><a href="MonoBehaviour.OnMouseOver.html">OnMouseOver</a></li>
+                    <li><a href="MonoBehaviour.OnMouseUp.html">OnMouseUp</a></li>
+                    <li><a href="MonoBehaviour.OnNetworkInstantiate.html">OnNetworkInstantiate</a></li>
+                    <li><a href="MonoBehaviour.OnParticleCollision.html">OnParticleCollision</a></li>
+                    <li><a href="MonoBehaviour.OnPlayerConnected.html">OnPlayerConnected</a></li>
+                    <li><a href="MonoBehaviour.OnPlayerDisconnected.html">OnPlayerDisconnected</a></li>
+                    <li><a href="MonoBehaviour.OnPostRender.html">OnPostRender</a></li>
+                    <li><a href="MonoBehaviour.OnPreCull.html">OnPreCull</a></li>
+                    <li><a href="MonoBehaviour.OnPreRender.html">OnPreRender</a></li>
+                    <li><a href="MonoBehaviour.OnRenderImage.html">OnRenderImage</a></li>
+                    <li><a href="MonoBehaviour.OnRenderObject.html">OnRenderObject</a></li>
+                    <li><a href="MonoBehaviour.OnSerializeNetworkView.html">OnSerializeNetworkView</a></li>
+                    <li><a href="MonoBehaviour.OnServerInitialized.html">OnServerInitialized</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerEnter.html">OnTriggerEnter</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerExit.html">OnTriggerExit</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerStay.html">OnTriggerStay</a></li>
+                    <li><a href="MonoBehaviour.OnWillRenderObject.html">OnWillRenderObject</a></li>
+                    <li><a href="MonoBehaviour.print.html">print</a></li>
+                    <li><a href="MonoBehaviour.Reset.html">Reset</a></li>
+                    <li><a href="MonoBehaviour.StartCoroutine.html">StartCoroutine</a></li>
+                    <li><a href="MonoBehaviour.Start.html">Start</a></li>
+                    <li><a href="MonoBehaviour.StopAllCoroutines.html">StopAllCoroutines</a></li>
+                    <li><a href="MonoBehaviour.StopCoroutine.html">StopCoroutine</a></li>
+                    <li><a href="MonoBehaviour.Update.html">Update</a></li>
+                    <li><a href="MonoBehaviour.useGUILayout.html">useGUILayout</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="MonoBehaviour.html">MonoBehaviour</a>.StartCoroutine 开始协同程序</h1>
+<p class="h1inherit"></p>
+<p>function <em>StartCoroutine</em> (<em>routine</em> : IEnumerator) : Coroutine </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Starts a coroutine.</p>
+<p>开始协同程序。</p>
+<p>The execution of a coroutine can be paused at any   point using the yield statement. The yield return value specifies when the   coroutine is resumed. Coroutines are excellent when modelling behaviour over   several frames. Coroutines have virtually no performance overhead.   StartCoroutine function always returns immediately, however you can yield the   result. This will wait until the coroutine has finished execution.</p>
+<p>一个协同程序在执行过程中,可以在任意位置使用yield语句。yield的返回值控制何时恢复协同程序向下执行。协同程序在对象自有帧执行过程中堪称优秀。协同程序在性能上没有更多的开销。StartCoroutine函数是立刻返回的,但是yield可以延迟结果。直到协同程序执行完毕。</p>
+<p>When using JavaScript it is not necessary to use   StartCoroutine, the compiler will do this for you. When writing C# code you must   call StartCoroutine.</p>
+<p>用javascript不需要添加StartCoroutine，编译器将会替你完成.但是在C#下，你必须调用StartCoroutine。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="MonoBehaviour.html">MonoBehaviour</a> {
+	void Start() {
+	print(&quot;Starting &quot; + <a href="../Time/Time.time.html">Time.time</a>);
+		StartCoroutine(WaitAndPrint(2.0F));
+		print(&quot;Before WaitAndPrint Finishes &quot; + <a href="../Time/Time.time.html">Time.time</a>);
+	}
+	IEnumerator WaitAndPrint(float waitTime) {
+		yield return new <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a>(waitTime);
+		print(&quot;WaitAndPrint &quot; + <a href="../Time/Time.time.html">Time.time</a>);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// In this example we show how to invoke a coroutine and continue executing
+// the function in parallel.
+// 此例演示如何调用协同程序和它的执行</span>
+function Start() {
+	<span class="notes">// - After 0 seconds, prints &quot;Starting 0.0&quot;
+	// - After 0 seconds, prints &quot;Before WaitAndPrint Finishes 0.0&quot;
+	// - After 2 seconds, prints &quot;WaitAndPrint 2.0&quot;
+	// 先打印&quot;Starting 0.0&quot;和&quot;Before WaitAndPrint Finishes 0.0&quot;两句,2秒后打印&quot;WaitAndPrint 2.0&quot;</span>
+	print (&quot;Starting &quot; + <a href="../Time/Time.time.html">Time.time</a> );
+	<span class="notes">// Start function WaitAndPrint as a coroutine. And continue execution while it is running
+	// this is the same as WaintAndPrint(2.0) as the compiler does it for you automatically
+	// 协同程序WaitAndPrint在Start函数内执行,可以视同于它与Start函数同步执行.</span>
+	StartCoroutine(WaitAndPrint(2.0)); 
+	print (&quot;Before WaitAndPrint Finishes &quot; + <a href="../Time/Time.time.html">Time.time</a> );
+}
+
+function WaitAndPrint (waitTime : float) {
+	<span class="notes">// suspend execution for waitTime seconds
+	// 暂停执行waitTime秒</span>
+	yield <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a> (waitTime);
+	print (&quot;WaitAndPrint &quot;+ <a href="../Time/Time.time.html">Time.time</a> );
+}</code></pre></div>
+</div>
+<p>另一个例子：</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="MonoBehaviour.html">MonoBehaviour</a> {
+	IEnumerator Start() {
+		print(&quot;Starting &quot; + <a href="../Time/Time.time.html">Time.time</a>);
+		yield return StartCoroutine(WaitAndPrint(2.0F));
+		print(&quot;Done &quot; + <a href="../Time/Time.time.html">Time.time</a>);
+	}
+	IEnumerator WaitAndPrint(float waitTime) {
+		yield return new <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a>(waitTime);
+		print(&quot;WaitAndPrint &quot; + <a href="../Time/Time.time.html">Time.time</a>);
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// In this example we show how to invoke a coroutine and wait until it 
+// is completed
+// 在这个例子中我们演示如何调用协同程序并直到它执行完成.</span>
+function Start() {
+	<span class="notes">// - After 0 seconds, prints &quot;Starting 0.0&quot;
+	// - After 2 seconds, prints &quot;WaitAndPrint 2.0&quot;
+	// - After 2 seconds, prints &quot;Done 2.0&quot;
+	// 0秒时打印&quot;Starting 0.0&quot;,2秒后打印&quot;WaitAndPrint 2.0&quot;和&quot;Done 2.0&quot;</span>
+	print (&quot;Starting &quot; + <a href="../Time/Time.time.html">Time.time</a> );
+	<span class="notes">// Start function WaitAndPrint as a coroutine. And wait until it is completed.
+	// the same as yield WaitAndPrint(2.0);
+	// 运行WaitAndPrint直到完成</span>
+	yield StartCoroutine(WaitAndPrint(2.0));
+	print (&quot;Done &quot; + <a href="../Time/Time.time.html">Time.time</a> );
+}
+
+function WaitAndPrint (waitTime : float) {
+	<span class="notes">// suspend execution for waitTime seconds
+	// 等待waitTime秒</span>
+	yield <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a> (waitTime);
+	print (&quot;WaitAndPrint &quot;+ <a href="../Time/Time.time.html">Time.time</a> );
+}
+</code></pre></div>
+</div>
+<p>&#8226; function <em>StartCoroutine</em> (<em>methodName</em> : string, <em>value</em> : object = null) : <a href="../Coroutine/Coroutine.html">Coroutine</a></p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>Starts a coroutine named methodName.</p>
+<p>开始一个叫methodName的协同程序.</p>
+<p>In most cases you want to use the StartCoroutine   variation above. However StartCoroutine using a string method name allows you to   use <a href="MonoBehaviour.StopCoroutine.html">StopCoroutine </a>with a specific method name. The downside is that the string version   has a higher runtime overhead to start the coroutine and you can pass only one   parameter</p>
+<p>很多情况下，我们会用到StartCoroutine的一个变体。使用有字符串方法名的StartCoroutine允许你用StopCoroutine去停止它。其缺点就是会有较高的性能开销，而且你只能传递一个参数。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="MonoBehaviour.html">MonoBehaviour</a> {
+	IEnumerator Start() {
+		StartCoroutine(&quot;DoSomething&quot;, 2.0F);
+		yield return new <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a>(1);
+		StopCoroutine(&quot;DoSomething&quot;);
+	}
+	IEnumerator DoSomething(float someParameter) {
+		while (true) {
+			print(&quot;DoSomething Loop&quot;);
+			yield return null;
+		}
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// In this example we show how to invoke a coroutine using a string name and stop it
+// 这个例子演示如何调用一个使用字符串名称的协同程序并停掉它</span>
+function Start () {
+	StartCoroutine(&quot;DoSomething&quot;, 2.0);
+	yield <a href="../WaitForSeconds/WaitForSeconds.html">WaitForSeconds</a> (1);
+	StopCoroutine(&quot;DoSomething&quot;);
+}
+
+function DoSomething (someParameter : float) {
+	while (true) {
+		print(&quot;DoSomething Loop&quot;);
+		<span class="notes">// Yield execution of this coroutine and return to the main loop until next frame
+		// 停止协同程序的执行并返回到主循环直到下一帧.</span>
+		yield;
+	}
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月2日 Sunday  13:48<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

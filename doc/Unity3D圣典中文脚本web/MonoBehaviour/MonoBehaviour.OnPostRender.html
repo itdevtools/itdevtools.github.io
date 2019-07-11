@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>MonoBehaviour.OnPostRender 当渲染之后</title>
+<meta name="Keywords" content="unity,MonoBehaviour,Behaviour,行为,OnPostRender" />
+<meta name="Description" content="在相机完成场景渲染之后被调用。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="MonoBehaviour.html">MonoBehaviour</a><span class="transer">翻译： 脚本_树 </span>
+                <ul>
+                    <li><a href="MonoBehaviour.Awake.html">Awake</a></li>
+                    <li><a href="MonoBehaviour.CancelInvoke.html">CancelInvoke</a></li>
+                    <li><a href="MonoBehaviour.FixedUpdate.html">FixedUpdate</a></li>
+                    <li><a href="MonoBehaviour.InvokeRepeating.html">InvokeRepeating</a></li>
+                    <li><a href="MonoBehaviour.Invoke.html">Invoke</a></li>
+                    <li><a href="MonoBehaviour.IsInvoking.html">IsInvoking</a></li>
+                    <li><a href="MonoBehaviour.LateUpdate.html">LateUpdate</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationFocus.html">OnApplicationFocus</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationPause.html">OnApplicationPause</a></li>
+                    <li><a href="MonoBehaviour.OnApplicationQuit.html">OnApplicationQuit</a></li>
+                    <li><a href="MonoBehaviour.OnBecameInvisible.html">OnBecameInvisible</a></li>
+                    <li><a href="MonoBehaviour.OnBecameVisible.html">OnBecameVisible</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionEnter.html">OnCollisionEnter</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionExit.html">OnCollisionExit</a></li>
+                    <li><a href="MonoBehaviour.OnCollisionStay.html">OnCollisionStay</a></li>
+                    <li><a href="MonoBehaviour.OnConnectedToServer.html">OnConnectedToServer</a></li>
+                    <li><a href="MonoBehaviour.OnControllerColliderHit.html">OnControllerColliderHit</a></li>
+                    <li><a href="MonoBehaviour.OnDestroy.html">OnDestroy</a></li>
+                    <li><a href="MonoBehaviour.OnDisable.html">OnDisable</a></li>
+                    <li><a href="MonoBehaviour.OnDisconnectedFromServer.html">OnDisconnectedFromServer</a></li>
+                    <li><a href="MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a></li>
+                    <li><a href="MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a></li>
+                    <li><a href="MonoBehaviour.OnEnable.html">OnEnable</a></li>
+                    <li><a href="MonoBehaviour.OnFailedToConnectToMasterServer.html" title="OnFailedToConnectToMasterServer">OnFailedToConnectToM...</a></li>
+                    <li><a href="MonoBehaviour.OnFailedToConnect.html">OnFailedToConnect</a></li>
+                    <li><a href="MonoBehaviour.OnGUI.html">OnGUI</a></li>
+                    <li><a href="MonoBehaviour.OnJointBreak.html">OnJointBreak</a></li>
+                    <li><a href="MonoBehaviour.OnLevelWasLoaded.html">OnLevelWasLoaded</a></li>
+                    <li><a href="MonoBehaviour.OnMasterServerEvent.html">OnMasterServerEvent</a></li>
+                    <li><a href="MonoBehaviour.OnMouseDown.html">OnMouseDown</a></li>
+                    <li><a href="MonoBehaviour.OnMouseDrag.html">OnMouseDrag</a></li>
+                    <li><a href="MonoBehaviour.OnMouseEnter.html">OnMouseEnter</a></li>
+                    <li><a href="MonoBehaviour.OnMouseExit.html">OnMouseExit</a></li>
+                    <li><a href="MonoBehaviour.OnMouseOver.html">OnMouseOver</a></li>
+                    <li><a href="MonoBehaviour.OnMouseUp.html">OnMouseUp</a></li>
+                    <li><a href="MonoBehaviour.OnNetworkInstantiate.html">OnNetworkInstantiate</a></li>
+                    <li><a href="MonoBehaviour.OnParticleCollision.html">OnParticleCollision</a></li>
+                    <li><a href="MonoBehaviour.OnPlayerConnected.html">OnPlayerConnected</a></li>
+                    <li><a href="MonoBehaviour.OnPlayerDisconnected.html">OnPlayerDisconnected</a></li>
+                    <li><a href="MonoBehaviour.OnPostRender.html">OnPostRender</a></li>
+                    <li><a href="MonoBehaviour.OnPreCull.html">OnPreCull</a></li>
+                    <li><a href="MonoBehaviour.OnPreRender.html">OnPreRender</a></li>
+                    <li><a href="MonoBehaviour.OnRenderImage.html">OnRenderImage</a></li>
+                    <li><a href="MonoBehaviour.OnRenderObject.html">OnRenderObject</a></li>
+                    <li><a href="MonoBehaviour.OnSerializeNetworkView.html">OnSerializeNetworkView</a></li>
+                    <li><a href="MonoBehaviour.OnServerInitialized.html">OnServerInitialized</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerEnter.html">OnTriggerEnter</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerExit.html">OnTriggerExit</a></li>
+                    <li><a href="MonoBehaviour.OnTriggerStay.html">OnTriggerStay</a></li>
+                    <li><a href="MonoBehaviour.OnWillRenderObject.html">OnWillRenderObject</a></li>
+                    <li><a href="MonoBehaviour.print.html">print</a></li>
+                    <li><a href="MonoBehaviour.Reset.html">Reset</a></li>
+                    <li><a href="MonoBehaviour.StartCoroutine.html">StartCoroutine</a></li>
+                    <li><a href="MonoBehaviour.Start.html">Start</a></li>
+                    <li><a href="MonoBehaviour.StopAllCoroutines.html">StopAllCoroutines</a></li>
+                    <li><a href="MonoBehaviour.StopCoroutine.html">StopCoroutine</a></li>
+                    <li><a href="MonoBehaviour.Update.html">Update</a></li>
+                    <li><a href="MonoBehaviour.useGUILayout.html">useGUILayout</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="MonoBehaviour.html">MonoBehaviour</a>.OnPostRender 当渲染之后</h1>
+<p class="h1inherit"></p>
+<p>function <em>OnPostRender</em> () : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p>OnPostRender is called after a camera finished   rendering the scene.</p>
+<p>在相机完成场景渲染之后被调用。</p>
+<p>This function is called only if the script is   attached to the camera and is enabled. OnPostRender can be a co-routine, simply   use the yield statement in the function.</p>
+<p>只有该脚本附于相机并启用时才会调用这个函数。OnPostRender可以是一个协同程序，在函数中调用yield语句即。</p>
+<p>OnPostRender is called after the camera renders   all its objects. If you want to do something after all cameras and GUI is   rendered, use <a href="../WaitForEndOfFrame/WaitForEndOfFrame.html">WaitForEndOfFrame </a>coroutine.</p>
+<p>OnPostRender在相机渲染完所有物体之后被调用。如果你想在相机和GUI渲染完成后做些什么，就用WaitForEndOfFrame协同程序。</p>
+<p>参见：<a href="MonoBehaviour.OnPreRender.html">OnPreRender </a>, <a href="../WaitForEndOfFrame/WaitForEndOfFrame.html">WaitForEndOfFrame </a></p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>还没有C#添加代码</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// When attached to a camera, will clear alpha channel
+// of camera's render texture to pure white.
+// Useful if you have camera rendering into a texture and later
+// want to display it in GUI.
+// 当附于一个相机后,将清理alpha管道为纯白色.如果你想渲染到纹理并显示在GUI上可以使用它.</span>
+private var mat : <a href="../Material/Material.html">Material</a>;
+
+function OnPostRender() {
+	<span class="notes">// Create a shader that renders white only to alpha channel
+	// 创建一个着色器,将alpha通道渲染为白色</span>
+	if(!mat) {
+		mat = new <a href="../Material/Material.html">Material</a>( &quot;<a href="../Shader/Shader.html">Shader</a> \&quot;Hidden/SetAlpha\&quot; {&quot; +
+		&quot;SubShader {&quot; +
+		&quot; Pass {&quot; +
+		&quot; ZTest Always Cull Off ZWrite Off&quot; +
+		&quot; ColorMask A&quot; +
+		&quot; <a href="../Color/Color.html">Color</a> (1,1,1,1)&quot; +
+		&quot; }&quot; +
+		&quot;}&quot; +
+		&quot;}&quot;
+		);
+	}
+	<span class="notes">// Draw a quad over the whole screen with the above shader
+	// 用上面的着色器绘制一个四边形覆盖整个屏幕</span>
+	<a href="../GL/GL.PushMatrix.html">GL.PushMatrix</a> ();
+	<a href="../GL/GL.LoadOrtho.html">GL.LoadOrtho</a> ();
+	for (var i = 0; i &lt; mat.passCount; ++i) {
+		mat.SetPass (i);
+		<a href="../GL/GL.Begin.html">GL.Begin</a>( GL.QUADS );
+		<a href="../GL/GL.Vertex3.html">GL.Vertex3</a>( 0, 0, 0.1 );
+		<a href="../GL/GL.Vertex3.html">GL.Vertex3</a>( 1, 0, 0.1 );
+		<a href="../GL/GL.Vertex3.html">GL.Vertex3</a>( 1, 1, 0.1 );
+		<a href="../GL/GL.Vertex3.html">GL.Vertex3</a>( 0, 1, 0.1 );
+		<a href="../GL/GL.End.html">GL.End</a>();
+	}
+	<a href="../GL/GL.PopMatrix.html">GL.PopMatrix</a> ();
+}</code></pre></div>
+</div>
+
+
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月2日 Sunday  17:26<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Transform.LookAt 注视</title>
+<meta name="Keywords" content="unity,Transform,变换,LookAt,注视" />
+<meta name="Description" content="旋转物体，向前向量指向target的当前位置。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Transform.html">Transform</a> <span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="Transform.childCount.html">childCount</a></li>
+                    <li><a href="Transform.DetachChildren.html">DetachChildren</a></li>
+                    <li><a href="Transform.eulerAngles.html">eulerAngles</a></li>
+                    <li><a href="Transform.Find.html">Find</a></li>
+                    <li><a href="Transform.forward.html">forward</a></li>
+                    <li><a href="Transform.InverseTransformDirection.html">InverseTransformDirection</a></li>
+                    <li><a href="Transform.InverseTransformPoint.html">InverseTransformPoint</a></li>
+                    <li><a href="Transform.IsChildOf.html">IsChildOf</a></li>
+                    <li><a href="Transform.localEulerAngles.html">localEulerAngles</a></li>
+                    <li><a href="Transform.localPosition.html">localPosition</a></li>
+                    <li><a href="Transform.localRotation.html">localRotation</a></li>
+                    <li><a href="Transform.localScale.html">localScale</a></li>
+                    <li><a href="Transform.localToWorldMatrix.html">localToWorldMatrix</a></li>
+                    <li><a href="Transform.LookAt.html">LookAt</a></li>
+                    <li><a href="Transform.lossyScale.html">lossyScale</a></li>
+                    <li><a href="Transform.parent.html">parent</a></li>
+                    <li><a href="Transform.position.html">position</a></li>
+                    <li><a href="Transform.right.html">right</a></li>
+                    <li><a href="Transform.root.html">root</a></li>
+                    <li><a href="Transform.RotateAround.html">RotateAround</a></li>
+                    <li><a href="Transform.Rotate.html">Rotate</a></li>
+                    <li><a href="Transform.rotation.html">rotation</a></li>
+                    <li><a href="Transform.TransformDirection.html">TransformDirection</a></li>
+                    <li><a href="Transform.TransformPoint.html">TransformPoint</a></li>
+                    <li><a href="Transform.Translate.html">Translate</a></li>
+                    <li><a href="Transform.up.html">up</a></li>
+                    <li><a href="Transform.worldToLocalMatrix.html">worldToLocalMatrix</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Transform.html">Transform</a>.LookAt 注视</h1>
+<p class="h1inherit"></p>
+<p>function <em>LookAt</em> (<em>target</em> : <a href="Transform.html">Transform</a>, <em>worldUp</em> : <a href="../Vector3/Vector3.html">Vector3</a> = <a href="../Vector3/Vector3.up.html">Vector3.up</a>) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Rotates the transform so the forward vector points at /target/'s current position.</p>
+<p>旋转物体，这样向前向量指向<em>target</em>的当前位置。简单说，</p>
+<p>旋转物体使z轴指向目标物体。</p>
+<p> Then it rotates the transform to point its up direction vector in the direction hinted at by the worldUp vector.  If you leave out the worldUp parameter, the function will use the world y axis.  worldUp is only a hint vector. The up vector of the rotation will only match the worldUp vector if the forward direction is perpendicular to worldUp </p>
+<p>在由worldUp向量示意的方向的y轴旋转物体，如果你忽略worldUp参数，这个函数将使用世界的y轴。worldUp只是一个示意向量，如果向前方向是与worldUp垂直的，旋转的向上向量将仅匹配worldUp向量。</p>
+<p>翻译的感觉很别扭，下面是我的经验总结： </p>
+<p>当该物体设置了LookAt并指定了目标物体时，该物体的z轴将始终指向目标物体，在设置了worldUp轴向时，该物体在更接近指定的轴向是旋转便的灵活，注意worldUp指的是世界空间，不论你物体在什么位置，只要接近指定的轴方向，旋转会变的更灵活。</p>
+<div class="wrap">
+  <ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public <a href="Transform.html">Transform</a> target;
+	void Update() {
+		transform.LookAt(target);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// This complete script can be attached to a camera to make it
+// continuously point at another object.
+//这个完成的脚本附加到一个摄像机，使它连续指向另一个物体。
+// The target variable shows up as a property in the inspector.
+// Drag another object onto it to make the camera look at it.
+//target变量作为一个属性显示在检视面板上
+//拖动另一个物体到这个上面，是摄像机注视它</span>
+var target : <a href="Transform.html">Transform</a>;
+
+<span class="notes">// Rotate the camera every frame so it keeps looking at the target
+//每帧旋转摄像机，这样它保持注视目标</span>
+function Update() {
+	transform.LookAt(target);
+}</code></pre></div>
+</div>
+<p>&#8226; function <em>LookAt</em> (<em>worldPosition</em> : <a href="../Vector3/Vector3.html">Vector3</a>, <em>worldUp</em> : <a href="../Vector3/Vector3.html">Vector3</a> = <a href="../Vector3/Vector3.up.html">Vector3.up</a>) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Rotates the transform so the forward vector points at worldPosition.</p>
+<p>旋转变换，这样向前向量指向<em>worldPosition</em>。简单说，</p>
+<p>旋转物体使z轴指向<em>worldPosition</em>。</p>
+<p> Then it rotates the transform to point its up direction vector in the direction hinted at by the worldUp vector.  If you leave out the worldUp parameter, the function will use the world y axis.  worldUp is only a hint vector. The up vector of the rotation will only match the worldUp vector if the forward direction is perpendicular to worldUp </p>
+<p>在由worldUp向量示意的方向的y轴旋转物体，如果你忽略worldUp参数，这个函数将使用世界的y轴。worldUp只是一个示意向量，如果向前方向是与worldUp垂直的，旋转的向上向量将仅匹配worldUp向量。</p>
+<p>翻译的感觉很别扭，下面是我的经验总结： </p>
+<p>当该物体设置了LookAt并指定了目标物体时，该物体的z轴将始终指向目标物体，在设置了worldUp轴向时，该物体在更接近指定的轴向是旋转便的灵活，注意worldUp指的是世界空间，不论你物体在什么位置，只要接近指定的轴方向，旋转会变的更灵活。</p>
+<div class="wrap">
+  <ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes">
+      <pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public void Awake() {
+		transform.LookAt(<a href="../Vector3/Vector3.zero.html">Vector3.zero</a>);
+	}
+}</code></pre></div>
+    <div class="panes">
+      <pre><code><span class="notes">// Point the object at the world origin
+//使物体注视世界坐标原点</span>
+transform.LookAt(<a href="../Vector3/Vector3.zero.html">Vector3.zero</a>);</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2010年12月19日 Sunday  18:41<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

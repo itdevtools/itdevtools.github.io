@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>iPhoneSettings.StartLocationServiceUpdates 开始定位服务更新</title>
+<meta name="Keywords" content="unity,iPhoneSettings,StartLocationServiceUpdates,开始定位服务更新" />
+<meta name="Description" content="开始定位服务的更新。最后通过iPhoneInput.lastLocation可以收回位置坐标变量。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="iPhoneSettings.html">iPhoneSettings</a><span class="transer">翻译：剑客 </span>
+          		<ul>
+                    <li><a href="iPhoneSettings.generation.html">generation</a></li>
+                    <li><a href="iPhoneSettings.internetReachability.html">internetReachability</a></li>
+                    <li><a href="iPhoneSettings.locationServiceEnabledByUser.html">locationServiceEnabledByUser</a></li>
+                    <li><a href="iPhoneSettings.locationServiceStatus.html">locationServiceStatus</a></li>
+                    <li><a href="iPhoneSettings.model.html">model</a></li>
+                    <li><a href="iPhoneSettings.name.html">name</a></li>
+                    <li><a href="iPhoneSettings.screenCanDarken.html">screenCanDarken</a></li>
+                    <li><a href="iPhoneSettings.StartLocationServiceUpdates.html">StartLocationServiceUpdates</a></li>
+                    <li><a href="iPhoneSettings.StopLocationServiceUpdates.html">StopLocationServiceUpdates</a></li>
+                    <li><a href="iPhoneSettings.systemName.html">systemName</a></li>
+                    <li><a href="iPhoneSettings.uniqueIdentifier.html">uniqueIdentifier</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="iPhoneSettings.html">iPhoneSettings</a>.StartLocationServiceUpdates 开始定位服务更新</h1>
+<p class="h1inherit"></p>
+<p>static function <em>StartLocationServiceUpdates</em> (<em>desiredAccuracyInMeters</em> : float = 10f, <em>updateDistanceInMeters</em> : float = 10f) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Starts location service updates.  Last location coordinates could be retrieved via <a href="../iPhoneInput/iPhoneInput.lastLocation.html">iPhoneInput.lastLocation</a>.</p>
+<p>开始定位服务的更新。最后通过iPhoneInput.lastLocation可以收回位置坐标变量。</p>
+<p> Service does not start to send location data immediately. Code should check <a href="iPhoneSettings.locationServiceStatus.html">iPhoneSettings.locationServiceStatus</a> for current service status.   desiredAccuracyInMeters - desired service accuracy in meters. Using   higher value like 500 usually does not require to turn GPS chip on and   thus saves battery power.   Values like 5-10 could be used for getting best accuracy. Default value   is 10 meters.  updateDistanceInMeters - the minimum distance (measured in meters) a   device must move laterally before <a href="../iPhoneInput/iPhoneInput.lastLocation.html">iPhoneInput.lastLocation</a> property is updated.   Higher values like 500 imply less overhead. Default is 10 meters. </p>
+<p>服务立刻开始发送定位数据。代码应该检查iPhoneSettings.locationServiceStatus为当前服务状态。desiredAccuracyInMeters - 理想服务精确度为米。使用更高的值像500通常不需要打开GPS芯片从而保持电池电量。像5-10的值可以被用来得到最好的精确度。默认值是10米。updateDistanceInMeters - 最小的距离（单位是米）的一种服务在横向移动之前必须更新iPhoneInput.lastLocation属性。像500意味着更少的开销。默认的是10米。 </p>
+<div class="note"><pre><code>function Start () {
+	<span class="notes">// Start service before querying location
+	// 开始服务在查询定位之前</span>
+	iPhoneSettings.StartLocationServiceUpdates();
+
+	<span class="notes">// Wait until service initializes
+	// 等待知道服务初始化</span>
+	var maxWait : int = 20;
+	while (<a href="iPhoneSettings.locationServiceStatus.html">iPhoneSettings.locationServiceStatus</a> ==
+	<a href="../Enumerations/LocationServiceStatus/LocationServiceStatus.Initializing.html">LocationServiceStatus.Initializing</a> &amp;&amp; maxWait &gt; 0) {
+		yield WaitForSeconds(1);
+		maxWait--;
+	}
+
+	<span class="notes">// Service didn't initialize in 20 seconds
+	// 服务没有初始化在20秒内</span>
+	if (maxWait &lt; 1) {
+		print(&quot;Timed out&quot;);
+		return;
+	}
+
+	<span class="notes">// User denied access to device location
+	// 用户拒绝访问定位服务</span>
+	if (<a href="iPhoneSettings.locationServiceStatus.html">iPhoneSettings.locationServiceStatus</a> == <a href="../Enumerations/LocationServiceStatus/LocationServiceStatus.Failed.html">LocationServiceStatus.Failed</a>) {
+		print(&quot;User denied access to device location&quot;);
+		return;
+	}
+	<span class="notes">// Access granted and location value could be retrieved
+	// 被给予许可并且定位数值可以取回</span>
+	else {
+		print(&quot;Location: &quot; + <a href="iPhoneInput.lastLocation.latitude.html">iPhoneInput.lastLocation</a>.latitude + &quot; &quot; +
+		<a href="iPhoneInput.lastLocation.longitude.html">iPhoneInput.lastLocation</a>.longitude + &quot; &quot; +
+		<a href="iPhoneInput.lastLocation.altitude.html">iPhoneInput.lastLocation</a> .altitude+ &quot; &quot; +
+		<a href="iPhoneInput.lastLocation.horizontalAccuracy.html">iPhoneInput.lastLocation</a>.horizontalAccuracy + &quot; &quot; +
+		<a href="iPhoneInput.lastLocation.timestamp.html">iPhoneInput.lastLocation</a>.timestamp);
+
+	}
+
+	<span class="notes">// Stop service if there is no need to query location updates continuously
+	// 停止服务如果不需要持续查询刷新定位</span>
+	<a href="iPhoneSettings.StopLocationServiceUpdates.html">iPhoneSettings.StopLocationServiceUpdates</a>();
+}</code></pre></div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年4月24日 Sunday  15:30<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

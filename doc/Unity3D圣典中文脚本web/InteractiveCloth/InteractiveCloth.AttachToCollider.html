@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>InteractiveCloth.AttachToCollider 附加碰撞器</title>
+<meta name="Keywords" content="unity,InteractiveCloth,AttachToCollider,附加碰撞器" />
+<meta name="Description" content="附加一个碰撞器到布料物体。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="InteractiveCloth.html">InteractiveCloth</a><span class="transer">翻译：U_鹰 </span>
+                <ul>
+                    <li><a href="InteractiveCloth.AddForceAtPosition.html">AddForceAtPosition</a></li>
+                    <li><a href="InteractiveCloth.attachmentResponse.html">attachmentResponse</a></li>
+                    <li><a href="InteractiveCloth.attachmentTearFactor.html">attachmentTearFactor</a></li>
+                    <li><a href="InteractiveCloth.AttachToCollider.html">AttachToCollider</a></li>
+                    <li><a href="InteractiveCloth.collisionResponse.html">collisionResponse</a></li>
+                    <li><a href="InteractiveCloth.density.html">density</a></li>
+                    <li><a href="InteractiveCloth.DetachFromCollider.html">DetachFromCollider</a></li>
+                    <li><a href="InteractiveCloth.friction.html">friction</a></li>
+                    <li><a href="InteractiveCloth.isTeared.html">isTeared</a></li>
+                    <li><a href="InteractiveCloth.mesh.html">mesh</a></li>
+                    <li><a href="InteractiveCloth.pressure.html">pressure</a></li>
+                    <li><a href="InteractiveCloth.tearFactor.html">tearFactor</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="InteractiveCloth.html">InteractiveCloth</a>.AttachToCollider 附加碰撞器</h1>
+<p class="h1inherit"></p>
+<p>function <em>AttachToCollider</em> (<em>collider</em> : <a href="../Collider/Collider.html">Collider</a>, <em>tearable</em> : bool = false, <em>twoWayInteraction</em> : bool = false) : void </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Attaches a collider to the cloth object.</p>
+<p>附加一个碰撞器到布料物体。</p>
+<p> Only has an effect if some vertices of the cloth are intersecting the collider.   These vertices will then become static in their position with respect to the collider.  If tearable is true, attachments can tear of, depending on the value of <a href="InteractiveCloth.attachmentTearFactor.html">attachmentTearFactor</a>.  If twoWayInteraction is true, the cloth will apply forces back to the attached rigidbody, depending on the value of <a href="InteractiveCloth.attachmentResponse.html">attachmentResponse</a>. </p>
+<p>只影响，如果布料是交互碰撞器的某些顶点。这些顶点就会成为静态，在它们碰撞器的位置。如果撕裂为true，附加的可以被撕裂，取决于<a href="InteractiveCloth.attachmentTearFactor.html">attachmentTearFactor</a>的值。如果twoWayInteraction为true，布料将应用力返回到附加的刚体，取决于<a href="InteractiveCloth.attachmentResponse.html">attachmentResponse</a>的值。</p>
+<p>参见：<a href="InteractiveCloth.DetachFromCollider.html">DetachFromCollider</a>函数</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public InteractiveCloth cloth;
+	void Start() {
+		if (cloth)
+			cloth.AttachToCollider(transform.collider, true, true);
+		else
+			<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;No cloth was assigned in the inspector&quot;);
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Attach this transform's collider to a cloth, make
+// it tearable and two way interactive on forces.
+// REMEMBER: Only has an effect if some vertices of
+// the cloth are intersecting the collider
+//附加这个变换的碰撞器到一个布料，使它可撕裂和双向互动
+//注意：只影响，如果布料是交互碰撞器的某些顶点。</span>
+
+var cloth : InteractiveCloth;
+
+function Start() {
+	if(cloth)
+		cloth.AttachToCollider(transform.collider, true, true);
+	else
+		<a href="../Debug/Debug.LogError.html">Debug.LogError</a>(&quot;No cloth was assigned in the inspector&quot;);
+}</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年3月27日 Sunday  19:16<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

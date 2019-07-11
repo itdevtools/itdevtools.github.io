@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>AssetPostprocessor 资源处理器</title>
+<meta name="Keywords" content="unity,AssetPostprocessor,资源处理器" />
+<meta name="Description" content="AssetPostprocessor让你挂进导入管线，在运行脚本之前或导入资源之后。" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+<div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="AssetPostprocessor.html">AssetPostprocessor</a><span class="transer">翻译：脚本_树 </span>
+                <ul>
+                    <li><a href="AssetPostprocessor.assetImporter.html">assetImporter</a></li>
+                    <li><a href="AssetPostprocessor.assetPath.html">assetPath</a></li>
+                    <li><a href="AssetPostprocessor.GetPostprocessOrder.html">GetPostprocessOrder</a></li>
+                    <li><a href="AssetPostprocessor.LogError.html">LogError</a></li>
+                    <li><a href="AssetPostprocessor.LogWarning.html">LogWarning</a></li>
+                    <li><a href="AssetPostprocessor.OnAssignMaterialModel.html">OnAssignMaterialModel</a></li>
+                    <li><a href="AssetPostprocessor.OnPostprocessAllAssets.html">OnPostprocessAllAssets</a></li>
+                    <li><a href="AssetPostprocessor.OnPostprocessAudio.html">OnPostprocessAudio</a></li>
+                    <li><a href="AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html" title="OnPostprocessGameObjectWithUserProperties">OnPostprocessGameObjectW...</a></li>
+                    <li><a href="AssetPostprocessor.OnPostprocessModel.html">OnPostprocessModel</a></li>
+                    <li><a href="AssetPostprocessor.OnPostprocessTexture.html">OnPostprocessTexture</a></li>
+                    <li><a href="AssetPostprocessor.OnPreprocessAudio.html">OnPreprocessAudio</a></li>
+                    <li><a href="AssetPostprocessor.OnPreprocessModel.html">OnPreprocessModel</a></li>
+                    <li><a href="AssetPostprocessor.OnPreprocessTexture.html">OnPreprocessTexture</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1>AssetPostprocessor 资源处理器</h1>
+<p class="h1inherit"></p>
+<p> AssetPostprocessor lets you hook into the import pipeline and run scripts prior or after importing assets.</p>
+<p>AssetPostprocessor让你挂接导入管线，在运行脚本之前或导入资源之后。</p>
+<p class="note">Note: This is an editor class. To use it you have to place your script in Assets/Editor inside your project folder. Editor classes are in the UnityEditor namespace so for C# scripts you need to add "using UnityEditor;" at the beginning of the script.<br />
+  注意：这是一个编辑器类，如果想使用它你需要把它放到工程目录下的Assets/Editor文件夹下。编辑器类在UnityEditor命名空间下。所以当使用C#脚本时，你需要在脚本前面加上 &quot;using UnityEditor&quot;引用。</p>
+<p> This way you can override default values in the import settings or modify the imported data like textures or meshes.</p>
+<p>这样你可以在导入的设置中重载默认值或修改导入的数据，如纹理或网格。</p>
+<h3>Variables<span class="trans">变量</span></h3>
+<ul class="tableli">
+    <li><div class="lititle"><a href="AssetPostprocessor.assetPath.html">assetPath</a></div>
+    	<div class="licontent">The path name of the asset being imported.<br />
+   	    被导入的资源的路径名 </div>
+    </li>
+    <li><div class="lititle"><a href="AssetPostprocessor.assetImporter.html">assetImporter</a></div>
+    	<div class="licontent">Reference to the asset importer<br />
+   	    引用资源导入器 </div>
+    </li>
+</ul>
+<h3>Functions<span class="trans">函数</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.LogWarning.html">LogWarning</a></div>
+    	<div class="licontent">Logs an import warning to the console.<br />
+   	    记录一个导入警告到控制台</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.LogError.html">LogError</a></div>
+    	<div class="licontent">Logs an import error message to the console.<br />
+   	    记录一个导入错误消息到控制台 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.GetPostprocessOrder.html">GetPostprocessOrder</a></div>
+    	<div class="licontent">Override the order in which importers are processed.<br />
+   	    重载导入器执行的次序 </div>
+    </li>
+</ul>
+<h3>Messages Sent<span class="trans">发送消息</span></h3>
+<ul class="tableli">
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPreprocessTexture.html">OnPreprocessTexture</a></div>
+    	<div class="licontent">Add this function in a subclass to get a notification just before the texture importer is run.<br />
+   	    在子类中重载这个函数以便在纹理导入器运行之前获取通知 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPostprocessTexture.html">OnPostprocessTexture</a></div>
+    	<div class="licontent">Add this function in a subclass to get a notification when a texture has completed importing just before the texture is saved to disk.<br />
+   	    在子类中加入这个函数，以便在纹理载入存入磁盘之前获得一个通知。</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPreprocessModel.html">OnPreprocessModel</a></div>
+    	<div class="licontent">Add this function in a subclass to get a notification just before a model (.fbx, .mb file etc.) is being imported.<br />
+   	    在子类中加入这个函数，以便在模型载入之前获得一个通知。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPostprocessModel.html">OnPostprocessModel</a></div>
+    	<div class="licontent">Add this function in a subclass to get a notification when a model has completed importing<br />
+   	    在子类中加入这个函数，以便在模型载入之后获得一个通知。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html" title="OnPostprocessGameObjectWithUserProperties">OnPostprocessGameObjectW...</a></div>
+    	<div class="licontent">Gets called for each GameObject that had at least one userpropery attached to it in the imported file.<br />
+   	    在导入文件中，为每个至少附加了一个用户属性的游戏物体调用。 </div>
+    </li>    
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnAssignMaterialModel.html">OnAssignMaterialModel</a></div>
+    	<div class="licontent">Feeds a source material<br />
+   	    获取一个源材质</div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPostprocessAudio.html">OnPostprocessAudio</a></div>
+    	<div class="licontent">Add this function in a subclass to get a notification when an audio clip has completed importing.<br />
+   	    在子类中加入这个函数，以便在一个声音剪辑载入后获得一个通知。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessor.OnPreprocessAudio.html">OnPreprocessAudio</a></div>
+    	<div class="licontent">Add this function in a subclass to get a notification just before an audio clip is being imported.<br />
+   	    在子类中加入这个函数，以便在一个声音剪辑载入之前获得一个通知。 </div>
+    </li>
+    <li>
+      <div class="lititle"><a href="AssetPostprocessorOnPostprocessAllAssets.OnPostprocessAllAssets.html">OnPostprocessAllAssets</a></div>
+    	<div class="licontent">This is called after importing of any number of assets is complete (when the Assets progress bar has reached the end).<br />
+   	    在一些资源被导入后调用(当资源进度条到达末端) </div>
+    </li>
+</ul>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年6月27日 Monday  15:04<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

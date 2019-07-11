@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>Cloth.bendingStiffness 抗弯硬度</title>
+<meta name="Keywords" content="unity,Cloth,布料,bendingStiffness,抗弯硬度" />
+<meta name="Description" content="布料的抗弯硬度（坚挺的程度）" />
+<link href="../Style/CSS/UnityStyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Style/SJ/jquery.min.js"></script>
+<script type="text/javascript" src="../Style/SJ/tabs.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$("ul.tabs").tabs("> .panes", {initialIndex: 1});
+});
+</script>
+
+</head>
+
+<body>
+<div class="head">
+<div class="logo"><a href="/Script"><img src="../Style/Images/unitylogo.png" alt="Unity圣典" width="350" height="80"  title="Unity圣典"/></a></div>
+<div class="menu"><a href="/">首页</a><a href="/Script">Unity脚本</a></div>
+</div>
+
+<div class="mainbody">
+    <div class="leftmain">
+    	        <ul class="scriptmenu">
+          <li><a href="../index.html">Overview</a> <span class="trans">概述</span></li>
+            <li><a href="../Runtime.Classes.html">Runtime Classes</a> <span class="trans">实时运行类</span></li>
+            <ul>
+                <li><a href="../Attributes/Attributes.html">Attributes</a> <span class="trans">属性</span></li>
+                <li><a href="../Enumerations/Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li><a href="../Editor.Classes.html">Editor Classes</a> <span class="trans">编辑器类</span></li>
+            <ul>
+                <li><a href="../Editor_Enumerations/Editor.Enumerations.html">Enumerations</a> <span class="trans">枚举</span></li>
+            </ul>
+            <li>History <span class="trans">历史</span></li>
+            <li><a href="../index.Classes.html">Index</a> <span class="trans">总索引</span></li>
+        </ul>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity方 */
+google_ad_slot = "5047319569";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+        <div class="subclass"><a href="Cloth.html">Cloth</a><span class="transer">翻译：anyfar </span>
+                <ul>
+                    <li><a href="Cloth.bendingStiffness.html">bendingStiffness</a></li>
+                    <li><a href="Cloth.damping.html">damping</a></li>
+                    <li><a href="Cloth.enabled.html">enabled</a></li>
+                    <li><a href="Cloth.externalAcceleration.html">externalAcceleration</a></li>
+                    <li><a href="Cloth.normals.html">normals</a></li>
+                    <li><a href="Cloth.randomAcceleration.html">randomAcceleration</a></li>
+                    <li><a href="Cloth.selfCollision.html">selfCollision</a></li>
+                    <li><a href="Cloth.stretchingStiffness.html">stretchingStiffness</a></li>
+                    <li><a href="Cloth.thickness.html">thickness</a></li>
+                    <li><a href="Cloth.useGravity.html">useGravity</a></li>
+					<li><a href="Cloth.vertices.html">vertices</a></li>
+                </ul>
+</div>
+    </div>
+    <div class="rightmain"><!--right start--><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<h1><a href="Cloth.html">Cloth</a>.bendingStiffness 抗弯硬度</h1>
+<p class="h1inherit"></p>
+<p>var <em>bendingStiffness</em> : float </p>
+<p><em>Description</em><span class="trans">描述</span></p>
+<p> Bending stiffness of the cloth.</p>
+<p>布料的抗弯硬度（坚挺的程度）</p>
+<p> Must be between zero and one. Setting the value to zero disables bending stiffness simulation.   In many cases, when you want a cloth to be more stiff, actually reducing the number of vertices  will get you better results - and performance. </p>
+<p>0 ~ 1 之间。设置为0关闭这个模拟属性。 在大多数情况下，当你想要一块比较硬的布料，实际上可以减少布料的顶点数，会得到更好的效果和性能。</p>
+<div class="wrap">
+	<ul class="tabs">
+		<li><a href="#">C#</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+    <div class="panes"><pre><code>using UnityEngine;
+using System.Collections;
+
+public class example : <a href="../MonoBehaviour/MonoBehaviour.html">MonoBehaviour</a> {
+	public void Awake() {
+		transform.GetComponent&lt;Cloth&gt;().bendingStiffness = 1;
+	}
+}</code></pre></div>
+    <div class="panes"><pre><code><span class="notes">// Set the bending Stiffness to 1 regardless if the cloth
+//设置布料的bending Stiffness为1
+// is a Skinned Cloth or Interactive.
+//可以是Skinned Cloth或者Interactive Cloth.</span>
+
+transform.GetComponent(Cloth). bendingStiffness = 1;
+
+</code></pre></div>
+</div>
+<div class="date"><span>最后修改：<!-- #BeginDate format:wfcCh2m -->2011年1月18日 Tuesday  21:21<!-- #EndDate --></span></div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8054246454688368";
+/* Unity横 */
+google_ad_slot = "2374072180";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="">
+</script>
+<!--right end--></div>
+    <div class="clear"></div>
+</div>
+
+<div style="padding: 30px; text-align: center; clear:both"><p>本脚本参考基于Unity 3.30f4</p>英文部分版权属&copy;<a href="http://unity3d.com/">Unity</a>公司所有，中文部分&copy;
+<a href="http://3d.ceeger.com/">Unity圣典</a> 版权所有，未经许可，严禁转载 。</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce93455bb2ae8f76d8b4a8d07db27a24' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
