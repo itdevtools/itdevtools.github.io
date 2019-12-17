@@ -40,5 +40,5 @@
 	/**展示几次销毁 */
 	"bannerShowTimes":1,
 	/**至少保留几个banner */
-	"atLeastBanners":2,
+	"atLeastBanners":2
 }
