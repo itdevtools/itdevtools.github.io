@@ -3,6 +3,8 @@
   "bannerAds": ["bannerAds-----00000", "bannerAds-----11111"],
   "comment": "激励视频 id ",
   "rewardedVideoadId": "videoAd-----00000",
+  "comment": "插屏广告 id ",
+  "interstitialId": "interstitialAd-000000",
   "comment": "版本号 ",
   "testV": "0.0.0",
   "comment": "是否开启了分享 ",
