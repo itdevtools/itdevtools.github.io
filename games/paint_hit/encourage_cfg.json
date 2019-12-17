@@ -1,44 +1,44 @@
 {
-	/**banner id 数组*/
-	"bannerAds": ["bannerAds-----00000", "bannerAds-----11111"],
-	/**激励视频 id */
-	"rewardedVideoadId": "videoAd-----00000",
-	/**版本号 */
-	"testV": "0.0.0",
-	/**是否开启了分享 */
-	"isOpenShare": 0,
-	/**是否开启更多游戏 */
-	"isOpenMoreGame": 0,
-	/**开启更多游戏需要的今日总局数 */
-	"openMoreGameDNum": 5,
-	/**开启更多游戏需要的登录后的玩游戏局数 */
-	"openMoreGameLNum": 1,
-	/**是否需要二次确认框 */
-	"needShowSecondAlert": true,
-	/**banner延迟弹出概率 */
-	"jbBanner": 0,
-	"loginBanner": 1,
-	/**新玩家前N局不弹视频 */
-	"newOpenWatchNum": 0,
-	/**新玩家分享次数*/
-	"newShareNum": 2,
-	/**新玩家视频次数*/
-	"newWatchNum": -1,
-	/**非新玩家分享次数 */
-	"shareNum": 2,
-	/**非新玩家视频次数 */
-	"watchNum": -1,
-	/**第一次分享失败概率 */
-	"share1": 60,
-	/**分享失败概率 */
-	"share3": 30,
-	/**复活类型 0是视频 1是分享*/
-	"reviveType": 0,
-	/**cpa是否弹 1是弹 0是不弹*/
-	"cpaOpen": 0,
-	"bannerTimes": [800, 1400, 1400, 1400],
-	/**展示几次销毁 */
-	"bannerShowTimes":1,
-	/**至少保留几个banner */
-	"atLeastBanners":2
+  "comment": "banner id 数组",
+  "bannerAds": ["bannerAds-----00000", "bannerAds-----11111"],
+  "comment": "激励视频 id ",
+  "rewardedVideoadId": "videoAd-----00000",
+  "comment": "版本号 ",
+  "testV": "0.0.0",
+  "comment": "是否开启了分享 ",
+  "isOpenShare": 0,
+  "comment": "是否开启更多游戏 ",
+  "isOpenMoreGame": 0,
+  "comment": "开启更多游戏需要的今日总局数 ",
+  "openMoreGameDNum": 5,
+  "comment": "开启更多游戏需要的登录后的玩游戏局数 ",
+  "openMoreGameLNum": 1,
+  "comment": "是否需要二次确认框 ",
+  "needShowSecondAlert": true,
+  "comment": "banner延迟弹出概率 ",
+  "jbBanner": 0,
+  "loginBanner": 1,
+  "comment": "新玩家前N局不弹视频 ",
+  "newOpenWatchNum": 0,
+  "comment": "新玩家分享次数",
+  "newShareNum": 2,
+  "comment": "新玩家视频次数",
+  "newWatchNum": -1,
+  "comment": "非新玩家分享次数 ",
+  "shareNum": 2,
+  "comment": "非新玩家视频次数 ",
+  "watchNum": -1,
+  "comment": "第一次分享失败概率 ",
+  "share1": 60,
+  "comment": "分享失败概率 ",
+  "share3": 30,
+  "comment": "复活类型 0是视频 1是分享",
+  "reviveType": 0,
+  "comment": "cpa是否弹 1是弹 0是不弹",
+  "cpaOpen": 0,
+  "bannerTimes": [800, 1400, 1400, 1400],
+  "comment": "展示几次销毁 ",
+  "bannerShowTimes": 1,
+  "comment": "至少保留几个banner ",
+  "atLeastBanners": 2
 }
