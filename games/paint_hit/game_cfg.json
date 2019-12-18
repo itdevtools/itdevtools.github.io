@@ -1,6 +1,29 @@
 {
-	"SHOW_BANNER_AD_HOMESCENE": 1,
-	"SHOW_BANNER_AD_GAMESCENE": 1,
-	"SHOW_INS_AD": 1,
-	"SHOW_REWARD_VIDEO_AD": 1
+	"ver":"1.0.0",
+
+	"test":{
+            "SHOW_BANNER_AD_HOMESCENE": 0,
+            "SHOW_BANNER_AD_GAMESCENE": 0,
+            "SHOW_BANNER_AD_RECOVERSCENE": 0,
+            "SHOW_BANNER_AD_LEVEL_UP_SCENESCENE": 0,
+            "SHOW_BANNER_AD_FRIEND_RANKSCENE": 0,
+            "SHOW_INS_AD": 0,
+            "SHOW_REWARD_VIDEO_AD": 0,
+
+            "USE_SHARE_TO_REVIVE": 0,
+            "USE_VIDEO_TO_REVIVE": 0
+	},
+
+	"online":{
+            "SHOW_BANNER_AD_HOMESCENE": 1,
+            "SHOW_BANNER_AD_GAMESCENE": 1,
+            "SHOW_BANNER_AD_RECOVERSCENE": 1,
+            "SHOW_BANNER_AD_LEVEL_UP_SCENESCENE": 1,
+            "SHOW_BANNER_AD_FRIEND_RANKSCENE": 1,
+            "SHOW_INS_AD": 1,
+            "SHOW_REWARD_VIDEO_AD": 1,
+
+            "USE_SHARE_TO_REVIVE": 1,
+            "USE_VIDEO_TO_REVIVE": 1
+	}
 }
