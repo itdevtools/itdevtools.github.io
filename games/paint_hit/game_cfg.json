@@ -2,6 +2,8 @@
 	"ver":"0.0.1",
 
 	"test":{
+            "IS_CREATE_USERINFO_BUTTON":0,
+
             "SHOW_BANNER_AD_HOMESCENE": 0,
             "SHOW_BANNER_AD_GAMESCENE": 0,
             "SHOW_BANNER_AD_GAMESCENE_RATE": 0,
@@ -17,6 +19,8 @@
 	},
 
 	"online":{
+            "IS_CREATE_USERINFO_BUTTON":0,
+
             "SHOW_BANNER_AD_HOMESCENE": 1,
 			"SHOW_BANNER_AD_GAMESCENE": 1,
 			"SHOW_BANNER_AD_GAMESCENE_RATE": 0,
