@@ -1,0 +1,1 @@
+window.ald_game_conf={},ald_game_conf.app_key_test="965d29ab1626d77305255a2d919f3722",ald_game_conf.app_key_release="c60e93ca84c8b93c183b0deff8d0b734",ald_game_conf.app_key=ald_game_conf.app_key_release,ald_game_conf.plugin=!1,ald_game_conf.useOpen=!1,ald_game_conf.openKey="";
