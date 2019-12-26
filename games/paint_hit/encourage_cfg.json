@@ -1,5 +1,5 @@
 {
-  "ver":"0.0.1",
+  "ver":"1.0.0",
 
   "test":{
     "comment": "banner id 数组",
@@ -8,8 +8,6 @@
     "rewardedVideoadId": "",
     "comment": "插屏广告 id ",
     "interstitialId": "",
-    "comment": "版本号 ",
-    "testV": "0.0.0",
     "comment": "是否开启了分享 ",
     "isOpenShare": 0,
     "comment": "是否开启更多游戏 ",
@@ -55,8 +53,6 @@
     "rewardedVideoadId": "",
     "comment": "插屏广告 id ",
     "interstitialId": "",
-    "comment": "版本号 ",
-    "testV": "0.0.0",
     "comment": "是否开启了分享 ",
     "isOpenShare": 0,
     "comment": "是否开启更多游戏 ",
