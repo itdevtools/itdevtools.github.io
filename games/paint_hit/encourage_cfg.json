@@ -1,9 +1,9 @@
 {
-  "ver":"1.0.0",
+  "ver":"0.0.1",
 
   "test":{
     "comment": "-----TODO---1.0.0版本保留，下次提交版本删除",
-    "cfgVer": "1.0.0",
+    "cfgVer": "0.0.1",
     "comment": "banner id 数组",
     "bannerAds": [],
     "comment": "激励视频 id ",
@@ -50,7 +50,7 @@
 
   "online":{
     "comment": "-----TODO---1.0.0版本保留，下次提交版本删除",
-    "cfgVer": "1.0.0",
+    "cfgVer": "0.0.1",
     "comment": "banner id 数组",
     "bannerAds": [],
     "comment": "激励视频 id ",
